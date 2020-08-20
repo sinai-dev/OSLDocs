@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SL_MeleeWeapon
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SL_MeleeWeapon
+   ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SideLoader.SL_MeleeWeapon">
+  
+  
+  <h1 id="SideLoader_SL_MeleeWeapon" data-uid="SideLoader.SL_MeleeWeapon" class="text-break">Class SL_MeleeWeapon
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="SideLoader.SL_Item.html">SL_Item</a></div>
+    <div class="level2"><a class="xref" href="SideLoader.SL_Equipment.html">SL_Equipment</a></div>
+    <div class="level3"><a class="xref" href="SideLoader.SL_Weapon.html">SL_Weapon</a></div>
+    <div class="level4"><span class="xref">SL_MeleeWeapon</span></div>
+      <div class="level5"><a class="xref" href="SideLoader.SL_DualMeleeWeapon.html">SL_DualMeleeWeapon</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_WeaponType">SL_Weapon.WeaponType</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_Unblockable">SL_Weapon.Unblockable</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_SwingSound">SL_Weapon.SwingSound</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_SpecialIsZoom">SL_Weapon.SpecialIsZoom</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_HealthLeechRatio">SL_Weapon.HealthLeechRatio</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_HealthBurnLeechRatio">SL_Weapon.HealthBurnLeechRatio</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Equipment.html#SideLoader_SL_Equipment_EquipSlot">SL_Equipment.EquipSlot</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Equipment.html#SideLoader_SL_Equipment_TwoHandType">SL_Equipment.TwoHandType</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Equipment.html#SideLoader_SL_Equipment_IKType">SL_Equipment.IKType</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Equipment.html#SideLoader_SL_Equipment_VisualDetectabilityAdd">SL_Equipment.VisualDetectabilityAdd</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_SLPackName">SL_Item.SLPackName</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_SubfolderName">SL_Item.SubfolderName</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ShouldApplyLate">SL_Item.ShouldApplyLate</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_Target_ItemID">SL_Item.Target_ItemID</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_New_ItemID">SL_Item.New_ItemID</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_Name">SL_Item.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_Description">SL_Item.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_LegacyItemID">SL_Item.LegacyItemID</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_IsPickable">SL_Item.IsPickable</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_IsUsable">SL_Item.IsUsable</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_QtyRemovedOnUse">SL_Item.QtyRemovedOnUse</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_GroupItemInDisplay">SL_Item.GroupItemInDisplay</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_HasPhysicsWhenWorld">SL_Item.HasPhysicsWhenWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_RepairedInRest">SL_Item.RepairedInRest</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_BehaviorOnNoDurability">SL_Item.BehaviorOnNoDurability</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_CastType">SL_Item.CastType</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_CastModifier">SL_Item.CastModifier</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_CastLocomotionEnabled">SL_Item.CastLocomotionEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_MobileCastMovementMult">SL_Item.MobileCastMovementMult</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_CastSheatheRequired">SL_Item.CastSheatheRequired</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_OverrideSellModifier">SL_Item.OverrideSellModifier</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_Tags">SL_Item.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_StatsHolder">SL_Item.StatsHolder</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ExtensionsEditBehaviour">SL_Item.ExtensionsEditBehaviour</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ItemExtensions">SL_Item.ItemExtensions</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_EffectBehaviour">SL_Item.EffectBehaviour</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_EffectTransforms">SL_Item.EffectTransforms</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ItemVisuals">SL_Item.ItemVisuals</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_SpecialItemVisuals">SL_Item.SpecialItemVisuals</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_SpecialFemaleItemVisuals">SL_Item.SpecialFemaleItemVisuals</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_Apply">SL_Item.Apply()</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ApplyToItem">SL_Item.ApplyToItem()</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ApplyItemVisuals_Item_">SL_Item.ApplyItemVisuals(Item)</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_ParseItemToTemplate_Item_">SL_Item.ParseItemToTemplate(Item)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SideLoader.html">SideLoader</a></h6>
+  <h6><strong>Assembly</strong>: SideLoader.dll</h6>
+  <h5 id="SideLoader_SL_MeleeWeapon_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SL_MeleeWeapon : SL_Weapon</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_MeleeWeapon_LinecastCount.md&amp;value=---%0Auid%3A%20SideLoader.SL_MeleeWeapon.LinecastCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Equipment/Weapon/SL_MeleeWeapon.cs/#L10">View Source</a>
+  </span>
+  <h4 id="SideLoader_SL_MeleeWeapon_LinecastCount" data-uid="SideLoader.SL_MeleeWeapon.LinecastCount">LinecastCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? LinecastCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_MeleeWeapon_Radius.md&amp;value=---%0Auid%3A%20SideLoader.SL_MeleeWeapon.Radius%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Equipment/Weapon/SL_MeleeWeapon.cs/#L11">View Source</a>
+  </span>
+  <h4 id="SideLoader_SL_MeleeWeapon_Radius" data-uid="SideLoader.SL_MeleeWeapon.Radius">Radius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float? Radius</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_MeleeWeapon_ApplyToItem_Item_.md&amp;value=---%0Auid%3A%20SideLoader.SL_MeleeWeapon.ApplyToItem(Item)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Equipment/Weapon/SL_MeleeWeapon.cs/#L13">View Source</a>
+  </span>
+  <a id="SideLoader_SL_MeleeWeapon_ApplyToItem_" data-uid="SideLoader.SL_MeleeWeapon.ApplyToItem*"></a>
+  <h4 id="SideLoader_SL_MeleeWeapon_ApplyToItem_Item_" data-uid="SideLoader.SL_MeleeWeapon.ApplyToItem(Item)">ApplyToItem(Item)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ApplyToItem(Item item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Item</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_ApplyToItem_Item_">SL_Weapon.ApplyToItem(Item)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_MeleeWeapon_SerializeItem_Item_SideLoader_SL_Item_.md&amp;value=---%0Auid%3A%20SideLoader.SL_MeleeWeapon.SerializeItem(Item%2CSideLoader.SL_Item)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Equipment/Weapon/SL_MeleeWeapon.cs/#L29">View Source</a>
+  </span>
+  <a id="SideLoader_SL_MeleeWeapon_SerializeItem_" data-uid="SideLoader.SL_MeleeWeapon.SerializeItem*"></a>
+  <h4 id="SideLoader_SL_MeleeWeapon_SerializeItem_Item_SideLoader_SL_Item_" data-uid="SideLoader.SL_MeleeWeapon.SerializeItem(Item,SideLoader.SL_Item)">SerializeItem(Item, SL_Item)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SerializeItem(Item item, SL_Item holder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Item</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SideLoader.SL_Item.html">SL_Item</a></td>
+        <td><span class="parametername">holder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="SideLoader.SL_Weapon.html#SideLoader_SL_Weapon_SerializeItem_Item_SideLoader_SL_Item_">SL_Weapon.SerializeItem(Item, SL_Item)</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_MeleeWeapon.md&amp;value=---%0Auid%3A%20SideLoader.SL_MeleeWeapon%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Equipment/Weapon/SL_MeleeWeapon.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
