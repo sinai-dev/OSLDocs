@@ -13,7 +13,7 @@
 - C# Documentation
 
   - [C# Overview](GettingStarted/CSharpGuide.md)
-  - [C# API](https://sinai-dev.github.io/_docfx/api/SideLoader.html ':target=_self')
+  - [C# API](https://sinai-dev.github.io/OSLDocs/_docfx/api/SideLoader.html ':target=_self')
   
 - Replacing Assets
 
