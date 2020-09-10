@@ -15,6 +15,8 @@ SideLoader has extensive logging, and you should be able to tell if something ma
 
 The log file can be found at `Outward\output_log.txt`, assuming you are on BepInEx 5.2 or later.
 
+* <b>NOTE:</b> if you don't see the file there, check at `%userprofile%\appdata\locallow\nine dots studio\outward\`
+
 In the log file, Ctrl+F for "SideLoader" and start from there. Look for your mod and see if SideLoader said anything about it, which give you a clue as to what went wrong.
 
 If you don't see anything that looks bad in the SideLoader setup but you find your custom asset is still bugged, you can reproduce the bug in-game and then immediately quit the game, then check the log file. At the very bottom of the file, you may find some logs related to the error.
