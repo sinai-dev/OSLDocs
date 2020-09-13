@@ -86,7 +86,7 @@ The game checks if your TransformName <b>contains</b> one of the following <b>ke
 
 There is one unique exception: if the TransformName is <b>exactly</b> "`Effects`", "`Effect`", "`ExtraEffects`" or "`HiddenEffects`", it works the same as the `Normal` keyword.
 
-This covers everything about the SL_EffectTransform itself, see the linked articles below for details on SL_Effect and SL_EffectCondition classes.
+This covers everything about the SL_EffectTransform itself, see [SL_Effect](Effects/SL_Effect) and [SL_EffectCondition](Effects/SL_EffectCondition) for more details.
 
 ## Xml Example
 The base XML structure for an SL_EffectTransform should look like this:
