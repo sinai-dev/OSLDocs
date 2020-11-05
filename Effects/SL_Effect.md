@@ -51,7 +51,7 @@ Simply gives the player an Achievement when this effect is used.
 
 `UnlockedAchievement` (enum)
 * The achievement which will be unlocked
-* See [this list](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/AchievementManager.Achievements) for possible values.
+* See [this list](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/AchievementManager.Achievements.txt) for possible values.
 
 ## SL_AchievementSetStatOnEffect
 
