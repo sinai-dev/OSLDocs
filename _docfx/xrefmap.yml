@@ -164,6 +164,12 @@ references:
   isSpec: "True"
   fullName: SideLoader.CustomAudio.ReplaceAudio
   nameWithType: CustomAudio.ReplaceAudio
+- uid: SideLoader.CustomAudio.ReplacedClips
+  name: ReplacedClips
+  href: api/SideLoader.CustomAudio.html#SideLoader_CustomAudio_ReplacedClips
+  commentId: F:SideLoader.CustomAudio.ReplacedClips
+  fullName: SideLoader.CustomAudio.ReplacedClips
+  nameWithType: CustomAudio.ReplacedClips
 - uid: SideLoader.CustomCharacters
   name: CustomCharacters
   href: api/SideLoader.CustomCharacters.html
@@ -196,6 +202,25 @@ references:
   isSpec: "True"
   fullName: SideLoader.CustomCharacters.CleanupCharacters
   nameWithType: CustomCharacters.CleanupCharacters
+- uid: SideLoader.CustomCharacters.CloneCharacter(Character)
+  name: CloneCharacter(Character)
+  href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_CloneCharacter_Character_
+  commentId: M:SideLoader.CustomCharacters.CloneCharacter(Character)
+  fullName: SideLoader.CustomCharacters.CloneCharacter(Character)
+  nameWithType: CustomCharacters.CloneCharacter(Character)
+- uid: SideLoader.CustomCharacters.CloneCharacter(System.String)
+  name: CloneCharacter(String)
+  href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_CloneCharacter_System_String_
+  commentId: M:SideLoader.CustomCharacters.CloneCharacter(System.String)
+  fullName: SideLoader.CustomCharacters.CloneCharacter(System.String)
+  nameWithType: CustomCharacters.CloneCharacter(String)
+- uid: SideLoader.CustomCharacters.CloneCharacter*
+  name: CloneCharacter
+  href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_CloneCharacter_
+  commentId: Overload:SideLoader.CustomCharacters.CloneCharacter
+  isSpec: "True"
+  fullName: SideLoader.CustomCharacters.CloneCharacter
+  nameWithType: CustomCharacters.CloneCharacter
 - uid: SideLoader.CustomCharacters.CreateCharacter(SideLoader.SL_Character,UnityEngine.Vector3,System.String,System.String)
   name: CreateCharacter(SL_Character, Vector3, String, String)
   href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_CreateCharacter_SideLoader_SL_Character_UnityEngine_Vector3_System_String_System_String_
@@ -279,6 +304,19 @@ references:
   isSpec: "True"
   fullName: SideLoader.CustomCharacters.InvokeSpawnCharacters
   nameWithType: CustomCharacters.InvokeSpawnCharacters
+- uid: SideLoader.CustomCharacters.IsRealScene(UnityEngine.SceneManagement.Scene)
+  name: IsRealScene(Scene)
+  href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_IsRealScene_UnityEngine_SceneManagement_Scene_
+  commentId: M:SideLoader.CustomCharacters.IsRealScene(UnityEngine.SceneManagement.Scene)
+  fullName: SideLoader.CustomCharacters.IsRealScene(UnityEngine.SceneManagement.Scene)
+  nameWithType: CustomCharacters.IsRealScene(Scene)
+- uid: SideLoader.CustomCharacters.IsRealScene*
+  name: IsRealScene
+  href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_IsRealScene_
+  commentId: Overload:SideLoader.CustomCharacters.IsRealScene
+  isSpec: "True"
+  fullName: SideLoader.CustomCharacters.IsRealScene
+  nameWithType: CustomCharacters.IsRealScene
 - uid: SideLoader.CustomCharacters.OnSpawnCallbacks
   name: OnSpawnCallbacks
   href: api/SideLoader.CustomCharacters.html#SideLoader_CustomCharacters_OnSpawnCallbacks
@@ -440,15 +478,15 @@ references:
   isSpec: "True"
   fullName: SideLoader.CustomItems.SetItemID
   nameWithType: CustomItems.SetItemID
-- uid: SideLoader.CustomItems.SetItemTags(Item,System.Collections.Generic.List{System.String},System.Boolean)
-  name: SetItemTags(Item, List<String>, Boolean)
-  href: api/SideLoader.CustomItems.html#SideLoader_CustomItems_SetItemTags_Item_System_Collections_Generic_List_System_String__System_Boolean_
-  commentId: M:SideLoader.CustomItems.SetItemTags(Item,System.Collections.Generic.List{System.String},System.Boolean)
-  name.vb: SetItemTags(Item, List(Of String), Boolean)
-  fullName: SideLoader.CustomItems.SetItemTags(Item, System.Collections.Generic.List<System.String>, System.Boolean)
-  fullName.vb: SideLoader.CustomItems.SetItemTags(Item, System.Collections.Generic.List(Of System.String), System.Boolean)
-  nameWithType: CustomItems.SetItemTags(Item, List<String>, Boolean)
-  nameWithType.vb: CustomItems.SetItemTags(Item, List(Of String), Boolean)
+- uid: SideLoader.CustomItems.SetItemTags(Item,System.String[],System.Boolean)
+  name: SetItemTags(Item, String[], Boolean)
+  href: api/SideLoader.CustomItems.html#SideLoader_CustomItems_SetItemTags_Item_System_String___System_Boolean_
+  commentId: M:SideLoader.CustomItems.SetItemTags(Item,System.String[],System.Boolean)
+  name.vb: SetItemTags(Item, String(), Boolean)
+  fullName: SideLoader.CustomItems.SetItemTags(Item, System.String[], System.Boolean)
+  fullName.vb: SideLoader.CustomItems.SetItemTags(Item, System.String(), System.Boolean)
+  nameWithType: CustomItems.SetItemTags(Item, String[], Boolean)
+  nameWithType.vb: CustomItems.SetItemTags(Item, String(), Boolean)
 - uid: SideLoader.CustomItems.SetItemTags*
   name: SetItemTags
   href: api/SideLoader.CustomItems.html#SideLoader_CustomItems_SetItemTags_
@@ -539,6 +577,12 @@ references:
   commentId: M:SideLoader.CustomItemVisuals.CloneVisualPrefab(Item,SideLoader.VisualPrefabType,System.Boolean)
   fullName: SideLoader.CustomItemVisuals.CloneVisualPrefab(Item, SideLoader.VisualPrefabType, System.Boolean)
   nameWithType: CustomItemVisuals.CloneVisualPrefab(Item, VisualPrefabType, Boolean)
+- uid: SideLoader.CustomItemVisuals.CloneVisualPrefab(Item,UnityEngine.GameObject,SideLoader.VisualPrefabType,System.Boolean)
+  name: CloneVisualPrefab(Item, GameObject, VisualPrefabType, Boolean)
+  href: api/SideLoader.CustomItemVisuals.html#SideLoader_CustomItemVisuals_CloneVisualPrefab_Item_UnityEngine_GameObject_SideLoader_VisualPrefabType_System_Boolean_
+  commentId: M:SideLoader.CustomItemVisuals.CloneVisualPrefab(Item,UnityEngine.GameObject,SideLoader.VisualPrefabType,System.Boolean)
+  fullName: SideLoader.CustomItemVisuals.CloneVisualPrefab(Item, UnityEngine.GameObject, SideLoader.VisualPrefabType, System.Boolean)
+  nameWithType: CustomItemVisuals.CloneVisualPrefab(Item, GameObject, VisualPrefabType, Boolean)
 - uid: SideLoader.CustomItemVisuals.CloneVisualPrefab*
   name: CloneVisualPrefab
   href: api/SideLoader.CustomItemVisuals.html#SideLoader_CustomItemVisuals_CloneVisualPrefab_
@@ -753,12 +797,38 @@ references:
   commentId: T:SideLoader.CustomScenes
   fullName: SideLoader.CustomScenes
   nameWithType: CustomScenes
-- uid: SideLoader.CustomScenes.LoadSceneFromBundle(UnityEngine.AssetBundle,UnityEngine.Vector3,System.Int32,System.Single)
-  name: LoadSceneFromBundle(AssetBundle, Vector3, Int32, Single)
-  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_LoadSceneFromBundle_UnityEngine_AssetBundle_UnityEngine_Vector3_System_Int32_System_Single_
-  commentId: M:SideLoader.CustomScenes.LoadSceneFromBundle(UnityEngine.AssetBundle,UnityEngine.Vector3,System.Int32,System.Single)
-  fullName: SideLoader.CustomScenes.LoadSceneFromBundle(UnityEngine.AssetBundle, UnityEngine.Vector3, System.Int32, System.Single)
-  nameWithType: CustomScenes.LoadSceneFromBundle(AssetBundle, Vector3, Int32, Single)
+- uid: SideLoader.CustomScenes.IsLoadingCustomScene
+  name: IsLoadingCustomScene
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_IsLoadingCustomScene
+  commentId: P:SideLoader.CustomScenes.IsLoadingCustomScene
+  fullName: SideLoader.CustomScenes.IsLoadingCustomScene
+  nameWithType: CustomScenes.IsLoadingCustomScene
+- uid: SideLoader.CustomScenes.IsLoadingCustomScene*
+  name: IsLoadingCustomScene
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_IsLoadingCustomScene_
+  commentId: Overload:SideLoader.CustomScenes.IsLoadingCustomScene
+  isSpec: "True"
+  fullName: SideLoader.CustomScenes.IsLoadingCustomScene
+  nameWithType: CustomScenes.IsLoadingCustomScene
+- uid: SideLoader.CustomScenes.IsRealScene(UnityEngine.SceneManagement.Scene)
+  name: IsRealScene(Scene)
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_IsRealScene_UnityEngine_SceneManagement_Scene_
+  commentId: M:SideLoader.CustomScenes.IsRealScene(UnityEngine.SceneManagement.Scene)
+  fullName: SideLoader.CustomScenes.IsRealScene(UnityEngine.SceneManagement.Scene)
+  nameWithType: CustomScenes.IsRealScene(Scene)
+- uid: SideLoader.CustomScenes.IsRealScene*
+  name: IsRealScene
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_IsRealScene_
+  commentId: Overload:SideLoader.CustomScenes.IsRealScene
+  isSpec: "True"
+  fullName: SideLoader.CustomScenes.IsRealScene
+  nameWithType: CustomScenes.IsRealScene
+- uid: SideLoader.CustomScenes.LoadSceneFromBundle(UnityEngine.AssetBundle,UnityEngine.Vector3,System.Action,System.Int32,System.Single)
+  name: LoadSceneFromBundle(AssetBundle, Vector3, Action, Int32, Single)
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_LoadSceneFromBundle_UnityEngine_AssetBundle_UnityEngine_Vector3_System_Action_System_Int32_System_Single_
+  commentId: M:SideLoader.CustomScenes.LoadSceneFromBundle(UnityEngine.AssetBundle,UnityEngine.Vector3,System.Action,System.Int32,System.Single)
+  fullName: SideLoader.CustomScenes.LoadSceneFromBundle(UnityEngine.AssetBundle, UnityEngine.Vector3, System.Action, System.Int32, System.Single)
+  nameWithType: CustomScenes.LoadSceneFromBundle(AssetBundle, Vector3, Action, Int32, Single)
 - uid: SideLoader.CustomScenes.LoadSceneFromBundle*
   name: LoadSceneFromBundle
   href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_LoadSceneFromBundle_
@@ -766,6 +836,32 @@ references:
   isSpec: "True"
   fullName: SideLoader.CustomScenes.LoadSceneFromBundle
   nameWithType: CustomScenes.LoadSceneFromBundle
+- uid: SideLoader.CustomScenes.PopulateNecessarySceneContents
+  name: PopulateNecessarySceneContents()
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_PopulateNecessarySceneContents
+  commentId: M:SideLoader.CustomScenes.PopulateNecessarySceneContents
+  fullName: SideLoader.CustomScenes.PopulateNecessarySceneContents()
+  nameWithType: CustomScenes.PopulateNecessarySceneContents()
+- uid: SideLoader.CustomScenes.PopulateNecessarySceneContents*
+  name: PopulateNecessarySceneContents
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_PopulateNecessarySceneContents_
+  commentId: Overload:SideLoader.CustomScenes.PopulateNecessarySceneContents
+  isSpec: "True"
+  fullName: SideLoader.CustomScenes.PopulateNecessarySceneContents
+  nameWithType: CustomScenes.PopulateNecessarySceneContents
+- uid: SideLoader.CustomScenes.Update
+  name: Update()
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_Update
+  commentId: M:SideLoader.CustomScenes.Update
+  fullName: SideLoader.CustomScenes.Update()
+  nameWithType: CustomScenes.Update()
+- uid: SideLoader.CustomScenes.Update*
+  name: Update
+  href: api/SideLoader.CustomScenes.html#SideLoader_CustomScenes_Update_
+  commentId: Overload:SideLoader.CustomScenes.Update
+  isSpec: "True"
+  fullName: SideLoader.CustomScenes.Update
+  nameWithType: CustomScenes.Update
 - uid: SideLoader.CustomStatusEffects
   name: CustomStatusEffects
   href: api/SideLoader.CustomStatusEffects.html
@@ -827,12 +923,12 @@ references:
   isSpec: "True"
   fullName: SideLoader.CustomStatusEffects.GetOrigEffectPreset
   nameWithType: CustomStatusEffects.GetOrigEffectPreset
-- uid: SideLoader.CustomStatusEffects.GetOrigStatusEffect(System.String,System.Boolean)
-  name: GetOrigStatusEffect(String, Boolean)
-  href: api/SideLoader.CustomStatusEffects.html#SideLoader_CustomStatusEffects_GetOrigStatusEffect_System_String_System_Boolean_
-  commentId: M:SideLoader.CustomStatusEffects.GetOrigStatusEffect(System.String,System.Boolean)
-  fullName: SideLoader.CustomStatusEffects.GetOrigStatusEffect(System.String, System.Boolean)
-  nameWithType: CustomStatusEffects.GetOrigStatusEffect(String, Boolean)
+- uid: SideLoader.CustomStatusEffects.GetOrigStatusEffect(System.String)
+  name: GetOrigStatusEffect(String)
+  href: api/SideLoader.CustomStatusEffects.html#SideLoader_CustomStatusEffects_GetOrigStatusEffect_System_String_
+  commentId: M:SideLoader.CustomStatusEffects.GetOrigStatusEffect(System.String)
+  fullName: SideLoader.CustomStatusEffects.GetOrigStatusEffect(System.String)
+  nameWithType: CustomStatusEffects.GetOrigStatusEffect(String)
 - uid: SideLoader.CustomStatusEffects.GetOrigStatusEffect*
   name: GetOrigStatusEffect
   href: api/SideLoader.CustomStatusEffects.html#SideLoader_CustomStatusEffects_GetOrigStatusEffect_
@@ -1489,6 +1585,18 @@ references:
   commentId: T:SideLoader.SL
   fullName: SideLoader.SL
   nameWithType: SL
+- uid: SideLoader.SL._GENERATED
+  name: _GENERATED
+  href: api/SideLoader.SL.html#SideLoader_SL__GENERATED
+  commentId: F:SideLoader.SL._GENERATED
+  fullName: SideLoader.SL._GENERATED
+  nameWithType: SL._GENERATED
+- uid: SideLoader.SL._INTERNAL
+  name: _INTERNAL
+  href: api/SideLoader.SL.html#SideLoader_SL__INTERNAL
+  commentId: F:SideLoader.SL._INTERNAL
+  fullName: SideLoader.SL._INTERNAL
+  nameWithType: SL._INTERNAL
 - uid: SideLoader.SL.BeforePacksLoaded
   name: BeforePacksLoaded
   href: api/SideLoader.SL.html#SideLoader_SL_BeforePacksLoaded
@@ -1501,6 +1609,12 @@ references:
   commentId: M:SideLoader.SL.DestroyChildren(UnityEngine.Transform,System.Boolean,System.Boolean)
   fullName: SideLoader.SL.DestroyChildren(UnityEngine.Transform, System.Boolean, System.Boolean)
   nameWithType: SL.DestroyChildren(Transform, Boolean, Boolean)
+- uid: SideLoader.SL.DestroyChildren(UnityEngine.Transform,System.Boolean,System.Boolean,System.Boolean)
+  name: DestroyChildren(Transform, Boolean, Boolean, Boolean)
+  href: api/SideLoader.SL.html#SideLoader_SL_DestroyChildren_UnityEngine_Transform_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:SideLoader.SL.DestroyChildren(UnityEngine.Transform,System.Boolean,System.Boolean,System.Boolean)
+  fullName: SideLoader.SL.DestroyChildren(UnityEngine.Transform, System.Boolean, System.Boolean, System.Boolean)
+  nameWithType: SL.DestroyChildren(Transform, Boolean, Boolean, Boolean)
 - uid: SideLoader.SL.DestroyChildren*
   name: DestroyChildren
   href: api/SideLoader.SL.html#SideLoader_SL_DestroyChildren_
@@ -1586,6 +1700,32 @@ references:
   commentId: E:SideLoader.SL.INTERNAL_ApplyStatuses
   fullName: SideLoader.SL.INTERNAL_ApplyStatuses
   nameWithType: SL.INTERNAL_ApplyStatuses
+- uid: SideLoader.SL.INTERNAL_FOLDER
+  name: INTERNAL_FOLDER
+  href: api/SideLoader.SL.html#SideLoader_SL_INTERNAL_FOLDER
+  commentId: P:SideLoader.SL.INTERNAL_FOLDER
+  fullName: SideLoader.SL.INTERNAL_FOLDER
+  nameWithType: SL.INTERNAL_FOLDER
+- uid: SideLoader.SL.INTERNAL_FOLDER*
+  name: INTERNAL_FOLDER
+  href: api/SideLoader.SL.html#SideLoader_SL_INTERNAL_FOLDER_
+  commentId: Overload:SideLoader.SL.INTERNAL_FOLDER
+  isSpec: "True"
+  fullName: SideLoader.SL.INTERNAL_FOLDER
+  nameWithType: SL.INTERNAL_FOLDER
+- uid: SideLoader.SL.Internal_Pack
+  name: Internal_Pack
+  href: api/SideLoader.SL.html#SideLoader_SL_Internal_Pack
+  commentId: P:SideLoader.SL.Internal_Pack
+  fullName: SideLoader.SL.Internal_Pack
+  nameWithType: SL.Internal_Pack
+- uid: SideLoader.SL.Internal_Pack*
+  name: Internal_Pack
+  href: api/SideLoader.SL.html#SideLoader_SL_Internal_Pack_
+  commentId: Overload:SideLoader.SL.Internal_Pack
+  isSpec: "True"
+  fullName: SideLoader.SL.Internal_Pack
+  nameWithType: SL.Internal_Pack
 - uid: SideLoader.SL.LoadAssetBundle(System.String)
   name: LoadAssetBundle(String)
   href: api/SideLoader.SL.html#SideLoader_SL_LoadAssetBundle_System_String_
@@ -1675,12 +1815,12 @@ references:
   isSpec: "True"
   fullName: SideLoader.SL.PLUGINS_FOLDER
   nameWithType: SL.PLUGINS_FOLDER
-- uid: SideLoader.SL.Setup
-  name: Setup()
-  href: api/SideLoader.SL.html#SideLoader_SL_Setup
-  commentId: M:SideLoader.SL.Setup
-  fullName: SideLoader.SL.Setup()
-  nameWithType: SL.Setup()
+- uid: SideLoader.SL.Setup(System.Boolean)
+  name: Setup(Boolean)
+  href: api/SideLoader.SL.html#SideLoader_SL_Setup_System_Boolean_
+  commentId: M:SideLoader.SL.Setup(System.Boolean)
+  fullName: SideLoader.SL.Setup(System.Boolean)
+  nameWithType: SL.Setup(Boolean)
 - uid: SideLoader.SL.Setup*
   name: Setup
   href: api/SideLoader.SL.html#SideLoader_SL_Setup_
@@ -1716,6 +1856,100 @@ references:
   commentId: F:SideLoader.SL.VERSION
   fullName: SideLoader.SL.VERSION
   nameWithType: SL.VERSION
+- uid: SideLoader.SL_AchievementOnEffect
+  name: SL_AchievementOnEffect
+  href: api/SideLoader.SL_AchievementOnEffect.html
+  commentId: T:SideLoader.SL_AchievementOnEffect
+  fullName: SideLoader.SL_AchievementOnEffect
+  nameWithType: SL_AchievementOnEffect
+- uid: SideLoader.SL_AchievementOnEffect.ApplyToComponent*
+  name: ApplyToComponent
+  href: api/SideLoader.SL_AchievementOnEffect.html#SideLoader_SL_AchievementOnEffect_ApplyToComponent_
+  commentId: Overload:SideLoader.SL_AchievementOnEffect.ApplyToComponent
+  isSpec: "True"
+  fullName: SideLoader.SL_AchievementOnEffect.ApplyToComponent
+  nameWithType: SL_AchievementOnEffect.ApplyToComponent
+- uid: SideLoader.SL_AchievementOnEffect.ApplyToComponent``1(``0)
+  name: ApplyToComponent<T>(T)
+  href: api/SideLoader.SL_AchievementOnEffect.html#SideLoader_SL_AchievementOnEffect_ApplyToComponent__1___0_
+  commentId: M:SideLoader.SL_AchievementOnEffect.ApplyToComponent``1(``0)
+  name.vb: ApplyToComponent(Of T)(T)
+  fullName: SideLoader.SL_AchievementOnEffect.ApplyToComponent<T>(T)
+  fullName.vb: SideLoader.SL_AchievementOnEffect.ApplyToComponent(Of T)(T)
+  nameWithType: SL_AchievementOnEffect.ApplyToComponent<T>(T)
+  nameWithType.vb: SL_AchievementOnEffect.ApplyToComponent(Of T)(T)
+- uid: SideLoader.SL_AchievementOnEffect.SerializeEffect*
+  name: SerializeEffect
+  href: api/SideLoader.SL_AchievementOnEffect.html#SideLoader_SL_AchievementOnEffect_SerializeEffect_
+  commentId: Overload:SideLoader.SL_AchievementOnEffect.SerializeEffect
+  isSpec: "True"
+  fullName: SideLoader.SL_AchievementOnEffect.SerializeEffect
+  nameWithType: SL_AchievementOnEffect.SerializeEffect
+- uid: SideLoader.SL_AchievementOnEffect.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name: SerializeEffect<T>(T, SL_Effect)
+  href: api/SideLoader.SL_AchievementOnEffect.html#SideLoader_SL_AchievementOnEffect_SerializeEffect__1___0_SideLoader_SL_Effect_
+  commentId: M:SideLoader.SL_AchievementOnEffect.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name.vb: SerializeEffect(Of T)(T, SL_Effect)
+  fullName: SideLoader.SL_AchievementOnEffect.SerializeEffect<T>(T, SideLoader.SL_Effect)
+  fullName.vb: SideLoader.SL_AchievementOnEffect.SerializeEffect(Of T)(T, SideLoader.SL_Effect)
+  nameWithType: SL_AchievementOnEffect.SerializeEffect<T>(T, SL_Effect)
+  nameWithType.vb: SL_AchievementOnEffect.SerializeEffect(Of T)(T, SL_Effect)
+- uid: SideLoader.SL_AchievementOnEffect.UnlockedAchievement
+  name: UnlockedAchievement
+  href: api/SideLoader.SL_AchievementOnEffect.html#SideLoader_SL_AchievementOnEffect_UnlockedAchievement
+  commentId: F:SideLoader.SL_AchievementOnEffect.UnlockedAchievement
+  fullName: SideLoader.SL_AchievementOnEffect.UnlockedAchievement
+  nameWithType: SL_AchievementOnEffect.UnlockedAchievement
+- uid: SideLoader.SL_AchievementSetStatOnEffect
+  name: SL_AchievementSetStatOnEffect
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html
+  commentId: T:SideLoader.SL_AchievementSetStatOnEffect
+  fullName: SideLoader.SL_AchievementSetStatOnEffect
+  nameWithType: SL_AchievementSetStatOnEffect
+- uid: SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent*
+  name: ApplyToComponent
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html#SideLoader_SL_AchievementSetStatOnEffect_ApplyToComponent_
+  commentId: Overload:SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent
+  isSpec: "True"
+  fullName: SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent
+  nameWithType: SL_AchievementSetStatOnEffect.ApplyToComponent
+- uid: SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent``1(``0)
+  name: ApplyToComponent<T>(T)
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html#SideLoader_SL_AchievementSetStatOnEffect_ApplyToComponent__1___0_
+  commentId: M:SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent``1(``0)
+  name.vb: ApplyToComponent(Of T)(T)
+  fullName: SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent<T>(T)
+  fullName.vb: SideLoader.SL_AchievementSetStatOnEffect.ApplyToComponent(Of T)(T)
+  nameWithType: SL_AchievementSetStatOnEffect.ApplyToComponent<T>(T)
+  nameWithType.vb: SL_AchievementSetStatOnEffect.ApplyToComponent(Of T)(T)
+- uid: SideLoader.SL_AchievementSetStatOnEffect.IncreaseAmount
+  name: IncreaseAmount
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html#SideLoader_SL_AchievementSetStatOnEffect_IncreaseAmount
+  commentId: F:SideLoader.SL_AchievementSetStatOnEffect.IncreaseAmount
+  fullName: SideLoader.SL_AchievementSetStatOnEffect.IncreaseAmount
+  nameWithType: SL_AchievementSetStatOnEffect.IncreaseAmount
+- uid: SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect*
+  name: SerializeEffect
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html#SideLoader_SL_AchievementSetStatOnEffect_SerializeEffect_
+  commentId: Overload:SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect
+  isSpec: "True"
+  fullName: SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect
+  nameWithType: SL_AchievementSetStatOnEffect.SerializeEffect
+- uid: SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name: SerializeEffect<T>(T, SL_Effect)
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html#SideLoader_SL_AchievementSetStatOnEffect_SerializeEffect__1___0_SideLoader_SL_Effect_
+  commentId: M:SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name.vb: SerializeEffect(Of T)(T, SL_Effect)
+  fullName: SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect<T>(T, SideLoader.SL_Effect)
+  fullName.vb: SideLoader.SL_AchievementSetStatOnEffect.SerializeEffect(Of T)(T, SideLoader.SL_Effect)
+  nameWithType: SL_AchievementSetStatOnEffect.SerializeEffect<T>(T, SL_Effect)
+  nameWithType.vb: SL_AchievementSetStatOnEffect.SerializeEffect(Of T)(T, SL_Effect)
+- uid: SideLoader.SL_AchievementSetStatOnEffect.StatToChange
+  name: StatToChange
+  href: api/SideLoader.SL_AchievementSetStatOnEffect.html#SideLoader_SL_AchievementSetStatOnEffect_StatToChange
+  commentId: F:SideLoader.SL_AchievementSetStatOnEffect.StatToChange
+  fullName: SideLoader.SL_AchievementSetStatOnEffect.StatToChange
+  nameWithType: SL_AchievementSetStatOnEffect.StatToChange
 - uid: SideLoader.SL_AddBoonEffect
   name: SL_AddBoonEffect
   href: api/SideLoader.SL_AddBoonEffect.html
@@ -1766,6 +2000,18 @@ references:
   commentId: T:SideLoader.SL_AddStatusEffect
   fullName: SideLoader.SL_AddStatusEffect
   nameWithType: SL_AddStatusEffect
+- uid: SideLoader.SL_AddStatusEffect.AdditionalLevel
+  name: AdditionalLevel
+  href: api/SideLoader.SL_AddStatusEffect.html#SideLoader_SL_AddStatusEffect_AdditionalLevel
+  commentId: F:SideLoader.SL_AddStatusEffect.AdditionalLevel
+  fullName: SideLoader.SL_AddStatusEffect.AdditionalLevel
+  nameWithType: SL_AddStatusEffect.AdditionalLevel
+- uid: SideLoader.SL_AddStatusEffect.AffectController
+  name: AffectController
+  href: api/SideLoader.SL_AddStatusEffect.html#SideLoader_SL_AddStatusEffect_AffectController
+  commentId: F:SideLoader.SL_AddStatusEffect.AffectController
+  fullName: SideLoader.SL_AddStatusEffect.AffectController
+  nameWithType: SL_AddStatusEffect.AffectController
 - uid: SideLoader.SL_AddStatusEffect.ApplyToComponent*
   name: ApplyToComponent
   href: api/SideLoader.SL_AddStatusEffect.html#SideLoader_SL_AddStatusEffect_ApplyToComponent_
@@ -1788,6 +2034,12 @@ references:
   commentId: F:SideLoader.SL_AddStatusEffect.ChanceToContract
   fullName: SideLoader.SL_AddStatusEffect.ChanceToContract
   nameWithType: SL_AddStatusEffect.ChanceToContract
+- uid: SideLoader.SL_AddStatusEffect.NoDealer
+  name: NoDealer
+  href: api/SideLoader.SL_AddStatusEffect.html#SideLoader_SL_AddStatusEffect_NoDealer
+  commentId: F:SideLoader.SL_AddStatusEffect.NoDealer
+  fullName: SideLoader.SL_AddStatusEffect.NoDealer
+  nameWithType: SL_AddStatusEffect.NoDealer
 - uid: SideLoader.SL_AddStatusEffect.SerializeEffect*
   name: SerializeEffect
   href: api/SideLoader.SL_AddStatusEffect.html#SideLoader_SL_AddStatusEffect_SerializeEffect_
@@ -2604,6 +2856,44 @@ references:
   commentId: F:SideLoader.SL_AffectStat.Stat_Tag
   fullName: SideLoader.SL_AffectStat.Stat_Tag
   nameWithType: SL_AffectStat.Stat_Tag
+- uid: SideLoader.SL_Ammunition
+  name: SL_Ammunition
+  href: api/SideLoader.SL_Ammunition.html
+  commentId: T:SideLoader.SL_Ammunition
+  fullName: SideLoader.SL_Ammunition
+  nameWithType: SL_Ammunition
+- uid: SideLoader.SL_Ammunition.ApplyToItem(Item)
+  name: ApplyToItem(Item)
+  href: api/SideLoader.SL_Ammunition.html#SideLoader_SL_Ammunition_ApplyToItem_Item_
+  commentId: M:SideLoader.SL_Ammunition.ApplyToItem(Item)
+  fullName: SideLoader.SL_Ammunition.ApplyToItem(Item)
+  nameWithType: SL_Ammunition.ApplyToItem(Item)
+- uid: SideLoader.SL_Ammunition.ApplyToItem*
+  name: ApplyToItem
+  href: api/SideLoader.SL_Ammunition.html#SideLoader_SL_Ammunition_ApplyToItem_
+  commentId: Overload:SideLoader.SL_Ammunition.ApplyToItem
+  isSpec: "True"
+  fullName: SideLoader.SL_Ammunition.ApplyToItem
+  nameWithType: SL_Ammunition.ApplyToItem
+- uid: SideLoader.SL_Ammunition.PoolCapacity
+  name: PoolCapacity
+  href: api/SideLoader.SL_Ammunition.html#SideLoader_SL_Ammunition_PoolCapacity
+  commentId: F:SideLoader.SL_Ammunition.PoolCapacity
+  fullName: SideLoader.SL_Ammunition.PoolCapacity
+  nameWithType: SL_Ammunition.PoolCapacity
+- uid: SideLoader.SL_Ammunition.SerializeItem(Item,SideLoader.SL_Item)
+  name: SerializeItem(Item, SL_Item)
+  href: api/SideLoader.SL_Ammunition.html#SideLoader_SL_Ammunition_SerializeItem_Item_SideLoader_SL_Item_
+  commentId: M:SideLoader.SL_Ammunition.SerializeItem(Item,SideLoader.SL_Item)
+  fullName: SideLoader.SL_Ammunition.SerializeItem(Item, SideLoader.SL_Item)
+  nameWithType: SL_Ammunition.SerializeItem(Item, SL_Item)
+- uid: SideLoader.SL_Ammunition.SerializeItem*
+  name: SerializeItem
+  href: api/SideLoader.SL_Ammunition.html#SideLoader_SL_Ammunition_SerializeItem_
+  commentId: Overload:SideLoader.SL_Ammunition.SerializeItem
+  isSpec: "True"
+  fullName: SideLoader.SL_Ammunition.SerializeItem
+  nameWithType: SL_Ammunition.SerializeItem
 - uid: SideLoader.SL_AngleFwdToTargetFwdCondition
   name: SL_AngleFwdToTargetFwdCondition
   href: api/SideLoader.SL_AngleFwdToTargetFwdCondition.html
@@ -3763,6 +4053,15 @@ references:
   commentId: F:SideLoader.SL_Damage.Damage
   fullName: SideLoader.SL_Damage.Damage
   nameWithType: SL_Damage.Damage
+- uid: SideLoader.SL_Damage.GetDamageList(SideLoader.SL_Damage[])
+  name: GetDamageList(SL_Damage[])
+  href: api/SideLoader.SL_Damage.html#SideLoader_SL_Damage_GetDamageList_SideLoader_SL_Damage___
+  commentId: M:SideLoader.SL_Damage.GetDamageList(SideLoader.SL_Damage[])
+  name.vb: GetDamageList(SL_Damage())
+  fullName: SideLoader.SL_Damage.GetDamageList(SideLoader.SL_Damage[])
+  fullName.vb: SideLoader.SL_Damage.GetDamageList(SideLoader.SL_Damage())
+  nameWithType: SL_Damage.GetDamageList(SL_Damage[])
+  nameWithType.vb: SL_Damage.GetDamageList(SL_Damage())
 - uid: SideLoader.SL_Damage.GetDamageList(System.Collections.Generic.List{SideLoader.SL_Damage})
   name: GetDamageList(List<SL_Damage>)
   href: api/SideLoader.SL_Damage.html#SideLoader_SL_Damage_GetDamageList_System_Collections_Generic_List_SideLoader_SL_Damage__
@@ -4209,6 +4508,38 @@ references:
   fullName.vb: SideLoader.SL_DetachParasite.SerializeEffect(Of T)(T, SideLoader.SL_Effect)
   nameWithType: SL_DetachParasite.SerializeEffect<T>(T, SL_Effect)
   nameWithType.vb: SL_DetachParasite.SerializeEffect(Of T)(T, SL_Effect)
+- uid: SideLoader.SL_DualMeleeWeapon
+  name: SL_DualMeleeWeapon
+  href: api/SideLoader.SL_DualMeleeWeapon.html
+  commentId: T:SideLoader.SL_DualMeleeWeapon
+  fullName: SideLoader.SL_DualMeleeWeapon
+  nameWithType: SL_DualMeleeWeapon
+- uid: SideLoader.SL_DualMeleeWeapon.ApplyToItem(Item)
+  name: ApplyToItem(Item)
+  href: api/SideLoader.SL_DualMeleeWeapon.html#SideLoader_SL_DualMeleeWeapon_ApplyToItem_Item_
+  commentId: M:SideLoader.SL_DualMeleeWeapon.ApplyToItem(Item)
+  fullName: SideLoader.SL_DualMeleeWeapon.ApplyToItem(Item)
+  nameWithType: SL_DualMeleeWeapon.ApplyToItem(Item)
+- uid: SideLoader.SL_DualMeleeWeapon.ApplyToItem*
+  name: ApplyToItem
+  href: api/SideLoader.SL_DualMeleeWeapon.html#SideLoader_SL_DualMeleeWeapon_ApplyToItem_
+  commentId: Overload:SideLoader.SL_DualMeleeWeapon.ApplyToItem
+  isSpec: "True"
+  fullName: SideLoader.SL_DualMeleeWeapon.ApplyToItem
+  nameWithType: SL_DualMeleeWeapon.ApplyToItem
+- uid: SideLoader.SL_DualMeleeWeapon.SerializeItem(Item,SideLoader.SL_Item)
+  name: SerializeItem(Item, SL_Item)
+  href: api/SideLoader.SL_DualMeleeWeapon.html#SideLoader_SL_DualMeleeWeapon_SerializeItem_Item_SideLoader_SL_Item_
+  commentId: M:SideLoader.SL_DualMeleeWeapon.SerializeItem(Item,SideLoader.SL_Item)
+  fullName: SideLoader.SL_DualMeleeWeapon.SerializeItem(Item, SideLoader.SL_Item)
+  nameWithType: SL_DualMeleeWeapon.SerializeItem(Item, SL_Item)
+- uid: SideLoader.SL_DualMeleeWeapon.SerializeItem*
+  name: SerializeItem
+  href: api/SideLoader.SL_DualMeleeWeapon.html#SideLoader_SL_DualMeleeWeapon_SerializeItem_
+  commentId: Overload:SideLoader.SL_DualMeleeWeapon.SerializeItem
+  isSpec: "True"
+  fullName: SideLoader.SL_DualMeleeWeapon.SerializeItem
+  nameWithType: SL_DualMeleeWeapon.SerializeItem
 - uid: SideLoader.SL_Effect
   name: SL_Effect
   href: api/SideLoader.SL_Effect.html
@@ -4380,15 +4711,15 @@ references:
   isSpec: "True"
   fullName: SideLoader.SL_EffectTransform.ApplyToTransform
   nameWithType: SL_EffectTransform.ApplyToTransform
-- uid: SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform,System.Collections.Generic.List{SideLoader.SL_EffectTransform},SideLoader.EffectBehaviours)
-  name: ApplyTransformList(Transform, List<SL_EffectTransform>, EffectBehaviours)
-  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_ApplyTransformList_UnityEngine_Transform_System_Collections_Generic_List_SideLoader_SL_EffectTransform__SideLoader_EffectBehaviours_
-  commentId: M:SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform,System.Collections.Generic.List{SideLoader.SL_EffectTransform},SideLoader.EffectBehaviours)
-  name.vb: ApplyTransformList(Transform, List(Of SL_EffectTransform), EffectBehaviours)
-  fullName: SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform, System.Collections.Generic.List<SideLoader.SL_EffectTransform>, SideLoader.EffectBehaviours)
-  fullName.vb: SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform, System.Collections.Generic.List(Of SideLoader.SL_EffectTransform), SideLoader.EffectBehaviours)
-  nameWithType: SL_EffectTransform.ApplyTransformList(Transform, List<SL_EffectTransform>, EffectBehaviours)
-  nameWithType.vb: SL_EffectTransform.ApplyTransformList(Transform, List(Of SL_EffectTransform), EffectBehaviours)
+- uid: SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform,SideLoader.SL_EffectTransform[],SideLoader.EffectBehaviours)
+  name: ApplyTransformList(Transform, SL_EffectTransform[], EffectBehaviours)
+  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_ApplyTransformList_UnityEngine_Transform_SideLoader_SL_EffectTransform___SideLoader_EffectBehaviours_
+  commentId: M:SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform,SideLoader.SL_EffectTransform[],SideLoader.EffectBehaviours)
+  name.vb: ApplyTransformList(Transform, SL_EffectTransform(), EffectBehaviours)
+  fullName: SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform, SideLoader.SL_EffectTransform[], SideLoader.EffectBehaviours)
+  fullName.vb: SideLoader.SL_EffectTransform.ApplyTransformList(UnityEngine.Transform, SideLoader.SL_EffectTransform(), SideLoader.EffectBehaviours)
+  nameWithType: SL_EffectTransform.ApplyTransformList(Transform, SL_EffectTransform[], EffectBehaviours)
+  nameWithType.vb: SL_EffectTransform.ApplyTransformList(Transform, SL_EffectTransform(), EffectBehaviours)
 - uid: SideLoader.SL_EffectTransform.ApplyTransformList*
   name: ApplyTransformList
   href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_ApplyTransformList_
@@ -4414,6 +4745,19 @@ references:
   commentId: F:SideLoader.SL_EffectTransform.Effects
   fullName: SideLoader.SL_EffectTransform.Effects
   nameWithType: SL_EffectTransform.Effects
+- uid: SideLoader.SL_EffectTransform.HasContent
+  name: HasContent
+  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_HasContent
+  commentId: P:SideLoader.SL_EffectTransform.HasContent
+  fullName: SideLoader.SL_EffectTransform.HasContent
+  nameWithType: SL_EffectTransform.HasContent
+- uid: SideLoader.SL_EffectTransform.HasContent*
+  name: HasContent
+  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_HasContent_
+  commentId: Overload:SideLoader.SL_EffectTransform.HasContent
+  isSpec: "True"
+  fullName: SideLoader.SL_EffectTransform.HasContent
+  nameWithType: SL_EffectTransform.HasContent
 - uid: SideLoader.SL_EffectTransform.ParseTransform(UnityEngine.Transform)
   name: ParseTransform(Transform)
   href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_ParseTransform_UnityEngine_Transform_
@@ -4427,6 +4771,24 @@ references:
   isSpec: "True"
   fullName: SideLoader.SL_EffectTransform.ParseTransform
   nameWithType: SL_EffectTransform.ParseTransform
+- uid: SideLoader.SL_EffectTransform.Position
+  name: Position
+  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_Position
+  commentId: F:SideLoader.SL_EffectTransform.Position
+  fullName: SideLoader.SL_EffectTransform.Position
+  nameWithType: SL_EffectTransform.Position
+- uid: SideLoader.SL_EffectTransform.Rotation
+  name: Rotation
+  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_Rotation
+  commentId: F:SideLoader.SL_EffectTransform.Rotation
+  fullName: SideLoader.SL_EffectTransform.Rotation
+  nameWithType: SL_EffectTransform.Rotation
+- uid: SideLoader.SL_EffectTransform.Scale
+  name: Scale
+  href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_Scale
+  commentId: F:SideLoader.SL_EffectTransform.Scale
+  fullName: SideLoader.SL_EffectTransform.Scale
+  nameWithType: SL_EffectTransform.Scale
 - uid: SideLoader.SL_EffectTransform.TransformName
   name: TransformName
   href: api/SideLoader.SL_EffectTransform.html#SideLoader_SL_EffectTransform_TransformName
@@ -6058,15 +6420,15 @@ references:
   isSpec: "True"
   fullName: SideLoader.SL_ItemExtension.AddToChild
   nameWithType: SL_ItemExtension.AddToChild
-- uid: SideLoader.SL_ItemExtension.ApplyExtensionList(Item,System.Collections.Generic.List{SideLoader.SL_ItemExtension},SideLoader.EditBehaviours)
-  name: ApplyExtensionList(Item, List<SL_ItemExtension>, EditBehaviours)
-  href: api/SideLoader.SL_ItemExtension.html#SideLoader_SL_ItemExtension_ApplyExtensionList_Item_System_Collections_Generic_List_SideLoader_SL_ItemExtension__SideLoader_EditBehaviours_
-  commentId: M:SideLoader.SL_ItemExtension.ApplyExtensionList(Item,System.Collections.Generic.List{SideLoader.SL_ItemExtension},SideLoader.EditBehaviours)
-  name.vb: ApplyExtensionList(Item, List(Of SL_ItemExtension), EditBehaviours)
-  fullName: SideLoader.SL_ItemExtension.ApplyExtensionList(Item, System.Collections.Generic.List<SideLoader.SL_ItemExtension>, SideLoader.EditBehaviours)
-  fullName.vb: SideLoader.SL_ItemExtension.ApplyExtensionList(Item, System.Collections.Generic.List(Of SideLoader.SL_ItemExtension), SideLoader.EditBehaviours)
-  nameWithType: SL_ItemExtension.ApplyExtensionList(Item, List<SL_ItemExtension>, EditBehaviours)
-  nameWithType.vb: SL_ItemExtension.ApplyExtensionList(Item, List(Of SL_ItemExtension), EditBehaviours)
+- uid: SideLoader.SL_ItemExtension.ApplyExtensionList(Item,SideLoader.SL_ItemExtension[],SideLoader.EditBehaviours)
+  name: ApplyExtensionList(Item, SL_ItemExtension[], EditBehaviours)
+  href: api/SideLoader.SL_ItemExtension.html#SideLoader_SL_ItemExtension_ApplyExtensionList_Item_SideLoader_SL_ItemExtension___SideLoader_EditBehaviours_
+  commentId: M:SideLoader.SL_ItemExtension.ApplyExtensionList(Item,SideLoader.SL_ItemExtension[],SideLoader.EditBehaviours)
+  name.vb: ApplyExtensionList(Item, SL_ItemExtension(), EditBehaviours)
+  fullName: SideLoader.SL_ItemExtension.ApplyExtensionList(Item, SideLoader.SL_ItemExtension[], SideLoader.EditBehaviours)
+  fullName.vb: SideLoader.SL_ItemExtension.ApplyExtensionList(Item, SideLoader.SL_ItemExtension(), SideLoader.EditBehaviours)
+  nameWithType: SL_ItemExtension.ApplyExtensionList(Item, SL_ItemExtension[], EditBehaviours)
+  nameWithType.vb: SL_ItemExtension.ApplyExtensionList(Item, SL_ItemExtension(), EditBehaviours)
 - uid: SideLoader.SL_ItemExtension.ApplyExtensionList*
   name: ApplyExtensionList
   href: api/SideLoader.SL_ItemExtension.html#SideLoader_SL_ItemExtension_ApplyExtensionList_
@@ -6233,12 +6595,12 @@ references:
   isSpec: "True"
   fullName: SideLoader.SL_ItemVisual.ApplyToVisuals
   nameWithType: SL_ItemVisual.ApplyToVisuals
-- uid: SideLoader.SL_ItemVisual.ParseVisualToTemplate(ItemVisual)
-  name: ParseVisualToTemplate(ItemVisual)
-  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_ParseVisualToTemplate_ItemVisual_
-  commentId: M:SideLoader.SL_ItemVisual.ParseVisualToTemplate(ItemVisual)
-  fullName: SideLoader.SL_ItemVisual.ParseVisualToTemplate(ItemVisual)
-  nameWithType: SL_ItemVisual.ParseVisualToTemplate(ItemVisual)
+- uid: SideLoader.SL_ItemVisual.ParseVisualToTemplate(Item,SideLoader.VisualPrefabType,ItemVisual)
+  name: ParseVisualToTemplate(Item, VisualPrefabType, ItemVisual)
+  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_ParseVisualToTemplate_Item_SideLoader_VisualPrefabType_ItemVisual_
+  commentId: M:SideLoader.SL_ItemVisual.ParseVisualToTemplate(Item,SideLoader.VisualPrefabType,ItemVisual)
+  fullName: SideLoader.SL_ItemVisual.ParseVisualToTemplate(Item, SideLoader.VisualPrefabType, ItemVisual)
+  nameWithType: SL_ItemVisual.ParseVisualToTemplate(Item, VisualPrefabType, ItemVisual)
 - uid: SideLoader.SL_ItemVisual.ParseVisualToTemplate*
   name: ParseVisualToTemplate
   href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_ParseVisualToTemplate_
@@ -6276,6 +6638,12 @@ references:
   commentId: F:SideLoader.SL_ItemVisual.Prefab_SLPack
   fullName: SideLoader.SL_ItemVisual.Prefab_SLPack
   nameWithType: SL_ItemVisual.Prefab_SLPack
+- uid: SideLoader.SL_ItemVisual.ResourcesPrefabPath
+  name: ResourcesPrefabPath
+  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_ResourcesPrefabPath
+  commentId: F:SideLoader.SL_ItemVisual.ResourcesPrefabPath
+  fullName: SideLoader.SL_ItemVisual.ResourcesPrefabPath
+  nameWithType: SL_ItemVisual.ResourcesPrefabPath
 - uid: SideLoader.SL_ItemVisual.Rotation
   name: Rotation
   href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_Rotation
@@ -6301,25 +6669,69 @@ references:
   isSpec: "True"
   fullName: SideLoader.SL_ItemVisual.SerializeItemVisuals
   nameWithType: SL_ItemVisual.SerializeItemVisuals
-- uid: SideLoader.SL_ItemVisual.SetVisualPrefab(Item,SideLoader.VisualPrefabType,UnityEngine.Transform,UnityEngine.Transform)
-  name: SetVisualPrefab(Item, VisualPrefabType, Transform, Transform)
-  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_SetVisualPrefab_Item_SideLoader_VisualPrefabType_UnityEngine_Transform_UnityEngine_Transform_
-  commentId: M:SideLoader.SL_ItemVisual.SetVisualPrefab(Item,SideLoader.VisualPrefabType,UnityEngine.Transform,UnityEngine.Transform)
-  fullName: SideLoader.SL_ItemVisual.SetVisualPrefab(Item, SideLoader.VisualPrefabType, UnityEngine.Transform, UnityEngine.Transform)
-  nameWithType: SL_ItemVisual.SetVisualPrefab(Item, VisualPrefabType, Transform, Transform)
-- uid: SideLoader.SL_ItemVisual.SetVisualPrefab*
-  name: SetVisualPrefab
-  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_SetVisualPrefab_
-  commentId: Overload:SideLoader.SL_ItemVisual.SetVisualPrefab
+- uid: SideLoader.SL_ItemVisual.SetCustomVisualPrefab(Item,SideLoader.VisualPrefabType,UnityEngine.Transform,UnityEngine.Transform)
+  name: SetCustomVisualPrefab(Item, VisualPrefabType, Transform, Transform)
+  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_SetCustomVisualPrefab_Item_SideLoader_VisualPrefabType_UnityEngine_Transform_UnityEngine_Transform_
+  commentId: M:SideLoader.SL_ItemVisual.SetCustomVisualPrefab(Item,SideLoader.VisualPrefabType,UnityEngine.Transform,UnityEngine.Transform)
+  fullName: SideLoader.SL_ItemVisual.SetCustomVisualPrefab(Item, SideLoader.VisualPrefabType, UnityEngine.Transform, UnityEngine.Transform)
+  nameWithType: SL_ItemVisual.SetCustomVisualPrefab(Item, VisualPrefabType, Transform, Transform)
+- uid: SideLoader.SL_ItemVisual.SetCustomVisualPrefab*
+  name: SetCustomVisualPrefab
+  href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_SetCustomVisualPrefab_
+  commentId: Overload:SideLoader.SL_ItemVisual.SetCustomVisualPrefab
   isSpec: "True"
-  fullName: SideLoader.SL_ItemVisual.SetVisualPrefab
-  nameWithType: SL_ItemVisual.SetVisualPrefab
+  fullName: SideLoader.SL_ItemVisual.SetCustomVisualPrefab
+  nameWithType: SL_ItemVisual.SetCustomVisualPrefab
 - uid: SideLoader.SL_ItemVisual.Type
   name: Type
   href: api/SideLoader.SL_ItemVisual.html#SideLoader_SL_ItemVisual_Type
   commentId: F:SideLoader.SL_ItemVisual.Type
   fullName: SideLoader.SL_ItemVisual.Type
   nameWithType: SL_ItemVisual.Type
+- uid: SideLoader.SL_LearnSkillEffect
+  name: SL_LearnSkillEffect
+  href: api/SideLoader.SL_LearnSkillEffect.html
+  commentId: T:SideLoader.SL_LearnSkillEffect
+  fullName: SideLoader.SL_LearnSkillEffect
+  nameWithType: SL_LearnSkillEffect
+- uid: SideLoader.SL_LearnSkillEffect.ApplyToComponent*
+  name: ApplyToComponent
+  href: api/SideLoader.SL_LearnSkillEffect.html#SideLoader_SL_LearnSkillEffect_ApplyToComponent_
+  commentId: Overload:SideLoader.SL_LearnSkillEffect.ApplyToComponent
+  isSpec: "True"
+  fullName: SideLoader.SL_LearnSkillEffect.ApplyToComponent
+  nameWithType: SL_LearnSkillEffect.ApplyToComponent
+- uid: SideLoader.SL_LearnSkillEffect.ApplyToComponent``1(``0)
+  name: ApplyToComponent<T>(T)
+  href: api/SideLoader.SL_LearnSkillEffect.html#SideLoader_SL_LearnSkillEffect_ApplyToComponent__1___0_
+  commentId: M:SideLoader.SL_LearnSkillEffect.ApplyToComponent``1(``0)
+  name.vb: ApplyToComponent(Of T)(T)
+  fullName: SideLoader.SL_LearnSkillEffect.ApplyToComponent<T>(T)
+  fullName.vb: SideLoader.SL_LearnSkillEffect.ApplyToComponent(Of T)(T)
+  nameWithType: SL_LearnSkillEffect.ApplyToComponent<T>(T)
+  nameWithType.vb: SL_LearnSkillEffect.ApplyToComponent(Of T)(T)
+- uid: SideLoader.SL_LearnSkillEffect.SerializeEffect*
+  name: SerializeEffect
+  href: api/SideLoader.SL_LearnSkillEffect.html#SideLoader_SL_LearnSkillEffect_SerializeEffect_
+  commentId: Overload:SideLoader.SL_LearnSkillEffect.SerializeEffect
+  isSpec: "True"
+  fullName: SideLoader.SL_LearnSkillEffect.SerializeEffect
+  nameWithType: SL_LearnSkillEffect.SerializeEffect
+- uid: SideLoader.SL_LearnSkillEffect.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name: SerializeEffect<T>(T, SL_Effect)
+  href: api/SideLoader.SL_LearnSkillEffect.html#SideLoader_SL_LearnSkillEffect_SerializeEffect__1___0_SideLoader_SL_Effect_
+  commentId: M:SideLoader.SL_LearnSkillEffect.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name.vb: SerializeEffect(Of T)(T, SL_Effect)
+  fullName: SideLoader.SL_LearnSkillEffect.SerializeEffect<T>(T, SideLoader.SL_Effect)
+  fullName.vb: SideLoader.SL_LearnSkillEffect.SerializeEffect(Of T)(T, SideLoader.SL_Effect)
+  nameWithType: SL_LearnSkillEffect.SerializeEffect<T>(T, SL_Effect)
+  nameWithType.vb: SL_LearnSkillEffect.SerializeEffect(Of T)(T, SL_Effect)
+- uid: SideLoader.SL_LearnSkillEffect.SkillID
+  name: SkillID
+  href: api/SideLoader.SL_LearnSkillEffect.html#SideLoader_SL_LearnSkillEffect_SkillID
+  commentId: F:SideLoader.SL_LearnSkillEffect.SkillID
+  fullName: SideLoader.SL_LearnSkillEffect.SkillID
+  nameWithType: SL_LearnSkillEffect.SkillID
 - uid: SideLoader.SL_LightLantern
   name: SL_LightLantern
   href: api/SideLoader.SL_LightLantern.html
@@ -6649,6 +7061,50 @@ references:
   commentId: F:SideLoader.SL_MeleeSkill.Unblockable
   fullName: SideLoader.SL_MeleeSkill.Unblockable
   nameWithType: SL_MeleeSkill.Unblockable
+- uid: SideLoader.SL_MeleeWeapon
+  name: SL_MeleeWeapon
+  href: api/SideLoader.SL_MeleeWeapon.html
+  commentId: T:SideLoader.SL_MeleeWeapon
+  fullName: SideLoader.SL_MeleeWeapon
+  nameWithType: SL_MeleeWeapon
+- uid: SideLoader.SL_MeleeWeapon.ApplyToItem(Item)
+  name: ApplyToItem(Item)
+  href: api/SideLoader.SL_MeleeWeapon.html#SideLoader_SL_MeleeWeapon_ApplyToItem_Item_
+  commentId: M:SideLoader.SL_MeleeWeapon.ApplyToItem(Item)
+  fullName: SideLoader.SL_MeleeWeapon.ApplyToItem(Item)
+  nameWithType: SL_MeleeWeapon.ApplyToItem(Item)
+- uid: SideLoader.SL_MeleeWeapon.ApplyToItem*
+  name: ApplyToItem
+  href: api/SideLoader.SL_MeleeWeapon.html#SideLoader_SL_MeleeWeapon_ApplyToItem_
+  commentId: Overload:SideLoader.SL_MeleeWeapon.ApplyToItem
+  isSpec: "True"
+  fullName: SideLoader.SL_MeleeWeapon.ApplyToItem
+  nameWithType: SL_MeleeWeapon.ApplyToItem
+- uid: SideLoader.SL_MeleeWeapon.LinecastCount
+  name: LinecastCount
+  href: api/SideLoader.SL_MeleeWeapon.html#SideLoader_SL_MeleeWeapon_LinecastCount
+  commentId: F:SideLoader.SL_MeleeWeapon.LinecastCount
+  fullName: SideLoader.SL_MeleeWeapon.LinecastCount
+  nameWithType: SL_MeleeWeapon.LinecastCount
+- uid: SideLoader.SL_MeleeWeapon.Radius
+  name: Radius
+  href: api/SideLoader.SL_MeleeWeapon.html#SideLoader_SL_MeleeWeapon_Radius
+  commentId: F:SideLoader.SL_MeleeWeapon.Radius
+  fullName: SideLoader.SL_MeleeWeapon.Radius
+  nameWithType: SL_MeleeWeapon.Radius
+- uid: SideLoader.SL_MeleeWeapon.SerializeItem(Item,SideLoader.SL_Item)
+  name: SerializeItem(Item, SL_Item)
+  href: api/SideLoader.SL_MeleeWeapon.html#SideLoader_SL_MeleeWeapon_SerializeItem_Item_SideLoader_SL_Item_
+  commentId: M:SideLoader.SL_MeleeWeapon.SerializeItem(Item,SideLoader.SL_Item)
+  fullName: SideLoader.SL_MeleeWeapon.SerializeItem(Item, SideLoader.SL_Item)
+  nameWithType: SL_MeleeWeapon.SerializeItem(Item, SL_Item)
+- uid: SideLoader.SL_MeleeWeapon.SerializeItem*
+  name: SerializeItem
+  href: api/SideLoader.SL_MeleeWeapon.html#SideLoader_SL_MeleeWeapon_SerializeItem_
+  commentId: Overload:SideLoader.SL_MeleeWeapon.SerializeItem
+  isSpec: "True"
+  fullName: SideLoader.SL_MeleeWeapon.SerializeItem
+  nameWithType: SL_MeleeWeapon.SerializeItem
 - uid: SideLoader.SL_MostRecentCondition
   name: SL_MostRecentCondition
   href: api/SideLoader.SL_MostRecentCondition.html
@@ -7026,6 +7482,673 @@ references:
   commentId: F:SideLoader.SL_PlaySoundEffect.Sounds
   fullName: SideLoader.SL_PlaySoundEffect.Sounds
   nameWithType: SL_PlaySoundEffect.Sounds
+- uid: SideLoader.SL_PlayVFX
+  name: SL_PlayVFX
+  href: api/SideLoader.SL_PlayVFX.html
+  commentId: T:SideLoader.SL_PlayVFX
+  fullName: SideLoader.SL_PlayVFX
+  nameWithType: SL_PlayVFX
+- uid: SideLoader.SL_PlayVFX.ApplyToComponent*
+  name: ApplyToComponent
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_ApplyToComponent_
+  commentId: Overload:SideLoader.SL_PlayVFX.ApplyToComponent
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.ApplyToComponent
+  nameWithType: SL_PlayVFX.ApplyToComponent
+- uid: SideLoader.SL_PlayVFX.ApplyToComponent``1(``0)
+  name: ApplyToComponent<T>(T)
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_ApplyToComponent__1___0_
+  commentId: M:SideLoader.SL_PlayVFX.ApplyToComponent``1(``0)
+  name.vb: ApplyToComponent(Of T)(T)
+  fullName: SideLoader.SL_PlayVFX.ApplyToComponent<T>(T)
+  fullName.vb: SideLoader.SL_PlayVFX.ApplyToComponent(Of T)(T)
+  nameWithType: SL_PlayVFX.ApplyToComponent<T>(T)
+  nameWithType.vb: SL_PlayVFX.ApplyToComponent(Of T)(T)
+- uid: SideLoader.SL_PlayVFX.BuildPrefabDictionary
+  name: BuildPrefabDictionary()
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_BuildPrefabDictionary
+  commentId: M:SideLoader.SL_PlayVFX.BuildPrefabDictionary
+  fullName: SideLoader.SL_PlayVFX.BuildPrefabDictionary()
+  nameWithType: SL_PlayVFX.BuildPrefabDictionary()
+- uid: SideLoader.SL_PlayVFX.BuildPrefabDictionary*
+  name: BuildPrefabDictionary
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_BuildPrefabDictionary_
+  commentId: Overload:SideLoader.SL_PlayVFX.BuildPrefabDictionary
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.BuildPrefabDictionary
+  nameWithType: SL_PlayVFX.BuildPrefabDictionary
+- uid: SideLoader.SL_PlayVFX.DebugVfxNames
+  name: DebugVfxNames()
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_DebugVfxNames
+  commentId: M:SideLoader.SL_PlayVFX.DebugVfxNames
+  fullName: SideLoader.SL_PlayVFX.DebugVfxNames()
+  nameWithType: SL_PlayVFX.DebugVfxNames()
+- uid: SideLoader.SL_PlayVFX.DebugVfxNames*
+  name: DebugVfxNames
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_DebugVfxNames_
+  commentId: Overload:SideLoader.SL_PlayVFX.DebugVfxNames
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.DebugVfxNames
+  nameWithType: SL_PlayVFX.DebugVfxNames
+- uid: SideLoader.SL_PlayVFX.DontInstantiateNew
+  name: DontInstantiateNew
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_DontInstantiateNew
+  commentId: F:SideLoader.SL_PlayVFX.DontInstantiateNew
+  fullName: SideLoader.SL_PlayVFX.DontInstantiateNew
+  nameWithType: SL_PlayVFX.DontInstantiateNew
+- uid: SideLoader.SL_PlayVFX.GetSafeVFXName(VFXSystem)
+  name: GetSafeVFXName(VFXSystem)
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_GetSafeVFXName_VFXSystem_
+  commentId: M:SideLoader.SL_PlayVFX.GetSafeVFXName(VFXSystem)
+  fullName: SideLoader.SL_PlayVFX.GetSafeVFXName(VFXSystem)
+  nameWithType: SL_PlayVFX.GetSafeVFXName(VFXSystem)
+- uid: SideLoader.SL_PlayVFX.GetSafeVFXName*
+  name: GetSafeVFXName
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_GetSafeVFXName_
+  commentId: Overload:SideLoader.SL_PlayVFX.GetSafeVFXName
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.GetSafeVFXName
+  nameWithType: SL_PlayVFX.GetSafeVFXName
+- uid: SideLoader.SL_PlayVFX.GetVfxSystem(SideLoader.SL_PlayVFX.VFXPrefabs)
+  name: GetVfxSystem(SL_PlayVFX.VFXPrefabs)
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_GetVfxSystem_SideLoader_SL_PlayVFX_VFXPrefabs_
+  commentId: M:SideLoader.SL_PlayVFX.GetVfxSystem(SideLoader.SL_PlayVFX.VFXPrefabs)
+  fullName: SideLoader.SL_PlayVFX.GetVfxSystem(SideLoader.SL_PlayVFX.VFXPrefabs)
+  nameWithType: SL_PlayVFX.GetVfxSystem(SL_PlayVFX.VFXPrefabs)
+- uid: SideLoader.SL_PlayVFX.GetVfxSystem*
+  name: GetVfxSystem
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_GetVfxSystem_
+  commentId: Overload:SideLoader.SL_PlayVFX.GetVfxSystem
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.GetVfxSystem
+  nameWithType: SL_PlayVFX.GetVfxSystem
+- uid: SideLoader.SL_PlayVFX.GetVFXSystemEnum(VFXSystem)
+  name: GetVFXSystemEnum(VFXSystem)
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_GetVFXSystemEnum_VFXSystem_
+  commentId: M:SideLoader.SL_PlayVFX.GetVFXSystemEnum(VFXSystem)
+  fullName: SideLoader.SL_PlayVFX.GetVFXSystemEnum(VFXSystem)
+  nameWithType: SL_PlayVFX.GetVFXSystemEnum(VFXSystem)
+- uid: SideLoader.SL_PlayVFX.GetVFXSystemEnum*
+  name: GetVFXSystemEnum
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_GetVFXSystemEnum_
+  commentId: Overload:SideLoader.SL_PlayVFX.GetVFXSystemEnum
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.GetVFXSystemEnum
+  nameWithType: SL_PlayVFX.GetVFXSystemEnum
+- uid: SideLoader.SL_PlayVFX.HitPos
+  name: HitPos
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_HitPos
+  commentId: F:SideLoader.SL_PlayVFX.HitPos
+  fullName: SideLoader.SL_PlayVFX.HitPos
+  nameWithType: SL_PlayVFX.HitPos
+- uid: SideLoader.SL_PlayVFX.ParentMode
+  name: ParentMode
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_ParentMode
+  commentId: F:SideLoader.SL_PlayVFX.ParentMode
+  fullName: SideLoader.SL_PlayVFX.ParentMode
+  nameWithType: SL_PlayVFX.ParentMode
+- uid: SideLoader.SL_PlayVFX.SerializeEffect*
+  name: SerializeEffect
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_SerializeEffect_
+  commentId: Overload:SideLoader.SL_PlayVFX.SerializeEffect
+  isSpec: "True"
+  fullName: SideLoader.SL_PlayVFX.SerializeEffect
+  nameWithType: SL_PlayVFX.SerializeEffect
+- uid: SideLoader.SL_PlayVFX.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name: SerializeEffect<T>(T, SL_Effect)
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_SerializeEffect__1___0_SideLoader_SL_Effect_
+  commentId: M:SideLoader.SL_PlayVFX.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name.vb: SerializeEffect(Of T)(T, SL_Effect)
+  fullName: SideLoader.SL_PlayVFX.SerializeEffect<T>(T, SideLoader.SL_Effect)
+  fullName.vb: SideLoader.SL_PlayVFX.SerializeEffect(Of T)(T, SideLoader.SL_Effect)
+  nameWithType: SL_PlayVFX.SerializeEffect<T>(T, SL_Effect)
+  nameWithType.vb: SL_PlayVFX.SerializeEffect(Of T)(T, SL_Effect)
+- uid: SideLoader.SL_PlayVFX.VFXPrefab
+  name: VFXPrefab
+  href: api/SideLoader.SL_PlayVFX.html#SideLoader_SL_PlayVFX_VFXPrefab
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefab
+  fullName: SideLoader.SL_PlayVFX.VFXPrefab
+  nameWithType: SL_PlayVFX.VFXPrefab
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs
+  name: SL_PlayVFX.VFXPrefabs
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html
+  commentId: T:SideLoader.SL_PlayVFX.VFXPrefabs
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs
+  nameWithType: SL_PlayVFX.VFXPrefabs
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.BloodLeechTriggerVFX
+  name: BloodLeechTriggerVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_BloodLeechTriggerVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.BloodLeechTriggerVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.BloodLeechTriggerVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.BloodLeechTriggerVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.CorruptionSpirit_v_VFXDeathGhost
+  name: CorruptionSpirit_v_VFXDeathGhost
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_CorruptionSpirit_v_VFXDeathGhost
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.CorruptionSpirit_v_VFXDeathGhost
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.CorruptionSpirit_v_VFXDeathGhost
+  nameWithType: SL_PlayVFX.VFXPrefabs.CorruptionSpirit_v_VFXDeathGhost
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.ElemDecayBuffFX
+  name: ElemDecayBuffFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_ElemDecayBuffFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.ElemDecayBuffFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.ElemDecayBuffFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.ElemDecayBuffFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.ElemEtherealBuffFX
+  name: ElemEtherealBuffFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_ElemEtherealBuffFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.ElemEtherealBuffFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.ElemEtherealBuffFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.ElemEtherealBuffFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.ElemFireBuffFX
+  name: ElemFireBuffFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_ElemFireBuffFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.ElemFireBuffFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.ElemFireBuffFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.ElemFireBuffFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.ElemFrostBuffFX
+  name: ElemFrostBuffFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_ElemFrostBuffFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.ElemFrostBuffFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.ElemFrostBuffFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.ElemFrostBuffFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.ElemLightBuffFX
+  name: ElemLightBuffFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_ElemLightBuffFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.ElemLightBuffFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.ElemLightBuffFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.ElemLightBuffFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXCopper
+  name: Flamethrower_FXCopper
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_Flamethrower_FXCopper
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXCopper
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXCopper
+  nameWithType: SL_PlayVFX.VFXPrefabs.Flamethrower_FXCopper
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXDecay
+  name: Flamethrower_FXDecay
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_Flamethrower_FXDecay
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXDecay
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXDecay
+  nameWithType: SL_PlayVFX.VFXPrefabs.Flamethrower_FXDecay
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXEthereal
+  name: Flamethrower_FXEthereal
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_Flamethrower_FXEthereal
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXEthereal
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXEthereal
+  nameWithType: SL_PlayVFX.VFXPrefabs.Flamethrower_FXEthereal
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXFire
+  name: Flamethrower_FXFire
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_Flamethrower_FXFire
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXFire
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXFire
+  nameWithType: SL_PlayVFX.VFXPrefabs.Flamethrower_FXFire
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXIce
+  name: Flamethrower_FXIce
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_Flamethrower_FXIce
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXIce
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXIce
+  nameWithType: SL_PlayVFX.VFXPrefabs.Flamethrower_FXIce
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXLightning
+  name: Flamethrower_FXLightning
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_Flamethrower_FXLightning
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXLightning
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.Flamethrower_FXLightning
+  nameWithType: SL_PlayVFX.VFXPrefabs.Flamethrower_FXLightning
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexBleedingVFX
+  name: HexBleedingVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexBleedingVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexBleedingVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexBleedingVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexBleedingVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexBurningVFX
+  name: HexBurningVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexBurningVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexBurningVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexBurningVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexBurningVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexChillVFX
+  name: HexChillVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexChillVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexChillVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexChillVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexChillVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexConfusionVFX
+  name: HexConfusionVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexConfusionVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexConfusionVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexConfusionVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexConfusionVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexCurseVFX
+  name: HexCurseVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexCurseVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexCurseVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexCurseVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexCurseVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexDoomVFX
+  name: HexDoomVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexDoomVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexDoomVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexDoomVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexDoomVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexHauntedVFX
+  name: HexHauntedVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexHauntedVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexHauntedVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexHauntedVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexHauntedVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexPainVFX
+  name: HexPainVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexPainVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexPainVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexPainVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexPainVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexPoisonNewFX
+  name: HexPoisonNewFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexPoisonNewFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexPoisonNewFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexPoisonNewFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexPoisonNewFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexPoisonVFX
+  name: HexPoisonVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexPoisonVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexPoisonVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexPoisonVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexPoisonVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexSappedVFX
+  name: HexSappedVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexSappedVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexSappedVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexSappedVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexSappedVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexScorchVFX
+  name: HexScorchVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexScorchVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexScorchVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexScorchVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexScorchVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.HexWeakenVFX
+  name: HexWeakenVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_HexWeakenVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.HexWeakenVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.HexWeakenVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.HexWeakenVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXChill
+  name: JinxProjectile_VFXChill
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_JinxProjectile_VFXChill
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXChill
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXChill
+  nameWithType: SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXChill
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXCurse
+  name: JinxProjectile_VFXCurse
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_JinxProjectile_VFXCurse
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXCurse
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXCurse
+  nameWithType: SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXCurse
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXDoom
+  name: JinxProjectile_VFXDoom
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_JinxProjectile_VFXDoom
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXDoom
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXDoom
+  nameWithType: SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXDoom
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXHaunt
+  name: JinxProjectile_VFXHaunt
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_JinxProjectile_VFXHaunt
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXHaunt
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXHaunt
+  nameWithType: SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXHaunt
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXScorch
+  name: JinxProjectile_VFXScorch
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_JinxProjectile_VFXScorch
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXScorch
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXScorch
+  nameWithType: SL_PlayVFX.VFXPrefabs.JinxProjectile_VFXScorch
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.LichRustReanimate_ExplosionFX
+  name: LichRustReanimate_ExplosionFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_LichRustReanimate_ExplosionFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.LichRustReanimate_ExplosionFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.LichRustReanimate_ExplosionFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.LichRustReanimate_ExplosionFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.NewGhostOneHandedAlly_v_VFXDeathGhost
+  name: NewGhostOneHandedAlly_v_VFXDeathGhost
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_NewGhostOneHandedAlly_v_VFXDeathGhost
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.NewGhostOneHandedAlly_v_VFXDeathGhost
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.NewGhostOneHandedAlly_v_VFXDeathGhost
+  nameWithType: SL_PlayVFX.VFXPrefabs.NewGhostOneHandedAlly_v_VFXDeathGhost
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.NONE
+  name: NONE
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_NONE
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.NONE
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.NONE
+  nameWithType: SL_PlayVFX.VFXPrefabs.NONE
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalChill_VfxChill
+  name: TormentBlast_NormalChill_VfxChill
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalChill_VfxChill
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalChill_VfxChill
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalChill_VfxChill
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalChill_VfxChill
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalConfusion_VfxConfusion
+  name: TormentBlast_NormalConfusion_VfxConfusion
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalConfusion_VfxConfusion
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalConfusion_VfxConfusion
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalConfusion_VfxConfusion
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalConfusion_VfxConfusion
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalCurse_VFXCurse
+  name: TormentBlast_NormalCurse_VFXCurse
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalCurse_VFXCurse
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalCurse_VFXCurse
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalCurse_VFXCurse
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalCurse_VFXCurse
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalDoom_VfxDoom
+  name: TormentBlast_NormalDoom_VfxDoom
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalDoom_VfxDoom
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalDoom_VfxDoom
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalDoom_VfxDoom
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalDoom_VfxDoom
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalHaunt_VfxHaunt
+  name: TormentBlast_NormalHaunt_VfxHaunt
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalHaunt_VfxHaunt
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalHaunt_VfxHaunt
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalHaunt_VfxHaunt
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalHaunt_VfxHaunt
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalPain_VfxPain
+  name: TormentBlast_NormalPain_VfxPain
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalPain_VfxPain
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalPain_VfxPain
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalPain_VfxPain
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalPain_VfxPain
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalScorch_VfxScorch
+  name: TormentBlast_NormalScorch_VfxScorch
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_TormentBlast_NormalScorch_VfxScorch
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalScorch_VfxScorch
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.TormentBlast_NormalScorch_VfxScorch
+  nameWithType: SL_PlayVFX.VFXPrefabs.TormentBlast_NormalScorch_VfxScorch
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.UnerringReadTriggerVFX
+  name: UnerringReadTriggerVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_UnerringReadTriggerVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.UnerringReadTriggerVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.UnerringReadTriggerVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.UnerringReadTriggerVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.UnerringReadVFX
+  name: UnerringReadVFX
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_UnerringReadVFX
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.UnerringReadVFX
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.UnerringReadVFX
+  nameWithType: SL_PlayVFX.VFXPrefabs.UnerringReadVFX
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFX_RunicHeal
+  name: VFX_RunicHeal
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFX_RunicHeal
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFX_RunicHeal
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFX_RunicHeal
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFX_RunicHeal
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXAnkleBlow
+  name: VFXAnkleBlow
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXAnkleBlow
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXAnkleBlow
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXAnkleBlow
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXAnkleBlow
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodBullet
+  name: VFXBloodBullet
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBloodBullet
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodBullet
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodBullet
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBloodBullet
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodLust
+  name: VFXBloodLust
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBloodLust
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodLust
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodLust
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBloodLust
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodLust_Blood
+  name: VFXBloodLust_Blood
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBloodLust_Blood
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodLust_Blood
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBloodLust_Blood
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBloodLust_Blood
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonBolt
+  name: VFXBoonBolt
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBoonBolt
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonBolt
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonBolt
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBoonBolt
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonDecay
+  name: VFXBoonDecay
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBoonDecay
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonDecay
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonDecay
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBoonDecay
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonEthereal
+  name: VFXBoonEthereal
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBoonEthereal
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonEthereal
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonEthereal
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBoonEthereal
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonFire
+  name: VFXBoonFire
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBoonFire
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonFire
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonFire
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBoonFire
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonIce
+  name: VFXBoonIce
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXBoonIce
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonIce
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXBoonIce
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXBoonIce
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCageBossMultiStrikeWind
+  name: VFXCageBossMultiStrikeWind
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXCageBossMultiStrikeWind
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXCageBossMultiStrikeWind
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCageBossMultiStrikeWind
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXCageBossMultiStrikeWind
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCallToElements
+  name: VFXCallToElements
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXCallToElements
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXCallToElements
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCallToElements
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXCallToElements
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXChakram
+  name: VFXChakram
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXChakram
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXChakram
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXChakram
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXChakram
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXChakramLong
+  name: VFXChakramLong
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXChakramLong
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXChakramLong
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXChakramLong
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXChakramLong
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCleanse
+  name: VFXCleanse
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXCleanse
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXCleanse
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCleanse
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXCleanse
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCounter
+  name: VFXCounter
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXCounter
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXCounter
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXCounter
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXCounter
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXDetectSoul
+  name: VFXDetectSoul
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXDetectSoul
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXDetectSoul
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXDetectSoul
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXDetectSoul
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXDiscipline
+  name: VFXDiscipline
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXDiscipline
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXDiscipline
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXDiscipline
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXDiscipline
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXEvasionShot
+  name: VFXEvasionShot
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXEvasionShot
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXEvasionShot
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXEvasionShot
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXEvasionShot
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXFinisherBlow
+  name: VFXFinisherBlow
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXFinisherBlow
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXFinisherBlow
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXFinisherBlow
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXFinisherBlow
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXForceBubble
+  name: VFXForceBubble
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXForceBubble
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXForceBubble
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXForceBubble
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXForceBubble
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXForceRaise
+  name: VFXForceRaise
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXForceRaise
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXForceRaise
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXForceRaise
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXForceRaise
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXGiftOfBlood
+  name: VFXGiftOfBlood
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXGiftOfBlood
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXGiftOfBlood
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXGiftOfBlood
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXGiftOfBlood
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXGiftOfBloodAlly
+  name: VFXGiftOfBloodAlly
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXGiftOfBloodAlly
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXGiftOfBloodAlly
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXGiftOfBloodAlly
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXGiftOfBloodAlly
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXJuggernaut
+  name: VFXJuggernaut
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXJuggernaut
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXJuggernaut
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXJuggernaut
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXJuggernaut
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXLeapAttack
+  name: VFXLeapAttack
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXLeapAttack
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXLeapAttack
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXLeapAttack
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXLeapAttack
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXLifeSyphonHit
+  name: VFXLifeSyphonHit
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXLifeSyphonHit
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXLifeSyphonHit
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXLifeSyphonHit
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXLifeSyphonHit
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXMaceFillAbsorb
+  name: VFXMaceFillAbsorb
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXMaceFillAbsorb
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXMaceFillAbsorb
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXMaceFillAbsorb
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXMaceFillAbsorb
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXMoonSwipe
+  name: VFXMoonSwipe
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXMoonSwipe
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXMoonSwipe
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXMoonSwipe
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXMoonSwipe
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXMultiStrikeWind
+  name: VFXMultiStrikeWind
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXMultiStrikeWind
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXMultiStrikeWind
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXMultiStrikeWind
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXMultiStrikeWind
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXPiercingShot
+  name: VFXPiercingShot
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXPiercingShot
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXPiercingShot
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXPiercingShot
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXPiercingShot
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXPreciseStrike
+  name: VFXPreciseStrike
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXPreciseStrike
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXPreciseStrike
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXPreciseStrike
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXPreciseStrike
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRage
+  name: VFXRage
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXRage
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXRage
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRage
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXRage
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneDeez
+  name: VFXRuneDeez
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXRuneDeez
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneDeez
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneDeez
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXRuneDeez
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneEgoth
+  name: VFXRuneEgoth
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXRuneEgoth
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneEgoth
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneEgoth
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXRuneEgoth
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneFal
+  name: VFXRuneFal
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXRuneFal
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneFal
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneFal
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXRuneFal
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneShim
+  name: VFXRuneShim
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXRuneShim
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneShim
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRuneShim
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXRuneShim
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRunicBlade
+  name: VFXRunicBlade
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXRunicBlade
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXRunicBlade
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXRunicBlade
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXRunicBlade
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXSavageStrikes
+  name: VFXSavageStrikes
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXSavageStrikes
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXSavageStrikes
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXSavageStrikes
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXSavageStrikes
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldAbsorb
+  name: VFXShieldAbsorb
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXShieldAbsorb
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldAbsorb
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldAbsorb
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXShieldAbsorb
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldBrace
+  name: VFXShieldBrace
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXShieldBrace
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldBrace
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldBrace
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXShieldBrace
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldCharge
+  name: VFXShieldCharge
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXShieldCharge
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldCharge
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXShieldCharge
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXShieldCharge
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXSniperShot
+  name: VFXSniperShot
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXSniperShot
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXSniperShot
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXSniperShot
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXSniperShot
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXSweepKick
+  name: VFXSweepKick
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXSweepKick
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXSweepKick
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXSweepKick
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXSweepKick
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXTeleport
+  name: VFXTeleport
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXTeleport
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXTeleport
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXTeleport
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXTeleport
+- uid: SideLoader.SL_PlayVFX.VFXPrefabs.VFXViolentStab
+  name: VFXViolentStab
+  href: api/SideLoader.SL_PlayVFX.VFXPrefabs.html#SideLoader_SL_PlayVFX_VFXPrefabs_VFXViolentStab
+  commentId: F:SideLoader.SL_PlayVFX.VFXPrefabs.VFXViolentStab
+  fullName: SideLoader.SL_PlayVFX.VFXPrefabs.VFXViolentStab
+  nameWithType: SL_PlayVFX.VFXPrefabs.VFXViolentStab
 - uid: SideLoader.SL_Preserver
   name: SL_Preserver
   href: api/SideLoader.SL_Preserver.html
@@ -7164,6 +8287,80 @@ references:
   fullName.vb: SideLoader.SL_ProbabilityCondition.SerializeEffect(Of T)(EffectCondition, T)
   nameWithType: SL_ProbabilityCondition.SerializeEffect<T>(EffectCondition, T)
   nameWithType.vb: SL_ProbabilityCondition.SerializeEffect(Of T)(EffectCondition, T)
+- uid: SideLoader.SL_ProjectileWeapon
+  name: SL_ProjectileWeapon
+  href: api/SideLoader.SL_ProjectileWeapon.html
+  commentId: T:SideLoader.SL_ProjectileWeapon
+  fullName: SideLoader.SL_ProjectileWeapon
+  nameWithType: SL_ProjectileWeapon
+- uid: SideLoader.SL_ProjectileWeapon.ApplyToItem(Item)
+  name: ApplyToItem(Item)
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_ApplyToItem_Item_
+  commentId: M:SideLoader.SL_ProjectileWeapon.ApplyToItem(Item)
+  fullName: SideLoader.SL_ProjectileWeapon.ApplyToItem(Item)
+  nameWithType: SL_ProjectileWeapon.ApplyToItem(Item)
+- uid: SideLoader.SL_ProjectileWeapon.ApplyToItem*
+  name: ApplyToItem
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_ApplyToItem_
+  commentId: Overload:SideLoader.SL_ProjectileWeapon.ApplyToItem
+  isSpec: "True"
+  fullName: SideLoader.SL_ProjectileWeapon.ApplyToItem
+  nameWithType: SL_ProjectileWeapon.ApplyToItem
+- uid: SideLoader.SL_ProjectileWeapon.AutoLoad
+  name: AutoLoad
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_AutoLoad
+  commentId: F:SideLoader.SL_ProjectileWeapon.AutoLoad
+  fullName: SideLoader.SL_ProjectileWeapon.AutoLoad
+  nameWithType: SL_ProjectileWeapon.AutoLoad
+- uid: SideLoader.SL_ProjectileWeapon.FullyBentSound
+  name: FullyBentSound
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_FullyBentSound
+  commentId: F:SideLoader.SL_ProjectileWeapon.FullyBentSound
+  fullName: SideLoader.SL_ProjectileWeapon.FullyBentSound
+  nameWithType: SL_ProjectileWeapon.FullyBentSound
+- uid: SideLoader.SL_ProjectileWeapon.LoadAnim
+  name: LoadAnim
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_LoadAnim
+  commentId: F:SideLoader.SL_ProjectileWeapon.LoadAnim
+  fullName: SideLoader.SL_ProjectileWeapon.LoadAnim
+  nameWithType: SL_ProjectileWeapon.LoadAnim
+- uid: SideLoader.SL_ProjectileWeapon.LocomotionEnabledOnReload
+  name: LocomotionEnabledOnReload
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_LocomotionEnabledOnReload
+  commentId: F:SideLoader.SL_ProjectileWeapon.LocomotionEnabledOnReload
+  fullName: SideLoader.SL_ProjectileWeapon.LocomotionEnabledOnReload
+  nameWithType: SL_ProjectileWeapon.LocomotionEnabledOnReload
+- uid: SideLoader.SL_ProjectileWeapon.SerializeItem(Item,SideLoader.SL_Item)
+  name: SerializeItem(Item, SL_Item)
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_SerializeItem_Item_SideLoader_SL_Item_
+  commentId: M:SideLoader.SL_ProjectileWeapon.SerializeItem(Item,SideLoader.SL_Item)
+  fullName: SideLoader.SL_ProjectileWeapon.SerializeItem(Item, SideLoader.SL_Item)
+  nameWithType: SL_ProjectileWeapon.SerializeItem(Item, SL_Item)
+- uid: SideLoader.SL_ProjectileWeapon.SerializeItem*
+  name: SerializeItem
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_SerializeItem_
+  commentId: Overload:SideLoader.SL_ProjectileWeapon.SerializeItem
+  isSpec: "True"
+  fullName: SideLoader.SL_ProjectileWeapon.SerializeItem
+  nameWithType: SL_ProjectileWeapon.SerializeItem
+- uid: SideLoader.SL_ProjectileWeapon.UnloadOnEquip
+  name: UnloadOnEquip
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_UnloadOnEquip
+  commentId: F:SideLoader.SL_ProjectileWeapon.UnloadOnEquip
+  fullName: SideLoader.SL_ProjectileWeapon.UnloadOnEquip
+  nameWithType: SL_ProjectileWeapon.UnloadOnEquip
+- uid: SideLoader.SL_ProjectileWeapon.UnloadOnIncompleteShot
+  name: UnloadOnIncompleteShot
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_UnloadOnIncompleteShot
+  commentId: F:SideLoader.SL_ProjectileWeapon.UnloadOnIncompleteShot
+  fullName: SideLoader.SL_ProjectileWeapon.UnloadOnIncompleteShot
+  nameWithType: SL_ProjectileWeapon.UnloadOnIncompleteShot
+- uid: SideLoader.SL_ProjectileWeapon.UnloadOnSheathe
+  name: UnloadOnSheathe
+  href: api/SideLoader.SL_ProjectileWeapon.html#SideLoader_SL_ProjectileWeapon_UnloadOnSheathe
+  commentId: F:SideLoader.SL_ProjectileWeapon.UnloadOnSheathe
+  fullName: SideLoader.SL_ProjectileWeapon.UnloadOnSheathe
+  nameWithType: SL_ProjectileWeapon.UnloadOnSheathe
 - uid: SideLoader.SL_ProximityCondition
   name: SL_ProximityCondition
   href: api/SideLoader.SL_ProximityCondition.html
@@ -7943,6 +9140,74 @@ references:
   commentId: F:SideLoader.SL_RunicBlade.WeaponID
   fullName: SideLoader.SL_RunicBlade.WeaponID
   nameWithType: SL_RunicBlade.WeaponID
+- uid: SideLoader.SL_Scene
+  name: SL_Scene
+  href: api/SideLoader.SL_Scene.html
+  commentId: T:SideLoader.SL_Scene
+  fullName: SideLoader.SL_Scene
+  nameWithType: SL_Scene
+- uid: SideLoader.SL_Scene.ApplyTemplate
+  name: ApplyTemplate()
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_ApplyTemplate
+  commentId: M:SideLoader.SL_Scene.ApplyTemplate
+  fullName: SideLoader.SL_Scene.ApplyTemplate()
+  nameWithType: SL_Scene.ApplyTemplate()
+- uid: SideLoader.SL_Scene.ApplyTemplate*
+  name: ApplyTemplate
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_ApplyTemplate_
+  commentId: Overload:SideLoader.SL_Scene.ApplyTemplate
+  isSpec: "True"
+  fullName: SideLoader.SL_Scene.ApplyTemplate
+  nameWithType: SL_Scene.ApplyTemplate
+- uid: SideLoader.SL_Scene.AssetBundleName
+  name: AssetBundleName
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_AssetBundleName
+  commentId: F:SideLoader.SL_Scene.AssetBundleName
+  fullName: SideLoader.SL_Scene.AssetBundleName
+  nameWithType: SL_Scene.AssetBundleName
+- uid: SideLoader.SL_Scene.DefaultSpawnIndex
+  name: DefaultSpawnIndex
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_DefaultSpawnIndex
+  commentId: F:SideLoader.SL_Scene.DefaultSpawnIndex
+  fullName: SideLoader.SL_Scene.DefaultSpawnIndex
+  nameWithType: SL_Scene.DefaultSpawnIndex
+- uid: SideLoader.SL_Scene.LoadScene
+  name: LoadScene()
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_LoadScene
+  commentId: M:SideLoader.SL_Scene.LoadScene
+  fullName: SideLoader.SL_Scene.LoadScene()
+  nameWithType: SL_Scene.LoadScene()
+- uid: SideLoader.SL_Scene.LoadScene(System.Int32,System.Single)
+  name: LoadScene(Int32, Single)
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_LoadScene_System_Int32_System_Single_
+  commentId: M:SideLoader.SL_Scene.LoadScene(System.Int32,System.Single)
+  fullName: SideLoader.SL_Scene.LoadScene(System.Int32, System.Single)
+  nameWithType: SL_Scene.LoadScene(Int32, Single)
+- uid: SideLoader.SL_Scene.LoadScene*
+  name: LoadScene
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_LoadScene_
+  commentId: Overload:SideLoader.SL_Scene.LoadScene
+  isSpec: "True"
+  fullName: SideLoader.SL_Scene.LoadScene
+  nameWithType: SL_Scene.LoadScene
+- uid: SideLoader.SL_Scene.PlayerSpawnPoints
+  name: PlayerSpawnPoints
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_PlayerSpawnPoints
+  commentId: F:SideLoader.SL_Scene.PlayerSpawnPoints
+  fullName: SideLoader.SL_Scene.PlayerSpawnPoints
+  nameWithType: SL_Scene.PlayerSpawnPoints
+- uid: SideLoader.SL_Scene.ScenePath
+  name: ScenePath
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_ScenePath
+  commentId: F:SideLoader.SL_Scene.ScenePath
+  fullName: SideLoader.SL_Scene.ScenePath
+  nameWithType: SL_Scene.ScenePath
+- uid: SideLoader.SL_Scene.SLPackName
+  name: SLPackName
+  href: api/SideLoader.SL_Scene.html#SideLoader_SL_Scene_SLPackName
+  commentId: F:SideLoader.SL_Scene.SLPackName
+  fullName: SideLoader.SL_Scene.SLPackName
+  nameWithType: SL_Scene.SLPackName
 - uid: SideLoader.SL_Serialized
   name: SL_Serialized
   href: api/SideLoader.SL_Serialized.html
@@ -9205,12 +10470,12 @@ references:
   commentId: F:SideLoader.SL_ShootBlastHornetControl.TimeStayOnTarget
   fullName: SideLoader.SL_ShootBlastHornetControl.TimeStayOnTarget
   nameWithType: SL_ShootBlastHornetControl.TimeStayOnTarget
-- uid: SideLoader.SL_ShootBlastProximity
-  name: SL_ShootBlastProximity
-  href: api/SideLoader.SL_ShootBlastProximity.html
-  commentId: T:SideLoader.SL_ShootBlastProximity
-  fullName: SideLoader.SL_ShootBlastProximity
-  nameWithType: SL_ShootBlastProximity
+- uid: SideLoader.SL_ShootBlastsProximity
+  name: SL_ShootBlastsProximity
+  href: api/SideLoader.SL_ShootBlastsProximity.html
+  commentId: T:SideLoader.SL_ShootBlastsProximity
+  fullName: SideLoader.SL_ShootBlastsProximity
+  nameWithType: SL_ShootBlastsProximity
 - uid: SideLoader.SL_ShootConeBlast
   name: SL_ShootConeBlast
   href: api/SideLoader.SL_ShootConeBlast.html
@@ -9373,6 +10638,44 @@ references:
   commentId: F:SideLoader.SL_ShooterPosStatusEffect.StatusIdentifier
   fullName: SideLoader.SL_ShooterPosStatusEffect.StatusIdentifier
   nameWithType: SL_ShooterPosStatusEffect.StatusIdentifier
+- uid: SideLoader.SL_ShootItem
+  name: SL_ShootItem
+  href: api/SideLoader.SL_ShootItem.html
+  commentId: T:SideLoader.SL_ShootItem
+  fullName: SideLoader.SL_ShootItem
+  nameWithType: SL_ShootItem
+- uid: SideLoader.SL_ShootItem.ApplyToComponent*
+  name: ApplyToComponent
+  href: api/SideLoader.SL_ShootItem.html#SideLoader_SL_ShootItem_ApplyToComponent_
+  commentId: Overload:SideLoader.SL_ShootItem.ApplyToComponent
+  isSpec: "True"
+  fullName: SideLoader.SL_ShootItem.ApplyToComponent
+  nameWithType: SL_ShootItem.ApplyToComponent
+- uid: SideLoader.SL_ShootItem.ApplyToComponent``1(``0)
+  name: ApplyToComponent<T>(T)
+  href: api/SideLoader.SL_ShootItem.html#SideLoader_SL_ShootItem_ApplyToComponent__1___0_
+  commentId: M:SideLoader.SL_ShootItem.ApplyToComponent``1(``0)
+  name.vb: ApplyToComponent(Of T)(T)
+  fullName: SideLoader.SL_ShootItem.ApplyToComponent<T>(T)
+  fullName.vb: SideLoader.SL_ShootItem.ApplyToComponent(Of T)(T)
+  nameWithType: SL_ShootItem.ApplyToComponent<T>(T)
+  nameWithType.vb: SL_ShootItem.ApplyToComponent(Of T)(T)
+- uid: SideLoader.SL_ShootItem.SerializeEffect*
+  name: SerializeEffect
+  href: api/SideLoader.SL_ShootItem.html#SideLoader_SL_ShootItem_SerializeEffect_
+  commentId: Overload:SideLoader.SL_ShootItem.SerializeEffect
+  isSpec: "True"
+  fullName: SideLoader.SL_ShootItem.SerializeEffect
+  nameWithType: SL_ShootItem.SerializeEffect
+- uid: SideLoader.SL_ShootItem.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name: SerializeEffect<T>(T, SL_Effect)
+  href: api/SideLoader.SL_ShootItem.html#SideLoader_SL_ShootItem_SerializeEffect__1___0_SideLoader_SL_Effect_
+  commentId: M:SideLoader.SL_ShootItem.SerializeEffect``1(``0,SideLoader.SL_Effect)
+  name.vb: SerializeEffect(Of T)(T, SL_Effect)
+  fullName: SideLoader.SL_ShootItem.SerializeEffect<T>(T, SideLoader.SL_Effect)
+  fullName.vb: SideLoader.SL_ShootItem.SerializeEffect(Of T)(T, SideLoader.SL_Effect)
+  nameWithType: SL_ShootItem.SerializeEffect<T>(T, SL_Effect)
+  nameWithType.vb: SL_ShootItem.SerializeEffect(Of T)(T, SL_Effect)
 - uid: SideLoader.SL_ShootProjectile
   name: SL_ShootProjectile
   href: api/SideLoader.SL_ShootProjectile.html
@@ -10469,6 +11772,24 @@ references:
   commentId: F:SideLoader.SL_Skill.StaminaCost
   fullName: SideLoader.SL_Skill.StaminaCost
   nameWithType: SL_Skill.StaminaCost
+- uid: SideLoader.SL_Skill.StartVFX
+  name: StartVFX
+  href: api/SideLoader.SL_Skill.html#SideLoader_SL_Skill_StartVFX
+  commentId: F:SideLoader.SL_Skill.StartVFX
+  fullName: SideLoader.SL_Skill.StartVFX
+  nameWithType: SL_Skill.StartVFX
+- uid: SideLoader.SL_Skill.StopStartVFXOnEnd
+  name: StopStartVFXOnEnd
+  href: api/SideLoader.SL_Skill.html#SideLoader_SL_Skill_StopStartVFXOnEnd
+  commentId: F:SideLoader.SL_Skill.StopStartVFXOnEnd
+  fullName: SideLoader.SL_Skill.StopStartVFXOnEnd
+  nameWithType: SL_Skill.StopStartVFXOnEnd
+- uid: SideLoader.SL_Skill.VFXOnStart
+  name: VFXOnStart
+  href: api/SideLoader.SL_Skill.html#SideLoader_SL_Skill_VFXOnStart
+  commentId: F:SideLoader.SL_Skill.VFXOnStart
+  fullName: SideLoader.SL_Skill.VFXOnStart
+  nameWithType: SL_Skill.VFXOnStart
 - uid: SideLoader.SL_SkillRow
   name: SL_SkillRow
   href: api/SideLoader.SL_SkillRow.html
@@ -10778,6 +12099,12 @@ references:
   commentId: T:SideLoader.SL_StatusEffect
   fullName: SideLoader.SL_StatusEffect
   nameWithType: SL_StatusEffect
+- uid: SideLoader.SL_StatusEffect.AmplifiedStatusIdentifier
+  name: AmplifiedStatusIdentifier
+  href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_AmplifiedStatusIdentifier
+  commentId: F:SideLoader.SL_StatusEffect.AmplifiedStatusIdentifier
+  fullName: SideLoader.SL_StatusEffect.AmplifiedStatusIdentifier
+  nameWithType: SL_StatusEffect.AmplifiedStatusIdentifier
 - uid: SideLoader.SL_StatusEffect.ApplyTemplate
   name: ApplyTemplate()
   href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_ApplyTemplate
@@ -10797,12 +12124,6 @@ references:
   commentId: F:SideLoader.SL_StatusEffect.BuildupRecoverySpeed
   fullName: SideLoader.SL_StatusEffect.BuildupRecoverySpeed
   nameWithType: SL_StatusEffect.BuildupRecoverySpeed
-- uid: SideLoader.SL_StatusEffect.CloneByIdentifier
-  name: CloneByIdentifier
-  href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_CloneByIdentifier
-  commentId: F:SideLoader.SL_StatusEffect.CloneByIdentifier
-  fullName: SideLoader.SL_StatusEffect.CloneByIdentifier
-  nameWithType: SL_StatusEffect.CloneByIdentifier
 - uid: SideLoader.SL_StatusEffect.CompileEffectsToData(StatusEffect)
   name: CompileEffectsToData(StatusEffect)
   href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_CompileEffectsToData_StatusEffect_
@@ -10852,6 +12173,12 @@ references:
   commentId: F:SideLoader.SL_StatusEffect.IsHidden
   fullName: SideLoader.SL_StatusEffect.IsHidden
   nameWithType: SL_StatusEffect.IsHidden
+- uid: SideLoader.SL_StatusEffect.IsMalusEffect
+  name: IsMalusEffect
+  href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_IsMalusEffect
+  commentId: F:SideLoader.SL_StatusEffect.IsMalusEffect
+  fullName: SideLoader.SL_StatusEffect.IsMalusEffect
+  nameWithType: SL_StatusEffect.IsMalusEffect
 - uid: SideLoader.SL_StatusEffect.LengthType
   name: LengthType
   href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_LengthType
@@ -10895,6 +12222,19 @@ references:
   commentId: F:SideLoader.SL_StatusEffect.RefreshRate
   fullName: SideLoader.SL_StatusEffect.RefreshRate
   nameWithType: SL_StatusEffect.RefreshRate
+- uid: SideLoader.SL_StatusEffect.ShouldSerializeTargetStatusID
+  name: ShouldSerializeTargetStatusID()
+  href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_ShouldSerializeTargetStatusID
+  commentId: M:SideLoader.SL_StatusEffect.ShouldSerializeTargetStatusID
+  fullName: SideLoader.SL_StatusEffect.ShouldSerializeTargetStatusID()
+  nameWithType: SL_StatusEffect.ShouldSerializeTargetStatusID()
+- uid: SideLoader.SL_StatusEffect.ShouldSerializeTargetStatusID*
+  name: ShouldSerializeTargetStatusID
+  href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_ShouldSerializeTargetStatusID_
+  commentId: Overload:SideLoader.SL_StatusEffect.ShouldSerializeTargetStatusID
+  isSpec: "True"
+  fullName: SideLoader.SL_StatusEffect.ShouldSerializeTargetStatusID
+  nameWithType: SL_StatusEffect.ShouldSerializeTargetStatusID
 - uid: SideLoader.SL_StatusEffect.SLPackName
   name: SLPackName
   href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_SLPackName
@@ -10919,12 +12259,6 @@ references:
   commentId: F:SideLoader.SL_StatusEffect.Tags
   fullName: SideLoader.SL_StatusEffect.Tags
   nameWithType: SL_StatusEffect.Tags
-- uid: SideLoader.SL_StatusEffect.TargetStatusID
-  name: TargetStatusID
-  href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_TargetStatusID
-  commentId: F:SideLoader.SL_StatusEffect.TargetStatusID
-  fullName: SideLoader.SL_StatusEffect.TargetStatusID
-  nameWithType: SL_StatusEffect.TargetStatusID
 - uid: SideLoader.SL_StatusEffect.TargetStatusIdentifier
   name: TargetStatusIdentifier
   href: api/SideLoader.SL_StatusEffect.html#SideLoader_SL_StatusEffect_TargetStatusIdentifier
@@ -12156,6 +13490,44 @@ references:
   commentId: F:SideLoader.SL_WeaponStats.WeaponStatData.StamMult
   fullName: SideLoader.SL_WeaponStats.WeaponStatData.StamMult
   nameWithType: SL_WeaponStats.WeaponStatData.StamMult
+- uid: SideLoader.SL_WindAltarActivatedCondition
+  name: SL_WindAltarActivatedCondition
+  href: api/SideLoader.SL_WindAltarActivatedCondition.html
+  commentId: T:SideLoader.SL_WindAltarActivatedCondition
+  fullName: SideLoader.SL_WindAltarActivatedCondition
+  nameWithType: SL_WindAltarActivatedCondition
+- uid: SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent*
+  name: ApplyToComponent
+  href: api/SideLoader.SL_WindAltarActivatedCondition.html#SideLoader_SL_WindAltarActivatedCondition_ApplyToComponent_
+  commentId: Overload:SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent
+  isSpec: "True"
+  fullName: SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent
+  nameWithType: SL_WindAltarActivatedCondition.ApplyToComponent
+- uid: SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent``1(``0)
+  name: ApplyToComponent<T>(T)
+  href: api/SideLoader.SL_WindAltarActivatedCondition.html#SideLoader_SL_WindAltarActivatedCondition_ApplyToComponent__1___0_
+  commentId: M:SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent``1(``0)
+  name.vb: ApplyToComponent(Of T)(T)
+  fullName: SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent<T>(T)
+  fullName.vb: SideLoader.SL_WindAltarActivatedCondition.ApplyToComponent(Of T)(T)
+  nameWithType: SL_WindAltarActivatedCondition.ApplyToComponent<T>(T)
+  nameWithType.vb: SL_WindAltarActivatedCondition.ApplyToComponent(Of T)(T)
+- uid: SideLoader.SL_WindAltarActivatedCondition.SerializeEffect*
+  name: SerializeEffect
+  href: api/SideLoader.SL_WindAltarActivatedCondition.html#SideLoader_SL_WindAltarActivatedCondition_SerializeEffect_
+  commentId: Overload:SideLoader.SL_WindAltarActivatedCondition.SerializeEffect
+  isSpec: "True"
+  fullName: SideLoader.SL_WindAltarActivatedCondition.SerializeEffect
+  nameWithType: SL_WindAltarActivatedCondition.SerializeEffect
+- uid: SideLoader.SL_WindAltarActivatedCondition.SerializeEffect``1(EffectCondition,``0)
+  name: SerializeEffect<T>(EffectCondition, T)
+  href: api/SideLoader.SL_WindAltarActivatedCondition.html#SideLoader_SL_WindAltarActivatedCondition_SerializeEffect__1_EffectCondition___0_
+  commentId: M:SideLoader.SL_WindAltarActivatedCondition.SerializeEffect``1(EffectCondition,``0)
+  name.vb: SerializeEffect(Of T)(EffectCondition, T)
+  fullName: SideLoader.SL_WindAltarActivatedCondition.SerializeEffect<T>(EffectCondition, T)
+  fullName.vb: SideLoader.SL_WindAltarActivatedCondition.SerializeEffect(Of T)(EffectCondition, T)
+  nameWithType: SL_WindAltarActivatedCondition.SerializeEffect<T>(EffectCondition, T)
+  nameWithType.vb: SL_WindAltarActivatedCondition.SerializeEffect(Of T)(EffectCondition, T)
 - uid: SideLoader.SLPack
   name: SLPack
   href: api/SideLoader.SLPack.html
@@ -12354,6 +13726,12 @@ references:
   commentId: F:SideLoader.UI.SL_GUI.Pages.Enchantments
   fullName: SideLoader.UI.SL_GUI.Pages.Enchantments
   nameWithType: SL_GUI.Pages.Enchantments
+- uid: SideLoader.UI.SL_GUI.Pages.HotReload
+  name: HotReload
+  href: api/SideLoader.UI.SL_GUI.Pages.html#SideLoader_UI_SL_GUI_Pages_HotReload
+  commentId: F:SideLoader.UI.SL_GUI.Pages.HotReload
+  fullName: SideLoader.UI.SL_GUI.Pages.HotReload
+  nameWithType: SL_GUI.Pages.HotReload
 - uid: SideLoader.UI.SL_GUI.Pages.Items
   name: Items
   href: api/SideLoader.UI.SL_GUI.Pages.html#SideLoader_UI_SL_GUI_Pages_Items
