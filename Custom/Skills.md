@@ -25,14 +25,14 @@ All SL_Skills inherit from this class. If you use a generated SL_Item template, 
 * Same as durability cost, but as a % of total weapon durability value
 
 `VFXOnStart` (bool)
-* Whether the `StartVFX` will play when this skill is activated
+* Whether the `StartVFX` will play immediately when this skill is activated, or after a short delay with the rest of the effects
 
 `StopStartVFXOnEnd` (bool)
 * Whether the `StartVFX` will end if the skill ends and the VFX is still playing
 
 `StartVFX` (enum)
-* Determines the VFX prefab that will play on start, assuming `VFXOnStart` is true.
-* Can pick any of [these values](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/VFXPrefabs.txt)
+* Determines the VFX prefab that will play on start.
+* Can pick any of [these values](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/VFXPrefabs.txt), or `NONE` to set no VFX.
 
 ### Required Items
 
