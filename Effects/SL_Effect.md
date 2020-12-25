@@ -410,10 +410,12 @@ Used to remove a status effect from the affected character.
 You can either use the <b>Identifier Name</b> of the status, or a <b>Tag</b> that the status might have on it.
 
 `Status_Name` (string)
+* <b>Only valid if you are NOT using `StatusType` for the CleanseType!</b>
 * If you want to remove a specific status by the identifier, set this.
 * For a list of Statuses listed by their Identifier, see [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658)
 
 `Status_Tag` (string)
+* <b>Only valid if you ARE using `StatusType` for the CleanseType!</b>
 * If there's a tag you want to search for on the status and remove all statuses with that tag, set it here.
 * See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
 
