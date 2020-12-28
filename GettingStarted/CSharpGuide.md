@@ -63,11 +63,15 @@ SideLoader.Helpers.ForceUnlockCursor.RemoveUnlockSource();
 ```
 
 ## At (AccessTools)
-SideLoader's class `At` is a Reflection helper, designed for simplicity and relatively good performance.
+SideLoader's class `At` is a Reflection helper, designed for simplicity and relatively good performance. It can be found in the `SideLoader.Helpers` namespace.
 
 The Methods should all be fairly self-explanatory and easy to follow if you have a basic grasp on C# Reflection, but feel free to ask me in the Outward Discord or anywhere if you need help with this.
 
-For example, to set the private field `m_name` on an `Item`, simply do `At.SetField(myItem, "m_name", "MyNewName")`;
+For example, to set the private field `m_name` on an `Item`, simply do:
+
+```csharp
+SideLoader.Helpers.At.SetField(myItem, "m_name", "MyNewName");
+```
 
 Most of `At`'s methods are generic, so be careful with the instances you pass to them, make sure the generic type actually contains the member you want to access. For example, if you have an instance of a Weapon but it is currently only cast to an Item, you would need to do something like this: `At.SetField(myItem as Weapon, "m_someWeaponField", someValue);`
 
