@@ -13,9 +13,9 @@ Before you dive too far into troubleshooting, you should make sure that:
 
 SideLoader has extensive logging, and you should be able to tell if something major has gone wrong from the log file.
 
-The log file can be found at `Outward\BepInEx\LogOutput.log`, assuming you are on BepInEx 5.2 or later.
+The log file can be found at `Outward\BepInEx\LogOutput.log`.
 
-* <b>NOTE:</b> if you don't see the file there, check at `%userprofile%\appdata\locallow\nine dots studio\outward\`
+* You can also check the full debug log at: `%userprofile%\appdata\locallow\nine dots studio\outward\output_log.txt`, or enable log redirection in the BepInEx config and find it at `Outward\output_log.txt`.
 
 In the log file, Ctrl+F for "SideLoader" and start from there. Look for your mod and see if SideLoader said anything about it, which give you a clue as to what went wrong.
 
