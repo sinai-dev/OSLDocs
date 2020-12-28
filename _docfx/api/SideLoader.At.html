@@ -73,8 +73,7 @@
   
   <h1 id="SideLoader_At" data-uid="SideLoader.At" class="text-break">Class At
   </h1>
-  <div class="markdown level0 summary"><p>At (AccessTools) is a collection of Reflection Helpers.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -118,11 +117,10 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_FLAGS.md&amp;value=---%0Auid%3A%20SideLoader.At.FLAGS%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L14">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L12">View Source</a>
   </span>
   <h4 id="SideLoader_At_FLAGS" data-uid="SideLoader.At.FLAGS">FLAGS</h4>
-  <div class="markdown level1 summary"><p>Common BindingFlags, and the only ones that are really needed for Outward.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -147,84 +145,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_Call_System_Type_System_Object_System_String_System_Type___System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.Call(System.Type%2CSystem.Object%2CSystem.String%2CSystem.Type%5B%5D%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L132">View Source</a>
-  </span>
-  <a id="SideLoader_At_Call_" data-uid="SideLoader.At.Call*"></a>
-  <h4 id="SideLoader_At_Call_System_Type_System_Object_System_String_System_Type___System_Object___" data-uid="SideLoader.At.Call(System.Type,System.Object,System.String,System.Type[],System.Object[])">Call(Type, Object, String, Type[], Object[])</h4>
-  <div class="markdown level1 summary"><p>Helper to invoke a private or protected method.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static object Call(Type type, object obj, string method, Type[] argumentTypes, params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The declaring class Type which contains this method.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>The instance to invoke the method from. If method is static, use &quot;null&quot;.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">method</span></td>
-        <td><p>The name of the method you want to invoke.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span>[]</td>
-        <td><span class="parametername">argumentTypes</span></td>
-        <td><p>[Optional] For ambiguous methods, provide an array corresponding to the Type of each argument, otherwise use &quot;null&quot;.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td><p>The actual arguments you want to provide for the method, if any.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p>The return value of the method (might be void).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_CopyFields_System_Object_System_Object_System_Type_System_Boolean_.md&amp;value=---%0Auid%3A%20SideLoader.At.CopyFields(System.Object%2CSystem.Object%2CSystem.Type%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L60">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L261">View Source</a>
   </span>
   <a id="SideLoader_At_CopyFields_" data-uid="SideLoader.At.CopyFields*"></a>
   <h4 id="SideLoader_At_CopyFields_System_Object_System_Object_System_Type_System_Boolean_" data-uid="SideLoader.At.CopyFields(System.Object,System.Object,System.Type,System.Boolean)">CopyFields(Object, Object, Type, Boolean)</h4>
@@ -276,7 +200,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_CopyProperties_System_Object_System_Object_System_Type_System_Boolean_.md&amp;value=---%0Auid%3A%20SideLoader.At.CopyProperties(System.Object%2CSystem.Object%2CSystem.Type%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L96">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L297">View Source</a>
   </span>
   <a id="SideLoader_At_CopyProperties_" data-uid="SideLoader.At.CopyProperties*"></a>
   <h4 id="SideLoader_At_CopyProperties_System_Object_System_Object_System_Type_System_Boolean_" data-uid="SideLoader.At.CopyProperties(System.Object,System.Object,System.Type,System.Boolean)">CopyProperties(Object, Object, Type, Boolean)</h4>
@@ -325,19 +249,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetProp_System_Type_System_Object_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetProp(System.Type%2CSystem.Object%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetField__1___0_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetField%60%601(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L197">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L57">View Source</a>
   </span>
-  <a id="SideLoader_At_GetProp_" data-uid="SideLoader.At.GetProp*"></a>
-  <h4 id="SideLoader_At_GetProp_System_Type_System_Object_System_String_" data-uid="SideLoader.At.GetProp(System.Type,System.Object,System.String)">GetProp(Type, Object, String)</h4>
-  <div class="markdown level1 summary"><p>Helper to get the value from a private property.</p>
+  <a id="SideLoader_At_GetField_" data-uid="SideLoader.At.GetField*"></a>
+  <h4 id="SideLoader_At_GetField__1___0_System_String_" data-uid="SideLoader.At.GetField``1(``0,System.String)">GetField&lt;T&gt;(T, String)</h4>
+  <div class="markdown level1 summary"><p>Helper to get an instance value on a non-static class. Use GetFieldStatic for Static Classes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static object GetProp(Type type, object obj, string property)</code></pre>
+    <pre><code class="lang-csharp hljs">public static object GetField&lt;T&gt;(T instance, string fieldName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,82 +274,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The declaring class Type which contains this property.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>The instance, for non-static members. If the member is static, use &quot;null&quot;.</p>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance to use, or null for static members. Can be used to implicitly declare T if not null.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">property</span></td>
-        <td><p>The name of the property you want to get.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p>The value from the property.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetValue_System_Type_System_Object_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetValue(System.Type%2CSystem.Object%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L40">View Source</a>
-  </span>
-  <a id="SideLoader_At_GetValue_" data-uid="SideLoader.At.GetValue*"></a>
-  <h4 id="SideLoader_At_GetValue_System_Type_System_Object_System_String_" data-uid="SideLoader.At.GetValue(System.Type,System.Object,System.String)">GetValue(Type, Object, String)</h4>
-  <div class="markdown level1 summary"><p>Helper to get the value from a private or protected field.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static object GetValue(Type type, object obj, string field)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The declaring class Type which contains this field.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>The instance, for non-static members. If the member is static, use &quot;null&quot;.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">field</span></td>
+        <td><span class="parametername">fieldName</span></td>
         <td><p>The name of the field you want to get.</p>
 </td>
       </tr>
@@ -442,26 +298,270 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><p>The value of the field provided, if valid.</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the field in it.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetProp__1___0_System_Type_System_Object_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetProp%60%601(%60%600%2CSystem.Type%2CSystem.Object%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetField__1_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetField%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L174">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L63">View Source</a>
   </span>
-  <a id="SideLoader_At_SetProp_" data-uid="SideLoader.At.SetProp*"></a>
-  <h4 id="SideLoader_At_SetProp__1___0_System_Type_System_Object_System_String_" data-uid="SideLoader.At.SetProp``1(``0,System.Type,System.Object,System.String)">SetProp&lt;T&gt;(T, Type, Object, String)</h4>
-  <div class="markdown level1 summary"><p>Helper to set a private property, if possible to set.</p>
+  <a id="SideLoader_At_GetField_" data-uid="SideLoader.At.GetField*"></a>
+  <h4 id="SideLoader_At_GetField__1_System_String_" data-uid="SideLoader.At.GetField``1(System.String)">GetField&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"><p>Helper to get a static value on a non-static class. Use GetFieldStatic for Static Classes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetProp&lt;T&gt;(T value, Type type, object obj, string property)</code></pre>
+    <pre><code class="lang-csharp hljs">public static object GetField&lt;T&gt;(string fieldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>The name of the field you want to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the field in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetFieldInfo_System_Type_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetFieldInfo(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L329">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetFieldInfo_" data-uid="SideLoader.At.GetFieldInfo*"></a>
+  <h4 id="SideLoader_At_GetFieldInfo_System_Type_System_String_" data-uid="SideLoader.At.GetFieldInfo(System.Type,System.String)">GetFieldInfo(Type, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FieldInfo GetFieldInfo(Type type, string fieldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.FieldInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetFieldStatic_System_Type_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetFieldStatic(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L69">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetFieldStatic_" data-uid="SideLoader.At.GetFieldStatic*"></a>
+  <h4 id="SideLoader_At_GetFieldStatic_System_Type_System_String_" data-uid="SideLoader.At.GetFieldStatic(System.Type,System.String)">GetFieldStatic(Type, String)</h4>
+  <div class="markdown level1 summary"><p>Helper to get a value on a Static Class (not just a static member of a class, use GetField&lt;T&gt; for that).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetFieldStatic(Type type, string fieldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The declaring class with the field in it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>The name of the field you want to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetMethodInfo_System_Type_System_String_System_Type___.md&amp;value=---%0Auid%3A%20SideLoader.At.GetMethodInfo(System.Type%2CSystem.String%2CSystem.Type%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L355">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetMethodInfo_" data-uid="SideLoader.At.GetMethodInfo*"></a>
+  <h4 id="SideLoader_At_GetMethodInfo_System_Type_System_String_System_Type___" data-uid="SideLoader.At.GetMethodInfo(System.Type,System.String,System.Type[])">GetMethodInfo(Type, String, Type[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MethodInfo GetMethodInfo(Type type, string methodName, Type[] argumentTypes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="parametername">argumentTypes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.MethodInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetProperty__1___0_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetProperty%60%601(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L136">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetProperty_" data-uid="SideLoader.At.GetProperty*"></a>
+  <h4 id="SideLoader_At_GetProperty__1___0_System_String_" data-uid="SideLoader.At.GetProperty``1(``0,System.String)">GetProperty&lt;T&gt;(T, String)</h4>
+  <div class="markdown level1 summary"><p>Helper to get an instance value on a non-static class. Use GetPropertyStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetProperty&lt;T&gt;(T instance, string propertyName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -475,28 +575,871 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The value you want to set.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The declaring class Type which contains this property.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>The instance, for non-static members. If the member is static, use &quot;null&quot;.</p>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance to use, or null for static members. Can be used to implicitly declare T if not null.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">property</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property you want to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the property in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetProperty__1_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetProperty%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L142">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetProperty_" data-uid="SideLoader.At.GetProperty*"></a>
+  <h4 id="SideLoader_At_GetProperty__1_System_String_" data-uid="SideLoader.At.GetProperty``1(System.String)">GetProperty&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"><p>Helper to get a static value on a non-static class. Use GetPropertyStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetProperty&lt;T&gt;(string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property you want to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the property in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetPropertyInfo_System_Type_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetPropertyInfo(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L342">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetPropertyInfo_" data-uid="SideLoader.At.GetPropertyInfo*"></a>
+  <h4 id="SideLoader_At_GetPropertyInfo_System_Type_System_String_" data-uid="SideLoader.At.GetPropertyInfo(System.Type,System.String)">GetPropertyInfo(Type, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PropertyInfo GetPropertyInfo(Type type, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_GetPropertyStatic_System_Type_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.GetPropertyStatic(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L148">View Source</a>
+  </span>
+  <a id="SideLoader_At_GetPropertyStatic_" data-uid="SideLoader.At.GetPropertyStatic*"></a>
+  <h4 id="SideLoader_At_GetPropertyStatic_System_Type_System_String_" data-uid="SideLoader.At.GetPropertyStatic(System.Type,System.String)">GetPropertyStatic(Type, String)</h4>
+  <div class="markdown level1 summary"><p>Helper to get a value on a Static Class (not just a static member of a class, use GetProperty&lt;T&gt; for that).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyStatic(Type type, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The declaring class with the property in it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property you want to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_Invoke__1___0_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.Invoke%60%601(%60%600%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L181">View Source</a>
+  </span>
+  <a id="SideLoader_At_Invoke_" data-uid="SideLoader.At.Invoke*"></a>
+  <h4 id="SideLoader_At_Invoke__1___0_System_String_System_Object___" data-uid="SideLoader.At.Invoke``1(``0,System.String,System.Object[])">Invoke&lt;T&gt;(T, String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Helper to call an instance method on a non-static class. Use InvokeStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Invoke&lt;T&gt;(T instance, string methodName, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance to invoke on, or null for static methods.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>The name of the method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments you want to provide for invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The return value of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the method in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_Invoke__1___0_System_String_System_Type___System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.Invoke%60%601(%60%600%2CSystem.String%2CSystem.Type%5B%5D%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L199">View Source</a>
+  </span>
+  <a id="SideLoader_At_Invoke_" data-uid="SideLoader.At.Invoke*"></a>
+  <h4 id="SideLoader_At_Invoke__1___0_System_String_System_Type___System_Object___" data-uid="SideLoader.At.Invoke``1(``0,System.String,System.Type[],System.Object[])">Invoke&lt;T&gt;(T, String, Type[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Helper to call an ambiguous instance method on a non-static class. Use InvokeStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Invoke&lt;T&gt;(T instance, string methodName, Type[] argumentTypes, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance to invoke on, or null for static methods.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>The name of the method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="parametername">argumentTypes</span></td>
+        <td><p>Optional, for ambiguous methods you can provide an array corresponding to the Types of the arguments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments you want to provide for invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The return value of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the method in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_Invoke__1_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.Invoke%60%601(System.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L189">View Source</a>
+  </span>
+  <a id="SideLoader_At_Invoke_" data-uid="SideLoader.At.Invoke*"></a>
+  <h4 id="SideLoader_At_Invoke__1_System_String_System_Object___" data-uid="SideLoader.At.Invoke``1(System.String,System.Object[])">Invoke&lt;T&gt;(String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Helper to call a static method on a non-static class. Use InvokeStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Invoke&lt;T&gt;(string methodName, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>The name of the method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments you want to provide for invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The return value of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the method in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_Invoke__1_System_String_System_Type___System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.Invoke%60%601(System.String%2CSystem.Type%5B%5D%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L208">View Source</a>
+  </span>
+  <a id="SideLoader_At_Invoke_" data-uid="SideLoader.At.Invoke*"></a>
+  <h4 id="SideLoader_At_Invoke__1_System_String_System_Type___System_Object___" data-uid="SideLoader.At.Invoke``1(System.String,System.Type[],System.Object[])">Invoke&lt;T&gt;(String, Type[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Helper to call an ambiguous static method on a non-static class. Use InvokeStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Invoke&lt;T&gt;(string methodName, Type[] argumentTypes, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>The name of the method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="parametername">argumentTypes</span></td>
+        <td><p>Optional, for ambiguous methods you can provide an array corresponding to the Types of the arguments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments you want to provide for invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The return value of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the method in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_InvokeStatic_System_Type_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.InvokeStatic(System.Type%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L216">View Source</a>
+  </span>
+  <a id="SideLoader_At_InvokeStatic_" data-uid="SideLoader.At.InvokeStatic*"></a>
+  <h4 id="SideLoader_At_InvokeStatic_System_Type_System_String_System_Object___" data-uid="SideLoader.At.InvokeStatic(System.Type,System.String,System.Object[])">InvokeStatic(Type, String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Helper to call a method on a Static Class (not just a static member of a class, use Invoke&lt;T&gt; for that).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object InvokeStatic(Type type, string methodName, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The declaring class with the method in it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>The name of the method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments you want to provide for invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The return value of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_InvokeStatic_System_Type_System_String_System_Type___System_Object___.md&amp;value=---%0Auid%3A%20SideLoader.At.InvokeStatic(System.Type%2CSystem.String%2CSystem.Type%5B%5D%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L225">View Source</a>
+  </span>
+  <a id="SideLoader_At_InvokeStatic_" data-uid="SideLoader.At.InvokeStatic*"></a>
+  <h4 id="SideLoader_At_InvokeStatic_System_Type_System_String_System_Type___System_Object___" data-uid="SideLoader.At.InvokeStatic(System.Type,System.String,System.Type[],System.Object[])">InvokeStatic(Type, String, Type[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Helper to call an ambiguous method on a Static Class (not just a static member of a class, use Invoke&lt;T&gt; for that).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object InvokeStatic(Type type, string methodName, Type[] argumentTypes, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The declaring class with the method in it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>The name of the method to invoke</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span>[]</td>
+        <td><span class="parametername">argumentTypes</span></td>
+        <td><p>Optional, for ambiguous methods you can provide an array corresponding to the Types of the arguments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments you want to provide for invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>The return value of the method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetField__1___0_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetField%60%601(%60%600%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L21">View Source</a>
+  </span>
+  <a id="SideLoader_At_SetField_" data-uid="SideLoader.At.SetField*"></a>
+  <h4 id="SideLoader_At_SetField__1___0_System_String_System_Object_" data-uid="SideLoader.At.SetField``1(``0,System.String,System.Object)">SetField&lt;T&gt;(T, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Helper to set an instance value on a non-static class. Use SetFieldStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetField&lt;T&gt;(T instance, string fieldName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance to use. Can be used to implicitly declare T if not null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>The name of the field you want to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value you want to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the field in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetField__1_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetField%60%601(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L28">View Source</a>
+  </span>
+  <a id="SideLoader_At_SetField_" data-uid="SideLoader.At.SetField*"></a>
+  <h4 id="SideLoader_At_SetField__1_System_String_System_Object_" data-uid="SideLoader.At.SetField``1(System.String,System.Object)">SetField&lt;T&gt;(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Helper to set a static value on a non-static class. Use SetFieldStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetField&lt;T&gt;(string fieldName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>The name of the field you want to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value you want to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The declaring class with the field in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetFieldStatic_System_Type_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetFieldStatic(System.Type%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L35">View Source</a>
+  </span>
+  <a id="SideLoader_At_SetFieldStatic_" data-uid="SideLoader.At.SetFieldStatic*"></a>
+  <h4 id="SideLoader_At_SetFieldStatic_System_Type_System_String_System_Object_" data-uid="SideLoader.At.SetFieldStatic(System.Type,System.String,System.Object)">SetFieldStatic(Type, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Helper to set a value on a Static Class (not just a static member of a class, use SetField&lt;T&gt; for that).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetFieldStatic(Type type, string fieldName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The declaring class with the field in it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>The name of the field you want to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value you want to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetProperty__1___0_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetProperty%60%601(%60%600%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L92">View Source</a>
+  </span>
+  <a id="SideLoader_At_SetProperty_" data-uid="SideLoader.At.SetProperty*"></a>
+  <h4 id="SideLoader_At_SetProperty__1___0_System_String_System_Object_" data-uid="SideLoader.At.SetProperty``1(``0,System.String,System.Object)">SetProperty&lt;T&gt;(T, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Helper to set an instance value on a non-static class. Use SetPropertyStatic for Static Classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetProperty&lt;T&gt;(T instance, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance to use, or null for static members. Can be used to implicitly declare T if not null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
         <td><p>The name of the property you want to set.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value you want to set.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -510,26 +1453,26 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The Type of value you are setting (only required if value is &quot;null&quot;).</p>
+        <td><p>The declaring class with the property in it.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetValue__1___0_System_Type_System_Object_System_String_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetValue%60%601(%60%600%2CSystem.Type%2CSystem.Object%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetProperty__1_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetProperty%60%601(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L24">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L99">View Source</a>
   </span>
-  <a id="SideLoader_At_SetValue_" data-uid="SideLoader.At.SetValue*"></a>
-  <h4 id="SideLoader_At_SetValue__1___0_System_Type_System_Object_System_String_" data-uid="SideLoader.At.SetValue``1(``0,System.Type,System.Object,System.String)">SetValue&lt;T&gt;(T, Type, Object, String)</h4>
-  <div class="markdown level1 summary"><p>Helper to set the value to a private or protected field.</p>
+  <a id="SideLoader_At_SetProperty_" data-uid="SideLoader.At.SetProperty*"></a>
+  <h4 id="SideLoader_At_SetProperty__1_System_String_System_Object_" data-uid="SideLoader.At.SetProperty``1(System.String,System.Object)">SetProperty&lt;T&gt;(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Helper to set a static value on a non-static class. Use SetPropertyStatic for Static Classes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetValue&lt;T&gt;(T value, Type type, object obj, string field)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void SetProperty&lt;T&gt;(string propertyName, object value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -542,27 +1485,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The value you want to set.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The declaring class Type which contains this field.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property you want to set.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>The instance, for non-static members. If the member is static, use &quot;null&quot;.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">field</span></td>
-        <td><p>The name of the field.</p>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value you want to set.</p>
 </td>
       </tr>
     </tbody>
@@ -578,7 +1509,53 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The Type of value you are setting (only required if value is &quot;null&quot;).</p>
+        <td><p>The declaring class with the property in it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At_SetPropertyStatic_System_Type_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SideLoader.At.SetPropertyStatic(System.Type%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L106">View Source</a>
+  </span>
+  <a id="SideLoader_At_SetPropertyStatic_" data-uid="SideLoader.At.SetPropertyStatic*"></a>
+  <h4 id="SideLoader_At_SetPropertyStatic_System_Type_System_String_System_Object_" data-uid="SideLoader.At.SetPropertyStatic(System.Type,System.String,System.Object)">SetPropertyStatic(Type, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Helper to set a value on a Static Class (not just a static member of a class, use SetProperty&lt;T&gt; for that).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyStatic(Type type, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The declaring class with the property in it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The name of the property you want to set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value you want to set.</p>
 </td>
       </tr>
     </tbody>
@@ -594,7 +1571,7 @@
                     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_At.md&amp;value=---%0Auid%3A%20SideLoader.At%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Helpers/AccessTools.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Helpers/At.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

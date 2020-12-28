@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum SL_GUI.Pages
+    <title>Class CustomKeybindings.InputManager_Base_Initialize
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum SL_GUI.Pages
+    <meta name="title" content="Class CustomKeybindings.InputManager_Base_Initialize
    ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,47 +68,84 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SideLoader.UI.SL_GUI.Pages">
+            <article class="content wrap" id="_content" data-uid="SideLoader.CustomKeybindings.InputManager_Base_Initialize">
   
   
-  <h1 id="SideLoader_UI_SL_GUI_Pages" data-uid="SideLoader.UI.SL_GUI.Pages" class="text-break">Enum SL_GUI.Pages
+  <h1 id="SideLoader_CustomKeybindings_InputManager_Base_Initialize" data-uid="SideLoader.CustomKeybindings.InputManager_Base_Initialize" class="text-break">Class CustomKeybindings.InputManager_Base_Initialize
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SideLoader.UI.html">SideLoader.UI</a></h6>
-  <h6><strong>Assembly</strong>: SideLoader.dll</h6>
-  <h5 id="SideLoader_UI_SL_GUI_Pages_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum Pages</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CustomKeybindings.InputManager_Base_Initialize</span></div>
   </div>
-  <h3 id="fields">Fields
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SideLoader.html">SideLoader</a></h6>
+  <h6><strong>Assembly</strong>: SideLoader.dll</h6>
+  <h5 id="SideLoader_CustomKeybindings_InputManager_Base_Initialize_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HarmonyPatch(typeof(InputManager_Base), &quot;Initialize&quot;)]
+public class InputManager_Base_Initialize</code></pre>
+  </div>
+  <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_CustomKeybindings_InputManager_Base_Initialize_InitializePatch_Rewired_InputManager_Base_.md&amp;value=---%0Auid%3A%20SideLoader.CustomKeybindings.InputManager_Base_Initialize.InitializePatch(Rewired.InputManager_Base)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Custom/CustomKeybindings.cs/#L227">View Source</a>
+  </span>
+  <a id="SideLoader_CustomKeybindings_InputManager_Base_Initialize_InitializePatch_" data-uid="SideLoader.CustomKeybindings.InputManager_Base_Initialize.InitializePatch*"></a>
+  <h4 id="SideLoader_CustomKeybindings_InputManager_Base_Initialize_InitializePatch_Rewired_InputManager_Base_" data-uid="SideLoader.CustomKeybindings.InputManager_Base_Initialize.InitializePatch(Rewired.InputManager_Base)">InitializePatch(InputManager_Base)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HarmonyPrefix]
+public static void InitializePatch(InputManager_Base __instance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
-    <thead>
+    </thead>
     <tbody>
       <tr>
-        <td id="SideLoader_UI_SL_GUI_Pages_Enchantments">Enchantments</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="SideLoader_UI_SL_GUI_Pages_HotReload">HotReload</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="SideLoader_UI_SL_GUI_Pages_Items">Items</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="SideLoader_UI_SL_GUI_Pages_StatusEffects">StatusEffects</td>
+        <td><span class="xref">Rewired.InputManager_Base</span></td>
+        <td><span class="parametername">__instance</span></td>
         <td></td>
       </tr>
     </tbody>
-  </thead></thead></table>
+  </table>
 </article>
           </div>
           
@@ -117,10 +154,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_UI_SL_GUI_Pages.md&amp;value=---%0Auid%3A%20SideLoader.UI.SL_GUI.Pages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_CustomKeybindings_InputManager_Base_Initialize.md&amp;value=---%0Auid%3A%20SideLoader.CustomKeybindings.InputManager_Base_Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/UI/SL_GUI.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Custom/CustomKeybindings.cs/#L224" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

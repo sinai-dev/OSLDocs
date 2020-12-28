@@ -94,12 +94,17 @@
       <div class="level2"><a class="xref" href="SideLoader.SL_HeightCondition.html">SL_HeightCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_ImbueEffectCondition.html">SL_ImbueEffectCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_ImbueEffectORCondition.html">SL_ImbueEffectORCondition</a></div>
+      <div class="level2"><a class="xref" href="SideLoader.SL_InBoundsCondition.html">SL_InBoundsCondition</a></div>
+      <div class="level2"><a class="xref" href="SideLoader.SL_InstrumentClose.html">SL_InstrumentClose</a></div>
+      <div class="level2"><a class="xref" href="SideLoader.SL_InTownOrCityCondition.html">SL_InTownOrCityCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_InZoneCondition.html">SL_InZoneCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_IsEquipSlotFilledCondition.html">SL_IsEquipSlotFilledCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_IsWorldHostCondition.html">SL_IsWorldHostCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_MostRecentCondition.html">SL_MostRecentCondition</a></div>
+      <div class="level2"><a class="xref" href="SideLoader.SL_NoSameShooterBlastInProximity.html">SL_NoSameShooterBlastInProximity</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_OwnsItemCondition.html">SL_OwnsItemCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_PassiveSkillCondition.html">SL_PassiveSkillCondition</a></div>
+      <div class="level2"><a class="xref" href="SideLoader.SL_PrePackDeployableCondition.html">SL_PrePackDeployableCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_ProbabilityCondition.html">SL_ProbabilityCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_ProximityCondition.html">SL_ProximityCondition</a></div>
       <div class="level2"><a class="xref" href="SideLoader.SL_ProximitySoulSpotCondition.html">SL_ProximitySoulSpotCondition</a></div>
@@ -147,7 +152,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition_Invert.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition.Invert%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Effect/SL_EffectCondition.cs/#L14">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Effect/SL_EffectCondition.cs/#L14">View Source</a>
   </span>
   <h4 id="SideLoader_SL_EffectCondition_Invert" data-uid="SideLoader.SL_EffectCondition.Invert">Invert</h4>
   <div class="markdown level1 summary"></div>
@@ -178,7 +183,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition_ApplyToComponent__1___0_.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition.ApplyToComponent%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Effect/SL_EffectCondition.cs/#L36">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Effect/SL_EffectCondition.cs/#L36">View Source</a>
   </span>
   <a id="SideLoader_SL_EffectCondition_ApplyToComponent_" data-uid="SideLoader.SL_EffectCondition.ApplyToComponent*"></a>
   <h4 id="SideLoader_SL_EffectCondition_ApplyToComponent__1___0_" data-uid="SideLoader.SL_EffectCondition.ApplyToComponent``1(``0)">ApplyToComponent&lt;T&gt;(T)</h4>
@@ -187,6 +192,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract void ApplyToComponent&lt;T&gt;(T component)
+
     where T : EffectCondition</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -226,7 +232,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition_ApplyToTransform_UnityEngine_Transform_.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition.ApplyToTransform(UnityEngine.Transform)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Effect/SL_EffectCondition.cs/#L16">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Effect/SL_EffectCondition.cs/#L16">View Source</a>
   </span>
   <a id="SideLoader_SL_EffectCondition_ApplyToTransform_" data-uid="SideLoader.SL_EffectCondition.ApplyToTransform*"></a>
   <h4 id="SideLoader_SL_EffectCondition_ApplyToTransform_UnityEngine_Transform_" data-uid="SideLoader.SL_EffectCondition.ApplyToTransform(UnityEngine.Transform)">ApplyToTransform(Transform)</h4>
@@ -273,7 +279,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition_ParseCondition_EffectCondition_.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition.ParseCondition(EffectCondition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Effect/SL_EffectCondition.cs/#L38">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Effect/SL_EffectCondition.cs/#L38">View Source</a>
   </span>
   <a id="SideLoader_SL_EffectCondition_ParseCondition_" data-uid="SideLoader.SL_EffectCondition.ParseCondition*"></a>
   <h4 id="SideLoader_SL_EffectCondition_ParseCondition_EffectCondition_" data-uid="SideLoader.SL_EffectCondition.ParseCondition(EffectCondition)">ParseCondition(EffectCondition)</h4>
@@ -317,19 +323,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition_SerializeEffect__1_EffectCondition___0_.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition.SerializeEffect%60%601(EffectCondition%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition_SerializeEffect__1___0_.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition.SerializeEffect%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Effect/SL_EffectCondition.cs/#L58">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Effect/SL_EffectCondition.cs/#L58">View Source</a>
   </span>
   <a id="SideLoader_SL_EffectCondition_SerializeEffect_" data-uid="SideLoader.SL_EffectCondition.SerializeEffect*"></a>
-  <h4 id="SideLoader_SL_EffectCondition_SerializeEffect__1_EffectCondition___0_" data-uid="SideLoader.SL_EffectCondition.SerializeEffect``1(EffectCondition,``0)">SerializeEffect&lt;T&gt;(EffectCondition, T)</h4>
+  <h4 id="SideLoader_SL_EffectCondition_SerializeEffect__1___0_" data-uid="SideLoader.SL_EffectCondition.SerializeEffect``1(``0)">SerializeEffect&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SerializeEffect&lt;T&gt;(EffectCondition component, T template)
-    where T : SL_EffectCondition</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void SerializeEffect&lt;T&gt;(T component)
+
+    where T : EffectCondition</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,13 +349,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EffectCondition</span></td>
-        <td><span class="parametername">component</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">template</span></td>
+        <td><span class="parametername">component</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -379,7 +381,7 @@
                     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_EffectCondition.md&amp;value=---%0Auid%3A%20SideLoader.SL_EffectCondition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Effect/SL_EffectCondition.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Effect/SL_EffectCondition.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

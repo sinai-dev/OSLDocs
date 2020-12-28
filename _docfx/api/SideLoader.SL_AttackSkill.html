@@ -82,6 +82,7 @@
     <div class="level2"><a class="xref" href="SideLoader.SL_Skill.html">SL_Skill</a></div>
     <div class="level3"><span class="xref">SL_AttackSkill</span></div>
       <div class="level4"><a class="xref" href="SideLoader.SL_MeleeSkill.html">SL_MeleeSkill</a></div>
+      <div class="level4"><a class="xref" href="SideLoader.SL_PistolSkill.html">SL_PistolSkill</a></div>
       <div class="level4"><a class="xref" href="SideLoader.SL_RangeAttackSkill.html">SL_RangeAttackSkill</a></div>
       <div class="level4"><a class="xref" href="SideLoader.SL_ThrowSkill.html">SL_ThrowSkill</a></div>
   </div>
@@ -113,6 +114,9 @@
     </div>
     <div>
       <a class="xref" href="SideLoader.SL_Skill.html#SideLoader_SL_Skill_RequiredItems">SL_Skill.RequiredItems</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_Skill.html#SideLoader_SL_Skill_HealthCost">SL_Skill.HealthCost</a>
     </div>
     <div>
       <a class="xref" href="SideLoader.SL_Item.html#SideLoader_SL_Item_SLPackName">SL_Item.SLPackName</a>
@@ -248,10 +252,39 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_AmmunitionAmount.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.AmmunitionAmount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L18">View Source</a>
+  </span>
+  <h4 id="SideLoader_SL_AttackSkill_AmmunitionAmount" data-uid="SideLoader.SL_AttackSkill.AmmunitionAmount">AmmunitionAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AmmunitionAmount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_AmmunitionTypes.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.AmmunitionTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L11">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L12">View Source</a>
   </span>
   <h4 id="SideLoader_SL_AttackSkill_AmmunitionTypes" data-uid="SideLoader.SL_AttackSkill.AmmunitionTypes">AmmunitionTypes</h4>
   <div class="markdown level1 summary"></div>
@@ -280,7 +313,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_RequiredOffHandTypes.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.RequiredOffHandTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L12">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L13">View Source</a>
   </span>
   <h4 id="SideLoader_SL_AttackSkill_RequiredOffHandTypes" data-uid="SideLoader.SL_AttackSkill.RequiredOffHandTypes">RequiredOffHandTypes</h4>
   <div class="markdown level1 summary"></div>
@@ -309,7 +342,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_RequiredWeaponTags.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.RequiredWeaponTags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L14">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L15">View Source</a>
   </span>
   <h4 id="SideLoader_SL_AttackSkill_RequiredWeaponTags" data-uid="SideLoader.SL_AttackSkill.RequiredWeaponTags">RequiredWeaponTags</h4>
   <div class="markdown level1 summary"></div>
@@ -338,7 +371,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_RequiredWeaponTypes.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.RequiredWeaponTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L13">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L14">View Source</a>
   </span>
   <h4 id="SideLoader_SL_AttackSkill_RequiredWeaponTypes" data-uid="SideLoader.SL_AttackSkill.RequiredWeaponTypes">RequiredWeaponTypes</h4>
   <div class="markdown level1 summary"></div>
@@ -367,7 +400,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_RequireImbue.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.RequireImbue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L15">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L16">View Source</a>
   </span>
   <h4 id="SideLoader_SL_AttackSkill_RequireImbue" data-uid="SideLoader.SL_AttackSkill.RequireImbue">RequireImbue</h4>
   <div class="markdown level1 summary"></div>
@@ -398,7 +431,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_ApplyToItem_Item_.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.ApplyToItem(Item)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L17">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L20">View Source</a>
   </span>
   <a id="SideLoader_SL_AttackSkill_ApplyToItem_" data-uid="SideLoader.SL_AttackSkill.ApplyToItem*"></a>
   <h4 id="SideLoader_SL_AttackSkill_ApplyToItem_Item_" data-uid="SideLoader.SL_AttackSkill.ApplyToItem(Item)">ApplyToItem(Item)</h4>
@@ -429,18 +462,18 @@
   <div><a class="xref" href="SideLoader.SL_Skill.html#SideLoader_SL_Skill_ApplyToItem_Item_">SL_Skill.ApplyToItem(Item)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_SerializeItem_Item_SideLoader_SL_Item_.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.SerializeItem(Item%2CSideLoader.SL_Item)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill_SerializeItem_Item_.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill.SerializeItem(Item)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L62">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L55">View Source</a>
   </span>
   <a id="SideLoader_SL_AttackSkill_SerializeItem_" data-uid="SideLoader.SL_AttackSkill.SerializeItem*"></a>
-  <h4 id="SideLoader_SL_AttackSkill_SerializeItem_Item_SideLoader_SL_Item_" data-uid="SideLoader.SL_AttackSkill.SerializeItem(Item,SideLoader.SL_Item)">SerializeItem(Item, SL_Item)</h4>
+  <h4 id="SideLoader_SL_AttackSkill_SerializeItem_Item_" data-uid="SideLoader.SL_AttackSkill.SerializeItem(Item)">SerializeItem(Item)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void SerializeItem(Item item, SL_Item holder)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void SerializeItem(Item item)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -457,15 +490,10 @@
         <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="SideLoader.SL_Item.html">SL_Item</a></td>
-        <td><span class="parametername">holder</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="SideLoader.SL_Skill.html#SideLoader_SL_Skill_SerializeItem_Item_SideLoader_SL_Item_">SL_Skill.SerializeItem(Item, SL_Item)</a></div>
+  <div><a class="xref" href="SideLoader.SL_Skill.html#SideLoader_SL_Skill_SerializeItem_Item_">SL_Skill.SerializeItem(Item)</a></div>
 </article>
           </div>
           
@@ -477,7 +505,7 @@
                     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_AttackSkill.md&amp;value=---%0Auid%3A%20SideLoader.SL_AttackSkill%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/Skill/SL_AttackSkill.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/Skill/SL_AttackSkill.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -110,7 +110,7 @@
   <h6><strong>Assembly</strong>: SideLoader.dll</h6>
   <h5 id="SideLoader_SL_BaseSkillSlot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SL_BaseSkillSlot</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SL_BaseSkillSlot</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -119,7 +119,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_BaseSkillSlot_ColumnIndex.md&amp;value=---%0Auid%3A%20SideLoader.SL_BaseSkillSlot.ColumnIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/SkillTree/SL_SkillTree.cs/#L159">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/SkillTree/SL_SkillTree.cs/#L152">View Source</a>
   </span>
   <h4 id="SideLoader_SL_BaseSkillSlot_ColumnIndex" data-uid="SideLoader.SL_BaseSkillSlot.ColumnIndex">ColumnIndex</h4>
   <div class="markdown level1 summary"></div>
@@ -148,7 +148,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_BaseSkillSlot_RequiredSkillSlot.md&amp;value=---%0Auid%3A%20SideLoader.SL_BaseSkillSlot.RequiredSkillSlot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/SkillTree/SL_SkillTree.cs/#L160">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/SkillTree/SL_SkillTree.cs/#L153">View Source</a>
   </span>
   <h4 id="SideLoader_SL_BaseSkillSlot_RequiredSkillSlot" data-uid="SideLoader.SL_BaseSkillSlot.RequiredSkillSlot">RequiredSkillSlot</h4>
   <div class="markdown level1 summary"></div>
@@ -176,10 +176,62 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_BaseSkillSlot_ApplyToRow_UnityEngine_Transform_System_Int32_.md&amp;value=---%0Auid%3A%20SideLoader.SL_BaseSkillSlot.ApplyToRow(UnityEngine.Transform%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/SkillTree/SL_SkillTree.cs/#L155">View Source</a>
+  </span>
+  <a id="SideLoader_SL_BaseSkillSlot_ApplyToRow_" data-uid="SideLoader.SL_BaseSkillSlot.ApplyToRow*"></a>
+  <h4 id="SideLoader_SL_BaseSkillSlot_ApplyToRow_UnityEngine_Transform_System_Int32_" data-uid="SideLoader.SL_BaseSkillSlot.ApplyToRow(UnityEngine.Transform,System.Int32)">ApplyToRow(Transform, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract SkillSlot ApplyToRow(Transform row, int treeID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Transform</span></td>
+        <td><span class="parametername">row</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">treeID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SkillSlot</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_BaseSkillSlot_SetRequiredSlot_BaseSkillSlot_.md&amp;value=---%0Auid%3A%20SideLoader.SL_BaseSkillSlot.SetRequiredSlot(BaseSkillSlot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/SkillTree/SL_SkillTree.cs/#L166">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/SkillTree/SL_SkillTree.cs/#L161">View Source</a>
   </span>
   <a id="SideLoader_SL_BaseSkillSlot_SetRequiredSlot_" data-uid="SideLoader.SL_BaseSkillSlot.SetRequiredSlot*"></a>
   <h4 id="SideLoader_SL_BaseSkillSlot_SetRequiredSlot_BaseSkillSlot_" data-uid="SideLoader.SL_BaseSkillSlot.SetRequiredSlot(BaseSkillSlot)">SetRequiredSlot(BaseSkillSlot)</h4>
@@ -219,7 +271,7 @@
                     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_BaseSkillSlot.md&amp;value=---%0Auid%3A%20SideLoader.SL_BaseSkillSlot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/SkillTree/SL_SkillTree.cs/#L156" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/SkillTree/SL_SkillTree.cs/#L149" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

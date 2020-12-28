@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SL_GUI
+    <title>Class SLPlugin
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SL_GUI
+    <meta name="title" content="Class SLPlugin
    ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,12 +68,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SideLoader.UI.SL_GUI">
+            <article class="content wrap" id="_content" data-uid="SideLoader.SLPlugin">
   
   
-  <h1 id="SideLoader_UI_SL_GUI" data-uid="SideLoader.UI.SL_GUI" class="text-break">Class SL_GUI
+  <h1 id="SideLoader_SLPlugin" data-uid="SideLoader.SLPlugin" class="text-break">Class SLPlugin
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>SideLoader's BepInEx plugin class.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -82,10 +83,20 @@
     <div class="level2"><span class="xref">UnityEngine.Component</span></div>
     <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
     <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
-    <div class="level5"><span class="xref">SL_GUI</span></div>
+    <div class="level5"><span class="xref">BepInEx.BaseUnityPlugin</span></div>
+    <div class="level6"><span class="xref">SLPlugin</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">BepInEx.BaseUnityPlugin.Info</span>
+    </div>
+    <div>
+      <span class="xref">BepInEx.BaseUnityPlugin.Logger</span>
+    </div>
+    <div>
+      <span class="xref">BepInEx.BaseUnityPlugin.Config</span>
+    </div>
     <div>
       <span class="xref">UnityEngine.MonoBehaviour.IsInvoking()</span>
     </div>
@@ -345,27 +356,28 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="SideLoader.UI.html">SideLoader.UI</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SideLoader.html">SideLoader</a></h6>
   <h6><strong>Assembly</strong>: SideLoader.dll</h6>
-  <h5 id="SideLoader_UI_SL_GUI_syntax">Syntax</h5>
+  <h5 id="SideLoader_SLPlugin_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SL_GUI : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">[BepInPlugin(&quot;com.sinai.SideLoader&quot;, &quot;SideLoader&quot;, &quot;3.1.0&quot;)]
+public class SLPlugin : BaseUnityPlugin</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_UI_SL_GUI_Instance.md&amp;value=---%0Auid%3A%20SideLoader.UI.SL_GUI.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SLPlugin_GUID.md&amp;value=---%0Auid%3A%20SideLoader.SLPlugin.GUID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/UI/SL_GUI.cs/#L13">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/SLPlugin.cs/#L20">View Source</a>
   </span>
-  <h4 id="SideLoader_UI_SL_GUI_Instance" data-uid="SideLoader.UI.SL_GUI.Instance">Instance</h4>
+  <h4 id="SideLoader_SLPlugin_GUID" data-uid="SideLoader.SLPlugin.GUID">GUID</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SL_GUI Instance</code></pre>
+    <pre><code class="lang-csharp hljs">public const string GUID = &quot;com.sinai.SideLoader&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,24 +389,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="SideLoader.UI.SL_GUI.html">SL_GUI</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_UI_SL_GUI_ShowMenu.md&amp;value=---%0Auid%3A%20SideLoader.UI.SL_GUI.ShowMenu%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SLPlugin_Instance.md&amp;value=---%0Auid%3A%20SideLoader.SLPlugin.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/UI/SL_GUI.cs/#L28">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/SLPlugin.cs/#L17">View Source</a>
   </span>
-  <h4 id="SideLoader_UI_SL_GUI_ShowMenu" data-uid="SideLoader.UI.SL_GUI.ShowMenu">ShowMenu</h4>
+  <h4 id="SideLoader_SLPlugin_Instance" data-uid="SideLoader.SLPlugin.Instance">Instance</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ShowMenu</code></pre>
+    <pre><code class="lang-csharp hljs">public static SLPlugin Instance</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -406,7 +418,65 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="SideLoader.SLPlugin.html">SLPlugin</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SLPlugin_MODNAME.md&amp;value=---%0Auid%3A%20SideLoader.SLPlugin.MODNAME%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/SLPlugin.cs/#L21">View Source</a>
+  </span>
+  <h4 id="SideLoader_SLPlugin_MODNAME" data-uid="SideLoader.SLPlugin.MODNAME">MODNAME</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MODNAME = &quot;SideLoader&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SLPlugin_VERSION.md&amp;value=---%0Auid%3A%20SideLoader.SLPlugin.VERSION%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/SLPlugin.cs/#L22">View Source</a>
+  </span>
+  <h4 id="SideLoader_SLPlugin_VERSION" data-uid="SideLoader.SLPlugin.VERSION">VERSION</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string VERSION = &quot;3.1.0&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -415,18 +485,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_UI_SL_GUI_MakeTex_System_Int32_System_Int32_UnityEngine_Color_.md&amp;value=---%0Auid%3A%20SideLoader.UI.SL_GUI.MakeTex(System.Int32%2CSystem.Int32%2CUnityEngine.Color)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SLPlugin_Log_System_String_SideLoader_SL_LogLevel_.md&amp;value=---%0Auid%3A%20SideLoader.SLPlugin.Log(System.String%2CSideLoader.SL.LogLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/UI/SL_GUI.cs/#L533">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/SLPlugin.cs/#L72">View Source</a>
   </span>
-  <a id="SideLoader_UI_SL_GUI_MakeTex_" data-uid="SideLoader.UI.SL_GUI.MakeTex*"></a>
-  <h4 id="SideLoader_UI_SL_GUI_MakeTex_System_Int32_System_Int32_UnityEngine_Color_" data-uid="SideLoader.UI.SL_GUI.MakeTex(System.Int32,System.Int32,UnityEngine.Color)">MakeTex(Int32, Int32, Color)</h4>
+  <a id="SideLoader_SLPlugin_Log_" data-uid="SideLoader.SLPlugin.Log*"></a>
+  <h4 id="SideLoader_SLPlugin_Log_System_String_SideLoader_SL_LogLevel_" data-uid="SideLoader.SLPlugin.Log(System.String,SideLoader.SL.LogLevel)">Log(String, SL.LogLevel)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Texture2D MakeTex(int width, int height, Color col)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Log(string log, SL.LogLevel level)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -439,33 +509,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">width</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">log</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">height</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Color</span></td>
-        <td><span class="parametername">col</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Texture2D</span></td>
+        <td><a class="xref" href="SideLoader.SL.LogLevel.html">SL.LogLevel</a></td>
+        <td><span class="parametername">level</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -478,10 +528,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_UI_SL_GUI.md&amp;value=---%0Auid%3A%20SideLoader.UI.SL_GUI%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SLPlugin.md&amp;value=---%0Auid%3A%20SideLoader.SLPlugin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/UI/SL_GUI.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/SLPlugin.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

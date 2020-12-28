@@ -79,11 +79,21 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="SideLoader.SL_ItemExtension.html">SL_ItemExtension</a></div>
-    <div class="level2"><span class="xref">SL_Deployable</span></div>
-      <div class="level3"><a class="xref" href="SideLoader.SL_ItemAddOn.html">SL_ItemAddOn</a></div>
+    <div class="level2"><a class="xref" href="SideLoader.SL_BasicDeployable.html">SL_BasicDeployable</a></div>
+    <div class="level3"><span class="xref">SL_Deployable</span></div>
+      <div class="level4"><a class="xref" href="SideLoader.SL_ItemAddOn.html">SL_ItemAddOn</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="SideLoader.SL_BasicDeployable.html#SideLoader_SL_BasicDeployable_CantDeployInNoBedZones">SL_BasicDeployable.CantDeployInNoBedZones</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_BasicDeployable.html#SideLoader_SL_BasicDeployable_DeploymentDirection">SL_BasicDeployable.DeploymentDirection</a>
+    </div>
+    <div>
+      <a class="xref" href="SideLoader.SL_BasicDeployable.html#SideLoader_SL_BasicDeployable_DeploymentOffset">SL_BasicDeployable.DeploymentOffset</a>
+    </div>
     <div>
       <a class="xref" href="SideLoader.SL_ItemExtension.html#SideLoader_SL_ItemExtension_Savable">SL_ItemExtension.Savable</a>
     </div>
@@ -125,7 +135,7 @@
   <h6><strong>Assembly</strong>: SideLoader.dll</h6>
   <h5 id="SideLoader_SL_Deployable_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SL_Deployable : SL_ItemExtension</code></pre>
+    <pre><code class="lang-csharp hljs">public class SL_Deployable : SL_BasicDeployable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -134,7 +144,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_AutoTake.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.AutoTake%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L11">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L11">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_AutoTake" data-uid="SideLoader.SL_Deployable.AutoTake">AutoTake</h4>
   <div class="markdown level1 summary"></div>
@@ -160,39 +170,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_CantDeployInNoBedZones.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.CantDeployInNoBedZones%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L12">View Source</a>
-  </span>
-  <h4 id="SideLoader_SL_Deployable_CantDeployInNoBedZones" data-uid="SideLoader.SL_Deployable.CantDeployInNoBedZones">CantDeployInNoBedZones</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? CantDeployInNoBedZones</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_CastAnim.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.CastAnim%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L13">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L12">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_CastAnim" data-uid="SideLoader.SL_Deployable.CastAnim">CastAnim</h4>
   <div class="markdown level1 summary"></div>
@@ -221,7 +202,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_DeployedStateItemID.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.DeployedStateItemID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L14">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L13">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_DeployedStateItemID" data-uid="SideLoader.SL_Deployable.DeployedStateItemID">DeployedStateItemID</h4>
   <div class="markdown level1 summary"></div>
@@ -247,68 +228,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_DeploymentDirection.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.DeploymentDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L15">View Source</a>
-  </span>
-  <h4 id="SideLoader_SL_Deployable_DeploymentDirection" data-uid="SideLoader.SL_Deployable.DeploymentDirection">DeploymentDirection</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3? DeploymentDirection</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">UnityEngine.Vector3</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_DeploymentOffset.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.DeploymentOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L16">View Source</a>
-  </span>
-  <h4 id="SideLoader_SL_Deployable_DeploymentOffset" data-uid="SideLoader.SL_Deployable.DeploymentOffset">DeploymentOffset</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3? DeploymentOffset</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">UnityEngine.Vector3</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_DeploymentSound.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.DeploymentSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L17">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L14">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_DeploymentSound" data-uid="SideLoader.SL_Deployable.DeploymentSound">DeploymentSound</h4>
   <div class="markdown level1 summary"></div>
@@ -337,7 +260,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_DisassembleOffset.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.DisassembleOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L18">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L15">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_DisassembleOffset" data-uid="SideLoader.SL_Deployable.DisassembleOffset">DisassembleOffset</h4>
   <div class="markdown level1 summary"></div>
@@ -366,7 +289,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_DisassembleSound.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.DisassembleSound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L19">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L16">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_DisassembleSound" data-uid="SideLoader.SL_Deployable.DisassembleSound">DisassembleSound</h4>
   <div class="markdown level1 summary"></div>
@@ -395,7 +318,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_PackedItemPrefabID.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.PackedItemPrefabID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L20">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L17">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_PackedItemPrefabID" data-uid="SideLoader.SL_Deployable.PackedItemPrefabID">PackedItemPrefabID</h4>
   <div class="markdown level1 summary"></div>
@@ -424,7 +347,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_State.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L21">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L18">View Source</a>
   </span>
   <h4 id="SideLoader_SL_Deployable_State" data-uid="SideLoader.SL_Deployable.State">State</h4>
   <div class="markdown level1 summary"></div>
@@ -455,7 +378,7 @@
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_ApplyToComponent__1___0_.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.ApplyToComponent%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L23">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L20">View Source</a>
   </span>
   <a id="SideLoader_SL_Deployable_ApplyToComponent_" data-uid="SideLoader.SL_Deployable.ApplyToComponent*"></a>
   <h4 id="SideLoader_SL_Deployable_ApplyToComponent__1___0_" data-uid="SideLoader.SL_Deployable.ApplyToComponent``1(``0)">ApplyToComponent&lt;T&gt;(T)</h4>
@@ -464,6 +387,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void ApplyToComponent&lt;T&gt;(T component)
+
     where T : ItemExtension</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -499,13 +423,13 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">SideLoader.SL_ItemExtension.ApplyToComponent&lt;T&gt;(T)</span></div>
+  <div><span class="xref">SideLoader.SL_BasicDeployable.ApplyToComponent&lt;T&gt;(T)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable_SerializeComponent__1___0_.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable.SerializeComponent%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L81">View Source</a>
+    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L57">View Source</a>
   </span>
   <a id="SideLoader_SL_Deployable_SerializeComponent_" data-uid="SideLoader.SL_Deployable.SerializeComponent*"></a>
   <h4 id="SideLoader_SL_Deployable_SerializeComponent__1___0_" data-uid="SideLoader.SL_Deployable.SerializeComponent``1(``0)">SerializeComponent&lt;T&gt;(T)</h4>
@@ -514,6 +438,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void SerializeComponent&lt;T&gt;(T extension)
+
     where T : ItemExtension</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -549,7 +474,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">SideLoader.SL_ItemExtension.SerializeComponent&lt;T&gt;(T)</span></div>
+  <div><span class="xref">SideLoader.SL_BasicDeployable.SerializeComponent&lt;T&gt;(T)</span></div>
 </article>
           </div>
           
@@ -561,7 +486,7 @@
                     <a href="https://github.com/sinai-dev/Outward-SideLoader/new/master/apiSpec/new?filename=SideLoader_SL_Deployable.md&amp;value=---%0Auid%3A%20SideLoader.SL_Deployable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/SideLoader/Serializer/Item/ItemExtension/SL_Deployable.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/sinai-dev/Outward-SideLoader/blob/master/SideLoader/src/Model/Item/ItemExtension/SL_Deployable.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
