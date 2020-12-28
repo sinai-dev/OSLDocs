@@ -13,7 +13,7 @@ Before you dive too far into troubleshooting, you should make sure that:
 
 SideLoader has extensive logging, and you should be able to tell if something major has gone wrong from the log file.
 
-The log file can be found at `Outward\output_log.txt`, assuming you are on BepInEx 5.2 or later.
+The log file can be found at `Outward\BepInEx\LogOutput.log`, assuming you are on BepInEx 5.2 or later.
 
 * <b>NOTE:</b> if you don't see the file there, check at `%userprofile%\appdata\locallow\nine dots studio\outward\`
 

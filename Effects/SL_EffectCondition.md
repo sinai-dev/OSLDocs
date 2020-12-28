@@ -169,6 +169,24 @@ Same as ImbueEffectCondition, but allows you to check from a list of valid Imbue
 
 It is exactly the same, but instead of `ImbuePresetID` you have `ImbuePresetIDs` (a list of integer).
 
+## SL_InBoundsCondition
+Checks if the character is within a certain `Bounds` value, in absolute world space.
+
+`Bounds` (Bounds)
+* A Bounds struct has the fields: `center` (Vector3) and `size` (Vector3), use these to set the bounds, ignore the other values.
+
+## SL_InstrumentClose
+Requires an Instrument item to be within a certain distance.
+
+`MainInstrumentID` (int)
+* The item ID of the primary instrument required
+
+`OtherInstrumentIDs` (list of int)
+* A list of ints for other accepted Instrument Item IDs
+
+`Range` (float)
+* Max distance from caster for the instrument to be
+
 ## SL_InZoneCondition
 I'll be honest, I don't really know how this one works. It might not actually be a real condition that is used.
 
@@ -194,6 +212,12 @@ Used by Runic spells to check which of two status effects is most recent.
 `StatusIdentifierToCompareTo` (string)
 * The identifier of the status you are comparing to (which should be older)
 
+## SL_NoSameShooterBlastInProximity
+Prevents multiple of the same shooter from creating this effect in a certain range.
+
+`Proximity` (float)
+* The range for only 1 of the shooter to be active inside.
+
 ## SL_OwnsItemCondition
 Checks if the caster owns an amount of a specific Item ID.
 
@@ -209,6 +233,18 @@ Checks if the caster has a passive skill of this Item ID.
 `ReqSkillID` (integer)
 * The required passive skill ID.
 
+## SL_PrePackDeployableCondition
+Requires a packable Instrument to be within a certain distance.
+
+`ProximityDist` (float)
+* The distance for the instrument to be
+
+`ProximityAngle` (float)
+* Max angle relative to player's facing direction that we check inside
+
+`PackableItemIDs` (list of int)
+* A list of ints for the accepted Instrument Item IDs
+
 ## SL_ProbabilityCondition
 A random condition. Has a chance to evaluate true or false.
 
@@ -221,6 +257,12 @@ Checks for proximity to required Item IDs.
 
 `RequiredItems` (list of SL_Skill.SkillItemReq objects)
 * Each `<SkillItemReq>` has: `ItemID` (integer, Item ID), `Consume` (true/false, item is consumed?) and `Quantity` (integer, quantity required).
+
+`ProximityAngle` (float)
+* The required angle relative to character facing direction for the proximity item
+
+`OrMode` (bool)
+* Changes the RequiredItems behaviour to accept ANY of the items for the condition to evaluate as true, instead of all of them.
 
 ## SL_ProximitySoulSpotCondition
 Inherits from SL_ProximityCondition, and contains one extra field. This is for spells which require a Soul Spot nearby.

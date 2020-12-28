@@ -18,6 +18,9 @@ All SL_Skills inherit from this class. If you use a generated SL_Item template, 
 `ManaCost` (float)
 * Mana cost of the skill
 
+`HealthCost` (float)
+* Health cost of using the skill
+
 `DurabilityCost` (float)
 * Durability cost of activation for current weapon (flat amount)
 
@@ -62,6 +65,9 @@ If a skill is an "Attack Skill" you can use these fields. Attack Skills are any 
 `RequiredWeaponTags` (list of string)
 * This works the same way as the `Tags` field on the SL_Item class. It's a list of <string> values.
 * The game uses this for the Lexicon tag, which can be fulfilled by either off-hand or main-hand weapons.
+
+`AmmunitionAmount` (int)
+* The ammunition amount required and used by the skill, for Bow skills usually
 
 ```xml
 <RequiredWeaponTags>
@@ -122,8 +128,11 @@ A SL_MeleeSkill inherits from SL_AttackSkill, and contains a few extra fields.
 `Radius` (float)
 * The radius of the collision
 
-`Unblockable`
-* Is the attack <b>unblockable</b>? Overrides `Blockable`, don't ask me why there are two values for this.
+`Unblockable` (bool)
+* Is the attack <b>unblockable</b>? Overrides `Blockable`.
+
+`NoWeaponAtkTag` (bool)
+* Not sure, investigate if you're curious
 
 ## SL_ThrowSkill
 Inherits from SL_AttackSkill, and contains a few extra fields. This is used with a `SL_ThrowItem` effect.

@@ -16,6 +16,9 @@ Currently, there is no debug menu generator for characters, so I'll just provide
   <!-- The following syntax is recommended. It's the reverse domain syntax, but with "_" instead of "." -->
   <UID>myname_myproject_mycharacter</UID>
 
+  <!-- The Save Type, which must be one of: Temporary, Scene or Follower -->
+  <SaveType>Temporary</SaveType>
+
   <!-- Character's Name -->
   <Name>My Name</Name>
   
@@ -97,6 +100,12 @@ Currently, there is no debug menu generator for characters, so I'll just provide
 * The <b>unique identifier</b> for this character template.
 * Can be used for the actual Character UID, or you can override it for dynamic spawns.
 * Used by the OnSpawn callback to invoke the corresponding template's method.
+
+`SaveType` (enum)
+* Determines how the character is saved.
+* `Temporary` will not save the character at all.
+* `Scene` will save the character with the scene, and reset them on Area Reset.
+* `Follower` will make the character change scenes with the players and never be destroyed unless you do it manually with your mod.
 
 `Name` (string)
 * The name of the character
@@ -213,6 +222,7 @@ Here is an example from the Necromancy mod for a unique, static NPC spawn.
 private static readonly SL_Character trainerTemplate = new SL_Character()
 {
     UID = TRAINER_UID,
+    SaveType = CharSaveType.Scene,
     Faction = Character.Factions.NONE,
     Name = "Spectral Wanderer",
     SceneToSpawn = "Hallowed_Dungeon4_Interior",
@@ -246,7 +256,8 @@ public void LocalTrainerSetup(Character trainer, string _)
 Here is an example of a dynamic spawn from a custom skill `Effect.ActivateLocally()`.
 
 ```csharp
-// The Ghost and Skeleton are SL_Character templates, didn't feel the need to show them since I showed that above.
+// The Ghost and Skeleton are SL_Character templates (with SaveType=CharSaveType.Follower), 
+// didn't feel the need to show them since I showed that above.
 
 // Setup templates in Awake
 internal void Awake()
@@ -308,6 +319,9 @@ This is a simple example template of an NPC. It will spawn outside the Cierzo ga
   <!-- The UID is important! Make sure you set a unique identifier. -->
   <!-- This UID is used by OnSpawn callbacks, and can also be used for the actual Character UID. -->
   <UID>com.sinai.Fred</UID>
+
+  <!-- One of: Temporary, Scene or Follower -->
+  <SaveType>Scene</SaveType>
 
   <!-- Character's Name -->
   <Name>Fred</Name>

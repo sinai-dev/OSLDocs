@@ -42,8 +42,38 @@ All SL_ItemExtension classes have this field.
 
 Below are all the subclasses of `SL_ItemExtension`. These contain the field above, as well as extra fields.
 
+## SL_BasicDeployable
+The base class for `SL_Deployable` and `SL_BuildingUpgrade`, it cannot be used directly as the class.
+
+`CantDeployInNoBedZones` (true/false)
+* Whether or not this item can deploy in "no bed zones"
+
+`DeploymentDirection` (Vector3)
+* A Vector3 (has `x`, `y` and `z` values) representing the direction that the deployed will be in.
+
+`DeploymentOffset` (Vector3)
+* The offset position of the deployed item prefab
+
+## SL_BuildingUpgrade
+Inherits from `SL_Deployable`. 
+
+`BuildingToUpgradeID` (int)
+* The Item ID of the Building this is an upgrade for
+
+`SnappingRadius` (float)
+* The snapping radius when deploying, default 5
+
+`RequiredQuestEventUIDs` (list of string)
+* A list of Quest Event UIDs required to build this upgrade.
+
+`UpgradeFromIndex` (int)
+* The UpgradeIndex which this continues from
+
+`UpgradeIndex` (int)
+* The Upgrade Index for this upgrade
+
 ## SL_Deployable
-Used to deploy or pack a deployable item (tents, crafting stations, etc). This behaviour is pretty specific to the existing Deployable items, you will need to use C# to modify the interactions in a significant way.
+Inherits from `SL_BasicDeployable`. Used to deploy or pack a deployable item (tents, crafting stations, etc). This behaviour is pretty specific to the existing Deployable items, you will need to use C# to modify the interactions in a significant way.
 
 Deployables all have a "Deployed" state version and a "Packed" state version. The player only ever has the Packed version in their inventory. Generally the Deployed-state Item ID is the Packed-state Item ID + 1.
 
@@ -61,18 +91,9 @@ Deployables all have a "Deployed" state version and a "Packed" state version. Th
 `AutoTake` (true/false)
 * Whether or not there is an animation when picked up (true = no animation)
 
-`CantDeployInNoBedZones` (true/false)
-* Whether or not this item can deploy in "no bed zones"
-
 `CastAnim` (enum)
 * The animation when deploying or packing
 * Can be any value off [this list](Resources/Types/enums/Character.SpellCastType.txt).
-
-`DeploymentDirection` (Vector3)
-* A Vector3 (has `x`, `y` and `z` values) representing the direction that the deployed will be in.
-
-`DeploymentOffset` (Vector3)
-* The offset position of the deployed item prefab
 
 `DeploymentSound` (enum)
 * The sound played when deployed

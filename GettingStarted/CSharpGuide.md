@@ -2,10 +2,6 @@
 
 This is a brief summary of how to use the SideLoader directly from your own C# mod.
 
-## C# API
-
-See the [C# API](https://sinai-dev.github.io/_docfx/api/SideLoader.html) (work-in-progress) for proper documentation. This documentation can also be seen as hints in your IDE when you are using SideLoader's API.
-
 ## Adding the Reference
 
 1. <b>Install SideLoader</b> to the Outward/BepInEx/plugins folder.
@@ -18,7 +14,7 @@ The most important thing about using SideLoader from C# are the Events, so I wil
 To subscribe to an event in C#, simply put something like this in your `Awake()` function:
 * `SL.OnPacksLoaded += MySetup;` where `MySetup` is a method.
 
-The events you can subscribe to are:
+Some of the important events you can subscribe to are:
 * `SL.BeforePacksLoaded` is called right before SL Packs are loaded and applied. This is <b>after</b> ResourcesPrefabManager has loaded.
 * `SL.OnPacksLoaded` is called after all packs have been loaded and applied. This will also be after ResourcesPrefabManager has loaded.
 * `SL.OnSceneLoaded` is called when a scene has truly finished loading. This is <b>not</b> called for the Main Menu or for the "Low Memory Transition Scene".
@@ -30,6 +26,50 @@ The `SLPack` class is the C# wrapper for SL Pack folders.
 * Use `SL.Packs["MyPackName"]` to get a handle on your pack.
 * You can access certain assets from your SL Pack with this class.
 * See also [SLPack (C# API)](https://sinai-dev.github.io/_docfx/api/SideLoader.SLPack.html)
+
+## Custom Keybindings
+
+One of the main helpers for C# is the Custom Keybindings. SideLoader implements this in a convenient API, to save other mods from all having to do this themselves.
+
+```csharp
+using SideLoader;
+
+// inside your BaseUnityPlugin.Awake() method:
+CustomKeybindings.AddAction("MyKey", KeybindingsCategory.CustomKeybindings, ControlType.Keyboard);
+
+// inside your Update() method:
+if (CustomKeybindings.GetKeyDown("MyKey")) 
+{
+    // the key was pressed this frame
+}
+if (CustomKeybindings.GetKey("MyKey")) 
+{
+    // the key is held this frame
+}
+```
+
+## Mouse Control
+
+SideLoader also provides a helper for taking control of the mouse, in a way that integrates nicely with Outward.
+
+Use this if you have a custom menu or something and want to unlock the mouse and prevent character input.
+
+```csharp
+// when you want to unlock the mouse:
+SideLoader.Helpers.ForceUnlockCursor.AddUnlockSource();
+
+// when you're done:
+SideLoader.Helpers.ForceUnlockCursor.RemoveUnlockSource();
+```
+
+## At (AccessTools)
+SideLoader's class `At` is a Reflection helper, designed for simplicity and relatively good performance.
+
+The Methods should all be fairly self-explanatory and easy to follow if you have a basic grasp on C# Reflection, but feel free to ask me in the Outward Discord or anywhere if you need help with this.
+
+For example, to set the private field `m_name` on an `Item`, simply do `At.SetField(myItem, "m_name", "MyNewName")`;
+
+Most of `At`'s methods are generic, so be careful with the instances you pass to them, make sure the generic type actually contains the member you want to access. For example, if you have an instance of a Weapon but it is currently only cast to an Item, you would need to do something like this: `At.SetField(myItem as Weapon, "m_someWeaponField", someValue);`
 
 ## Custom Items
 

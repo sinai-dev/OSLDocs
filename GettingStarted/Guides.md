@@ -9,19 +9,15 @@ Before we start, have a quick read of the [SL Packs](GettingStarted/SLPacks) art
 
 Next, start Outward. We are going to use the [SL Menu](GettingStarted/SLMenu) to generate a template from an existing Item for us.
 
-1. In game, press <b>Ctrl + Alt + F6</b> to open the SL Menu. 
-2. In the Items panel, enter `2000010` as the Target Item ID, as well as the New Item ID. 
+1. Go into your Keybindings and set a binding for the SL Menu if you have not already, then open the menu.
+2. In the Items section, enter `2000010` as the Item ID. 
 3. Press the button to generate the template.
-
-![Using the SL Menu.](https://i.imgur.com/5QQbJnn.png)
 
 Let's find the template SideLoader generated.
 
-1. Open `Outward\Mods\SideLoader\_GENERATED\`, this is where SideLoader generates templates to. 
+1. Press the button at the top of the menu to open the "_GENERATED" folder (`Outward\Mods\SideLoader\_GENERATED\`)
 2. Inside here, you should see an `Items\` sub-folder
 3. Inside Items, you should see a folder called `2000010_IronSword\`.
-
-![The `_GENERATED\` folder should look like this.](https://i.imgur.com/tqcQTzc.png)
 
 Now we need to move this folder into our own SL Pack.
 
@@ -32,20 +28,10 @@ Now we need to move this folder into our own SL Pack.
 
 It should now look like this: `Outward\Mods\SideLoader\Test\Items\2000010_IronSword\`.
 
-![Moving the folder to our own SL Pack.](https://i.imgur.com/gjxhoWk.png)
-
 Now let's make a basic change to the Item.
 
 1. Open the `2000010_IronSword\Iron Sword.xml` file and have a look. 
-2. Have a look at the <b>Description</b> field. Since there is no value set, it is displayed as `<Description />` in the XML file.
-
-![The SL_Item XML file should look something like this.](https://i.imgur.com/zfrmzTJ.png)
-
-To set a value, we will need to expand the brackets. 
-1. Delete the existing value for the Description completely.
-2. Replace the value with this: `<Description>Test.</Description>`. 
-
-![Setting a new description.](https://i.imgur.com/g14TBOZ.png)
+2. Replace the `<Description />` value with this: `<Description>Test.</Description>`
 
 Before we start the game and inspect our changes, make sure you have enabled the <b>Outward Debug Menu</b> first:
 1. Open the folder `Outward\Outward_Data\`
@@ -55,7 +41,7 @@ With Debug Mode enabled, start Outward. Once in-game, press <b>F1</b> to open th
 
 ![It worked!](https://i.imgur.com/UxuA8ky.png)
 
-If there were any errors, SideLoader should log them in the file `Outward\output_log.txt`.
+If there were any errors, SideLoader should log them in the file `Outward\BepInEx\LogOutput.log`.
 
 See also: [Custom Items](Custom/Items)
 
@@ -94,6 +80,3 @@ You will find other SideLoader mods on NexusMods, but not all of them will be as
 ### Textures
 * [Antiquated Antiques](https://www.nexusmods.com/outward/mods/154)
 * [Twilight Kintsugi Armor](https://www.nexusmods.com/outward/mods/147)
-
-### Status Effects
-* [Protection Bubble Shield](https://www.nexusmods.com/outward/mods/150)

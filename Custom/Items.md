@@ -36,7 +36,7 @@ All custom items have these fields.
 * The Item ID of the Item you are cloning <b>from</b>, or the item you want to edit. If you leave out fields on the template, it will default to the value from this item.
 
 `New_ItemID` (integer) <b>[REQUIRED]</b>
-* The Item ID you want to apply the template <b>to</b>. It can be a new or existing ID.
+* The Item ID you want to apply the template <b>to</b>. It can be a new or existing ID. If not set, this will default to the Target ID.
 
 `Name` (text)
 * The item name.
@@ -267,6 +267,15 @@ For example:
 `Cooldown_Reduction` (float)
 * Cooldown reduction %, between 0 and 100.
 
+`BarrierProtection` (float)
+* Barrier protection stat.
+
+`GlobalStatusEffectResistance` (float)
+* Global Status Effect Build Up Resistance stat
+
+`StaminaRegenModifier` (float)
+* Multiplier which affects Stamina Regen rate
+
 ## SL_Armor
 `SL_Armor` derives from `SL_Equipment`, and contains a couple extra fields.
 
@@ -305,6 +314,9 @@ As well as all the fields on SL_Item and SL_Equipment, weapons also have a few m
 
 `HealthBurnLeechRatio` (float)
 * Percent of damage dealt that is restored to player's <b>burnt</b> health
+
+`IgnoreHalfResistances` (true/false)
+* Does this weapon ignore 50% of enemy resistances?
 
 ### SL_WeaponStats
 
@@ -421,6 +433,9 @@ The `Damage` value is a list of `<float></float>` values.
 `PoolCapacity` (int)
 * The maximum amount of arrow projectiles active in the object pool at one time (for this weapon)
 
+`BehaviorOnCollision` (enum)
+* Determines behaviour on collision. Must be exactly one of: `None`, `Stuck` or `Destroyed`
+
 ## SL_ProjectileWeapon
 
 `SL_ProjectileWeapon` inherits from `SL_Weapon`, and contains a few extra fields.
@@ -466,6 +481,106 @@ Bags inherit from SL_Equipment, and contain a few extra fields.
 `RecipeUID` (string)
 * The UID of the recipe you want this scroll to teach.
 * This corresponds to the `UID` in a [SL_Recipe](Custom/ItemRecipes) template.
+
+## SL_Throwable
+SL_Throwable inherits from SL_Item, and contains one more field. This is used for Grenades in The Three Brothers DLC.
+
+`DestroyDelay` (float)
+* Delay in seconds after throwing for explosion
+
+## SL_Instrument
+SL_Instrument inherits from SL_Item, and is used for the Instruments (Ghost Drum and Sky Chimes) in The Three Brothers DLC.
+
+`PeriodicTime` (float)
+* How frequently the Periodic Effects (the Hex infliction for the vanilla instruments) happens
+
+`PulseSpeed` (Vector2)
+* Affects the pulse speed of the visual effects depending on the number of charges
+* `x` is the minimum value and `y` is the maximum value
+
+`StrikeTime` (float)
+* How long the delay is after striking the instrument before it can be hit again
+
+## SL_Building
+SL_Building inherits from SL_Item, and is used for Buildings in The Three Brothers DLC.
+
+`BuildingType` (enum)
+* The type of the building. Must be one of: `Basic`, `Specialized`, `House` or `ResourceProducing`
+
+`ConstructionPhases` (list of `SL_ConstructionPhase`)
+* The construction phases, generally 0 = placed but construction not started, 1 = mid-way through construction or done, 2 = done
+
+`UpgradePhases` (list of `SL_ConstructionPhase`)
+* The upgrade options. These generally have one phase for construction and not multiple phases like the base construction did.
+
+### SL_ConstructionPhase
+
+The fields on SL_ConstructionPhase are:
+
+`Name` (string)
+* The name of the phase
+
+`PhaseType` (enum)
+* What type of construction phase this is, must be one of: `WIP`, `Finished`, `Upgrade`
+
+`ConstructionCosts` (BuildingResourceValues)
+* The cost of construction
+* This value is a `BuildingResourceValues` struct. For the available values, see BuildingResourceValues below.
+
+`ConstructionTime` (float)
+* The time it takes to construct this building, in days
+
+`RareMaterialID` (int)
+* The Item ID of the Rare Material required for this building (if any)
+
+`BuildingRequirements` (list of `SL_BuildingRequirement`)
+* The requirements for the building to be allowed to be constructed
+* See `SL_BuildingRequirement` below for the available fields on this value
+
+`HouseCountRequirement` (int)
+* The required Housing value for building to take place
+
+`HousingValue` (int)
+* The Housing gained from constructing this building
+
+`MultiplyProductionPerHouse` (bool)
+* Does this building multiply its production per House constructed?
+
+`CapacityBonus` (BuildingResourceValues)
+* The storage capacity bonus gained from constructing this building.
+* The value is a `BuildingResourceValues` struct (see below)
+
+`UpkeepCosts` (BuildingResourceValues)
+* The costs for maintaining this building once it is constructed, per day.
+* The value is a `BuildingResourceValues` struct (see below)
+
+`UpkeepProductions` (BuildingResourceValues)
+* The productions this building generates, per day.
+* The value is a `BuildingResourceValues` struct (see below)
+
+### BuildingResourceValues
+BuildingResourceValues is a struct which contains the fields `Funds`, `Timber`, `Food` and `Stone`. 
+
+Each value is an `int`, representing the value for that material.
+
+For example in XML:
+```xml
+<BuildingResourceValues>
+  <Funds>100</Funds>
+  <Food>0</Food>
+  <Timber>0</Timber>
+  <Stone>0</Stone>
+</BuildingResourceValues>
+```
+
+### SL_BuildingRequirement
+An `SL_BuildingRequirement` value has the following fields:
+
+`ReqBuildingID` (int)
+* The Item ID of the Required Building
+
+`ReqUpgradeIndex` (int)
+* The required upgrade index on that building, if any
 
 ## SL_MultiItem
 

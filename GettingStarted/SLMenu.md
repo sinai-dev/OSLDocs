@@ -5,25 +5,17 @@ The <b>SideLoader Menu</b> is currently used for generating XML Templates from e
 
 ## Using The Menu
 
-Press <b>Control + Alt + F6</b> to show or hide the SideLoader menu when in-game.
+Open your in-game keybindings and set a binding for the SideLoader Menu. 
 
-<i>Note: F6 must be pressed last in the combo.</i>
+Press the button and the menu should open. If it does not, you may have installed SideLoader incorrectly, or you may have conflicting mods installed.
 
 ### Items
 
 To export an Item, simply enter the `Item ID` for the Item you want to export from. You can find these IDs on the [Outward Wiki](https://outward.gamepedia.com), or on the [Outward Tools Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=673914692).
 
-You can also set the `New ID`. This will determine the ID which your template will be <b>applied to</b>. If you want to edit an existing item, enter that ID here, otherwise enter a new unique ID.
-
 When you press the button to generate a template, it will be generated to <b>`Mods/SideLoader/_GENERATED/Items/`</b>. It will automatically create the proper sub-folder structure including the Textures and Icons.
 
 To use this generated template, take the folder (eg. `2000010_IronSword\`) and put it into the `Items\` folder of your SL Pack. It should look like `Items\2000010_IronSword\Iron Sword.xml`, for example.
-
-The Menu also lets you set the `EffectBehaviour` setting on the `SL_Item` template.
-
-* <b>Destroy Effects</b>: `DestroyEffects`
-* <b>Override Effects</b>: `OverrideEffects`
-* <b>None (leave all)</b>: `NONE`
 
 ### Status Effects
 

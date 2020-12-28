@@ -63,6 +63,18 @@ Sets an Achievement Stat. These are used to track the player's progress for vari
 `IncreaseAmount` (int)
 * The amount to increase the stat value by
 
+## SL_AddAbsorbHealth
+Used to add health absorption to the character, for example by Infuse Blood.
+
+`HealthRatio` (float)
+* The ratio of health restored to the character based on all damage dealt
+
+## SL_AddChargeInstrument
+Used to add charges to an instrument on hit.
+
+`Charges` (int)
+* Nummber of charges to add
+
 ## SL_AddStatusEffect
 Used for simply adding a status effect on activation.
 
@@ -114,6 +126,21 @@ For adding a build-up effect, usually used by Hit effects.
 
 `Buildup` (float)
 * The effect build-up value, between 0 and 100.
+
+`BuildUpMultiplier` (float)
+* Multiplier on Buildup %.
+
+`BypassCounter` (bool)
+* Does this effect ignore counters?
+
+## SL_AddStatusEffectBuildUpInstrument
+Inherits from `SL_AddStatusEffectBuildUp`, and contains one extra field.
+
+`ChancesPerCharge` (float)
+* How much extra buildup % the effect gains per charge on the instrument
+
+## SL_AddStatusEffectIfDead
+Inherits from `SL_AddStatusEffect`. Contains no extra fields, but gives the requirement that the target must have died at the same time this effect is checked.
 
 ## SL_AffectBurntHealth
 For affecting burnt health.
@@ -203,8 +230,8 @@ For affecting the owner character's stability. Used by Juggernaught, for example
 `AffectQuantity` (float)
 * How much current stability is affected
 
-`IsModifier` (true/false)
-* Should this be applied as a modifier (multiplier) value?
+`SetStability` (true/false)
+* Should this be applied as a direct value? (ie, sets Stability to this exact value)
 
 ## SL_AffectStamina
 For affecting current stamina.
@@ -227,6 +254,18 @@ For affecting a character's <b>Stat</b> attribute for the given `Stat_Tag`.
 
 `IsModifier` (true/false)
 * Should this be applied as a modifier (multiplier) value?
+
+## SL_AffectStatusEffectBuildUpResistance
+Inherits from `SL_Effect`. Adds Status Effect Build Up Resistance for a specific Status Effect to the character.
+
+`StatusEffectIdentifier` (string)
+* The Status Effect Identifier to add resistance for
+
+`Value` (float)
+* The amount of resistance for this effect
+
+`Duration` (float)
+* How long does the resistance last?
 
 ## SL_AutoKnock
 This effect is quite simple, it just guarantees a stagger or knockdown on the affected character. Use HitEffects to apply to enemies.
@@ -283,6 +322,12 @@ For adding an <b>Imbue Preset</b> to a character.
 * Must be exactly one of: `MainHand` or `OffHand` 
 * The slot which this imbue preset will be applied to.
 
+## SL_InstrumentTriggerBubble
+Used by Nurturing Echo to trigger the healing effect on nearby instruments.
+
+`Range` (float)
+* The max range of instruments to trigger healing for
+
 ## SL_LearnSkillEffect
 
 Simply teaches the player character a skill.
@@ -304,6 +349,14 @@ This effects loads a weapon (ie. Pistol).
 
 `WeaponSlot` (enum)
 * Which slot to affect. Must be exactly one of: `MainHand` or `OffHand`
+
+## SL_PackDeployable
+Used by Reverberation to pack instruments back to their packed state prefab.
+
+Contains no fields, but requires a `SL_PrePackDeployableCondition` SL_EffectCondition on the same transform.
+
+## SL_Petrify
+Used by Full Petrification to Petrify the target character. Contains no extra fields.
 
 ## SL_PlaySoundEffect
 This one is obviously for playing a sound effect. You can pick any sound from the global list.
@@ -382,6 +435,21 @@ This class inherits from SL_PunctualDamage, and contains a few extra fields.
 `IgnoreShooter` (true/false)
 * Should the shooter be ignored?
 
+`IgnoreHalfResistances` (bool)
+* Does this attack ignore 50% of target's resistances?
+
+## SL_PunctualDamageInstrument
+Inherits from `SL_PunctualDamage`, and contains two extra fields.
+
+`DamageCap` (float)
+* Max damage that can be dealt
+
+`DamagePerCharge` (float)
+* Damage gained per charge on the instrument (overrides damage values on base PunctualDamage)
+
+## SL_PutBackItemVisual
+Special effect used by certain skills, contains no extra fields.
+
 ## SL_ReduceDurability
 Simple effect which reduces durability of some equipment.
 
@@ -390,6 +458,9 @@ Simple effect which reduces durability of some equipment.
 
 `EquipmentSlot` (enum)
 * Which slot to affect. Must be one of [these values](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/EquipmentSlot.EquipmentSlotIDs.txt).
+
+`Percentage` (bool)
+* Does this effect reduce durability by a %, not a flat value?
 
 ## SL_ReduceStatusLevel
 For Status Effects which <b>levels</b> (eg the new Alertness status in the DLC).
@@ -420,8 +491,9 @@ You can either use the <b>Identifier Name</b> of the status, or a <b>Tag</b> tha
 * See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
 
 `CleanseType` (enum)
-* Exactly one of: `StatusNameContains`, `StatusType`, `StatusFamily` or `StatusSpecific`
+* Exactly one of: `StatusNameContains`, `StatusType`, `StatusFamily`, `StatusSpecific` or `NegativeStatuses`
 * I recommend using <b>StatusNameContains</b> and using the <b>Status_Name</b> field, or <b>StatusType</b> and using the <b>Status_Tag</b> field.
+* The `NegativeStatuses` value will remove ALL negative (purgeable) effects.
 
 ## SL_RunicBlade
 This effect is uniquely used by the Runic Blade skill. However, it could be used for other purposes too.
@@ -522,6 +594,15 @@ ShootBlast inherits from SL_Shooter, and contains some extra fields.
 `BlastEffects` (List of SL_EffectTransform)
 * List of actual effects on the blast.
 * See [the Effects article](Effects/EffectTransforms) for more information.
+
+`PlaySounOnRefresh` (bool)
+* Play sound each refresh tick?
+
+`DelayFirstShoot` (bool)
+* Delay the first shot?
+
+`PlayFXOnRefresh` (bool)
+* Play VFX on refresh tick?
 
 ## SL_ShootBlastHornetControl
 Derives from `SL_ShootBlast`. Used by Hive AI enemies to shoot a lingering blast which tracks to the target.
@@ -722,6 +803,12 @@ Now, back to the fields on SL_ShootProjectile.
 * List of actual effects on the projectile.
 * See [the Effects article](Effects/EffectTransforms) for more information.
 
+`CameraAddYDirection` (float)
+* Adds Y based on Camera direction (?)
+
+## SL_ShootProjectileAmmoVisuals
+Inherits from SL_ShootProjectile and contains no extra fields, used by Bow Skills.
+
 ## SL_ShootItem
 
 Inherits from `SL_ShootProjectile`, and has no extra fields.
@@ -837,6 +924,12 @@ Uses ammunition from a WeaponLoadout.
 `MainHand` (true/false)
 * Should we affect the main-hand item, or off-hand?
 
+`AutoLoad` (bool)
+* Does this automatically load ammo for you?
+
+`DestroyOnEmpty` (bool)
+* Is it destroyed when empty?
+
 ## SL_VitalityDamage
 Damage dealt directly to the affected character's health, <b>cannot be resisted</b>.
 
@@ -876,3 +969,23 @@ Inherits from SL_WeaponDamage, used by Prismatic Flurry.
 `HitDelay` (float)
 * The time delay between each hit.
 
+## SL_WeaponDamageOwnerHPStam
+
+Inherits from SL_WeaponDamage, contains no extra fields. Used by some of the new Weapon Master skills to amplify damage based on our HP and Stam.
+
+## SL_WeaponDamageProjectileWeapon
+
+Inherits from SL_WeaponDamage, contains no extra fields. Used by ProjectileWeapon skills.
+
+## SL_WeaponDamageStatusOnKill
+
+Inherits from SL_WeaponDamage, grants a Status Effect if this weapon damage deals a killing blow.
+
+`StatusIdentifier` (string)
+* The Status Identifier of the effect gained on kills
+
+## SL_WeaponDamageTargetHealth
+Inherits from SL_WeaponDamage, gains more damage multiplier depending on target's Health % ratio.
+
+`MultiplierHighLowHP` (Vector2)
+* Multiplier for target health ratio. `x` is 100% multiplier, `y` is 0% multiplier, value is lerped depending on target health.

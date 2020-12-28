@@ -273,4 +273,4 @@ Take this bundle and place it in the `TextureBundles` folder (`MyPack\Items\Text
 
 ![The SideLoader pack structure](https://i.imgur.com/ScW0Pk9.png)
 
-Launch the game, and SideLoader should log that it loaded and applied your textures in the `output_log.txt` file.
+Launch the game, and SideLoader should log that it loaded and applied your textures in the `BepInEx\LogOutput.log` file.

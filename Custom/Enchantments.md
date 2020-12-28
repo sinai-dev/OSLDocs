@@ -201,3 +201,9 @@ In xml, the FlatDamageAdded should look something like this:
 
 `TrackDamageRatio` (true/false)
 * Used by Vampiric weapons (for the Vampiric Transmutation, the required damage dealt).
+
+`GlobalStatusResistance` (float)
+* Grants global Status Resistance stat (The Three Brothers DLC)
+
+`QuestEventUID` (string)
+* Required Quest Event UID. Only use this if you understand how Quest Event UIDs work and how to find them.

@@ -77,6 +77,24 @@ On <b>SL_ImbueEffect</b>, you need to set the TargetStatusID and the NewStatusID
 * Determines the category this effect is shown under in the HUD.
 * `true` will show this effect in the Negative category, `false` will show it in the Positive category.
 
+`PlaySpecialFXOnStop` (bool)
+* Should Special FX be played on stop?
+
+`ComplicationStatusIdentifier` (string)
+* The Status Identifier for the "Complication Status" (I think it becomes a more severe status if untreated or ignored?) Or maybe used for Ambraine Withdrawal.
+
+`RequiredStatusIdentifier` (string)
+* The Status identifier for the Required Status. For example, Plague, Blaze and Holy Blaze, these statuses require Poisoned or Burning on the target to work.
+
+`RemoveRequiredStatus` (bool)
+* Relating to the previous value, should the required status be removed when this is applied?
+
+`NormalizeDamageDisplay` (bool)
+* Should the damage value (if automatically parsed) be normalized (rounded) for the display?
+
+`IgnoreBarrier` (bool)
+* Whether or not this status ignores the Barrier protection stat
+
 `Tags` (list of string)
 * The `Tags` is a list of string (text) values. For statuses, these are not used that much.
 * See [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
