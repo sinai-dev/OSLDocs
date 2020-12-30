@@ -255,6 +255,9 @@ For affecting a character's <b>Stat</b> attribute for the given `Stat_Tag`.
 `IsModifier` (true/false)
 * Should this be applied as a modifier (multiplier) value?
 
+`Tags` (list of string)
+* Extra Tag restrictions on the affected Stat. This is used in special cases like Damage Bonuses that only affect a certain type of skill or effect.
+
 ## SL_AffectStatusEffectBuildUpResistance
 Inherits from `SL_Effect`. Adds Status Effect Build Up Resistance for a specific Status Effect to the character.
 
