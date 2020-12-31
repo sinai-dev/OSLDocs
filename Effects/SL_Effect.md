@@ -682,14 +682,21 @@ SL_ShootProjectile inherits from SL_Shooter. It is similar to ShootBlast, this s
 
 ### SL_ProjectileShot
 `ProjectileShots` (list of SL_ProjectileShot)
+
 Each SL_ProjectileShot is an actual projectile produced by this effect. You need at least 1 of these, but can have as many as you want. Each shot can have its own offsets and directions applied to it.
 
 In Xml, it would look like:
 ```xml
 <ProjectileShots>
   <SL_ProjectileShot>
-    <!-- SL_ProjectileShot fields/values go here -->
+    <LocalDirectionOffset>
+		<x>0</x>
+		<y>1.5</y>
+		<z>0</z>
+	</LocalDirectionOffset>
+	<!-- etc... -->
   </SL_ProjectileShot>
+  <!-- etc... -->
 </ProjectileShots>
 ```
 
