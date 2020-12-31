@@ -680,14 +680,9 @@ SL_ShootProjectile inherits from SL_Shooter. It is similar to ShootBlast, this s
 * This determines the base visuals for your projectile.
 * You can pick any value from [this list](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/ProjectilePrefabs.txt) (there are a lot).
 
-`InstantiatedAmount` (int)
-* Determines how many projectiles are created on cast
-* This limit affects the ProjectileShots.
-
 ### SL_ProjectileShot
 `ProjectileShots` (list of SL_ProjectileShot)
-* This is not always used, but some ShootProjectile effects make use of this.
-* Determines unique behaviour for one or more individual projectile, when the effect is activated.
+Each SL_ProjectileShot is an actual projectile produced by this effect. You need at least 1 of these, but can have as many as you want. Each shot can have its own offsets and directions applied to it.
 
 In Xml, it would look like:
 ```xml
@@ -717,6 +712,10 @@ The fields on SL_ProjectileShot are:
 
 ### SL_ShootProjectile fields
 Now, back to the fields on SL_ShootProjectile.
+
+`InstantiatedAmount` (int)
+* This is the limit on how many TOTAL projectiles can be active at one time. It does not determine how many shots are created, that is done by the SL_ProjectileShots.
+* Think about how many could possibly need to be active at one time (probably in regards to the cooldown of the spell) and set this to that. Should at least be higher than the amount of ProjectileShots you defined.
 
 `Lifespan` (float)
 * Maximum lifespan of the Projectile
