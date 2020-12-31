@@ -921,7 +921,7 @@ Simply unloads the weapon in the given AffectSlot.
 * The equipment slot to unlaod from.
 * Must be exactly one of [these values](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Types/enums/EquipmentSlot.EquipmentSlotIDs.txt).
 
-## SL_UseLoadoutAmmunition
+## SL_UseLoadoutAmunition
 Uses ammunition from a WeaponLoadout.
 
 `MainHand` (true/false)
