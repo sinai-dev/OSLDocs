@@ -155,9 +155,9 @@ The EffectTransforms value is actually a <b>list of Transforms</b> (a container 
 
 `EffectBehaviour` (enum)
 * This setting relates to your `EffectTransforms`, and it controls the template behaviour in regards to the Effects on the item or skill.
-* The options are: `DestroyEffects`, `OverrideEffects` and `NONE`.
-* <b>`DestroyEffects`</b> will destroy all the existing effects on the item or skill before it applies your new ones. This means everything will be overwritten with your new effects.
-* <b>`OverrideEffects`</b> will only destroy existing transforms if you have defined one of the same name in your EffectTransforms list. Use this to replace specific transforms, but not all of them.
+* The options are: `Destroy`, `Override` and `NONE`.
+* <b>`Destroy`</b> will destroy all the existing effects on the item or skill before it applies your new ones. This means everything will be overwritten with your new effects.
+* <b>`Override`</b> will only destroy existing transforms if you have defined one of the same name in your EffectTransforms list. Use this to replace specific transforms, but not all of them.
 * <b>`NONE`</b> will add your effects on top (if you defined any) and not remove anything.
 
 ### ItemExtensions

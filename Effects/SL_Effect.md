@@ -592,7 +592,7 @@ ShootBlast inherits from SL_Shooter, and contains some extra fields.
 
 `EffectBehaviour` (enum)
 * Determines the behaviour for your BlastEffects.
-* Must be exactly one of: `OverrideEffects`, `DestroyEffects` or `NONE`.
+* Must be exactly one of: `Override`, `Destroy` or `NONE`.
 
 `BlastEffects` (List of SL_EffectTransform)
 * List of actual effects on the blast.
@@ -806,7 +806,7 @@ Now, back to the fields on SL_ShootProjectile.
 
 `EffectBehaviour` (enum)
 * Determines the behaviour of your ProjectileEffects.
-* Must be exactly one of: `DestroyEffects`, `OverrideEffects` or `NONE`.
+* Must be exactly one of: `Destroy`, `Override` or `NONE`.
 
 `ProjectileEffects` (list of SL_EffectTransform)
 * List of actual effects on the projectile.

@@ -12,10 +12,10 @@ I recommend using the [SideLoader Menu](GettingStarted/SLMenu) to dump some exis
 ## Edit Behaviour
 `EffectBehaviour` is a setting found on various SideLoader templates such as SL_Item and SL_StatusEffect. It determines <b>how your template effects are applied</b>. This is referring to when SideLoader actually applies this template, not when the effects are applied in game.
 * `NONE` will <b>leave the existing effects untouched</b>. Use NONE if you don't want to modify the existing effects at all, or you want to add on-top of them.
-* `DestroyEffects` will <b>wipe all the existing effects</b> before it applies yours. This is recommended in most cases if you are editing the effects.
-* `OverrideEffects` will <b>only destroy transforms if you have defined one with the same TransformName</b>. You can use this to have greater control and only replace specific transforms. In some cases, it is possible that there are duplicate-name children on one transform, and SideLoader has no way to solve this. You would need to use DestroyEffects and replace everything in this case.
+* `Destroy` will <b>wipe all the existing effects</b> before it applies yours. This is recommended in most cases if you are editing the effects.
+* `Override` will <b>only destroy transforms if you have defined one with the same TransformName</b>. You can use this to have greater control and only replace specific transforms. In some cases, it is possible that there are duplicate-name children on one transform, and SideLoader has no way to solve this. You would need to use Destroy and replace everything in this case.
 
-!> <b>Note:</b> Even if you don't define any SL_EffectTransforms, your EffectBehaviour is <b>still applied</b> to the base prefab. All SL classes have `OverrideEffects` or `NONE` as the default value if not set.
+!> <b>Note:</b> Even if you don't define any SL_EffectTransforms, your EffectBehaviour is <b>still applied</b> to the base prefab. All SL classes have `Override` or `NONE` as the default value if not set.
 
 ## SL_EffectTransform
 As mentioned above, an SL_EffectTransform is a container for effects and conditions. When defining your Effects on items, skills or status effects, you are defining a <b>list of SL_EffectTransforms</b>.
