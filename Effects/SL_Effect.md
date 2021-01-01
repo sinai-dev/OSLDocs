@@ -19,6 +19,7 @@ For example:
 <SL_Effect xsi:type="SL_AddStatusEffectBuildUp">
     <StatusEffect>Doom</StatusEffect>
     <Buildup>60</Buildup>
+	<!-- etc ... -->
 </SL_Effect>
 ```
 ## SL_Effect
@@ -128,7 +129,7 @@ For adding a build-up effect, usually used by Hit effects.
 * The effect build-up value, between 0 and 100.
 
 `BuildUpMultiplier` (float)
-* Multiplier on Buildup %.
+* Multiplier on Buildup %. By default this should be 1.0.
 
 `BypassCounter` (bool)
 * Does this effect ignore counters?
