@@ -284,7 +284,7 @@ I'm not really sure. It's used by Rune spells.
 * If true, overrides the Shooter cast position to the position of the status effect...?
 
 ## SL_StatusEffectCondition
-Checks if the caster has a given status effect.
+Checks if the affected character has a given status effect. Use `SL_HasStatusEffectEffectCondition` for other checks.
 
 `StatusIdentifier` (string)
 * Identifier name of the status to check for.
