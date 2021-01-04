@@ -58,8 +58,8 @@ Currently there is no template generator for Recipes, so here's how it should lo
 ## SL_Recipe
 
 `UID` (string)
-* Optional. If you don't set one, SideLoader will generate one for you based on the result and ingredients.
 * Used by Recipe Scroll items. Those items require a UID to learn the appropriate recipe.
+* You can set anything, but best to use something like a `myname.myrecipe` format.
 
 `StationType` (enum)
 * Can be exactly one of: `Survival`, `Alchemy`, `Cooking`, or `Forge` (unused)
