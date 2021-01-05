@@ -119,8 +119,8 @@ private void BeforePacksLoaded()
     */
     template.SubfolderName = "myitemsubfoldername"; 
 
-    /* when you're done, call this first to set up the item. This will call ApplyTemplateToItem() too, when SideLoader has finished loading all assets. */
-    var myItem = CustomItems.CreateCustomItem(template);
+    /* when you're done, call this to register the template. */
+    template.Apply();
 }
 
 private void OnPacksLoaded()
