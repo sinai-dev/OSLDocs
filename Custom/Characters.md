@@ -28,7 +28,7 @@ For SL_CharacterTrainers, see below.
   <!-- Spawn information -->
   <!-- The SceneToSpawn corresponds to the scene builds names (listed on Wiki) -->
   <SceneToSpawn>ChersoneseNewTerrain</SceneToSpawn>
-  <!-- Get SpawnPosition with Explorer or Debug Mode (actual Game's Debug Mode, not SL) -->
+  <!-- Get SpawnPosition with SL Menu Tools tab, or F2 Debug Mode "Debug Position" -->
   <SpawnPosition>
     <x>133.0</x>
     <y>33.0</y>
@@ -383,7 +383,7 @@ For more information on SL_SkillTree, see [Skill Trees](Custom/SkillTrees.md).
   <!-- Spawn information -->
   <!-- The SceneToSpawn corresponds to the scene builds names (listed on Wiki) -->
   <SceneToSpawn>ChersoneseNewTerrain</SceneToSpawn>
-  <!-- Get SpawnPosition with Explorer or Debug Mode (actual Game's Debug Mode, not SL) -->
+  <!-- Get SpawnPosition with SL Menu Tools tab, or F2 Debug Mode "Debug Position" -->
   <SpawnPosition>
     <x>135.0</x>
     <y>33.0</y>
