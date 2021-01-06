@@ -51,6 +51,11 @@ On <b>SL_ImbueEffect</b>, you need to set the TargetStatusID and the NewStatusID
 `Lifespan` (float)
 * The length of the Status Effect in seconds.
 
+`LengthType` (enum)
+* Must be one of: `Short` or `Long`
+* Short effects count down from in-game seconds, and are lost on sleep or death
+* Long effects are diseases or incurable effects
+
 `RefreshRate` (float)
 * How frequently the status effects are applied, in seconds.
 * Depending on the effect, this may not matter. Most important for regeneration and DoT effects.
