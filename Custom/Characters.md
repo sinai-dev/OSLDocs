@@ -508,14 +508,13 @@ public override void ActivateLocally(Character _affectedCharacter, object[] _inf
 
     var extraRpcData = caster.UID.ToString();
 
-    // Manually call CustomCharacters.CreateCharacter. This version of the method is 
-    // recommended for most cases.
-    // We are manually sending a spawn position, character UID, and extraRpcData.
+    // Call SL_Character.Spawn()
+    // We are sending a spawn position, character UID, and extraRpcData.
     // In this case, the extraRpcData is the Caster character's UID.
-    CustomCharacters.CreateCharacter(template, spawnPos, summonUID, extraRpcData);
+    template.Spawn(spawnPos, summonUID, extraRpcData);
 }
 
-// Callback from CreateCharacter which executes locally for all clients.
+// The network callback from Spawn() which executes for all clients.
 private void OnSpawn(Character character, string rpcData)
 {
     var ownerUID = rpcData;
