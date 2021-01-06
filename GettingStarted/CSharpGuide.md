@@ -8,6 +8,8 @@ This is a brief summary of how to use the SideLoader directly from your own C# m
 2. In your C# Project, add a reference to <b>SideLoader.dll</b> from this location.
 3. Put `using SideLoader;` at the top of classes where you want to use SideLoader.
 
+# C# Helpers
+
 ## Events
 The most important thing about using SideLoader from C# are the Events, so I will cover them first.
 
@@ -75,24 +77,29 @@ SideLoader.Helpers.At.SetField(myItem, "m_name", "MyNewName");
 
 Most of `At`'s methods are generic, so be careful with the instances you pass to them, make sure the generic type actually contains the member you want to access. For example, if you have an instance of a Weapon but it is currently only cast to an Item, you would need to do something like this: `At.SetField(myItem as Weapon, "m_someWeaponField", someValue);`
 
+# Custom Content from C#
+
+You can define any custom SL template (SL_Item, SL_StatusEffect, SL_Recipe, etc) from C# almost exactly the same way as XML.
+
+The only difference with C# (other than the obviously language change) is that you will need to call a method to apply your template, this is usually called `Apply()`, and is that simple. You should do this in your Awake() method, or at `SL.BeforePacksLoaded` at the latest.
+
+Subscribe to the `SL.OnPacksLoaded` event for any changes you want to make which require the template to be actually applied.
+
 ## Custom Items
 
-The main SideLoader classes for custom items are `CustomItems` and `SL_Item`, and `CustomItemVisuals`.
-
-See also: [SideLoader.CustomItems (C# API)](https://sinai-dev.github.io/_docfx/api/SideLoader.CustomItems.html).
-
-Defining custom items from C# is the same as the XML method, except you're defining the SL_Item object from code instead of XML. You should subscribe to `SL.BeforePacksLoaded` and set up your custom items at this point. For any changes you want to make which depend on the template being applied, you should make those changes on `SL.OnPacksLoaded`.
+To define an SL_Item from C#, it would look something like this:
 
 ```csharp
 using SideLoader;
 
 internal void Awake() 
 {
-    SL.BeforePacksLoaded += BeforePacksLoaded;
+    SetupMyTemplate();
+	
     SL.OnPacksLoaded += OnPacksLoaded;
 }
 
-private void BeforePacksLoaded()
+private void SetupMyTemplate()
 {
     /* You can define any SL_Item class, we'll use SL_Weapon for this example. */
     var template = new SL_Weapon()
@@ -119,16 +126,15 @@ private void BeforePacksLoaded()
     */
     template.SubfolderName = "myitemsubfoldername"; 
 
-    /* when you're done, call this to register the template. */
+    /* when you're done, call this to prepare and register the template. */
     template.Apply();
 }
 
 private void OnPacksLoaded()
 {
-    /* any non-template changes should be performed here, after CreateCustomItem() */
-    var myItem = ResourcesPrefabManager.Instance.GetItemPrefab(myTemplateNewID);
+    /* SideLoader has finished setting up all custom content, now is a safe time to do other changes that depend on that. */
+    var myItem = ResourcesPrefabManager.Instance.GetItemPrefab(myTemplateID);
 
-    var effects = myItem.transform.Find("Effects");
     // etc ...
 }
 ```
@@ -153,8 +159,4 @@ For example, you might need a custom texture for a menu or something.
 You can do `myPack.Texture2D["MyCustomPngName"]` to get the Texture2D for this .png file at runtime. 
 
 Note: Do <b>not</b> include the ".png" when getting your texture name this way.
-
-## WIP
-
-This page is still a work in progress. If you have suggestions for what else can go here, let me know.
 

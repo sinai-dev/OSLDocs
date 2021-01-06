@@ -523,6 +523,6 @@ private void OnSpawn(Character character, string rpcData)
     // We got the caster's UID from our extraRpcData that we sent.
     // You could use the extraRpcData string for whatever needs you have.
 
-    // In this case, it's used to maintain a dictionary of who spawned which character.
+    // In this case, it was used to maintain a dictionary of who spawned which character.
 }
 ```
