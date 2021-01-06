@@ -174,7 +174,7 @@ Inherits from SL_MeleeSkill, and contains some extra fields.
 * Multiplier for damage, not sure exactly what for.
 
 ## SL_CounterSelfSkill
-Inherits from SL_CounterSkill. Contains no extra fields, is used by Brace.
+Inherits from SL_CounterSkill. Contains no extra fields, is used by Brace. CounterSelf fires the HitEffects on the owner character on a successful counter.
 
 ## SL_CounterAbsorbSkill
 Inherits from SL_CounterSkill. Contains one extra field.
