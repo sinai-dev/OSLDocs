@@ -41,7 +41,7 @@ For SL_CharacterTrainers, see below.
   <CanDodge>true</CanDodge>
   <CanBlock>true</CanBlock>
   
-  <!-- Generally use either "NONE", "Players" or "Bandits", there are other options too (Character.Factions) -->
+  <!-- Generally use either "NONE", "Player" or "Bandits", there are other options too (Character.Factions) -->
   <Faction>Bandits</Faction>
   <!-- Human character visual data. Corresponds to Character Creation options. -->
   <CharacterVisualsData>
