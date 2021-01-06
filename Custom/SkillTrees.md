@@ -1,8 +1,10 @@
 # Custom Skill Trees
 
-<b>Skill Trees</b> can be defined through the SideLoader with C#. Currently I haven't added XML support for these yet, but if you're setting up an entire skill tree you're probably going to need your own C# anyway.
+<b>Skill Trees</b> can be defined through the SideLoader with C# or XML. 
 
-I suggest setting up the base skills with XML templates, then subscribing to `SL.OnPacksLoaded` and defining the skill tree after this point. The Skill Tree template assumes that the skills IDs are already set up when you apply it.
+For C#, I suggest setting up the base skills with XML templates, then subscribing to `SL.OnPacksLoaded` and defining the skill tree after this point. The Skill Tree template assumes that the skills IDs are already set up when you apply it.
+
+For XML, you must use an [SL_CharacterTrainer](Custom/Characters.md) and define your skill tree directly there.
 
 ## SL_SkillTree
 The `SL_SkillTree` class is the base class for containing the tree, as well as applying it once it is set up.
