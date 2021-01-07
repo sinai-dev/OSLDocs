@@ -3,6 +3,7 @@
 <b>Custom Characters</b> can be created and spawned with SideLoader, either through XML or C#.
 
 The SL Pack sub-folder for custom characters is `Characters\`.
+* Note: Do NOT put your Character XMLs inside a sub-folder for now, they must simply be in the Characters folder.
 
 You can also define an SL_CharacterTrainer which is a basic pre-made trainer you can customize, and which has two additional fields: `InitialDialogue` and `SkillTree`.
 
