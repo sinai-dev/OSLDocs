@@ -17,12 +17,7 @@
   - [SL Menu](Basics/SLMenu.md)
   - [Guides](Basics/Guides.md)
 
-- Advanced Guides (WIP)
-
-  - [Custom Animations](Guides/Animations.md)
-  - [Rigging Equipment Meshes](Guides/Rigging.md)
-
-  - SL API
+- SL API
   - [Enums](API/Enums.md)
   - [SL_Damage](API/SL_Damage.md)
 
