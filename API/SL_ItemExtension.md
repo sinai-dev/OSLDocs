@@ -4,7 +4,8 @@ An <b>SL_ItemExtension</b> can be defined in the `ItemExtensions` field on an [S
 
 ## How to define one
 
-When defining an SL_ItemExtension, simply define them like any other Xml object inside the `ItemExtensions` list of the SL_Item.
+<!-- tabs:start -->
+#### ** XML **
 
 ```xml
 <ItemExtensions>
@@ -23,6 +24,18 @@ For example:
     <Lifespan>60</Lifespan>
 </SL_ItemExtension>
 ```
+
+#### ** C# **
+
+```csharp
+var ext = new SL_Ephemeral
+{
+    Savable = true,
+    Lifespan = 60f,
+}
+```
+
+<!-- tabs:end -->
 
 ## Edit behaviour
 
