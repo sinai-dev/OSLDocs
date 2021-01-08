@@ -20,6 +20,10 @@ For full documentation about the SL_Item class, see [SL_Item](API/SL_Item.md).
 
 #### ** XML **
 
+Make sure you have enabled the <b>Outward Debug Menu</b> for this guide first:
+1. Open the folder `Outward\Outward_Data\`
+2. Create a .txt file called "DEBUG", it should look like `DEBUG.txt`. <b>Note:</b> if you have "Show File Extensions" disabled, it will need to look like "DEBUG" instead of "DEBUG.txt".
+
 We are going to use the [SL Menu](Basics/SLMenu.md) to generate a template from an existing Item for us.
 
 1. Go into your Keybindings and set a binding for the SL Menu if you have not already, then open the menu.
@@ -47,12 +51,8 @@ Now let's make a basic change to the Item.
 
 1. Open the `Iron Sword.xml` file and have a look. 
 2. Replace the `<Description />` value with this: `<Description>Test.</Description>`
-
-Before we start the game and inspect our changes, make sure you have enabled the <b>Outward Debug Menu</b> first:
-1. Open the folder `Outward\Outward_Data\`
-2. Create a .txt file called "DEBUG", it should look like `DEBUG.txt`. <b>Note:</b> if you have "Show File Extensions" disabled, it will need to look like "DEBUG" instead of "DEBUG.txt".
-
-With Debug Mode enabled, start Outward. Once in-game, press <b>F1</b> to open the Item Spawner, then spawn an Iron Sword and have a look, our description should now be set.
+3. In the SL Menu under the "SL Packs" tab, press the Hot Reload button to reload all SL Packs.
+4. Load a character and press <b>F1</b> to open the Item Spawner, then spawn an Iron Sword and have a look, our description should now be set.
 
 ![It worked!](https://i.imgur.com/UxuA8ky.png)
 
