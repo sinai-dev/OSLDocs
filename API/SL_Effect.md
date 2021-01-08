@@ -29,7 +29,7 @@ For example:
 
 #### ** C# **
 
-You can't use SL_Effect directly in C#, you must define any sub-class of it.
+Define any sub-class of SL_Effect (most likely on an [SL_EffectTransform](API/SL_EffectTransform)).
 
 ```csharp
 var effect = new SL_AddStatusEffectBuildUp
