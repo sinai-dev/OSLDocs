@@ -14,3 +14,6 @@
 
   - [Custom Animations](Guides/Animations.md)
   - [Rigging Equipment Meshes](Guides/Rigging.md)
+
+<!-- empty block so buttom link isn't cut off on mobile. -->
+<div style="height:40px; display:block;"></div>

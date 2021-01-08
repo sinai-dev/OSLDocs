@@ -33,4 +33,4 @@
   - [SL_StatusEffect](API/SL_StatusEffect.md)
 
 <!-- empty block so buttom link isn't cut off on mobile. -->
-<div style="height:30px; display:block;"></div>
+<div style="height:40px; display:block;"></div>

@@ -4,13 +4,28 @@ An <b>SL_EffectCondition</b> object can be defined on an [Effect Transform](Effe
 
 ## How to define one
 
-When defining an SL_EffectCondition, simply define them like any other Xml object inside the `EffectConditions` list of the EffectTransform.
+<!-- tabs:start -->
+
+#### ** XML **
 
 ```xml
 <!-- replace 'EffectConditionType' with the actual effect type -->
 <SL_EffectCondition xsi:type="EffectConditionType">
     <!-- put fields and values for this effect condition here -->
 </SL_EffectCondition>
+```
+
+#### ** C# **
+
+Define any sub-class of SL_Effect (most likely on an [SL_EffectTransform](API/SL_EffectTransform)).
+
+```csharp
+var condition = new SL_HasStatusEffectEFfectCondition
+{
+  SelectorValue = "Doom",
+  StatusSelectorType = StatusEffectSelector.Types.StatusSpecific,
+  // etc...
+}
 ```
 
 ## SL_EffectCondition
