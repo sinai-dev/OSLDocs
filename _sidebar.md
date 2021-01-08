@@ -1,61 +1,35 @@
 - SideLoader
   - [Home](/)
-  - [Setup Guide](GettingStarted/Installation.md)
-  - [Troubleshooting](Troubleshooting.md)
-
-- Getting Started
-
-  - [Overview](GettingStarted/Overview.md)
-  - [SL Packs](GettingStarted/SLPacks.md)
-  - [SL Menu](GettingStarted/SLMenu.md)
-  - [Guides](GettingStarted/Guides.md)
-
-- C# Documentation
-
-  - [C# Overview](GettingStarted/CSharpGuide.md)
-  - [C# API](https://sinai-dev.github.io/OSLDocs/_docfx/api/SideLoader.html ':target=_self')
+  - [Installation](Main/Installation.md)
+  - [Troubleshooting](Main/Troubleshooting.md)
+  - [Roadmap](Main/Roadmap)
+  - [Resources](Main/Resources.md)
   
-- Replacing Assets
+- API
 
-  - [Replacing Audio](Replacing/Audio.md)
-  - [Replacing Textures](Replacing/Textures.md)
-  
-- Items
-  
-  - [Custom Items](Custom/Items.md)  
-  - [Visuals and Icons](Custom/ItemVisuals.md)
-  - [Item Extensions](Custom/ItemExtensions.md)
-  - [Item Recipes](Custom/ItemRecipes.md)
-  
-- Skills
+  - [SL API](API/API.md)
 
-  - [Custom Skills](Custom/Skills.md)
-  - [Skill Trees](Custom/SkillTrees.md)
-  
-- Status Effects
+- Basics
 
-  - [Custom Status Effects](Custom/StatusEffects.md)
-  
-- Enchantments
+  - [Overview](Basics/Overview.md)
+  - [C# Overview](Basics/CSharpGuide.md)
+  - [SL Packs](Basics/SLPacks.md)
+  - [SL Menu](Basics/SLMenu.md)
 
-  - [Custom Enchantments](Custom/Enchantments.md)
-  
-- Effects & Effect Transforms
+- Guides
 
-  - [Effect Transforms](Effects/EffectTransforms.md)
-  - [SL_Effect](Effects/SL_Effect.md)
-  - [SL_EffectCondition](Effects/SL_EffectCondition.md)
-  
-- Characters
+  - [Replacing Audio](Guides/ReplacingAudio.md)
+  - [Replacing Textures](Guides/ReplacingTextures.md)
+  - [Custom Items & Skills](Guides/Items.md)
+  - [Custom Item Visuals](Guides/ItemVisuals.md)
+  - [Custom Statuses](Guides/StatusEffects.md)
+  - [Custom Characters](Guides/Characters.md)
+  - [Custom Skill Trees](Guides/SkillTrees.md)
 
-  - [Custom Characters](Custom/Characters.md)
-  
-- External Resources
+- Advanced Guides (WIP)
 
-  - [Enums](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources/Types/enums)
-  - [Outward Tools](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1701861708)
-  - [SL Resources](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources)
-  
-- Roadmap
+  - [Custom Animations](Guides/Animations.md)
+  - [Rigging Equipment Meshes](Guides/Rigging.md)
 
-  - [SideLoader Roadmap](Roadmap)
+<!-- empty block so buttom link isn't cut off on mobile. -->
+<div style="height:30px; display:block;"></div>
