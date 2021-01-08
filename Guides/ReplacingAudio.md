@@ -4,7 +4,7 @@ Replacing Audio with SideLoader is fairly simple, the only tedious part is findi
 
 All you have to do is use the same name that the game uses (listed below) and SideLoader will find and replace the original audio with your file.
 
-Your .wav files must be placed in the `AudioClip\` sub-folder of your [SL Pack](SL-Packs).
+Your .wav files must be placed in the `AudioClip\` sub-folder of your [SL Pack](Basics/SLPacks).
 
 For example, `Mods\SideLoader\MyPack\AudioClip\BGM_GeneralTitleScreen.wav` would replace the title screen music.
 

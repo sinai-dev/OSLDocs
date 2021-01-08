@@ -1,6 +1,6 @@
 # Replacing Textures
 
-Replacing textures is probably the easiest part of using the SideLoader. All you have to do is place the texture .png file in the `Texture2D\` folder of your [SL Pack](SL-Packs).
+Replacing textures is probably the easiest part of using the SideLoader. All you have to do is place the texture .png file in the `Texture2D\` folder of your [SL Pack](Basics/SLPacks).
 
 Importantly, your textures must use <b>the exact same name</b> that the game uses. This is how the SideLoader identifies which textures to replace.
 
