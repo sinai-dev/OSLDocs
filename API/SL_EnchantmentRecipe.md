@@ -1,18 +1,10 @@
 # Custom Enchantments
 
-<b>Custom Enchantments</b> (`SL_EnchantmentRecipe`s) can be defined from XML or C#. You can edit existing Enchantments by overwriting them with a Custom Enchantment, or you can create a completely new one.
+`SL_EnchantmentRecipe`s can be defined from XML or C#. Enchantment XMLs should be placed in the `Enchantments\` sub-folder of your SL Pack.
 
-Enchantment XMLs should be placed in the `Enchantments\` sub-folder of your SL Pack.
+You can make a recipe scroll with a `SL_EnchantmentRecipeItem` template. See the [SL_Item](API/SL_Item.md) page for more details.
 
-SideLoader does not currently support EnchantmentRecipeItems (recipe scrolls), but this will be added at some point. In the mean time, making one with C# would be fairly trivial (clone an existing scroll and change the EnchantmentRecipeItem.Recipes field). You would need to use C# anyway if you wanted to add this scroll to merchant stock, loot, etc.
-
-!> <b>Note:</b> Unlike SL_Item and SL_StatusEffect templates, SideLoader does not clone from an existing Enchantment when it applies your template, so the values you set will define everything about the Enchantment.
-
-## Making A Template
-
-You can generate a template from an existing Enchantment, either to edit it or to make a new one based off of it.
-
-See [SideLoader Menu](Basics/SLMenu.md) for details on how to dump Enchantments.
+See [SL Menu](Basics/SLMenu.md) for details on how to dump Enchantments and see how they work in more detail.
 
 <!-- tabs:start -->
 #### ** Universal **
