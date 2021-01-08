@@ -1,3 +1,4 @@
+# Guides
 See these articles for a guide or example on the major features of SideLoader.
 
 * [Replacing Audio](Guides/ReplacingAudio.md)
@@ -8,7 +9,7 @@ See these articles for a guide or example on the major features of SideLoader.
 * [Custom Characters](Guides/Characters.md)
 * [Custom Skill Trees](Guides/SkillTrees.md)
 
-Advanced Guides (WIP)
+## Advanced Guides (WIP)
 
 * [Custom Animations](Guides/Animations.md)
 * [Rigging Equipment Meshes](Guides/Rigging.md)
