@@ -11,7 +11,7 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 * If you want to create a new Status, set a new Identifier for it here.
 
 `NewStatusID` (integer)
-* Sets the Preset ID of the Status Effect. This isn't really used by many things, but you should still set it.
+* Sets the Preset ID of the Status Effect. This isn't really used by many things, but you should still set it if you want to be safe.
 * If you set to 0 or below, SideLoader will ignore this value completely.
 
 `Name` (string)
