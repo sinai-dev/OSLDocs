@@ -40,7 +40,7 @@ A `TextureConfig` has a few simple values which determine how SideLoader loads t
 `TextureName` (string)
 * Must match the name of one of the textures being set on this material.
 
-`UseMipMap` (true/false)
+`UseMipMap` (boolean)
 * Default `true`
 * If true, will enable <b>MipMap</b> for this texture (adjusts resolution dynamically per distance)
 

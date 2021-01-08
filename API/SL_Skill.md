@@ -59,7 +59,7 @@ The fields should be self-explanatory. Add as many SkillItemReq objects as you w
 
 If a skill is an "Attack Skill" you can use these fields. Attack Skills are any skills that do some kind of damage or counter. Currently the only active skills which aren't attack skills are placing Sigils, Reveal Soul, Mana Ward, Conjure, Flamethrower, and cosmetic skills.
 
-`RequireImbue` (true/false)
+`RequireImbue` (boolean)
 * Used by skills that require any kind of imbue, eg. Gong Strike or Elemental Discharge.
 
 `RequiredWeaponTags` (list of string)
@@ -98,13 +98,13 @@ It should look like this in XML:
 ## SL_RangeAttackSkill
 Inherits from SL_AttackSkill, used for bow skills.
 
-`AutoLoad` (true/false)
+`AutoLoad` (boolean)
 * Should this load the bow for you?
 
-`FakeShoot` (true/false)
+`FakeShoot` (boolean)
 * Not sure what this does, sorry.
 
-`OverrideAimOffset` (true/false)
+`OverrideAimOffset` (boolean)
 * Override the aim offset of the caster with the AimOffset value?
 
 `AimOffset` (Vector2)
@@ -113,7 +113,7 @@ Inherits from SL_AttackSkill, used for bow skills.
 ## SL_MeleeSkill
 A SL_MeleeSkill inherits from SL_AttackSkill, and contains a few extra fields.
 
-`Blockable` (true/false)
+`Blockable` (boolean)
 * Can the attack be blocked?
 
 `Damage` (float)
@@ -161,7 +161,7 @@ Inherits from SL_MeleeSkill, and contains some extra fields.
 `MaxRange` (float)
 * Maximum range of the counter/block.
 
-`TurnTowardsDealer` (true/false)
+`TurnTowardsDealer` (boolean)
 * On counter, will turn caster towards the attacking character.
 
 `KnockbackMult` (float)

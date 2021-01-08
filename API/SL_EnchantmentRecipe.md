@@ -33,7 +33,7 @@ The `PillarDatas` field is list of PillarData objects.
 
 Each PillarData has:
 * `Direction` (enum): one of `North`, `South`, `East` or `West`
-* `IsFar` (true/false): Whether this is a "Far" pillar or not (otherwise "Close").
+* `IsFar` (boolean): Whether this is a "Far" pillar or not (otherwise "Close").
 
 In Xml, it would look like this:
 ```xml
@@ -97,7 +97,7 @@ In Xml, this would look like:
 
 The `WeatherConditions` field is a list of WeatherCondition objects. Each of these has:
 * `WeatherType` (enum): One of: `Clear`, `Rain`, `Snow` or `SeasonEffect`.
-* `Invert` (true/false): Like the Invert field on SL_EffectCondition, this flips the result of the evaluation.
+* `Invert` (boolean): Like the Invert field on SL_EffectCondition, this flips the result of the evaluation.
 
 In Xml, this might look like:
 ```xml
@@ -121,7 +121,7 @@ For example, in Xml:
 </Temperature>
 ```
 
-`WindAltarActivated` (true/false)
+`WindAltarActivated` (boolean)
 * Whether or not the Wind Altar needs to be activated in the current region for this recipe.
 
 `EnchantTime` (float)
@@ -196,10 +196,10 @@ In xml, the FlatDamageAdded should look something like this:
 `StaminaAbsorbRatio` (float)
 * Not actually something that is used by any existing enchantment, but it does work. Leeches Stamina.
 
-`Indestructible` (true/false)
+`Indestructible` (boolean)
 * Makes the equipment indestructible if true.
 
-`TrackDamageRatio` (true/false)
+`TrackDamageRatio` (boolean)
 * Used by Vampiric weapons (for the Vampiric Transmutation, the required damage dealt).
 
 `GlobalStatusResistance` (float)

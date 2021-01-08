@@ -17,7 +17,7 @@ When defining an SL_EffectCondition, simply define them like any other Xml objec
 
 The only base field which is shared by all EffectConditions is:
 
-`Invert` (true/false)
+`Invert` (boolean)
 * If true, it will flip the result of the condition after evaluating.
 * Used if your condition produces the opposite behaviour than intended.
 * Also used by "XOR" (exclusive-or, or mutually-exclusive) conditions, with one inverted and one not inverted.
@@ -43,7 +43,7 @@ Checks the last Attack ID used by the casting character.
 ## SL_BooleanCondition
 I'll be honest, I have no idea how this one works. If you want to figure it out, let me know if you do.
 
-`Valid` (true/false)
+`Valid` (boolean)
 * Is it valid...?
 
 ## SL_ContainedWaterCondition
@@ -109,7 +109,7 @@ Checks if the caster has a Status Effect or not.
 `DiseaseAge` (float)
 * If checking for a disease, the minimum age of the disease.
 
-`CheckOwner` (true/false)
+`CheckOwner` (boolean)
 * Check the owner?
 
 `StatusSelectorType` (enum)
@@ -131,7 +131,7 @@ Similar to HasStatusEffectEffectCondition, but checks for a Level-Status Effect 
 `CompareLevel` (integer)
 * The level required
 
-`CheckOwner` (true/false)
+`CheckOwner` (boolean)
 * Whether to check on the owner or not
 
 `ComparisonType` (enum)
@@ -157,7 +157,7 @@ Checks if the caster has an imbue.
 `ImbuePresetID` (integer)
 * The Preset ID of the Imbue required.
 
-`AnyImbue` (true/false)
+`AnyImbue` (boolean)
 * Will any imbue work, or only the one with the PresetID set?
 
 `WeaponToCheck` (enum)
@@ -299,7 +299,7 @@ Not sure how this is a condition, but it delays the effect like a DelayCondition
 * The format of the delay time.
 * Must be exactly one of: `GameHours` or `Seconds`
 
-`IgnoreFirstCheck` (true/false)
+`IgnoreFirstCheck` (boolean)
 * Whether to ignore the first check or not
 
 ## SL_WeaponIsLoadedCondition

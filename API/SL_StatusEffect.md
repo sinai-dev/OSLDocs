@@ -44,16 +44,16 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 * Set this to the Identifier Name of the Status Effect you want to set.
 * Note: if you're setting this to a custom Status, you should set that one up first. SideLoader applies templates in alphabetical order (of the file name), so use that to apply the other one first.
 
-`IgnoreBuildupIfApplied` (true / false)
+`IgnoreBuildupIfApplied` (boolean)
 * If false, buildup cannot be added when already 100 or if status is active.
 
-`DisplayedInHUD` (true / false)
+`DisplayedInHUD` (boolean)
 * Is the status visible in HUD?
 
-`IsHidden` (true / false)
+`IsHidden` (boolean)
 * Is the status completely hidden?
 
-`IsMalusEffect` (true/false)
+`IsMalusEffect` (boolean)
 * Determines the category this effect is shown under in the HUD.
 * `true` will show this effect in the Negative category, `false` will show it in the Positive category.
 

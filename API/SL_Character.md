@@ -26,15 +26,15 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 * Optional, only used if SceneToSpawn is set.
 * A Vector3 takes an `x`, `y` and `z` value.
 
-`AddCombatAI` (true/false)
+`AddCombatAI` (boolean)
 * Defaults to false
 * If true, will add a basic combat AI to the character.
 * This AI is based on the Summoned Ghost. You can modify it if you want.
 
-`CanDodge` (true/false)
+`CanDodge` (boolean)
 * Can the combat AI dodge?
 
-`CanBlock` (true/false)
+`CanBlock` (boolean)
 * Can the combat AI block?
 
 `Faction` (enum)

@@ -26,22 +26,22 @@ All SL_Item classes have these fields.
 * If you want a Legacy Chest upgrade for this item, enter that item ID here. That will be the result when this item is placed in a chest.
 * Set to `-1` for no upgrade.
 
-`IsPickable` (true/false)
+`IsPickable` (boolean)
 * Can the item be picked up? This affects whether it shows in the game's F1 Debug Menu too.
 
-`IsUsable` (true/false)
+`IsUsable` (boolean)
 * Can you "Use" the item?
 
 `QtyRemovedOnUse` (integer)
 * If usable, how many get removed on use?
 
-`GroupItemInDisplay` (true/false)
+`GroupItemInDisplay` (boolean)
 * Should this item stack in displays? This means it can be an item stack.
 
-`HasPhysicsWhenWorld` (true/false)
+`HasPhysicsWhenWorld` (boolean)
 * Determines if the item should behave as a rigid body when in world space
 
-`RepairedInRest` (true/false)
+`RepairedInRest` (boolean)
 * Does this item get repaired when resting? (If equipped)
 
 `BehaviorOnNoDurability` (enum)
@@ -56,7 +56,7 @@ All SL_Item classes have these fields.
 * A modifier on the character when you use or activate this item/skill.
 * Must be exactly one of: `Immobilized`, `Mobile`, `Attack` or `NONE`
 
-`CastLocomotionEnabled` (true/false)
+`CastLocomotionEnabled` (boolean)
 * Can you move while casting or using this item/skill?
 
 `MobileCastMovementMult` (float)
@@ -273,14 +273,14 @@ As well as all the fields on SL_Item and SL_Equipment, weapons also have a few m
 * Sets the type of weapon.
 * Must be one of these values: [Weapon.WeaponType](API/Enums/EquipmentSoundMaterials.md)
 
-`Unblockable` (true/false)
+`Unblockable` (boolean)
 * Sets the unblockable behaviour. Is this weapon <b>unblockable</b>? Currently no weapons in the live game have this as true, but it does work.
 
 `SwingSound` (enum)
 * The sound when you swing the weapon.
 * Must be exactly one of: `Default`, `Weapon_1H`, `WeaponHvy_1H`, `Weapon_2H`, or `WeaponHvy_2H`
 
-`SpecialIsZoom` (true/false)
+`SpecialIsZoom` (boolean)
 * If true, the special attack is for zooming in (used for Bows).
 
 `HealthLeechRatio` (float)
@@ -289,7 +289,7 @@ As well as all the fields on SL_Item and SL_Equipment, weapons also have a few m
 `HealthBurnLeechRatio` (float)
 * Percent of damage dealt that is restored to player's <b>burnt</b> health
 
-`IgnoreHalfResistances` (true/false)
+`IgnoreHalfResistances` (boolean)
 * Does this weapon ignore 50% of enemy resistances?
 
 ### SL_WeaponStats
@@ -312,7 +312,7 @@ The extra stats you have on WeaponStats are:
 `StamCost` (float)
 * Base stamina cost of attacks. For bows, this is consumed when you draw.
 
-`AutoGenerateAttackData` (true/false)
+`AutoGenerateAttackData` (boolean)
 * Only relevant for melee weapons.
 * Defaults to `false`, and your `Attacks` will be used to set the Attack Data.
 * If `true`, this will ignore your `Attacks`, and instead automatically generate scaled damages from your `BaseDamage`, `Impact` and `StamCost` values. There are standard multipliers used for each weapon class which the SideLoader uses to scale your stats.
@@ -414,19 +414,19 @@ The `Damage` value is a list of `<float></float>` values.
 
 `SL_ProjectileWeapon` inherits from `SL_Weapon`, and contains a few extra fields.
 
-`AutoLoad` (true/false)
+`AutoLoad` (boolean)
 * Whether this weapon automatically loads?
 
-`UnloadOnSheathe` (true/false)
+`UnloadOnSheathe` (boolean)
 * Whether or not to unload the weapon when it is sheathed
 
-`UnloadOnEquip` (true/false)
+`UnloadOnEquip` (boolean)
 * Whether to unload the weapon when it is unequipped
 
-`UnloadOnIncompleteShot` (true/false)
+`UnloadOnIncompleteShot` (boolean)
 * Whether to unload the weapon if the owner performs an incomplete shot
 
-`LocomotionEnabledOnReload` (true/false)
+`LocomotionEnabledOnReload` (boolean)
 * Whether the owner is able to move while reloading this weapon
 
 `LoadAnim` (enum)
@@ -443,7 +443,7 @@ Bags inherit from SL_Equipment, and contain a few extra fields.
 `Capacity` (float)
 * The capacity of the bag
 
-`Restrict_Dodge` (true/false)
+`Restrict_Dodge` (boolean)
 * Does this backpack restrict the character's dodge when equipped?
 
 `InventoryProtection` (float)

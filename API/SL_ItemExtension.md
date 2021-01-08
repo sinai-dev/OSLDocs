@@ -35,7 +35,7 @@ The field `SL_Item.ExtensionsEditBehaviour` is an `EditBehaviour` value (enum), 
 
 All SL_ItemExtension classes have this field.
 
-`Savable` (true/false)
+`Savable` (boolean)
 * Does this ItemExtension save its values to the player's save file? This depends on the type of ItemExtension you are using.
 
 # Sub-classes
@@ -45,7 +45,7 @@ Below are all the subclasses of `SL_ItemExtension`. These contain the field abov
 ## SL_BasicDeployable
 The base class for `SL_Deployable` and `SL_BuildingUpgrade`, it cannot be used directly as the class.
 
-`CantDeployInNoBedZones` (true/false)
+`CantDeployInNoBedZones` (boolean)
 * Whether or not this item can deploy in "no bed zones"
 
 `DeploymentDirection` (Vector3)
@@ -88,7 +88,7 @@ Deployables all have a "Deployed" state version and a "Packed" state version. Th
 * This will allow the Deployed-state item to be disassembled, and the player receives this PackedItemPrefabID item.
 * You have to actually set this on the Deployed-state item, setting this to the Packed-state item will do nothing.
 
-`AutoTake` (true/false)
+`AutoTake` (boolean)
 * Whether or not there is an animation when picked up (true = no animation)
 
 `CastAnim` (enum)
@@ -135,13 +135,13 @@ Ephemeral components give a lifespan to an Item, after which they are destroyed.
 
 This is like a more advanced version of the IsUsable and QtyRemovedOnUse fields on SL_Item. It allows a finer degree of control.
 
-`AppliedOnPrice` (true/false)
+`AppliedOnPrice` (boolean)
 * Whether each item of the stack applies to the total stack price
 
-`AppliedOnWeight` (true/false)
+`AppliedOnWeight` (boolean)
 * Whether each item of the stack applies to the total stack weight
 
-`AutoStack` (true/false)
+`AutoStack` (boolean)
 * Whether multiple items of the same type automatically stack together
 
 `MaxStackAmount` (integer)
@@ -154,23 +154,23 @@ Perishable components make the item lose durability over time. Used by Food and 
 `BaseDepletionRate` (float)
 * The base value used to reduce durability by
 
-`DisableInInventory` (true/false)
+`DisableInInventory` (boolean)
 * Whether this item perishes while in the inventory or not
 
-`DontPerishInWorld` (true/false)
+`DontPerishInWorld` (boolean)
 * Whether this item perishes when placed on the ground in the world
 
-`DontPerishSkipTime` (true/false)
+`DontPerishSkipTime` (boolean)
 * Whether this item perishes when time is skipped (traveling, sleeping, etc)
 
-`OverrideUpdateRate` (true/false)
+`OverrideUpdateRate` (boolean)
 * If set to a value above 0, this overrides the rate at which the BaseDepletionRate is applied. Otherwise it's every 5 seconds (multiplied against Environment Time delta).
 
 ## SL_Preserver
 
 Preserver is used for Bags, and it slows the rate of Perishable items inside them.
 
-`NullifyPerish` (true/false)
+`NullifyPerish` (boolean)
 * Whether to completely prevent items perishing inside this bag
 
 `PreservedElements` (list of SL_PreservedElement)
@@ -199,7 +199,7 @@ Example:
 
 Used for tents and bedrolls, allows the player to sleep in it. Must be on a Deployed-state SL_Deployable item.
 
-`AffectFoodDrink` (true/false)
+`AffectFoodDrink` (boolean)
 * Whether sleeping in this tent affects the players food and drink values
 
 `AmbushReduction` (int)
@@ -223,13 +223,13 @@ Used for tents and bedrolls, allows the player to sleep in it. Must be on a Depl
 `HeatProtection` (int)
 * Protection against Hot weather when sleeping
 
-`IsInnsBed` (true/false)
+`IsInnsBed` (boolean)
 * Is this a bed inside an Inn?
 
 `ManaPreservationModifier` (int)
 * Percent modifier placed on the rate at which the player restores mana while sleeping
 
-`Rejuvenate` (true/false)
+`Rejuvenate` (boolean)
 * Does the player restore all food and drink in this bed?
 
 `StaminaRecuperationModifier` (int)
@@ -260,15 +260,15 @@ Used by pistols and bows, it handles the ammunition for the weapon.
 `MaxProjectileLoaded` (int)
 * Maximum projectile shots which can be loaded, before needing to reload.
 
-`SaveRemainingShots` (true/false)
+`SaveRemainingShots` (boolean)
 * Whether to save any remaining shots in the weapon when we reload.
 
-`ShowLoadedAmmunition` (true/false)
+`ShowLoadedAmmunition` (boolean)
 * Whether to visibly show the loaded ammunition for the weapon
 
 ## SL_WeaponLoadoutItem
 
 SL_WeaponLoadoutItem inherits from `SL_WeaponLoadout`, and contains one extra field. It is used by Bows.
 
-`ReduceAmmunitionOnLoad` (true/false)
+`ReduceAmmunitionOnLoad` (boolean)
 * Whether to reduce the ammunition when the weapon is loaded or not.

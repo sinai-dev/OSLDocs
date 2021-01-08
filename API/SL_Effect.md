@@ -107,7 +107,7 @@ Used for simply adding a status effect on activation.
 `ChanceToContract` (float)
 * Usually this is `100` for 100%, but it can be between 0 and 100.
 
-`AffectController` (true/false)
+`AffectController` (boolean)
 * Default `false`
 * If true, would override the affected character to the owner of this effect (ie. person creating it)
 
@@ -115,7 +115,7 @@ Used for simply adding a status effect on activation.
 * Default `0`
 * For Level Status Effects (ie Alert), adds extra levels
 
-`NoDealer` (true/false)
+`NoDealer` (boolean)
 * Default `false`
 * If true, prevents this effect from knowing who applied it
 
@@ -169,7 +169,7 @@ For affecting burnt health.
 `AffectQuantity` (float)
 * How much burnt health is affected
 
-`IsModifier` (true/false)
+`IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
 ## SL_AffectBurntStamina
@@ -178,7 +178,7 @@ For affecting burnt stamina.
 `AffectQuantity` (float)
 * How much burnt stamina is affected
 
-`IsModifier` (true/false)
+`IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
 ## SL_AffectCorruption
@@ -187,7 +187,7 @@ For affecting the character's Corruption stat (The Soroboreans DLC).
 `AffectQuantity` (float)
 * The amount corruption is affected by
 
-`IsRaw` (true/false)
+`IsRaw` (boolean)
 * Is this value "Raw"?
 
 ## SL_AffectDrink
@@ -214,7 +214,7 @@ For restoring or affecting current Health.
 `AffectQuantity` (float)
 * How much current health is affected
 
-`IsModifier` (true/false)
+`IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
 `AffectQuantityOnAI`
@@ -226,10 +226,10 @@ For healing the "owner" of the effect. Used by Blood Bullet, for example.
 `AffectQuantity` (float)
 * How much current health is affected
 
-`IsModifier` (true/false)
+`IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
-`Requires_AffectedChar` (true/false)
+`Requires_AffectedChar` (boolean)
 * Does it require a successful affected character (ie. on-hit effect, etc)?
 
 ## SL_AffectMana
@@ -238,7 +238,7 @@ For affecting current Mana.
 `AffectQuantity` (float)
 * How much current mana is affected
 
-`IsModifier` (true/false)
+`IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
 `AffectType` (enum)
@@ -251,7 +251,7 @@ For affecting the owner character's stability. Used by Juggernaught, for example
 `AffectQuantity` (float)
 * How much current stability is affected
 
-`SetStability` (true/false)
+`SetStability` (boolean)
 * Should this be applied as a direct value? (ie, sets Stability to this exact value)
 
 ## SL_AffectStamina
@@ -273,7 +273,7 @@ For affecting a character's <b>Stat</b> attribute for the given `Stat_Tag`.
 `AffectQuantity` (float)
 * The quantity the stat is affected by
 
-`IsModifier` (true/false)
+`IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
 `Tags` (list of string)
@@ -294,7 +294,7 @@ Inherits from `SL_Effect`. Adds Status Effect Build Up Resistance for a specific
 ## SL_AutoKnock
 This effect is quite simple, it just guarantees a stagger or knockdown on the affected character. Use HitEffects to apply to enemies.
 
-`KnockDown` (true/false)
+`KnockDown` (boolean)
 * Should the affected character be knocked down, or just staggered?
 
 ## SL_CallSquadMembers
@@ -362,13 +362,13 @@ Simply teaches the player character a skill.
 ## SL_LightLantern
 This effect lights or un-lights your lantern, if equipped.
 
-`Light` (true/false)
+`Light` (boolean)
 * Should this light the lantern? `false` would un-light the lantern.
 
 ## SL_LoadWeapon
 This effects loads a weapon (ie. Pistol).
 
-`UnloadFirst` (true/false)
+`UnloadFirst` (boolean)
 * Should it unload the weapon before loading?
 
 `WeaponSlot` (enum)
@@ -388,7 +388,7 @@ This one is obviously for playing a sound effect. You can pick any sound from th
 `Sound` (GlobalAudioManager.Sounds)
 * Pick any sound of [this list](API/Enums/Sounds.md).
 
-`Follow` (true/false)
+`Follow` (boolean)
 * Should the sound follow the affected character?
 
 `MinPitch` (float)
@@ -404,14 +404,14 @@ Used to play a VFX System (visual effects).
 * Can pick any of [these values](API/Enums/VFXPrefabs.md)
 * Determines the VFX prefab that will play
 
-`HitPos` (true/false)
+`HitPos` (boolean)
 * Determines whether the VFX will play at the position provided by the effect activation
 
 `ParentMode` (enum)
 * Must be exactly one of: `This` or `FXWorld`
 * If `FXWorld`, it will set the parent to the global FX transform holder
 
-`DontInstantiateNew` (true/false)
+`DontInstantiateNew` (boolean)
 * If `false`, it will instantiate a new prefab each activation
 
 ## SL_Puke
@@ -444,7 +444,7 @@ The XML should look like:
 `Knockback` (float)
 * The Impact damage of the effect
 
-`HitInventory` (true/false)
+`HitInventory` (boolean)
 * Does this effect damage the durability of items in the affected character's backpack?
 
 ## SL_PunctualDamageAoE
@@ -456,7 +456,7 @@ This class inherits from SL_PunctualDamage, and contains a few extra fields.
 `TargetType` (enum)
 * Must be one of: `Allies` or `Enemies`
 
-`IgnoreShooter` (true/false)
+`IgnoreShooter` (boolean)
 * Should the shooter be ignored?
 
 `IgnoreHalfResistances` (bool)
@@ -547,7 +547,7 @@ ShootBlast and ShootProjectile are rather complex effects, they are almost as in
 * Adds position to the start-point of the shooter projectile or blast.
 * A Vector3 has `x`, `y` and `z` offsets you can set.
 
-`NoAim` (true/false)
+`NoAim` (boolean)
 * Force "no-aim" behaviour.
 
 `TargetType` (enum)
@@ -574,41 +574,41 @@ ShootBlast inherits from SL_Shooter, and contains some extra fields.
 * Determines the <b>maximum copies of the blast</b> which can be active at once.
 * Think about how many you would need (per caster) at any one time, and set to that.
 
-`Interruptible` (true/false)
+`Interruptible` (boolean)
 * Can the blast be interrupted?
 
 `MaxHitTargetCount` (integer)
 * Maximum targets that can be hit by the blast, if any.
 
-`AffectHitTargetCenter` (true/false)
+`AffectHitTargetCenter` (boolean)
 * Should the blast affect the target from their center position?
 
-`HitOnShoot` (true/false)
+`HitOnShoot` (boolean)
 * Should the hit effects be applied automatically on shoot?
 
-`IgnoreShooter` (true/false)
+`IgnoreShooter` (boolean)
 * Should the shooter be ignored?
 
-`IgnoreStop` (true/false)
+`IgnoreStop` (boolean)
 * Should stopping be ignored?
 
 `NoTargetForwardMultiplier` (float)
 * If the shooter has no target, this increases the forward speed.
 
-`ParentToShootTransform` (true/false)
+`ParentToShootTransform` (boolean)
 * Determines the shooting behaviour, should the parent transform be the shooter?
 
-`UseTargetCharacterPositionType` (true/false)
+`UseTargetCharacterPositionType` (boolean)
 * Should the target character's position-type be used for the targeting mode?
 
 `ImpactSoundMaterial` (enum)
 * The sound on impact.
 * Must be one of [these values](API/Enums/EquipmentSoundMaterials.md).
 
-`DontPlayHitSound` (true/false)
+`DontPlayHitSound` (boolean)
 * Whether to play the hit sound on hit
 
-`FXIsWorld` (true/false)
+`FXIsWorld` (boolean)
 * Are the effects "world effects"?
 
 `EffectBehaviour` (enum)
@@ -749,10 +749,10 @@ The fields on SL_ProjectileShot are:
 `LockDirection` (Vector3)
 * Custom locked direction for this projectile
 
-`MustShoot` (true/false)
+`MustShoot` (boolean)
 * Should this shot be forced to shoot?
 
-`NoBaseDir` (true/false)
+`NoBaseDir` (boolean)
 * Whether to override the base direction or not
 
 `RandomLocalDirectionAdd` (Vector3)
@@ -771,20 +771,20 @@ Back to the other fields on SL_ShootProjectile...
 `LateShootTime` (float)
 * Delay on the projectile shot
 
-`Unblockable` (true/false)
+`Unblockable` (boolean)
 * Is the projectile <b>unblockable</b>?
 
-`EffectsOnlyIfHitCharacter` (true/false)
+`EffectsOnlyIfHitCharacter` (boolean)
 * Only do effects if the projectile actually hit a targetable character?
 
 `EndMode` (enum)
 * Determines the end-mode behaviour
 * Must be exactly one of: `LifetimeOnly`, `EnvironmentOnly`, `Normal` or `Custom`
 
-`DisableOnHit` (true/false)
+`DisableOnHit` (boolean)
 * Should the projectile be disabled once it hits something?
 
-`IgnoreShooterCollision` (true/false)
+`IgnoreShooterCollision` (boolean)
 * Should the shooter collision be ignored?
 
 `TargetingMode` (enum)
@@ -797,7 +797,7 @@ Back to the other fields on SL_ShootProjectile...
 `TargetRange` (float)
 * Maximum target-acquisition range.
 
-`AutoTarget` (true/false)
+`AutoTarget` (boolean)
 * Should the projectile acquire a target automatically? (No lock-on)
 
 `AutoTargetMaxAngle` (float)
@@ -839,7 +839,7 @@ Back to the other fields on SL_ShootProjectile...
 * Offset of the Point-Light, if any.
 * Also has a `z` value.
 
-`TrailEnabled` (true/false)
+`TrailEnabled` (boolean)
 * Is the trail enabled on the projectile (if any)?
 
 `TrailTime` (float)
@@ -870,7 +870,7 @@ Used for Bows.
 ## SL_ShootProjectilePistol
 Inherits from ShootProjectile, and is used for pistol skills.
 
-`UseShot` (true/false)
+`UseShot` (boolean)
 * Should the loaded shot be used, if any?
 
 ## SL_StartDuel
@@ -900,7 +900,7 @@ This effect type is used by skills like Conjure (Summoned Ghost), but also for t
 * How many can be summoned at once?
 * Only valid if SummonMode is `Buffer`.
 
-`LimitOfOne` (true/false)
+`LimitOfOne` (boolean)
 * Can only one be active at a time?
 
 `SummonMode` (enum)
@@ -917,13 +917,13 @@ This effect type is used by skills like Conjure (Summoned Ghost), but also for t
 `MaxDistance` (float)
 * Max distance of summon from caster (only at time of cast)
 
-`SameDirectionAsSummoner` (true/false)
+`SameDirectionAsSummoner` (boolean)
 * Summoned prefab has same facing direction as caster?
 
 `SummonLocalForward` (Vector3)
 * Optional extra position added to Summoned prefab
 
-`IgnoreOnDestroy` (true/false)
+`IgnoreOnDestroy` (boolean)
 * Does the effect ignore when prefab is destroyed?
 
 ## SL_SummonAI
@@ -947,7 +947,7 @@ Teleports the caster.
 `OffsetRelativeTarget` (Vector3)
 * Offset position to target
 
-`UseTarget` (true/false)
+`UseTarget` (boolean)
 * Do we teleport to the current target?
 
 ## SL_ThrowItem
@@ -971,7 +971,7 @@ Simply unloads the weapon in the given AffectSlot.
 ## SL_UseLoadoutAmunition
 Uses ammunition from a WeaponLoadout.
 
-`MainHand` (true/false)
+`MainHand` (boolean)
 * Should we affect the main-hand item, or off-hand?
 
 `AutoLoad` (bool)
@@ -997,7 +997,7 @@ This inherits all the fields on SL_PunctualDamage, and also has:
 * You can set this to `COUNT` to bypass any override.
 * Otherwise, must be one of: `Physical`, `Ethereal`, `Decay`, `Electric` (<b>not</b> Lightning), `Frost`, or `Fire`.
 
-`ForceOnlyLeftHand` (true/false)
+`ForceOnlyLeftHand` (boolean)
 * If true, it will ignore the damage on any required main-hand weapons, if there are any.
 
 `Damage_Multiplier` (float)
