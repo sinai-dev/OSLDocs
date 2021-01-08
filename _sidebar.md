@@ -11,7 +11,7 @@
   - [C# Overview](Basics/CSharpGuide.md)
   - [SL Packs](Basics/SLPacks.md)
   - [SL Menu](Basics/SLMenu.md)
-  - [Guides](Basics/Guides.md)
+  - [Guides](Guides/Guides.md)
 
 - <b>Documentation</b>
 
