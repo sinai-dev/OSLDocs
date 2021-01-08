@@ -2,7 +2,7 @@
 
 An <b>SL_Effect</b> object can be defined on an [SL_EffectTransform](API/SL_EffectTransform).
 
-This effects work closely with [SL_EffectConditions](API/SL_EffectCondition).
+These effects work closely with [SL_EffectConditions](API/SL_EffectCondition).
 
 ## How to define one
 
