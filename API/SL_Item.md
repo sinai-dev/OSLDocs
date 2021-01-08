@@ -539,34 +539,6 @@ BuildingResourceValues is a struct which contains the fields `Funds`, `Timber`, 
 
 Each value is an `int`, representing the value for that material.
 
-For example:
-<!-- tabs:start -->
-
-#### ** XML **
-
-```xml
-<BuildingResourceValues>
-  <Funds>100</Funds>
-  <Food>0</Food>
-  <Timber>0</Timber>
-  <Stone>0</Stone>
-</BuildingResourceValues>
-```
-
-#### ** C# **
-
-```csharp
-new BuildingResourceValues
-{
-  Funds = 100,
-  Food = 0,
-  Timber = 0,
-  Stone = 0
-}
-```
-
-<!-- tabs:end -->
-
 ### SL_BuildingRequirement
 An `SL_BuildingRequirement` value has the following fields:
 
