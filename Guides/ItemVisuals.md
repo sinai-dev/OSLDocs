@@ -101,7 +101,7 @@ SideLoader supports setting custom visual prefabs for items, provided that you s
 First, make sure you are familiar with the [AssetBundle Workflow](https://docs.unity3d.com/Manual/AssetBundles-Workflow.html) in the Unity Editor as well as working with [SL Pack AssetBundles](Basics/SLPacks#assetbundles).
 
 * In the project, create a folder called "Editor", and create a new C# script inside this folder.
-* Copy and paste the script provided in the "Building the Asset Bundles" section of the link above.
+* Copy and paste the script provided in the "Building the Asset Bundles" section of the [AssetBundle Workflow](https://docs.unity3d.com/Manual/AssetBundles-Workflow.html) guide.
 * You should now see the option to "Build AssetBundles" in the Assets drop-down menu at the top of the Editor.
 * Once you set that up, build your prefab to an asset bundle and put it in your `AssetBundles/` folder of your SLPack.
 
