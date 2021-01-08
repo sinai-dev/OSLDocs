@@ -26,7 +26,7 @@
   - [SL_Item](API/SL_Item.md)
   - [SL_ItemExtension](API/SL_ItemExtension.md)
   - [SL_ItemVisual](API/SL_ItemVisual.md)
-  - [SL_Mateiral](API/SL_Material.md)
+  - [SL_Material](API/SL_Material.md)
   - [SL_Recipe](API/SL_Recipe.md)
   - [SL_Skill](API/SL_Skill.md)
   - [SL_SkillTree](API/SL_SkillTree.md)
