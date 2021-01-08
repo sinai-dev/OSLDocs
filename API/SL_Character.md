@@ -127,6 +127,8 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 
 #### ** C# Only **
 
+See also: [C# Custom Characters](Basics/CSharpGuide?id=customcharacters)
+
 ### Methods
 
 `Prepare()`
@@ -146,7 +148,5 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 * Invoked when any character using this template is spawned
 * The `Character` argument is the Character instance that was just spawned
 * The `string` argument is the `extraRpcData` you may have provided to your Spawn method.
-
-See also: [C# Custom Characters](Basics/CSharpGuide?id=customcharacters)
 
 <!-- tabs:end -->

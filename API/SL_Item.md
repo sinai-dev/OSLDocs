@@ -606,6 +606,8 @@ It should look like this in XML:
 
 #### ** C# Only **
 
+See also: [C# Custom Items](Basics/CSharpGuide?id=customitems)
+
 ### Fields
 
 `SLPackName` (string)
@@ -623,7 +625,5 @@ It should look like this in XML:
 `AddOnInstanceStartListener(Action<Item> listener>)`
 * The OnInstanceStart event is called when an Item with this template's applied ID is created or loaded during gameplay.
 * `Action<Item> listener` is your callback. The Item argument passed to your method is the instance that was just created.
-
-See also: [C# Custom Items](Basics/CSharpGuide?id=customitems)
 
 <!-- tabs:end -->
