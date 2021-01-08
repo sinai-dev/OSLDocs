@@ -2,7 +2,9 @@
 
 See also: [Custom Items](Guides/Items.md).
 
-## Fields
+<!-- tabs:start -->
+
+#### ** Universal **
 
 All SL_Item classes have these fields.
 
@@ -601,3 +603,27 @@ It should look like this in XML:
 	</Items>
 </SL_MultiItem>
 ```
+
+#### ** C# Only **
+
+### Fields
+
+`SLPackName` (string)
+* If setting custom textures or icons, the name of the SL Pack you to use
+
+`SubfolderName`
+* If setting custom textures or icons, the name of the subfolder in the `Items` folder of the SLPack which contains your `Textures` folder to use
+* See [Custom Item Visuals](Guides/ItemVisuals.md) for more information
+
+### Methods
+
+`Apply()`
+* Call this to prepare and apply the template. Do this in Awake or BeforePacksLoaded.
+
+`AddOnInstanceStartListener(Action<Item> listener>)`
+* The OnInstanceStart event is called when an Item with this template's applied ID is created or loaded during gameplay.
+* `Action<Item> listener` is your callback. The Item argument passed to your method is the instance that was just created.
+
+See also: [C# Custom Items](Basics/CSharpGuide?id=customitems)
+
+<!-- tabs:end -->

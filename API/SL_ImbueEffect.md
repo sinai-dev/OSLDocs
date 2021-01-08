@@ -2,6 +2,9 @@
 
 Imbues are similar to [Status Effects](API/SL_StatusEffect.md), but much simpler overall. See also: [Custom Status Effects](Guides/StatusEffects.md).
 
+<!-- tabs:start -->
+#### ** Universal **
+
 `TargetStatusID` (integer)
 * The ID of the Imbue you want to clone from or modify
 
@@ -20,3 +23,9 @@ Imbues are similar to [Status Effects](API/SL_StatusEffect.md), but much simpler
 
 `Effects` (list of `SL_EffectTransform`)
 * See the [SL_EffectTransform](API/SL_EffectTransform.md) page for documentation on all SL_Effect classes, and more details on how to set up EffectTransforms.
+
+#### ** C# Only **
+
+For C#, just call `Apply()` to apply your template, at Awake or BeforePacksLoaded.
+
+<!-- tabs:end -->

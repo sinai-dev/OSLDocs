@@ -2,7 +2,8 @@
 
 See also: [Custom Status Effects](Guides/StatusEffects.md).
 
-## Fields
+<!-- tabs:start -->
+#### ** Universal **
 
 `TargetStatusIdentifier` (string) <b>[REQUIRED]</b>
 * The Identifier Name of the Status Effect you want to clone from or modify
@@ -93,3 +94,10 @@ Your tags XML should look like this, for example:
 
 `Effects` (list of `SL_EffectTransform`)
 * See the [Effects](API/SL_EffectTransform) page for documentation on all SL_Effect classes, and more details on how to set up EffectTransforms.
+
+#### ** C# Only **
+
+For C#, just call `Apply()` to apply your template, at Awake or BeforePacksLoaded.
+
+<!-- tabs:end -->
+

@@ -6,56 +6,10 @@ Recipes XMLs should be placed in the `Recipes\` sub-folder of your SL Pack.
 
 ?> <b>Note:</b> Custom recipes are applied after all Custom Items have been set up, so you can safely reference those here.
 
-## Template
-Currently there is no template generator for Recipes, so here's how it should look:
+You can make a recipe scroll with a `SL_RecipeItem` template. See the [SL_Item](API/SL_Item.md) page for more details.
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<SL_Recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <!-- Choose a unique UID for this recipe -->
-  <UID>MyUniqueUIDForThisRecipe</UID>
-  <!-- One of: "Survival", "Alchemy", "Cooking", "Forge" (unused) -->
-  <StationType>Survival</StationType> 
-  <Ingredients>
-    <Ingredient>
-      <!-- Type: "AddSpecificIngredient" for an Item ID, or "AddGenericIngredient" for a Tag Name -->
-      <Type>AddSpecificIngredient</Type>
-      <!-- Use "Ingredient_ItemID" for AddSpecificIngredient -->
-      <Ingredient_ItemID>2010070</Ingredient_ItemID>
-    </Ingredient>
-    <Ingredient>
-      <Type>AddGenericIngredient</Type>
-      <!-- Use "Ingredient_Tag" for AddGenericIngredient -->
-      <Ingredient_Tag>Water</Ingredient_Tag>
-    </Ingredient>
-    <!--
-    <Ingredient>
-      <Type>AddSpecificIngredient</Type>
-      <Ingredient_ItemID>2010070</Ingredient_ItemID>
-    </Ingredient>
-    <Ingredient>
-      <Type>AddSpecificIngredient</Type>
-      <Ingredient_ItemID>2010070</Ingredient_ItemID>
-    </Ingredient>
-    -->
-  </Ingredients>
-  <Results>
-    <ItemQty>
-      <!-- You can set any ID for the result item ID, including custom items. -->
-      <ItemID>2010072</ItemID> 
-      <Quantity>1</Quantity>
-    </ItemQty>
-    <!-- You can have multiple results!
-    <ItemQty>		
-      <ItemID>2000010</ItemID> 
-      <Quantity>1</Quantity>
-    </ItemQty>
-    -->
-  </Results>
-</SL_Recipe>
-```
-
-## SL_Recipe
+<!-- tabs:start -->
+#### ** Universal **
 
 `UID` (string)
 * Used by Recipe Scroll items. Those items require a UID to learn the appropriate recipe.
@@ -73,21 +27,74 @@ Currently there is no template generator for Recipes, so here's how it should lo
 * You can add any number of results that you want.
 * Each must have an `ItemID`, and `Quantity` for the result.
 
-## Recipe Scrolls
+#### ** XML **
 
-You can make a recipe scroll with a `SL_RecipeItem` template. See the [SL_Item](API/SL_Item.md) page for more details.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SL_Recipe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Choose a unique UID for this recipe -->
+  <UID>myname.myrecipe</UID>
+  <!-- One of: "Survival", "Alchemy", "Cooking", "Forge" (unused) -->
+  <StationType>Survival</StationType> 
+  <Ingredients>
 
-## From C#
+    <Ingredient>
+      <!-- Type: "AddSpecificIngredient" for an Item ID, or "AddGenericIngredient" for a Tag Name -->
+      <Type>AddSpecificIngredient</Type>
 
-It's pretty much exactly the same as above. It will look like this:
+      <!-- Use "Ingredient_ItemID" for AddSpecificIngredient -->
+      <Ingredient_ItemID>2010070</Ingredient_ItemID>
+    </Ingredient>
+
+    <Ingredient>
+      <Type>AddGenericIngredient</Type>
+
+      <!-- Use "Ingredient_Tag" for AddGenericIngredient -->
+      <Ingredient_Tag>Water</Ingredient_Tag>
+    </Ingredient>
+
+    <!--
+    <Ingredient>
+      <Type>AddSpecificIngredient</Type>
+      <Ingredient_ItemID>2010070</Ingredient_ItemID>
+    </Ingredient>
+
+    <Ingredient>
+      <Type>AddSpecificIngredient</Type>
+      <Ingredient_ItemID>2010070</Ingredient_ItemID>
+    </Ingredient>
+
+    -->
+
+  </Ingredients>
+
+  <Results>
+    <ItemQty>
+      <!-- You can set any ID for the result item ID, including custom items. -->
+      <ItemID>2010072</ItemID> 
+      <Quantity>1</Quantity>
+    </ItemQty>
+    <!-- You can have multiple results
+    <ItemQty>		
+      <ItemID>2000010</ItemID> 
+      <Quantity>1</Quantity>
+    </ItemQty>
+    -->
+  </Results>
+</SL_Recipe>
+```
+
+#### ** C# **
+
+You should apply this recipe at Awake or BeforePacksLoaded.
 
 ```csharp
 var myrecipe = new SL_Recipe() 
 {
-    // define everything here like its done above
+    // define fields here
 };
 
 myrecipe.ApplyRecipe();
 ```
 
-That's about all there is to custom recipes. Feel free to ask me for help if you have any questions.
+<!-- tabs:end -->

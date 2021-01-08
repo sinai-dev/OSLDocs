@@ -2,6 +2,10 @@
 
 See also: [Guides: Custom Characters](Guides/Characters.md)
 
+<!-- tabs:start -->
+
+#### ** Universal **
+
 ## SL_Character
 
 `UID` (string)
@@ -120,3 +124,29 @@ The SL_CharacterTrainer has two additional fields, and can be used to set up a b
 For more information on SL_SkillTree, see [Skill Trees](Guides/SkillTrees.md).
 
 For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characters.md).
+
+#### ** C# Only **
+
+### Methods
+
+`Prepare()`
+* Call this in OnPacksLoaded to register your character template.
+
+`Spawn(Vector3 position, string characterUID, string extraRpcData)`
+* Manually spawn a character using this template, with an optional manual UID and RPC data.
+* `characterUID` is optional, if not provided it will use the default from your template. If you are spawning multiple dynamic characters from this template, use UID.Generate().
+* `extraRpcData` is any custom data you want to have passed over network, it will be sent to your `OnSpawn` callback.
+
+`TryEquipItem(Character character, int id)`
+* Helper to force-equip an Item onto the provided Character.
+* Will check if they own the item first, otherwise will spawn and give it to them.
+
+### Events
+`Action<Character, string> OnSpawn`
+* Invoked when any character using this template is spawned
+* The `Character` argument is the Character instance that was just spawned
+* The `string` argument is the `extraRpcData` you may have provided to your Spawn method.
+
+See also: [C# Custom Characters](Basics/CSharpGuide?id=customcharacters)
+
+<!-- tabs:end -->
