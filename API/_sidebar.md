@@ -7,7 +7,7 @@
 - Items
   - [SL_Item](API/SL_Item.md)
   - [SL_ItemExtension](API/SL_ItemExtension.md)
-  - [SL_ItemVisual](API/SL_ItemVisuals.md)
+  - [SL_ItemVisual](API/SL_ItemVisual.md)
   - [SL_Recipe](API/SL_Recipe.md)
 
 - Skills
