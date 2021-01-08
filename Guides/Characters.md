@@ -212,7 +212,7 @@ private void OnSpawn(Character character, string rpcData)
 
 ## SL_CharacterTrainer example
 
-For C#, it's basically the same, just see [SL_SkillTree](API/SL_SkillTree) for details on how to set the SkillTree up.
+For C#, it's basically the same, just see [Custom Skill Trees](Guides/SkillTrees.md) for details on how to set the SkillTree up.
 
 For XML:
 

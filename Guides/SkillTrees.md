@@ -2,6 +2,8 @@
 
 Custom Skill Trees can be defined through C# or with XML (through an SL_CharacterTrainer).
 
+See [SL_SkillTree](API/SL_SkillTree.md) for full documentation.
+
 ## Examples
 
 <!-- tabs:start -->
