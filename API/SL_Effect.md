@@ -139,6 +139,9 @@ It's exactly the same as `SL_AddStatusEffect`, except that you have one addition
 * The Status Identifier for the effect received when you have Shamanic Resonance
 * The game just adds ` Amplified` to the identifier for most boons, eg `Bless Amplified`
 
+## SL_AddPukeOnEat
+Contains no extra fields, used by Indigestion to give the character a chance of puking on eating.
+
 ## SL_AddStatusEffectBuildUp
 For adding a build-up effect, usually used by Hit effects.
 
@@ -332,8 +335,9 @@ Used by enemy AIs, related to DLC content.
 `OrderID` (integer)
 * The "order" given to AI squad members.
 
-## SL_ImbueWeapon
-For adding an <b>Imbue Preset</b> to a character.
+## SL_ImbueObject
+
+Abstract base class used by SL_ImbueWeapon and SL_ImbueProjectile.
 
 `Lifespan` (float)
 * Lifespan of the imbue from this source
@@ -342,9 +346,18 @@ For adding an <b>Imbue Preset</b> to a character.
 * The ID of the Imbue Preset you want to apply.
 * You can find preset IDs with [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658) - use the "ID" of the effect.
 
+## SL_ImbueWeapon
+Inherits from SL_ImbueObject, for adding an <b>Imbue Preset</b> to a character's main weapon (and dagger).
+
 `Imbue_Slot` (enum)
 * Must be exactly one of: `MainHand` or `OffHand` 
 * The slot which this imbue preset will be applied to.
+
+## SL_ImbueProjectile
+For applying an Imbue to a projectile.
+
+`UnloadProjectile` (boolean)
+* Unload the current projectile?
 
 ## SL_InstrumentTriggerBubble
 Used by Nurturing Echo to trigger the healing effect on nearby instruments.

@@ -132,7 +132,21 @@ A SL_MeleeSkill inherits from SL_AttackSkill, and contains a few extra fields.
 * Is the attack <b>unblockable</b>? Overrides `Blockable`.
 
 `NoWeaponAtkTag` (bool)
-* Not sure, investigate if you're curious
+* Overrides this weapon skill being identified as one by the `WeaponSkillAttack` tag (Damascene/Masterpiece weapons)
+* True to not be identified as one
+
+## SL_PistolSkill
+Inherits from SL_AttackSkill, contains two extra fields for Pistols.
+
+This is currently only set up to help modify the Fire & Reload skill, there is no API for creating new pistol-based skills from this yet.
+
+`PrimaryActivationRequirement` (enum)
+* Determines the requirement for the normal activation (ie. reloading)
+* Must be one of: `Ignore`, `Empty`, `OwnsAmmunition`, `Loaded`, `OwnsAmmunitionOrLoaded`
+
+`AlternativeActivationRequirement` (enum)
+* Determines the requirement for the alternate activations (ie. shooting), determined by the EffectConditions for the various shots
+* Must be one of: `Ignore`, `Empty`, `OwnsAmmunition`, `Loaded`, `OwnsAmmunitionOrLoaded`
 
 ## SL_ThrowSkill
 Inherits from SL_AttackSkill, and contains a few extra fields. This is used with a `SL_ThrowItem` effect.

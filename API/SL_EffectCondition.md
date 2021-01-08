@@ -166,6 +166,9 @@ Checks the height of the character (relative to nearest ground? or just in gener
 `HeightThreshold` (float)
 * The height requirement. Don't know if relative or just based on "sea level".
 
+## SL_InTownOrCityCondition
+Checks if the character is in a town or city, contains no extra fields.
+
 ## SL_ImbueEffectCondition
 Checks if the caster has an imbue.
 
