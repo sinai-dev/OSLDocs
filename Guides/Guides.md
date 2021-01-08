@@ -1,5 +1,5 @@
 # Guides
-See these articles for a guide or example on the major features of SideLoader.
+See these articles for a guide or example on the major features of SideLoader:
 
 * [Replacing Audio](Guides/ReplacingAudio.md)
 * [Replacing Textures](Guides/ReplacingTextures.md)

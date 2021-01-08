@@ -7,11 +7,10 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 `TargetStatusIdentifier` (string) <b>[REQUIRED]</b>
 * The Identifier Name of the Status Effect you want to clone from
 
-`StatusIdentifier` (string) <b>[REQUIRED]</b>
-* Determines the Status Effect your template will be applied to, or the new Identifier Name of your custom status.
-* Set to an existing Identifier to apply to an existing Status, or create a new one to create a new Status.
+`StatusIdentifier` (string)
+* If you want to create a new Status, set a new Identifier for it here.
 
-`NewStatusID` (integer) <b>[REQUIRED]</b>
+`NewStatusID` (integer)
 * Sets the Preset ID of the Status Effect. This isn't really used by many things, but you should still set it.
 * If you set to 0 or below, SideLoader will ignore this value completely.
 
