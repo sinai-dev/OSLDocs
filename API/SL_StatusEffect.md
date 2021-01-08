@@ -5,7 +5,7 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 ## Fields
 
 `TargetStatusIdentifier` (string) <b>[REQUIRED]</b>
-* The Identifier Name of the Status Effect you want to clone from
+* The Identifier Name of the Status Effect you want to clone from or modify
 
 `StatusIdentifier` (string)
 * If you want to create a new Status, set a new Identifier for it here.

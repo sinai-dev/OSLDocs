@@ -3,10 +3,10 @@
 Imbues are similar to [Status Effects](API/SL_StatusEffect.md), but much simpler overall. See also: [Custom Status Effects](Guides/StatusEffects.md).
 
 `TargetStatusID` (integer)
-* The ID of the Imbue you want to clone from
+* The ID of the Imbue you want to clone from or modify
 
 `NewStatusID` (integer)
-* The ID of the Imbue you want to apply to. Can be a new or existing ID.
+* If you want to create a new Imbue, set this to your desired ID here.
 
 `Name` (string)
 * The name of your Imbue. Unity rich text supported.
