@@ -34,5 +34,16 @@ var template = new SL_StatusEffect
     // etc...
 };
 
+/* If setting a custom icon, set these next two values to do so. */
+
+/* The SLPack folder name which you want to use */
+template.SLPackName = "MyPackName"; 
+
+/* The subfolder name in the StatusEffects/ folder of the SLPack for this custom status.
+ * Your icon should be called "icon.png" and placed directly in this folder.
+*/
+template.SubfolderName = "MySubfolderName"; 
+
+/* when you're done, call this to prepare and register the template. */
 template.Apply();
 ```
