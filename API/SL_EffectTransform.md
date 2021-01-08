@@ -12,7 +12,7 @@ I recommend using the [SideLoader Menu](Basics/SLMenu.md) to dump some existing 
 * `Destroy` will <b>wipe all the existing effects</b> before it applies yours. This is recommended in most cases if you are editing the effects.
 * `Override` will <b>only destroy transforms if you have defined one with the same TransformName</b>. You can use this to have greater control and only replace specific transforms. In some cases, it is possible that there are duplicate-name children on one transform, and SideLoader has no way to solve this. You would need to use Destroy and replace everything in this case.
 
-!> <b>Note:</b> Even if you don't define any SL_EffectTransforms, your EffectBehaviour is <b>still applied</b> to the base prefab. All SL classes have `Override` or `NONE` as the default value if not set.
+?> <b>Note:</b> Even if you don't define any SL_EffectTransforms, your EffectBehaviour is <b>still applied</b> to the base prefab. All SL classes have `Override` or `NONE` as the default value if not set.
 
 ## SL_EffectTransform
 As mentioned above, an SL_EffectTransform is a container for effects and conditions. When defining your Effects on items, skills or status effects, you are defining a <b>list of SL_EffectTransforms</b>.
