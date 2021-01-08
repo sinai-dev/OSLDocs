@@ -137,7 +137,7 @@ var transform = new SL_EffectTransform
   },
   EffectConditions = new SL_EffectCondition[]
   {
-    new HasStatusEffectEffectCondition
+    new SL_HasStatusEffectEffectCondition
     {
       // ...
     },
