@@ -1,5 +1,8 @@
 # SL_ItemVisual
 
+<!-- tabs:start -->
+#### ** Universal **
+
 These are the fields you can set on an SL_ItemVisual class.
 
 ?> <b>Note:</b> the `Prefab_` fields are not required. They're only used if you are using your own custom Visual Prefabs.
@@ -58,8 +61,8 @@ SL_ArmorVisuals inherits from SL_ItemVisual, and contains two extra fields.
 `HideHair`
 * For head or chest armor only. Does equipping these visuals hide the player's hair?
 
-### Xml Example
-Here is an Xml Example of an SL_ItemVisual object.
+#### ** XML Example **
+Here is an Xml Example of an SL_ItemVisual object in XML.
 
 ```xml
 <ItemVisuals>
@@ -86,3 +89,20 @@ Here is an Xml Example of an SL_ItemVisual object.
 <SpecialItemVisuals>
 <!-- etc... -->
 ```
+
+#### ** C# Only **
+
+The `CustomItemVisuals` class contains a few helpers you might want to use from C#.
+
+`SetSpriteLink(Item item, Sprite sprite, bool skill = false)`
+* Set the sprite override for an Item, for either its ItemIcon or SkillTreeIcon
+* If skill is set to true, will set the SkillTreeIcon.
+
+`GetOrigItemVisuals(Item item, VisualPrefabType type)`
+* Get the original unmodified item visuals for an Item
+
+<!-- tabs:end -->
+
+## CustomItemVisuals
+
+If you want to do anything custom with Item Visuals from C#, the `CustomItemVisuals` class may be of help to you, see the public methods in your IDE.

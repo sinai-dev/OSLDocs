@@ -604,7 +604,31 @@ See also: [C# Custom Items](Basics/CSharpGuide?id=customitems)
 * Call this to prepare and apply the template. Do this in Awake or BeforePacksLoaded.
 
 `AddOnInstanceStartListener(Action<Item> listener>)`
-* The OnInstanceStart event is called when an Item with this template's applied ID is created or loaded during gameplay.
+* The OnInstanceStart event is called when an Item with this template's applied ID is created or loaded during gameplay, in an actual scene.
 * `Action<Item> listener` is your callback. The Item argument passed to your method is the instance that was just created.
+
+### Events
+
+`Action<Item> OnTemplateApplied`
+* Simple event which is called after this template is applied, either on startup or hot reload.
+* The item argument passed to your method is the Item prefab that was just created.
+
+## CustomItems
+
+The `CustomItems` class has a few extra helpers you can use to make things easier when modifying custom items in general.
+
+`CustomItems.GetOriginalItemPrefab(int ItemID)`
+* Use this to get the true original prefab for an Item ID, in case it has been modified.
+
+`CustomItems.CreateCustomItem(int cloneTargetID, int newID, string name, SL_Item template = null)`
+* You can use this to clone an item and get the cloned prefab back.
+* Helpful if you just want to do your own custom item mods and not use the SideLoader templates at all, while still being compatible with other mods.
+
+`SetNameAndDescription(Item item, string _name, string _description)`
+* Helper to set the Name and/or Description on an Item easily.
+* You can use `null` and it will keep the existing value.
+
+`SetItemTags(Item item, string[] tags, bool destroyExisting)`
+* In case you want to set the tags on an item directly from a string array, you can do so with this.
 
 <!-- tabs:end -->

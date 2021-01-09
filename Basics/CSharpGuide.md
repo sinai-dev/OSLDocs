@@ -112,35 +112,6 @@ There is also a static class version for each of those methods, for example `Get
 
 The rest of `At`'s helper methods are generic, so be careful with the instances you pass to them, make sure the generic type actually contains the member you want to access. For example, if you have an instance of a Weapon but it is currently only cast to an Item, you would need to do something like this: `At.SetField(myItem as Weapon, "m_someWeaponField", someValue);`
 
-## CustomCharacters
-
-The `CustomCharacters` class has a few methods to give you more control of your characters from C#.
-
-`CustomCharacters.DestroyCharacterRPC(Character character)` (or `string UID`)
-* Destroys a character via a networked RPC call, so it will clean up for all connected players.
-
-`CustomCharacters.CloneCharacter(Character _targetCharacter)` (or `string _gameObjectPathAndName`)
-* [BETA] Clones the provided character and returns the clone to you.
-
-## CustomItems
-
-The `CustomItems` class has a few extra helpers you can use to make things easier when modifying custom items in general.
-
-`CustomItems.GetOriginalItemPrefab(int ItemID)`
-* Use this to get the true original prefab for an Item ID, in case it has been modified.
-
-`CustomItems.CreateCustomItem(int cloneTargetID, int newID, string name, SL_Item template = null)`
-* You can use this to clone an item and get the cloned prefab back.
-* Helpful if you just want to do your own custom item mods and not use the SideLoader templates at all, while still being compatible with other mods.
-
-## CustomItemVisuals
-
-If you want to do anything custom with Item Visuals from C#, the `CustomItemVisuals` class may be of help to you, see the public methods in your IDE.
-
-## CustomStatusEffects
-
-The `CustomStatusEffects` class is similar to `CustomItems`, it contains the API used by SideLoader to set up custom status effects and imbues, you may find it useful.
-
 ## CustomTags
 
 SideLoader's helper for creating or getting a `Tag`. 
@@ -185,3 +156,9 @@ The `UnityHelpers` class contains a few helpers for working with Unity objects i
 
 `T GetCopyOf<T>(T component, Transform transform) where T : Component`
 * Copy the provided component onto the provided transform as a clone.
+
+## Other C# Helpers
+
+There are a few other C# helper classes which all start with the class name `Custom...`, documentation about these is found on the relevant pages.
+
+Eg, for `CustomItems`, see `SL_Item`.

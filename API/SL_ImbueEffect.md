@@ -28,4 +28,14 @@ Imbues are similar to [Status Effects](API/SL_StatusEffect.md), but much simpler
 
 For C#, just call `Apply()` to apply your template, at Awake or BeforePacksLoaded.
 
+### Events
+
+`Action<ImbueEffectPreset> OnTemplateApplied`
+* Called when this template is applied during startup or hot reload.
+* The `ImbueEffectPreset` argument passed to your method is the ImbueEffectPreset prefab that was just created.
+
+## CustomStatusEffects
+
+The `CustomStatusEffects` class is similar to `CustomItems`, it contains the API used by SideLoader to set up custom status effects and imbues, you may find it useful.
+
 <!-- tabs:end -->

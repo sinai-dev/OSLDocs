@@ -127,8 +127,6 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 
 #### ** C# Only **
 
-See also: [C# Custom Characters](Basics/CSharpGuide?id=customcharacters)
-
 ### Methods
 
 `Prepare()`
@@ -139,7 +137,7 @@ See also: [C# Custom Characters](Basics/CSharpGuide?id=customcharacters)
 * `characterUID` is optional, if not provided it will use the default from your template. If you are spawning multiple dynamic characters from this template, use UID.Generate().
 * `extraRpcData` is any custom data you want to have passed over network, it will be sent to your `OnSpawn` callback.
 
-`TryEquipItem(Character character, int id)`
+`SL_Character.TryEquipItem(Character character, int id)`
 * Helper to force-equip an Item onto the provided Character.
 * Will check if they own the item first, otherwise will spawn and give it to them.
 
@@ -148,5 +146,16 @@ See also: [C# Custom Characters](Basics/CSharpGuide?id=customcharacters)
 * Invoked when any character using this template is spawned
 * The `Character` argument is the Character instance that was just spawned
 * The `string` argument is the `extraRpcData` you may have provided to your Spawn method.
+
+## CustomCharacters
+
+The `CustomCharacters` class has a few methods to give you more control of your characters from C#.
+
+`CustomCharacters.DestroyCharacterRPC(Character character)` (or `string UID`)
+* Destroys a character via a networked RPC call, so it will clean up for all connected players.
+
+`CustomCharacters.CloneCharacter(Character _targetCharacter)` (or `string _gameObjectPathAndName`)
+* [BETA] Clones the provided character and returns the clone to you.
+* Experimental feature, intended to be used on existing scene enemies (not custom SL_Characters).
 
 <!-- tabs:end -->
