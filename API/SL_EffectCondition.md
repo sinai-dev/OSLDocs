@@ -17,7 +17,7 @@ An <b>SL_EffectCondition</b> object can be defined on an [Effect Transform](Effe
 
 #### ** C# **
 
-Define any sub-class of SL_Effect (most likely on an [SL_EffectTransform](API/SL_EffectTransform)).
+Define any sub-class of SL_EffectCondition (most likely on an [SL_EffectTransform](API/SL_EffectTransform)).
 
 ```csharp
 var condition = new SL_HasStatusEffectEFfectCondition
