@@ -1,4 +1,4 @@
-# Effects
+# SL_Effect
 
 An <b>SL_Effect</b> object can be defined on an [SL_EffectTransform](API/SL_EffectTransform).
 
@@ -42,7 +42,7 @@ var effect = new SL_AddStatusEffectBuildUp
 
 <!-- tabs:end -->
 
-## SL_Effect
+## Fields
 
 <b>All SL_Effect classes have these fields.</b>
 

@@ -1,4 +1,4 @@
-# Custom Skill Trees
+# SL_SkillTree
 
 <b>Skill Trees</b> can be defined through the SideLoader with C# or XML. 
 
@@ -9,7 +9,6 @@ For XML, you must use an [SL_CharacterTrainer](API/SL_Character) and define your
 <!-- tabs:start -->
 #### ** Universal **
 
-## SL_SkillTree
 The `SL_SkillTree` class is the base class for containing the tree, as well as applying it once it is set up.
 
 `Name` (string)

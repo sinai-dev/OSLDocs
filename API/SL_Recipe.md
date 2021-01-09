@@ -1,4 +1,4 @@
-# Custom Item Recipes
+# SL_Recipe
 
 <b>Custom Recipes</b> can be defined from XML or C#. You can set recipes for any station type.
 

@@ -1,12 +1,10 @@
-# Custom Characters
+# SL_Character
 
 See also: [Guides: Custom Characters](Guides/Characters.md)
 
 <!-- tabs:start -->
 
 #### ** Universal **
-
-## SL_Character
 
 `UID` (string)
 * The <b>unique identifier</b> for this character template.

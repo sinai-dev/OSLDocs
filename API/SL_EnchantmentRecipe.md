@@ -1,4 +1,4 @@
-# Custom Enchantments
+# SL_EnchantmentRecipe
 
 `SL_EnchantmentRecipe`s can be defined from XML or C#. Enchantment XMLs should be placed in the `Enchantments\` sub-folder of your SL Pack.
 
@@ -8,8 +8,6 @@ See [SL Menu](Basics/SLMenu.md) for details on how to dump Enchantments and see 
 
 <!-- tabs:start -->
 #### ** Universal **
-
-## SL_Enchantment Fields
 
 `EnchantmentID` (int)
 * The ID of this Enchantment Recipe and result.

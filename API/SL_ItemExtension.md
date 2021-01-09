@@ -1,4 +1,4 @@
-# Item Extensions
+# SL_ItemExtension
 
 An <b>SL_ItemExtension</b> can be defined in the `ItemExtensions` field on an [SL_Item](API/SL_Item.md) template.
 
@@ -44,7 +44,7 @@ The field `SL_Item.ExtensionsEditBehaviour` is an `EditBehaviour` value (enum), 
 * `NONE` or `Override` will not remove any of the existing Extensions, and it will add or modify Extensions based on the ones you have defined.
 * `Destroy` will remove all Extensions which are not defined in your ItemExtensions list.
 
-## SL_ItemExtension
+## Fields
 
 All SL_ItemExtension classes have this field.
 

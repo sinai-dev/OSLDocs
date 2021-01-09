@@ -1,4 +1,4 @@
-# Effect Conditions
+# SL_EffectCondition
 
 An <b>SL_EffectCondition</b> object can be defined on an [Effect Transform](Effect-Transforms). 
 
@@ -28,7 +28,7 @@ var condition = new SL_HasStatusEffectEFfectCondition
 }
 ```
 <!-- tabs:end -->
-## SL_EffectCondition
+## Fields
 
 The only base field which is shared by all EffectConditions is:
 

@@ -1,4 +1,4 @@
-# Custom Skills
+# SL_Skill
 
 The `SL_Skill` template inherits from [SL_Item](API/SL_Item.md), and includes a few extra fields for controlling skills.
 
