@@ -273,7 +273,7 @@ As well as all the fields on SL_Item and SL_Equipment, weapons also have a few m
 
 `WeaponType` (enum)
 * Sets the type of weapon.
-* Must be one of these values: [Weapon.WeaponType](API/Enums/EquipmentSoundMaterials.md)
+* Must be one of these values: [Weapon.WeaponType](API/Enums/WeaponType.md)
 
 `Unblockable` (boolean)
 * Sets the unblockable behaviour. Is this weapon <b>unblockable</b>? Currently no weapons in the live game have this as true, but it does work.
@@ -457,6 +457,15 @@ Bags inherit from SL_Equipment, and contain a few extra fields.
 `RecipeUID` (string)
 * The UID of the recipe you want this scroll to teach.
 * This corresponds to the `UID` in a [SL_Recipe](API/SL_Recipe) template.
+
+## SL_EnchantmentRecipeItem
+<b>Similar to RecipeItem</b>, but used for Enchantment recipes in The Soroboreans. Inherits `SL_Item`.
+
+Note: the `Description` is for the Shop description for EnchantmentRecipeItems, otherwise the game auto-generates it.
+
+`Recipes` (list of int)
+* A list of Enchantment Recipe IDs that this scroll is for, usually 3 at most (Helmet/Chest/Boots).
+* These can also be custom enchantment IDs.
 
 ## SL_Throwable
 SL_Throwable inherits from SL_Item, and contains one more field. This is used for Grenades in The Three Brothers DLC.
