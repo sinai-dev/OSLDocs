@@ -27,7 +27,7 @@ var condition = new SL_HasStatusEffectEFfectCondition
   // etc...
 }
 ```
-
+<!-- tabs:end -->
 ## SL_EffectCondition
 
 The only base field which is shared by all EffectConditions is:
