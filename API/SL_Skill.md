@@ -6,7 +6,7 @@ For custom skills, most of the skill is actually defined from the <b>EffectTrans
 
 For Passives, none of these fields really do anything. You'll only need to worry about the EffectTransforms.
 
-## SL_Skill
+## SL_Skill : SL_Item
 All SL_Skills inherit from this class. If you use a generated SL_Item template, these values will be at the bottom.
 
 `Cooldown` (float)
@@ -55,7 +55,7 @@ The XML should look like this:
 
 The fields should be self-explanatory. Add as many SkillItemReq objects as you want.
 
-## SL_AttackSkill
+## SL_AttackSkill : SL_Skill
 
 If a skill is an "Attack Skill" you can use these fields. Attack Skills are any skills that do some kind of damage or counter. Currently the only active skills which aren't attack skills are placing Sigils, Reveal Soul, Mana Ward, Conjure, Flamethrower, and cosmetic skills.
 
@@ -95,7 +95,7 @@ It should look like this in XML:
 `AmmunitionTypes` (list of WeaponType)
 * Same as previous two values, but for required Ammunition.
 
-## SL_RangeAttackSkill
+## SL_RangeAttackSkill : SL_AttackSkill
 Inherits from SL_AttackSkill, used for bow skills.
 
 `AutoLoad` (boolean)
@@ -110,7 +110,7 @@ Inherits from SL_AttackSkill, used for bow skills.
 `AimOffset` (Vector2)
 * An optional `x` and `y` offset for aiming.
 
-## SL_MeleeSkill
+## SL_MeleeSkill : SL_AttackSkill
 A SL_MeleeSkill inherits from SL_AttackSkill, and contains a few extra fields.
 
 `Blockable` (boolean)
@@ -135,7 +135,7 @@ A SL_MeleeSkill inherits from SL_AttackSkill, and contains a few extra fields.
 * Overrides this weapon skill being identified as one by the `WeaponSkillAttack` tag (Damascene/Masterpiece weapons)
 * True to not be identified as one
 
-## SL_PistolSkill
+## SL_PistolSkill : SL_AttackSkill
 Inherits from SL_AttackSkill, contains two extra fields for Pistols.
 
 This is currently only set up to help modify the Fire & Reload skill, there is no API for creating new pistol-based skills from this yet.
@@ -148,20 +148,20 @@ This is currently only set up to help modify the Fire & Reload skill, there is n
 * Determines the requirement for the alternate activations (ie. shooting), determined by the EffectConditions for the various shots
 * Must be one of: `Ignore`, `Empty`, `OwnsAmmunition`, `Loaded`, `OwnsAmmunitionOrLoaded`
 
-## SL_ThrowSkill
+## SL_ThrowSkill : SL_AttackSkill
 Inherits from SL_AttackSkill, and contains a few extra fields. This is used with a `SL_ThrowItem` effect.
 
 `ThrowableItemIDs` (list of integer)
 * A list of integers (`<int>`) which represent Item IDs you can throw with this skill.
 * Eg, `<ThrowableItemIDs><int>2000010</int></ThrowableItemIDs>` would allow you to throw an Iron Sword.
 
-## SL_TrinketSkill
+## SL_TrinketSkill : SL_Skill
 Inherits from SL_Skill, used for simple trinket skills like Dagger Slash.
 
 `CompatibleItemIDs` (list of integer)
 * A list of `<int>` Item IDs which work with this skill.
 
-## SL_CounterSkill
+## SL_CounterSkill : SL_MeleeSkill
 Inherits from SL_MeleeSkill, and contains some extra fields.
 
 `BlockDamageTypes` (list of DamageType)
@@ -187,10 +187,10 @@ Inherits from SL_MeleeSkill, and contains some extra fields.
 `DamageMult` (float)
 * Multiplier for damage, not sure exactly what for.
 
-## SL_CounterSelfSkill
+## SL_CounterSelfSkill : SL_CounterSkill
 Inherits from SL_CounterSkill. Contains no extra fields, is used by Brace. CounterSelf fires the HitEffects on the owner character on a successful counter.
 
-## SL_CounterAbsorbSkill
+## SL_CounterAbsorbSkill : SL_CounterSkill
 Inherits from SL_CounterSkill. Contains one extra field.
 
 `Absorbs` (list of AbsorbType)

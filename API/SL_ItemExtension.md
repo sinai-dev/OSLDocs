@@ -55,7 +55,7 @@ All SL_ItemExtension classes have this field.
 
 Below are all the subclasses of `SL_ItemExtension`. These contain the field above, as well as extra fields.
 
-## SL_BasicDeployable
+## SL_BasicDeployable : SL_ItemExtension
 The base class for `SL_Deployable` and `SL_BuildingUpgrade`, it cannot be used directly as the class.
 
 `CantDeployInNoBedZones` (boolean)
@@ -67,7 +67,7 @@ The base class for `SL_Deployable` and `SL_BuildingUpgrade`, it cannot be used d
 `DeploymentOffset` (Vector3)
 * The offset position of the deployed item prefab
 
-## SL_BuildingUpgrade
+## SL_BuildingUpgrade : SL_BasicDeployable
 Inherits from `SL_Deployable`. 
 
 `BuildingToUpgradeID` (int)
@@ -85,7 +85,7 @@ Inherits from `SL_Deployable`.
 `UpgradeIndex` (int)
 * The Upgrade Index for this upgrade
 
-## SL_Deployable
+## SL_Deployable : SL_BasicDeployable
 Inherits from `SL_BasicDeployable`. Used to deploy or pack a deployable item (tents, crafting stations, etc). This behaviour is pretty specific to the existing Deployable items, you will need to use C# to modify the interactions in a significant way.
 
 Deployables all have a "Deployed" state version and a "Packed" state version. The player only ever has the Packed version in their inventory. Generally the Deployed-state Item ID is the Packed-state Item ID + 1.
@@ -119,7 +119,7 @@ Deployables all have a "Deployed" state version and a "Packed" state version. Th
 * The sound played when disassembled
 * Can be any value off [this list](API/Enums/SpellCastType.md)
 
-## SL_ItemAddOn
+## SL_ItemAddOn : SL_Deployable
 SL_ItemAddOn inherits from `SL_Deployable`, and contains a few extra fields.
 
 This class is for deployable which snap-on to another deployable, such as Alchemy Kit or Cooking Pot.
@@ -133,18 +133,18 @@ This class is for deployable which snap-on to another deployable, such as Alchem
 `SnappingRadius` (float)
 * The radius which this item will snap-on to the compatible item when being deployed.
 
-## SL_DestroyOnOwnerDeath
+## SL_DestroyOnOwnerDeath : SL_ItemExtension
 
 This class has no extra fields, it just destroys the Item if the Character dies.
 
-## SL_Ephemeral
+## SL_Ephemeral : SL_ItemExtension
 
 Ephemeral components give a lifespan to an Item, after which they are destroyed.
 
 `Lifespan` (float)
 * The time, in seconds, after which this item is destroyed.
 
-## SL_MultipleUsage
+## SL_MultipleUsage : SL_ItemExtension
 
 This is like a more advanced version of the IsUsable and QtyRemovedOnUse fields on SL_Item. It allows a finer degree of control.
 
@@ -160,7 +160,7 @@ This is like a more advanced version of the IsUsable and QtyRemovedOnUse fields 
 `MaxStackAmount` (integer)
 * The maximum stack count before making a new stack
 
-## SL_Perishable
+## SL_Perishable : SL_ItemExtension
 
 Perishable components make the item lose durability over time. Used by Food and Torches/Lanterns.
 
@@ -179,7 +179,7 @@ Perishable components make the item lose durability over time. Used by Food and 
 `OverrideUpdateRate` (boolean)
 * If set to a value above 0, this overrides the rate at which the BaseDepletionRate is applied. Otherwise it's every 5 seconds (multiplied against Environment Time delta).
 
-## SL_Preserver
+## SL_Preserver : SL_ItemExtension
 
 Preserver is used for Bags, and it slows the rate of Perishable items inside them.
 
@@ -208,7 +208,7 @@ Example:
 </PreservedElements>
 ```
 
-## SL_Sleepable
+## SL_Sleepable : SL_ItemExtension
 
 Used for tents and bedrolls, allows the player to sleep in it. Must be on a Deployed-state SL_Deployable item.
 
@@ -248,14 +248,14 @@ Used for tents and bedrolls, allows the player to sleep in it. Must be on a Depl
 `StaminaRecuperationModifier` (int)
 * Percent modifier placed on the rate at which the player restores stamina while sleeping
 
-## SL_WeaponCharger
+## SL_WeaponCharger : SL_ItemExtension
 
 Used for Bows to draw-back the weapon.
 
 `ChargingStaminaCost` (float)
 * Stamina cost per tick while drawing the bow (tick every 0.5 or 1 seconds?)
 
-## SL_WeaponLoadout
+## SL_WeaponLoadout : SL_ItemExtension
 
 Used by pistols and bows, it handles the ammunition for the weapon.
 
@@ -279,7 +279,7 @@ Used by pistols and bows, it handles the ammunition for the weapon.
 `ShowLoadedAmmunition` (boolean)
 * Whether to visibly show the loaded ammunition for the weapon
 
-## SL_WeaponLoadoutItem
+## SL_WeaponLoadoutItem : SL_WeaponLoadout
 
 SL_WeaponLoadoutItem inherits from `SL_WeaponLoadout`, and contains one extra field. It is used by Bows.
 

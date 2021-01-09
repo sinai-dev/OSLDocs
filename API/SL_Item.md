@@ -93,8 +93,8 @@ Your tags XML should look like this, for example:
 
 Some tags are added by default. For example, if you create an Axe, it will automatically get "Axe" and "Weapon", you don't have to set those.
 
-### StatsHolder
-The `StatsHolder` contains the item's <b>Stats</b> values. Not all items have stats, but most do.
+### SL_ItemStats (StatsHolder)
+The `StatsHolder` contains the item's <b>SL_ItemStats</b> values. Not all items have stats, but most do.
 
 A base SL_ItemStats XML should look like this:
 ```xml
@@ -148,7 +148,7 @@ There are three fields on the SL_Item template which relate to custom visuals.
 
 `SL_Item.ItemVisuals`, `SL_Item.SpecialItemVisuals` and `SL_Item.SpecialFemaleItemVisuals`.
 
-See [Custom Item Visuals](Guides/ItemVisuals) for instructions on setting up custom visuals, and also for details on changing textures or icons with your own .png files.
+See [Custom Item Visuals](Guides/ItemVisuals) and [SL_ItemVisual](API/SL_ItemVisual) for instructions on setting up custom visuals, and also for details on changing textures or icons with your own .png files.
 
 Even if you are not defining custom visuals at all, you can still use some of these settings to align and rotate the existing visuals.
 
@@ -156,10 +156,10 @@ Even if you are not defining custom visuals at all, you can still use some of th
 
 The sections below are specific to certain types of custom items.
 
-## SL_Skill
+## SL_Skill : SL_Item
 See [SL_Skill](API/SL_Skill.md) for more information.
 
-## SL_Equipment
+## SL_Equipment : SL_Item
 
 The `SL_Equipment` template is used for base Equipment, and it inherits all the base fields on SL_Item. The classes SL_Bag and SL_Weapon inherit from SL_Equipment.
 
@@ -177,7 +177,7 @@ Along with all the SL_Item fields, you have the following:
 * For off-hand equipment, the IK (hand/arm animation) when the character holds the item.
 * Must be exactly one of: `None`, `Lantern`, `Torch`, or `Lexicon`
 
-### SL_EquipmentStats
+### SL_EquipmentStats : SL_ItemStats
 
 The <b>Equipment Stats</b> overrides the base `StatsHolder` field. It will look like:
 ```xml
@@ -252,8 +252,8 @@ For example:
 `StaminaRegenModifier` (float)
 * Multiplier which affects Stamina Regen rate
 
-## SL_Armor
-`SL_Armor` derives from `SL_Equipment`, and contains a couple extra fields.
+## SL_Armor : SL_Equipment
+`SL_Armor` inherits from `SL_Equipment`, and contains a couple extra fields.
 
 `Class` (enum)
 * The Armor Class. Not sure if this actually has an effect on anything.
@@ -267,7 +267,7 @@ For example:
 * The sound when the armor is hit
 * Must be exactly one of [these values](API/Enums/EquipmentSoundMaterials.md).
 
-## SL_Weapon
+## SL_Weapon : SL_Equipment
 
 As well as all the fields on SL_Item and SL_Equipment, weapons also have a few more values and their own stats.
 
@@ -294,7 +294,7 @@ As well as all the fields on SL_Item and SL_Equipment, weapons also have a few m
 `IgnoreHalfResistances` (boolean)
 * Does this weapon ignore 50% of enemy resistances?
 
-### SL_WeaponStats
+### SL_WeaponStats : SL_EquipmentStats
 
 The <b>Weapon Stats</b> overrides the `StatsHolder` field for a second time (after EquipmentStats). It will look like:
 ```xml
@@ -388,7 +388,7 @@ The `Damage` value is a list of `<float></float>` values.
     </Damage>
 ```
 
-## SL_MeleeWeapon
+## SL_MeleeWeapon : SL_Weapon
 
 `SL_MeleeWeapon` inherits from `SL_Weapon`, and contains a few extra fields.
 
@@ -398,11 +398,11 @@ The `Damage` value is a list of `<float></float>` values.
 `Radius` (float)
 * The radius of the line cast check
 
-## SL_DualMeleeWeapon
+## SL_DualMeleeWeapon : SL_MeleeWeapon
 
 `SL_DualMeleeWeapon` inherits from `SL_MeleeWeapon`, and contains no extra fields. It just tells the game to treat this item as a dual melee weapon (like Gauntlets).
 
-## SL_Ammunition
+## SL_Ammunition : SL_Weapon
 
 `SL_Ammunition` inherits from `SL_Weapon`, and contains one extra field.
 
@@ -412,7 +412,7 @@ The `Damage` value is a list of `<float></float>` values.
 `BehaviorOnCollision` (enum)
 * Determines behaviour on collision. Must be exactly one of: `None`, `Stuck` or `Destroyed`
 
-## SL_ProjectileWeapon
+## SL_ProjectileWeapon : SL_Weapon
 
 `SL_ProjectileWeapon` inherits from `SL_Weapon`, and contains a few extra fields.
 
@@ -439,7 +439,7 @@ The `Damage` value is a list of `<float></float>` values.
 * The sound which plays when the bow is fully drawn.
 * Must be one of these values: [GlobalAudioManager.Sounds](API/Enums/Sounds.md).
 
-## SL_Bag
+## SL_Bag : SL_Equipment
 Bags inherit from SL_Equipment, and contain a few extra fields.
 
 `Capacity` (float)
@@ -451,14 +451,14 @@ Bags inherit from SL_Equipment, and contain a few extra fields.
 `InventoryProtection` (float)
 * Protection to the durability of items in the backpack when hit from behind
 
-## SL_RecipeItem
+## SL_RecipeItem : SL_Item
 <b>SL_RecipeItem</b> is a very simple class, just used to make a Recipe Scroll. It inherits from `SL_Item` and contains only one other value:
 
 `RecipeUID` (string)
 * The UID of the recipe you want this scroll to teach.
 * This corresponds to the `UID` in a [SL_Recipe](API/SL_Recipe) template.
 
-## SL_EnchantmentRecipeItem
+## SL_EnchantmentRecipeItem : SL_Item
 <b>Similar to RecipeItem</b>, but used for Enchantment recipes in The Soroboreans. Inherits `SL_Item`.
 
 Note: the `Description` is for the Shop description for EnchantmentRecipeItems, otherwise the game auto-generates it.
@@ -467,13 +467,13 @@ Note: the `Description` is for the Shop description for EnchantmentRecipeItems, 
 * A list of Enchantment Recipe IDs that this scroll is for, usually 3 at most (Helmet/Chest/Boots).
 * These can also be custom enchantment IDs.
 
-## SL_Throwable
+## SL_Throwable : SL_Item
 SL_Throwable inherits from SL_Item, and contains one more field. This is used for Grenades in The Three Brothers DLC.
 
 `DestroyDelay` (float)
 * Delay in seconds after throwing for explosion
 
-## SL_Instrument
+## SL_Instrument : SL_Item
 SL_Instrument inherits from SL_Item, and is used for the Instruments (Ghost Drum and Sky Chimes) in The Three Brothers DLC.
 
 `PeriodicTime` (float)
@@ -486,7 +486,7 @@ SL_Instrument inherits from SL_Item, and is used for the Instruments (Ghost Drum
 `StrikeTime` (float)
 * How long the delay is after striking the instrument before it can be hit again
 
-## SL_Building
+## SL_Building : SL_Item
 SL_Building inherits from SL_Item, and is used for Buildings in The Three Brothers DLC.
 
 `BuildingType` (enum)

@@ -66,7 +66,7 @@ Below are all the subclasses of SL_Effect. These contain the 3 fields above, as 
 
 ?> <b>Note:</b> There are a lot of subclasses. Use Ctrl+F to find the effects you are interested in.
 
-## SL_AchievementOnEffect
+## SL_AchievementOnEffect : SL_Effect
 
 Simply gives the player an Achievement when this effect is used.
 
@@ -74,7 +74,7 @@ Simply gives the player an Achievement when this effect is used.
 * The achievement which will be unlocked
 * See [this list](API/Enums/Achievements) for possible values.
 
-## SL_AchievementSetStatOnEffect
+## SL_AchievementSetStatOnEffect : SL_Effect
 
 Sets an Achievement Stat. These are used to track the player's progress for various Achievements.
 
@@ -84,19 +84,19 @@ Sets an Achievement Stat. These are used to track the player's progress for vari
 `IncreaseAmount` (int)
 * The amount to increase the stat value by
 
-## SL_AddAbsorbHealth
+## SL_AddAbsorbHealth : SL_Effect
 Used to add health absorption to the character, for example by Infuse Blood.
 
 `HealthRatio` (float)
 * The ratio of health restored to the character based on all damage dealt
 
-## SL_AddChargeInstrument
+## SL_AddChargeInstrument : SL_Effect
 Used to add charges to an instrument on hit.
 
 `Charges` (int)
 * Nummber of charges to add
 
-## SL_AddStatusEffect
+## SL_AddStatusEffect : SL_Effect
 Used for simply adding a status effect on activation.
 
 `StatusEffect` (string)
@@ -119,7 +119,7 @@ Used for simply adding a status effect on activation.
 * Default `false`
 * If true, prevents this effect from knowing who applied it
 
-## SL_AddStatusEffectRandom
+## SL_AddStatusEffectRandom : SL_AddStatusEffect
 Used by Jinx to apply a random Status Effect from a list of possible values.
 
 `StatusIdentifiers` (list of string)
@@ -130,7 +130,7 @@ Used by Jinx to apply a random Status Effect from a list of possible values.
 * If you want to override the result to a certain value, set this
 * This is the index of the StatusIdentifiers list (starting at 0) to choose.
 
-## SL_AddBoonEffect
+## SL_AddBoonEffect : SL_AddStatusEffect
 This is used for Boons, for the Amplified Effect (with Shamanic Resonance).
 
 It's exactly the same as `SL_AddStatusEffect`, except that you have one additional field.
@@ -139,10 +139,10 @@ It's exactly the same as `SL_AddStatusEffect`, except that you have one addition
 * The Status Identifier for the effect received when you have Shamanic Resonance
 * The game just adds ` Amplified` to the identifier for most boons, eg `Bless Amplified`
 
-## SL_AddPukeOnEat
+## SL_AddPukeOnEat : SL_Effect
 Contains no extra fields, used by Indigestion to give the character a chance of puking on eating.
 
-## SL_AddStatusEffectBuildUp
+## SL_AddStatusEffectBuildUp : SL_Effect
 For adding a build-up effect, usually used by Hit effects.
 
 `StatusEffect` (string)
@@ -157,16 +157,16 @@ For adding a build-up effect, usually used by Hit effects.
 `BypassCounter` (bool)
 * Does this effect ignore counters?
 
-## SL_AddStatusEffectBuildUpInstrument
+## SL_AddStatusEffectBuildUpInstrument : SL_AddStatusEffectBuildUp
 Inherits from `SL_AddStatusEffectBuildUp`, and contains one extra field.
 
 `ChancesPerCharge` (float)
 * How much extra buildup % the effect gains per charge on the instrument
 
-## SL_AddStatusEffectIfDead
+## SL_AddStatusEffectIfDead : SL_AddStatusEffect
 Inherits from `SL_AddStatusEffect`. Contains no extra fields, but gives the requirement that the target must have died at the same time this effect is checked.
 
-## SL_AffectBurntHealth
+## SL_AffectBurntHealth : SL_Effect
 For affecting burnt health.
 
 `AffectQuantity` (float)
@@ -175,7 +175,16 @@ For affecting burnt health.
 `IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
-## SL_AffectBurntStamina
+## SL_AffectBurntMana : SL_Effect
+For affecting burnt mana.
+
+`AffectQuantity` (float)
+* How much mana burn is affected
+
+`IsModifier` (boolean)
+* Whether the value is applied as a % or flat value
+
+## SL_AffectBurntStamina : SL_Effect
 For affecting burnt stamina.
 
 `AffectQuantity` (float)
@@ -184,7 +193,7 @@ For affecting burnt stamina.
 `IsModifier` (boolean)
 * Should this be applied as a modifier (multiplier) value?
 
-## SL_AffectCorruption
+## SL_AffectCorruption : SL_Effect
 For affecting the character's Corruption stat (The Soroboreans DLC).
 
 `AffectQuantity` (float)
@@ -193,25 +202,25 @@ For affecting the character's Corruption stat (The Soroboreans DLC).
 `IsRaw` (boolean)
 * Is this value "Raw"?
 
-## SL_AffectDrink
+## SL_AffectDrink : SL_Effect
 For affecting the player's Thirst/Drink stat.
 
 `AffectQuantity` (float)
 * The amount the player's thirst is affected by
 
-## SL_AffectFatigue
+## SL_AffectFatigue : SL_Effect
 For affecting the player's Fatigue (Rest) stat.
 
 * `AffectQuantity` (float)
 * The amount the player's fatigue is affected by.
 
-## SL_AffectFood
+## SL_AffectFood : SL_Effect
 For affecting the player's hunger (Food) stat.
 
 `AffectQuantity` (float)
 * The amount the player's hunger is affected by.
 
-## SL_AffectHealth
+## SL_AffectHealth : SL_Effect
 For restoring or affecting current Health.
 
 `AffectQuantity` (float)
@@ -223,7 +232,7 @@ For restoring or affecting current Health.
 `AffectQuantityOnAI`
 * If you want a separate value for AI, set that here. Otherwise set to -1.
 
-## SL_AffectHealthParentOwner
+## SL_AffectHealthParentOwner : SL_Effect
 For healing the "owner" of the effect. Used by Blood Bullet, for example.
 
 `AffectQuantity` (float)
@@ -235,7 +244,7 @@ For healing the "owner" of the effect. Used by Blood Bullet, for example.
 `Requires_AffectedChar` (boolean)
 * Does it require a successful affected character (ie. on-hit effect, etc)?
 
-## SL_AffectMana
+## SL_AffectMana : SL_Effect
 For affecting current Mana.
 
 `AffectQuantity` (float)
@@ -248,7 +257,7 @@ For affecting current Mana.
 * Determines whether it restores or uses mana.
 * One of: `Restaure` or `Use`
 
-## SL_AffectStability
+## SL_AffectStability : SL_Effect
 For affecting the owner character's stability. Used by Juggernaught, for example.
 
 `AffectQuantity` (float)
@@ -257,13 +266,13 @@ For affecting the owner character's stability. Used by Juggernaught, for example
 `SetStability` (boolean)
 * Should this be applied as a direct value? (ie, sets Stability to this exact value)
 
-## SL_AffectStamina
+## SL_AffectStamina : SL_Effect
 For affecting current stamina.
 
 `AffectQuantity` (float)
 * How much current stamina is affected
 
-## SL_AffectStat
+## SL_AffectStat : SL_Effect
 For affecting a character's <b>Stat</b> attribute for the given `Stat_Tag`.
 
 * See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
@@ -282,7 +291,7 @@ For affecting a character's <b>Stat</b> attribute for the given `Stat_Tag`.
 `Tags` (list of string)
 * Extra Tag restrictions on the affected Stat. This is used in special cases like Damage Bonuses that only affect a certain type of skill or effect.
 
-## SL_AffectStatusEffectBuildUpResistance
+## SL_AffectStatusEffectBuildUpResistance : SL_Effect
 Inherits from `SL_Effect`. Adds Status Effect Build Up Resistance for a specific Status Effect to the character.
 
 `StatusEffectIdentifier` (string)
@@ -294,24 +303,24 @@ Inherits from `SL_Effect`. Adds Status Effect Build Up Resistance for a specific
 `Duration` (float)
 * How long does the resistance last?
 
-## SL_AutoKnock
+## SL_AutoKnock : SL_Effect
 This effect is quite simple, it just guarantees a stagger or knockdown on the affected character. Use HitEffects to apply to enemies.
 
 `KnockDown` (boolean)
 * Should the affected character be knocked down, or just staggered?
 
-## SL_CallSquadMembers
+## SL_CallSquadMembers : SL_Effect
 This class uses no fields, other than the base SL_Effect fields.
 
 This is used for AI (non-player) enemies to call over their squad members, it has no effect when used by a player character.
 
-## SL_Cough
+## SL_Cough : SL_Effect
 Used by the "Cold" disease, interrupts the player's actions. 
 
 `ChanceToTrigger` (integer)
 * Value from 0 to 100, what is the general chance for the Cough to trigger when this effect is activated?
 
-## SL_CreateItemEffect
+## SL_CreateItemEffect : SL_Effect
 Used to add an item to the caster's inventory.
 
 `ItemToCreate` (int)
@@ -320,22 +329,22 @@ Used to add an item to the caster's inventory.
 `Quantity` (int)
 * Quantity of the item received
 
-## SL_CureDisease
+## SL_CureDisease : SL_Effect
 This effect inherits from `SL_RemoveStatusEffect`. There are no custom fields on this effect other than the ones inherited from SL_RemoveStatusEffect, it's just that the game knows you are removing a Disease instead of a regular Status Effect.
 
-## SL_Death
+## SL_Death : SL_Effect
 Another simple effect, the name tells you what happens. Guaranteed death.
 
-## SL_DetachParasite
+## SL_DetachParasite : SL_Effect
 Used by enemy AIs. Probably related to some DLC content.
 
-## SL_GiveOrder
+## SL_GiveOrder : SL_Effect
 Used by enemy AIs, related to DLC content.
 
 `OrderID` (integer)
 * The "order" given to AI squad members.
 
-## SL_ImbueObject
+## SL_ImbueObject : SL_Effect
 
 Abstract base class used by SL_ImbueWeapon and SL_ImbueProjectile.
 
@@ -346,39 +355,39 @@ Abstract base class used by SL_ImbueWeapon and SL_ImbueProjectile.
 * The ID of the Imbue Preset you want to apply.
 * You can find preset IDs with [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658) - use the "ID" of the effect.
 
-## SL_ImbueWeapon
+## SL_ImbueWeapon : SL_ImbueObject
 Inherits from SL_ImbueObject, for adding an <b>Imbue Preset</b> to a character's main weapon (and dagger).
 
 `Imbue_Slot` (enum)
 * Must be exactly one of: `MainHand` or `OffHand` 
 * The slot which this imbue preset will be applied to.
 
-## SL_ImbueProjectile
+## SL_ImbueProjectile : SL_ImbueObject
 For applying an Imbue to a projectile.
 
 `UnloadProjectile` (boolean)
 * Unload the current projectile?
 
-## SL_InstrumentTriggerBubble
+## SL_InstrumentTriggerBubble : SL_Effect
 Used by Nurturing Echo to trigger the healing effect on nearby instruments.
 
 `Range` (float)
 * The max range of instruments to trigger healing for
 
-## SL_LearnSkillEffect
+## SL_LearnSkillEffect : SL_Effect
 
 Simply teaches the player character a skill.
 
 `SkillID` (int)
 * The Item ID of the skill to teach.
 
-## SL_LightLantern
+## SL_LightLantern : SL_Effect
 This effect lights or un-lights your lantern, if equipped.
 
 `Light` (boolean)
 * Should this light the lantern? `false` would un-light the lantern.
 
-## SL_LoadWeapon
+## SL_LoadWeapon : SL_Effect
 This effects loads a weapon (ie. Pistol).
 
 `UnloadFirst` (boolean)
@@ -387,15 +396,15 @@ This effects loads a weapon (ie. Pistol).
 `WeaponSlot` (enum)
 * Which slot to affect. Must be exactly one of: `MainHand` or `OffHand`
 
-## SL_PackDeployable
+## SL_PackDeployable : SL_Effect
 Used by Reverberation to pack instruments back to their packed state prefab.
 
 Contains no fields, but requires a `SL_PrePackDeployableCondition` SL_EffectCondition on the same transform.
 
-## SL_Petrify
+## SL_Petrify : SL_Effect
 Used by Full Petrification to Petrify the target character. Contains no extra fields.
 
-## SL_PlaySoundEffect
+## SL_PlaySoundEffect : SL_Effect
 This one is obviously for playing a sound effect. You can pick any sound from the global list.
 
 `Sound` (GlobalAudioManager.Sounds)
@@ -410,7 +419,7 @@ This one is obviously for playing a sound effect. You can pick any sound from th
 `MaxPitch` (float)
 * Maximum pitch (from distance)
 
-## SL_PlayVFX
+## SL_PlayVFX : SL_Effect
 Used to play a VFX System (visual effects).
 
 `VFXPrefab` (SL_PlayVFX.VFXPrefabs)
@@ -427,13 +436,13 @@ Used to play a VFX System (visual effects).
 `DontInstantiateNew` (boolean)
 * If `false`, it will instantiate a new prefab each activation
 
-## SL_Puke
+## SL_Puke : SL_Effect
 Similar to SL_Cough, used by the Indigestion disease.
 
 `ChanceToTrigger` (integer)
 * The chance for the Puke to trigger when this effect is activated.
 
-## SL_PunctualDamage
+## SL_PunctualDamage : SL_Effect
 PunctualDamage is a type of damage applied by skills or effects. It requires no weapon.
 
 The `Damage` is a list of SL_Damage objects. This is similar to the `BaseDamage` field on a SL_Weapon template.
@@ -460,7 +469,7 @@ The XML should look like:
 `HitInventory` (boolean)
 * Does this effect damage the durability of items in the affected character's backpack?
 
-## SL_PunctualDamageAoE
+## SL_PunctualDamageAoE : SL_PunctualDamage
 This class inherits from SL_PunctualDamage, and contains a few extra fields.
 
 `Radius` (float)
@@ -475,7 +484,7 @@ This class inherits from SL_PunctualDamage, and contains a few extra fields.
 `IgnoreHalfResistances` (bool)
 * Does this attack ignore 50% of target's resistances?
 
-## SL_PunctualDamageInstrument
+## SL_PunctualDamageInstrument : SL_PunctualDamage
 Inherits from `SL_PunctualDamage`, and contains two extra fields.
 
 `DamageCap` (float)
@@ -484,10 +493,10 @@ Inherits from `SL_PunctualDamage`, and contains two extra fields.
 `DamagePerCharge` (float)
 * Damage gained per charge on the instrument (overrides damage values on base PunctualDamage)
 
-## SL_PutBackItemVisual
+## SL_PutBackItemVisual : SL_Effect
 Special effect used by certain skills, contains no extra fields.
 
-## SL_ReduceDurability
+## SL_ReduceDurability : SL_Effect
 Simple effect which reduces durability of some equipment.
 
 `Durability` (float)
@@ -499,20 +508,20 @@ Simple effect which reduces durability of some equipment.
 `Percentage` (bool)
 * Does this effect reduce durability by a %, not a flat value?
 
-## SL_ReduceStatusLevel
+## SL_ReduceStatusLevel : SL_Effect
 For Status Effects which <b>levels</b> (eg the new Alertness status in the DLC).
 
 `StatusIdentifierToReduce` (string)
 * The <b>Identifier Name</b> of the Status Effect.
 * See [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658) for a list of Status Effect Identifiers.
 
-## SL_RemoveImbueEffects
+## SL_RemoveImbueEffects : SL_Effect
 Simply removes the Imbue from a given Equipment Slot.
 
 `AffectSlot` (enum)
 * Must be one of [these values](API/Enums/EquipmentSlotIDs.md).
 
-## SL_RemoveStatusEffect
+## SL_RemoveStatusEffect : SL_Effect
 Used to remove a status effect from the affected character.
 
 You can either use the <b>Identifier Name</b> of the status, or a <b>Tag</b> that the status might have on it.
@@ -532,7 +541,7 @@ You can either use the <b>Identifier Name</b> of the status, or a <b>Tag</b> tha
 * I recommend using <b>StatusNameContains</b> and using the <b>Status_Name</b> field, or <b>StatusType</b> and using the <b>Status_Tag</b> field.
 * The `NegativeStatuses` value will remove ALL negative (purgeable) effects.
 
-## SL_RunicBlade
+## SL_RunicBlade : SL_Effect
 This effect is uniquely used by the Runic Blade skill. However, it could be used for other purposes too.
 
 `WeaponID` (integer)
@@ -547,7 +556,7 @@ This effect is uniquely used by the Runic Blade skill. However, it could be used
 `PrefixGreaterImbueID` (integer)
 * If the player has Runic Prefix, the Preset ID of the Imbue you want to give for the GreaterWeaponID weapon.
 
-## SL_Shooter
+## SL_Shooter : SL_Effect
 The base class used by SL_ShootBlast and SL_ShootProjectile. You cannot use this class directly.
 
 ShootBlast and ShootProjectile are rather complex effects, they are almost as involved as a Skill or Item by itself.
@@ -567,7 +576,7 @@ ShootBlast and ShootProjectile are rather complex effects, they are almost as in
 * Determiens the target-type behaviour.
 * Must be exactly one of: `Allies` or `Enemies`
 
-## SL_ShootBlast
+## SL_ShootBlast : SL_Shooter
 ShootBlast inherits from SL_Shooter, and contains some extra fields.
 
 `BaseBlast` (enum)
@@ -641,8 +650,8 @@ ShootBlast inherits from SL_Shooter, and contains some extra fields.
 `PlayFXOnRefresh` (bool)
 * Play VFX on refresh tick?
 
-## SL_ShootBlastHornetControl
-Derives from `SL_ShootBlast`. Used by Hive AI enemies to shoot a lingering blast which tracks to the target.
+## SL_ShootBlastHornetControl : SL_ShootBlast
+Inherits from `SL_ShootBlast`. Used by Hive AI enemies to shoot a lingering blast which tracks to the target.
 
 <b>Notes:</b>
 * Set the `BlastLifespan` (a ShootBlast field) to control how long the effect lasts. 
@@ -693,12 +702,12 @@ Derives from `SL_ShootBlast`. Used by Hive AI enemies to shoot a lingering blast
 `HornetPassiveTargetRange` (float)
 * Max range of the passive attacks
 
-## SL_ShootBlastsProximity
-Derives from `SL_ShootBlast`.
+## SL_ShootBlastsProximity : SL_ShootBlast
+Inherits from `SL_ShootBlast`.
 
 Contains no extra fields, this works by having a `SL_ProximityCondition` EffectCondition on the same Effect Transform.
 
-## SL_ShootEnchantmentBlast
+## SL_ShootEnchantmentBlast : SL_ShootBlast
 Inherits from `SL_ShootBlast`.
 
 Used for Enchantments which add an AoE on-hit blast. The Damage is based on the weapon used.
@@ -707,7 +716,7 @@ Used for Enchantments which add an AoE on-hit blast. The Damage is based on the 
 * The multiplier of the weapon damage, which determines the damage of the blast
 * Generally between 0 and 1.
 
-## SL_ShootProjectile
+## SL_ShootProjectile : SL_Shooter
 SL_ShootProjectile inherits from SL_Shooter. It is similar to ShootBlast, this shoots a projectile with a direction and velocity.
 
 `BaseProjectile` (enum)
@@ -869,10 +878,10 @@ Back to the other fields on SL_ShootProjectile...
 `CameraAddYDirection` (float)
 * Adds Y based on Camera direction (?)
 
-## SL_ShootProjectileAmmoVisuals
-Inherits from SL_ShootProjectile and contains no extra fields, used by Bow Skills.
+## SL_ShootProjectileAmmoVisuals : SL_ShootProjectile
+Inherits from `SL_ShootProjectile` and contains no extra fields, used by Bow Skills.
 
-## SL_ShootItem
+## SL_ShootItem : SL_ShootProjectile
 
 Inherits from `SL_ShootProjectile`, and has no extra fields.
 
@@ -880,24 +889,24 @@ This effect <b>requires</b> a `SL_WeaponLoadoutItem` [SL_ItemExtension](API/SL_I
 
 Used for Bows.
 
-## SL_ShootProjectilePistol
+## SL_ShootProjectilePistol : SL_ShootProjectile
 Inherits from ShootProjectile, and is used for pistol skills.
 
 `UseShot` (boolean)
 * Should the loaded shot be used, if any?
 
-## SL_StartDuel
+## SL_StartDuel : SL_Effect
 This simple effect will change the affected character's faction to `Bandits`.
 
 This is uniquely used by the Duel Baton item, and contains no fields.
 
-## SL_Stun
+## SL_Stun : SL_Effect
 Used by the Sweep Kick skill (if target has Confusion).
 
 `Duration` (float)
 * Duration of the stun.
 
-## SL_Summon
+## SL_Summon : SL_Effect
 This effect type is used by skills like Conjure (Summoned Ghost), but also for things like placing a Sigil on the ground, or casting a Runic Trap, etc.
 
 `Prefab` (string)
@@ -939,13 +948,13 @@ This effect type is used by skills like Conjure (Summoned Ghost), but also for t
 `IgnoreOnDestroy` (boolean)
 * Does the effect ignore when prefab is destroyed?
 
-## SL_SummonAI
+## SL_SummonAI : SL_Summon
 This effect inherits from SL_Summon. It contains no extra fields, it just tells the game you are summoning an AI Character which will follow the caster.
 
-## SL_SummonBloodSpirit
+## SL_SummonBloodSpirit : SL_SummonAI
 Like SL_SummonAI, but it tells the game you are summoning a "Blood Spirit" (probably DLC-related).
 
-## SL_Teleport
+## SL_Teleport : SL_Effect
 Teleports the caster.
 
 `MaxRange` (float)
@@ -963,8 +972,8 @@ Teleports the caster.
 `UseTarget` (boolean)
 * Do we teleport to the current target?
 
-## SL_ThrowItem
-<b>NOTE:</b> Must be on an `SL_ThrowSkill` (eg. cloned from Throw Lantern skill).
+## SL_ThrowItem : SL_ShootProjectile
+<b>NOTE:</b> Must be on an `SL_ThrowSkill` (eg. cloned from Throw Lantern skill). Inherits from SL_ShootProjectile.
 
 `CollisionBehaviour` (enum)
 * Determines the collision behaviour
@@ -974,14 +983,14 @@ Teleports the caster.
 * Determines how the projectile itself behaves
 * Must be exactly one of: `RayCast` or `Physic`
 
-## SL_UnloadWeapon
+## SL_UnloadWeapon : SL_Effect
 Simply unloads the weapon in the given AffectSlot.
 
 `AffectSlot` (enum)
 * The equipment slot to unlaod from.
 * Must be exactly one of [these values](API/Enums/EquipmentSlotIDs.md).
 
-## SL_UseLoadoutAmunition
+## SL_UseLoadoutAmunition : SL_Effect
 Uses ammunition from a WeaponLoadout.
 
 `MainHand` (boolean)
@@ -993,13 +1002,13 @@ Uses ammunition from a WeaponLoadout.
 `DestroyOnEmpty` (bool)
 * Is it destroyed when empty?
 
-## SL_VitalityDamage
+## SL_VitalityDamage : SL_Effect
 Damage dealt directly to the affected character's health, <b>cannot be resisted</b>.
 
 `PercentOfMax` (float)
 * Percent of character's health that is lost.
 
-## SL_WeaponDamage
+## SL_WeaponDamage : SL_PunctualDamage
 
 This is a type of SL_PunctualDamage that <b>requires an equipped weapon</b>, used by Attack Skills. It bases the damage off the required weapon types for the attack skill it is placed on.
 
@@ -1025,29 +1034,29 @@ This inherits all the fields on SL_PunctualDamage, and also has:
 
 You also have `Impact_Multiplier`, `Impact_Multiplier_Kback` and `Impact_Multiplier_Kdown` which are the same but they're for impact damage.
 
-## SL_WeaponDamageFlurry
+## SL_WeaponDamageFlurry : SL_WeaponDamage
 
 Inherits from SL_WeaponDamage, used by Prismatic Flurry.
 
 `HitDelay` (float)
 * The time delay between each hit.
 
-## SL_WeaponDamageOwnerHPStam
+## SL_WeaponDamageOwnerHPStam : SL_WeaponDamage
 
 Inherits from SL_WeaponDamage, contains no extra fields. Used by some of the new Weapon Master skills to amplify damage based on our HP and Stam.
 
-## SL_WeaponDamageProjectileWeapon
+## SL_WeaponDamageProjectileWeapon : SL_WeaponDamage
 
 Inherits from SL_WeaponDamage, contains no extra fields. Used by ProjectileWeapon skills.
 
-## SL_WeaponDamageStatusOnKill
+## SL_WeaponDamageStatusOnKill : SL_WeaponDamage
 
 Inherits from SL_WeaponDamage, grants a Status Effect if this weapon damage deals a killing blow.
 
 `StatusIdentifier` (string)
 * The Status Identifier of the effect gained on kills
 
-## SL_WeaponDamageTargetHealth
+## SL_WeaponDamageTargetHealth : SL_WeaponDamage
 Inherits from SL_WeaponDamage, gains more damage multiplier depending on target's Health % ratio.
 
 `MultiplierHighLowHP` (Vector2)
