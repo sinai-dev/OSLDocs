@@ -157,7 +157,7 @@ Even if you are not defining custom visuals at all, you can still use some of th
 The sections below are specific to certain types of custom items.
 
 ## SL_Skill
-SL_Skill is a rather involved topic, with many derived classes. See [SL_Skill](API/SL_Skill.md) for more information.
+See [SL_Skill](API/SL_Skill.md) for more information.
 
 ## SL_Equipment
 
