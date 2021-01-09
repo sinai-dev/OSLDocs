@@ -70,4 +70,10 @@ The base class used by both `SL_SkillSlotFork` and `SL_SkillSlot`.
 * Call this first to create the base `GameObject`. 
 * It returns the `SkillSchool` to you (a component on the base `GameObject`)
 
+`Sprite Sigil`
+* Only use this if you did not use the SL Pack approach to setting the tree sigil.
+* The `Sigil` is the background icon when using the skill trainer for this tree.
+* A Sigil you can use as an example can be found on the [Resources](Main/Resources) page.
+* Use the `CustomTextures` class to load your PNG and create your Sprite to set.
+
 <!-- tabs:end -->

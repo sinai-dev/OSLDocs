@@ -8,5 +8,10 @@ The [Outward Tools](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPX
 ## SideLoader Resources
 The [SideLoader Resources](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources) folder in the SideLoader repo contains some useful files such as blank icons and the `Human_v` bone rig for player characters.
 
+* [Human_v.prefab](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources/Human_v.prefab) - the Human bone rig, needed to make custom equipment meshes
+* [SkillTree Sigil Sprite](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources/tex_men_treeLogoHermit.png) - an example of a Sigil sprite for a Skill Tree
+* [Main Shader Properties](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources/Main Shader Properties.txt) - a list of the shader properties for Nine Dots' main shader.
+* [Icons](https://github.com/sinai-dev/Outward-SideLoader/tree/master/Resources/Icons) - blank icons to use for Items, Skills etc
+
 ## See also
 * [Enums](API/Enums.md)

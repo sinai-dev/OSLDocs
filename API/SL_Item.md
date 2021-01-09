@@ -587,8 +587,6 @@ It should look like this in XML:
 
 #### ** C# Only **
 
-See also: [C# Custom Items](Basics/CSharpGuide?id=customitems)
-
 ### Fields
 
 `SLPackName` (string)
