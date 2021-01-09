@@ -56,10 +56,12 @@ Checks the last Attack ID used by the casting character.
 * Attack IDs are between 0 and 5.
 
 ## SL_BooleanCondition : SL_EffectCondition
-I'll be honest, I have no idea how this one works. If you want to figure it out, let me know if you do.
+This can be used to set a "hard-coded" condition check for the whole transform. It will always return whatever value you set.
+
+This could be used to invert an entire transform without manually changing each condition, I guess.
 
 `Valid` (boolean)
-* Is it valid...?
+* True to do nothing, false to flip the whole effect transform.
 
 ## SL_ContainedWaterCondition : SL_EffectCondition
 A condition used to check the type of water in a waterskin, or any waterskin maybe?
