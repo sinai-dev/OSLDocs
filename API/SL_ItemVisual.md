@@ -1,17 +1,17 @@
 # SL_ItemVisual
 
+See also: [Custom Item Visuals](Guides/ItemVisuals.md).
+
 <!-- tabs:start -->
 #### ** Universal **
 
 These are the fields you can set on an SL_ItemVisual class.
 
-?> <b>Note:</b> the `Prefab_` fields are not required. They're only used if you are using your own custom Visual Prefabs.
-
-See also: [Custom Item Visuals](Guides/ItemVisuals.md).
-
 `ResourcesPrefabPath` (string)
 * If the custom `Prefab_` Visuals are <b>not</b> set, you can use this to transmog the visual prefab to a different Item's visuals.
 * You can copy this from a different item for easy "transmogs".
+
+?> <b>Note:</b> the `Prefab_` fields are not required. They're only used if you are using your own custom Visual Prefabs.
 
 `Prefab_SLPack` (string)
 * The name of the SLPack you are using for the visuals.
@@ -102,7 +102,3 @@ The `CustomItemVisuals` class contains a few helpers you might want to use from 
 * Get the original unmodified item visuals for an Item
 
 <!-- tabs:end -->
-
-## CustomItemVisuals
-
-If you want to do anything custom with Item Visuals from C#, the `CustomItemVisuals` class may be of help to you, see the public methods in your IDE.
