@@ -58,6 +58,8 @@ The `CharacterVisualsData` field contains the visual data. You can set it to nul
 `HeadVariationIndex` (integer)
 * Face style. May be clamped depending on your chosen Gender and SkinIndex.
 
+>? Note: If you want to hide the face with an Armor by default, you must set this to 0. This is a bug and will be fixed when possible.
+
 `HairStyleIndex` (integer)
 * Chosen hair style, corresponds to the character creation options.
 
