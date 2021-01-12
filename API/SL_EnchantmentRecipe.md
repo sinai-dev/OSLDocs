@@ -41,7 +41,7 @@ In Xml, it would look like this:
 
 The `CompatibleEquipment` contains information about the compatible equipment.
 
-* `RequiredTag` (string): The <b>REQUIRED</b> Tag for Equipment with this Enchantment. Eg, "Weapon", "Armor", "Helmet", "Boots". Can pick any Tag off [this list of Tags](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680).
+* `RequiredTag` (string): The <b>REQUIRED</b> Tag for Equipment with this Enchantment. Eg, "Item", "Weapon", "Armor", "Helmet", "Boots". Can pick any Tag off [this list of Tags](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680).
 * `Equipments` (list of IngredientData): The optional list of compatible Equipments, either by Tag or Specific Item ID. If not set, any item with RequiredTag will work.
 
 Each IngredientData has:
