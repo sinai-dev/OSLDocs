@@ -2,6 +2,8 @@
 
 See also: [Custom Items](Guides/Items.md).
 
+?> For Icons and Item Visuals, see [Custom Item Visuals](Guides/ItemVisuals) and/or [SL_ItemVisual](API/SL_ItemVisual).
+
 <!-- tabs:start -->
 
 #### ** Universal **
