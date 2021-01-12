@@ -27,23 +27,21 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 `SpawnPosition` (Vector3)
 * Optional, only used if SceneToSpawn is set.
 * A Vector3 takes an `x`, `y` and `z` value.
+* You can find World Position with the SL Menu.
 
-`AddCombatAI` (boolean)
-* Defaults to false
-* If true, will add a basic combat AI to the character.
-* This AI is based on the Summoned Ghost. You can modify it if you want.
-
-`CanDodge` (boolean)
-* Can the combat AI dodge?
-
-`CanBlock` (boolean)
-* Can the combat AI block?
+`SpawnRotation` (Vector3)
+* Optional, only used if SceneToSpawn is set.
+* A Vector3 for the spawn rotation.
 
 `Faction` (enum)
 * The faction ("team") of the character. Not referring to Story factions.
 * Common options are: `NONE`, `Players`, `Bandits`
 * Other options are: `Mercs`, `Tuanosaurs`, `Deer`, `Hounds`, `Merchants`, `Golden`, `CorruptionSpirit`
 * Default is `Players`, if unchanged.
+
+`TargetableFactions` (list of Character.Factions)
+* Optional, you can set this to manually define a list of targetable factions.
+* Same possible values as Factions, but its a list.
 
 ### Visual Data
 The `CharacterVisualsData` field contains the visual data. You can set it to null or delete it for default visuals.
@@ -97,6 +95,9 @@ The next few fields relate to the character's stats.
 `Protection` (float)
 * Physical protection stat, 0-100.
 
+`Barrier` (float)
+* Barrier stat, 0-100.
+
 `Damage_Resists` (float array)
 * Damage resistance stats for the character.
 * Like on SL_Item and SL_Effect, this relates to the damage types.
@@ -110,6 +111,139 @@ The next few fields relate to the character's stats.
 * This is like the `Tags` field on SL_Item or SL_StatusEffect. It contains a list of strings.
 * Each entry is a Tag.
 * Use the Outward Tools google sheet (link in Resources on sidebar) to get Tag names.
+
+`AI` (SL_CharacterAI)
+* Optional, The `AI` can be defined if you want AI for the character.
+
+### SL_CharacterAI
+
+The SL_CharacterAI class is used to define your Character's AI behaviour. At the moment there is only one preset class, SL_CharacterAIMelee.
+
+<!-- tabs:start -->
+
+#### ** XML **
+
+```xml
+<AI xsi:type="SL_CharacterAIMelee">
+    <!-- ... --->
+</AI>
+```
+
+#### ** C# **
+
+```csharp
+sl_character.AI = new SL_CharacterAIMelee()
+{
+  // ...
+}
+```
+
+<!-- tabs:end -->
+
+`CanDodge` (boolean)
+* Can the character perform dodges?
+
+`CanBlock` (boolean)
+* Can the character perform blocks?
+
+`CanWanderFar` (boolean)
+* Can the character wander as far as they want? (for "Wander" type only)
+
+`ForceNonCombat` (boolean)
+* Set true to force the character to always be passive
+
+`AIContagionRange` (float)
+* Probably won't do anything yet. I think it's used for AI Squads.
+
+`Wander_Speed` (float)
+* Speed modifier for Wander state
+
+`Wander_FollowPlayer` (boolean)
+* Set true to have the character follow players (nearest?)
+
+`Wander_Type` (enum)
+* Must be one of: `Wander` or `Patrol`
+* `Wander` is free-roam
+* `Patrol` requires you to set the Waypoints (explained below)
+
+`Wander_PatrolWaypoints` (list of SL_Waypoint)
+* If using `Patrol` type, set the world-position waypoints here.
+* See SL_Waypoint below for more details.
+
+`Suspicious_Speed` (float)
+* Movement speed modifier for suspicious state
+
+`Suspicious_Duration` (float)
+* How long to stay suspicious for after losing detection
+
+`Suspicious_Range` (float)
+* Distance of suspicious detection range
+
+`Suspicious_TurnModif` (float)
+* Modifier for turn speed in suspicious state
+
+`Combat_ChargeTime` (Vector2)
+* Random min/max for charge time for attacks
+
+`Combat_TargetVulnerableChargeModifier` (float)
+* Modifier for charge time when target is vulnerable
+
+`Combat_ChargeAttackRangeMulti` (float)
+* Modifier for attack range expectation by AI
+
+`Combat_ChargeTimeToAttack` (float)
+* Time for an attack
+
+`Combat_ChargeStartRangeMult` (Vector2)
+* Random min/max for range to start an attack charge
+
+`Combat_SpeedModifiers` (list of float)
+* A list of modifiers for the combat speed based on range, needs more investigation
+
+`Combat_ChanceToAttack` (float)
+* Between 0 and 100, average chance to attack per AI update (not sure on frequency)
+
+`Combat_KnowsUnblockable` (boolean)
+* Does the AI know about unblockable attacks?
+
+`Combat_DodgeCooldown` (float)
+* Cooldown on dodge frequency, if can dodge
+
+`Combat_AttackPatterns` (list of AttackPattern)
+* The actual attacks the character can perform.
+* A list of AttackPattern objects, see below for details on AttackPattern.
+
+#### SL_Waypoint
+
+An SL_Waypoint has:
+
+`WorldPosition` (Vector3)
+* The world position of the waypoint
+
+`RandomRadius` (float)
+* How much randomness there is to the world position
+
+`WaitTime` (Vector2)
+* A random min/max for how long the character waits at the patrol point.
+
+#### AttackPattern
+
+An AttackPattern has:
+
+`ID` (integer)
+* The ID for this attack pattern, indexed from 0 to the number of attack patterns you've defined.
+
+`Chance` (float)
+* Weighted chance to use this attack
+
+`Range` (Vector2)
+* The allowed range to target for this attack
+
+`HPPercent` (Vector2)
+* The allowed HP percent min/max for the AI character to perform the attack
+
+`Attacks` (list of AtkTypes)
+* A list of `AtkTypes` objects, which can be either `Normal` or `Special`
 
 ## SL_CharacterTrainer
 
@@ -132,7 +266,7 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 `Prepare()`
 * Call this in OnPacksLoaded to register your character template.
 
-`Spawn(Vector3 position, string characterUID, string extraRpcData)`
+`Spawn(Vector3 position, Vector3 rotation, string characterUID, string extraRpcData)`
 * Manually spawn a character using this template, with an optional manual UID and RPC data.
 * `characterUID` is optional, if not provided it will use the default from your template. If you are spawning multiple dynamic characters from this template, use UID.Generate().
 * `extraRpcData` is any custom data you want to have passed over network, it will be sent to your `OnSpawn` callback.
@@ -146,6 +280,10 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 * Invoked when any character using this template is spawned
 * The `Character` argument is the Character instance that was just spawned
 * The `string` argument is the `extraRpcData` you may have provided to your Spawn method.
+
+`Action<Character, string> OnSaveApplied`
+* Invoked when any character using this template is loaded from a save. 
+* Same arguments as OnSpawn, the extraRpcData is from what you gave to the Spawn method.
 
 ## CustomCharacters
 
