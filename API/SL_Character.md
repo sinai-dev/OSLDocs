@@ -119,9 +119,7 @@ The next few fields relate to the character's stats.
 
 The SL_CharacterAI class is used to define your Character's AI behaviour. At the moment there is only one preset class, SL_CharacterAIMelee.
 
-<!-- tabs:start -->
-
-#### ** XML **
+To define one in XML:
 
 ```xml
 <AI xsi:type="SL_CharacterAIMelee">
@@ -129,7 +127,7 @@ The SL_CharacterAI class is used to define your Character's AI behaviour. At the
 </AI>
 ```
 
-#### ** C# **
+Or in C#:
 
 ```csharp
 sl_character.AI = new SL_CharacterAIMelee()
@@ -137,8 +135,6 @@ sl_character.AI = new SL_CharacterAIMelee()
   // ...
 }
 ```
-
-<!-- tabs:end -->
 
 `CanDodge` (boolean)
 * Can the character perform dodges?
