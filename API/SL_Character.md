@@ -112,12 +112,12 @@ The next few fields relate to the character's stats.
 * Each entry is a Tag.
 * Use the Outward Tools google sheet (link in Resources on sidebar) to get Tag names.
 
-`AI` (SL_CharacterAI)
-* Optional, The `AI` can be defined if you want AI for the character.
-
 ### SL_CharacterAI
 
-The SL_CharacterAI class is used to define your Character's AI behaviour. At the moment there is only one preset class, SL_CharacterAIMelee.
+The `AI` field is an SL_CharacterAI object, which is the class used to define your Character's AI behaviour. At the moment there is only one preset class, SL_CharacterAIMelee.
+
+`AI` (SL_CharacterAI)
+* Optional, The `AI` can be defined if you want AI for the character.
 
 To define one in XML:
 
