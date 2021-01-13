@@ -212,6 +212,9 @@ Example:
 
 Used for tents and bedrolls, allows the player to sleep in it. Must be on a Deployed-state SL_Deployable item.
 
+`RestStatusIdentifier` (string)
+* The Identifier of the Status Effect received from sleeping in this Sleepable
+
 `AffectFoodDrink` (boolean)
 * Whether sleeping in this tent affects the players food and drink values
 
