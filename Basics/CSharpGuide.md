@@ -93,11 +93,7 @@ if (CustomKeybindings.GetKey("MyKey"))
 
 The `PlayerSaveExtension` class can be used to extend a player's save easily. You can create a derived class of `PlayerSaveExtension` and implement the abstract methods, and then simply define your save data into the class.
 
-<b>Note:</b> The fields you define must be <b>serializable</b>, which means they must be either:
-* A `string` or `primitive`
-* An `array` or `IList` of strings or primitives
-* A `struct` which only contains string/primitive members
-* (Unconfirmed) A class which implements `ISerializable`
+<b>Note:</b> The fields you define must be <b>serializable</b>, which generally means they must be a primitive type (`int`, `bool`, etc) or a `string`. They can also be an `IEnumerable` or `ICollection` which contains primitives/strings, or a struct (or a type with a parameterless constructor) which only contains previously mentioned types. For full details, see [Types Supported by the Data Contract Serializer](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer).
 
 Example:
 ```csharp
