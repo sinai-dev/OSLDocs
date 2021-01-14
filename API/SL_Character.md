@@ -33,6 +33,9 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 * Optional, only used if SceneToSpawn is set.
 * A Vector3 for the spawn rotation.
 
+`DestroyOnDeath` (boolean)
+* If true, the character will be destroyed after they die
+
 `Faction` (enum)
 * The faction ("team") of the character. Not referring to Story factions.
 * Common options are: `NONE`, `Players`, `Bandits`
@@ -155,7 +158,7 @@ sl_character.AI = new SL_CharacterAIMelee()
 * Speed modifier for Wander state
 
 `Wander_FollowPlayer` (boolean)
-* Set true to have the character follow players (nearest?)
+* <b>Note:</b> This is used by Summoned Ghost, but I don't think it's working yet for SL_Characters properly. Probably best to leave it on false.
 
 `Wander_Type` (enum)
 * Must be one of: `Wander` or `Patrol`

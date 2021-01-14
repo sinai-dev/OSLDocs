@@ -9,6 +9,8 @@ You can also define an SL_CharacterTrainer which is a basic pre-made trainer you
 
 See [SL_Character](API/SL_Character.md) for full documentation on this class.
 
+If you wanted to spawn the characters from an effect on a weapon or skill, you can use [SL_SpawnSLCharacter](SL_Effect?id=sl_spawnslcharacter-sl_effect).
+
 ## SL_Character Example
 
 <!-- tabs:start -->
@@ -49,6 +51,8 @@ For SL_CharacterTrainers, see below.
     <y>0</y>
     <z>0</z>
   </SpawnRotation>
+  
+  <DestroyOnDeath>false</DestroyOnDeath>
   
   <!-- Generally use either "NONE", "Player" or "Bandits", there are other options too (Character.Factions) -->
   <Faction>Bandits</Faction>
@@ -216,57 +220,7 @@ For SL_CharacterTrainers, see below.
         </HPPercent>
       </AttackPattern>
 	  
-      <AttackPattern>
-        <ID>1</ID>
-        <Chance>15</Chance>
-        <Range>
-          <x>0</x>
-          <y>2.9</y>
-        </Range>
-        <Attacks>
-          <AtkTypes>Normal</AtkTypes>
-          <AtkTypes>Normal</AtkTypes>
-        </Attacks>
-      </AttackPattern>
-	  
-      <AttackPattern>
-        <ID>2</ID>
-        <Chance>30</Chance>
-        <Range>
-          <x>0</x>
-          <y>1.5</y>
-        </Range>
-        <Attacks>
-          <AtkTypes>Special</AtkTypes>
-        </Attacks>
-      </AttackPattern>
-	  
-      <AttackPattern>
-        <ID>3</ID>
-        <Chance>30</Chance>
-        <Range>
-          <x>0</x>
-          <y>1.5</y>
-        </Range>
-        <Attacks>
-          <AtkTypes>Normal</AtkTypes>
-          <AtkTypes>Special</AtkTypes>
-        </Attacks>
-      </AttackPattern>
-	  
-      <AttackPattern>
-        <ID>4</ID>
-        <Chance>30</Chance>
-        <Range>
-          <x>0</x>
-          <y>1.3</y>
-        </Range>
-        <Attacks>
-          <AtkTypes>Normal</AtkTypes>
-          <AtkTypes>Normal</AtkTypes>
-          <AtkTypes>Special</AtkTypes>
-        </Attacks>
-      </AttackPattern>
+      <!-- etc, define as many as you want... -->
 	  
     </Combat_AttackPatterns>
 	
@@ -309,6 +263,7 @@ private static readonly SL_Character trainerTemplate = new SL_Character()
     Chest_ID = 3200040,
     Helmet_ID = 3200041,
     Boots_ID = 3200042,
+	// etc...
 };
 
 // use Awake to set up Character templates.
@@ -331,61 +286,7 @@ public void LocalTrainerSetup(Character trainer, string _)
 }
 ```
 
-Here is an example of a dynamic spawn from a custom skill `Effect.ActivateLocally()`.
-
-```csharp
-// The Ghost and Skeleton are SL_Character templates (with SaveType=CharSaveType.Follower), 
-// didn't feel the need to show them since I showed that above.
-
-// Setup templates in Awake
-internal void Awake()
-{
-    Instance = this;
-
-    Ghost.Prepare();
-    Skeleton.Prepare();
-
-    Ghost.OnSpawn += OnSpawn;
-    Skeleton.OnSpawn += OnSpawn;
-}
-
-// In the custom Effect class for this "Summon" skill, 
-// I override the ActivateLocally method.
-
-// This Effect SyncType is set to MasterSync (only host executes)
-public override void ActivateLocally(Character _affectedCharacter, object[] _infos)
-{
-    // Make a unique UID for this character, but the SL_Character template UID is used 
-    // for the spawn callback.
-    var summonUID = UID.Generate().ToString();
-
-    // Get the appropriate template to use based on a custom condition check
-    var template = PlagueAuraProximityCondition.InsidePlagueAura(_affectedCharacter) ? 
-        Ghost : 
-        Skeleton;
-
-    var spawnPos = _affectedCharacter.transform.position + (Vector3.forward * 0.5f);
-
-    var extraRpcData = caster.UID.ToString();
-
-    // Call SL_Character.Spawn()
-    // We are sending a spawn position, character UID, and extraRpcData.
-    // In this case, the extraRpcData is the Caster character's UID.
-    template.Spawn(spawnPos, summonUID, extraRpcData);
-}
-
-// The network callback from Spawn() which executes for all clients.
-private void OnSpawn(Character character, string rpcData)
-{
-    var ownerUID = rpcData;
-    var summonUID = character.UID;
-
-    // We got the caster's UID from our extraRpcData that we sent.
-    // You could use the extraRpcData string for whatever needs you have.
-
-    // In this case, it was used to maintain a dictionary of who spawned which character.
-}
-```
+You could also look at the NecromancySkills' [SummonManager.cs](https://github.com/sinai-dev/Outward-Mods/blob/master/Necromancy/src/SummonManager.cs) and [SummonSkeleton.cs](https://github.com/sinai-dev/Outward-Mods/blob/master/Necromancy/src/CustomSkills/SummonSkeleton.cs) classes for some practical examples.
 
 <!-- tabs:end -->
 

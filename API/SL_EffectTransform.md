@@ -20,7 +20,7 @@ As mentioned above, an SL_EffectTransform is a container for effects and conditi
 The fields on an SL_EffectTransform are:
 
 `TransformName` (string)
-* Determines the <b>effects category</b>, and the name of the transform.
+* <b>Important</b>, this is used by the game to determine the <b>effects category</b>.
 * See [TransformName](#TransformName) below.
 
 `Position` (Vector3)
@@ -61,29 +61,33 @@ Example of a Vector3 value in XML:
 
 ### TransformName
 
-The <b>TransformName</b> is very important, the game uses this to know when to apply the Effects on this transform. You can also override the TransformName with the `OverrideCategory` of your [SL_Effect](API/SL_Effect).
+The <b>TransformName</b> is very important, the game uses this to know when to apply the Effects on this transform. 
 
 The game checks if your TransformName <b>contains</b> one of the following <b>keywords</b>, in this order:
 
 `Normal`
 * For standard activation effects, ie. using the item or activating the skill
 * Unlike `Activation`, these effects happen during the animation at a certain point depending on the animation
+* For status effects, these are applied on each refresh.
 
 `Hit`
-* Used for on-hit effects for weapons and skills
+* Used for on-hit effects. These effects apply to the hit character.
+* <b>Note:</b> your conditions will also be evaluated against this character, unless the class allows you to override the check to the owner character.
 
 `Passive`
-* For passive effects. 
+* For passive effects, these apply only once when the passive is learned or loaded from a save.
 
 `Activation`
 * Used immediately on activation, before the animation begins.
 
 `Block`
-* used for skills that have on-block effects
+* Used for skills that have on-block effects
 
-There is one unique exception: if the TransformName is <b>exactly</b> "`Effects`", "`Effect`", "`ExtraEffects`" or "`HiddenEffects`", it works the same as the `Normal` keyword.
+There is one unique exception: if the TransformName is <b>exactly</b> `Effects`, `Effect`, `ExtraEffects` or `HiddenEffects`, it works the same as the `Normal` keyword. This is likely just an internal thing for the devs before they made the keyword system.
 
-This covers everything about the SL_EffectTransform itself, see [SL_Effect](API/SL_Effect) and [SL_EffectCondition](API/SL_EffectCondition) for more details.
+You can also override the TransformName by setting the `OverrideCategory` of your [SL_Effect](API/SL_Effect).
+
+See [SL_Effect](API/SL_Effect) and [SL_EffectCondition](API/SL_EffectCondition) for more details.
 
 ## Example
 

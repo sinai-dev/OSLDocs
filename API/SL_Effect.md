@@ -906,6 +906,21 @@ Used by the Sweep Kick skill (if target has Confusion).
 `Duration` (float)
 * Duration of the stun.
 
+## SL_SpawnSLCharacter : SL_Effect
+The `SL_SpawnSLCharacter` class is a custom non-game class which can be used to spawn an [SL_Character](API/SL_Character) from an effect. It can also make the character follow the caster of the effect.
+
+`SLCharacter_UID` (string)
+* The SL_Character template UID which you want to spawn
+
+`GenerateRandomUIDForSpawn` (boolean)
+* If true, will generate a unique UID for each spawned character, allowing you to re-use the template for dynamic spawns.
+
+`TryFollowCaster` (boolean)
+* If true, will try to follow the person who created this effect. This <b>requires</b> you to set the `Wander_Type` on the SL_CharacterAI to `Follow`. You should also set `Wander_FollowPlayer` to <b>false</b> if you are using this.
+
+`SpawnOffset` (Vector3)
+* Vector3 Position offset for character spawn position
+
 ## SL_Summon : SL_Effect
 This effect type is used by skills like Conjure (Summoned Ghost), but also for things like placing a Sigil on the ground, or casting a Runic Trap, etc.
 
