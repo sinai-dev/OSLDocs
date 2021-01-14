@@ -9,7 +9,7 @@ You can also define an SL_CharacterTrainer which is a basic pre-made trainer you
 
 See [SL_Character](API/SL_Character.md) for full documentation on this class.
 
-If you wanted to spawn the characters from an effect on a weapon or skill, you can use [SL_SpawnSLCharacter](SL_Effect?id=sl_spawnslcharacter-sl_effect).
+If you wanted to spawn the characters from an effect on a weapon or skill, you can use [SL_SpawnSLCharacter](API/SL_Effect?id=sl_spawnslcharacter-sl_effect).
 
 ## SL_Character Example
 

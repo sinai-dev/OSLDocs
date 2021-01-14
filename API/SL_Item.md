@@ -68,8 +68,10 @@ All SL_Item classes have these fields.
 * It's a "float" value, meaning you can set it to "0.3" or "1.52374", etc.
 
 `CastSheatheRequired` (integer)
-* Sets the type of  weapon sheathing behavior when you use/cast this item.
-* Either `0`, `1` or `2`. I'm not totally sure how this one works, haven't looked into it.
+* Sets the type of weapon sheathing behavior when you use/cast this item or skill.
+* `0` or `-1` = not set, do nothing
+* `1` = unsheathe required
+* `2` = sheathe required
 
 `OverrideSellModifier` (integer)
 * Overrides the Sell Modifier (at ALL merchants) for the item compared to the Buy Price. By default it is 0.3 for most items.
