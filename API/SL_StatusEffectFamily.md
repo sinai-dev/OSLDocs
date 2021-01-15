@@ -36,13 +36,13 @@ There is not currently a template generator for SL_StatusEffectFamily, so an exa
 
 ## Examples
 
-<!-- tabs:start -->
-
-#### ** XML **
-
 For XML, if you are defining an SL_StatusEffect and using the Bind family mode, the family should be defined directly in the SL_StatusEffect template.
 
 If using a Reference family, you can define a new one from the `StatusFamilies` folder of your SLPack, or via C#.
+
+<!-- tabs:start -->
+
+#### ** XML **
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
