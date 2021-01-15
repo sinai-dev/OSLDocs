@@ -26,11 +26,6 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 `Lifespan` (float)
 * The length of the Status Effect in seconds.
 
-`LengthType` (enum)
-* Must be one of: `Short` or `Long`
-* Short effects count down from in-game seconds, and are lost on sleep or death
-* Long effects are diseases or incurable effects
-
 `ActionOnHit` (enum)
 * The behaviour when the character with this status gets hit by an attack
 * `None` - do nothing
