@@ -37,6 +37,11 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 * `ReduceStack` - reduce a level of the status (for LevelStatusEffect)
 * `RemoveStatus` - removes the status entirely 
 
+`Priority` (int)
+* The priority of this effect if it is part of a stacking family.
+* Higher number = higher stacking priority.
+* The `FamilyMode` must be set to `Reference`.
+
 `RefreshRate` (float)
 * How frequently the status effects are applied, in seconds.
 * Depending on the effect, this may not matter. Most important for regeneration and DoT effects.
