@@ -14,6 +14,12 @@ The `SL_SkillTree` class is the base class for containing the tree, as well as a
 `Name` (string)
 * The Name of your skill tree. This also sets the SkillSchool.UID and name.
 
+`SigilIconName` (string)
+* You can use this to set the Sigil sprite for the skill tree from a PNG file.
+* The PNG should be placed in the `Texture2D\Local\` folder of your SLPack, and you reference it by its file name (without ".png").
+* For example, set `MyTreeIcon` as the name and use a png file `{SLPack}\Texture2D\Local\MyTreeIcon.png`.
+* For an example skill tree sigil, [see here](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/tex_men_treeLogoHermit.png)
+
 `SkillRows` (List<SL_SkillRow>)
 * The rows of your skill tree. `SL_SkillRow` is explained below.
 
@@ -72,7 +78,7 @@ The base class used by both `SL_SkillSlotFork` and `SL_SkillSlot`.
 `Sprite Sigil`
 * Only use this if you did not use the SL Pack approach to setting the tree sigil.
 * The `Sigil` is the background icon when using the skill trainer for this tree.
-* A Sigil you can use as an example can be found on the [Resources](Main/Resources) page.
+* A Sigil you can use as an example can be found [here](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/tex_men_treeLogoHermit.png).
 * Use the `CustomTextures` class to load your PNG and create your Sprite to set.
 
 <!-- tabs:end -->

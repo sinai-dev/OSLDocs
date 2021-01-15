@@ -55,6 +55,16 @@ The XML should look like this:
 
 The fields should be self-explanatory. Add as many SkillItemReq objects as you want.
 
+## SL_LevelPassiveSkill : SL_Skill
+
+While PassiveSkills do not have a specific SideLoader class, LevelPassiveSkills do.
+
+A LevelPassiveSkill will increase the potency of this Passive's effects (AffectStat, etc) for each level of the watched status. For example, they will be 1.0x at level 1, 2.0x at level 2, etc.
+
+`WatchedStatusIdentifier` (string)
+* The Identifier name of the LevelStatusEffect that you want to base this passive off
+* For example, Daredevil watches `Alert`
+
 ## SL_AttackSkill : SL_Skill
 
 If a skill is an "Attack Skill" you can use these fields. Attack Skills are any skills that do some kind of damage or counter. Currently the only active skills which aren't attack skills are placing Sigils, Reveal Soul, Mana Ward, Conjure, Flamethrower, and cosmetic skills.
@@ -94,6 +104,47 @@ It should look like this in XML:
 
 `AmmunitionTypes` (list of WeaponType)
 * Same as previous two values, but for required Ammunition.
+
+## SL_LevelAttackSkill : SL_AttackSkill
+
+An `SL_LevelAttackSkill` inherits from SL_AttackSkill, and has increasing levels which change the animation, name and icon based on a LevelStatusEffect.
+
+For the additional level icons, you can either set the sprites directly from C#, or you can place them in your SLPack named "icon2.png", "icon3.png" etc for each additional level. When you generate a template from a LevelAttackSkill it will contain the extra levels for you in this format.
+
+`WatchedStatusIdentifier` (string)
+* The Identifier name of the LevelStatusEffect that you want to base this skill off
+* For example, Probe watches `Alert`
+
+`Stages` (list of SL_SkillStage)
+* A list, defining the names and animations for each <b>additional</b> phase
+* See below for more details
+
+### SL_SkillStage
+The `SL_SkillStage` is used to define each stage of an SL_LevelAttackSkill.
+
+The first one you define should be the Level 2 effect, and from there continue for as many levels as you want in order.
+
+`Name` (string)
+* The name of the skill for this level
+
+`Animation` (enum)
+* The animation to use for this level
+* Must be one of [these values](API/Enums/SpellCastType).
+
+For example in XML:
+```xml
+<Stages>
+  <SL_SkillStage>
+    <Name>Bait</Name>
+    <Animation>Bait</Animation>
+  </SL_SkillStage>
+  <SL_SkillStage>
+    <Name>Taunt</Name>
+    <Animation>Taunt</Animation>
+  </SL_SkillStage>
+  <!-- etc... -->
+</Stages>
+```
 
 ## SL_RangeAttackSkill : SL_AttackSkill
 Inherits from SL_AttackSkill, used for bow skills.

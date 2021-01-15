@@ -25,6 +25,7 @@ The sub-folders you can create are:
 * `Items\`
 * `Recipes\`
 * `StatusEffects\`
+* `StatusFamilies`
 * `Texture2D\`
 
 ### AssetBundles
@@ -83,8 +84,16 @@ The `StatusEffects\` folder is for custom Status Effects and Imbues. Similar to 
 
 See also: [Custom Statuses](Guides/StatusEffects.md)
 
+### StatusFamilies
+
+The `StatusFamilies\` folder is used to define custom Status Effect Families.
+
+See [SL_StatusEffectFamily](API/SL_StatusEffectFamily.md) for more details.
+
 ### Texture2D
 
-The `Texture2D` folder is used for loading or replacing textures. SideLoader will find currently loaded textures which have the same name and replace them.
+The `Texture2D\` folder is used for loading or replacing textures. SideLoader will find currently loaded textures which have the same name and replace them.
+
+You can also make a sub-folder inside the Texture2D folder called `Local\`. Textures which are placed in here are <b>not</b> used for global replacements, but they can be accessed through your SL Pack for other things. This should be used if you don't want to automatically replace textures based on the texture's name.
 
 See also: [Replacing Textures](Guides/ReplacingTextures.md)

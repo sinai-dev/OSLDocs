@@ -29,6 +29,10 @@ These two files go in the base `Textures\` folder:
 * Replaces the <b>main item icon</b>
 * A blank icon template can be found here: [for items](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Icons/ItemIcon.png), or [for skills](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Icons/ActiveSkillIcon.png), or [for passives](https://github.com/sinai-dev/Outward-SideLoader/blob/master/Resources/Icons/PassiveSkillIcon.png)
 
+`icon{N}.png` (84x128px)
+* Used by [SL_LevelAttackSkills](API/SL_Skill?id=sl_levelattackskill-sl_attackskill), you can define an icon for each additional level of the skill (icon.png is used for level 1). 
+* The `{N}` is the level for this icon, starting at 2. 
+
 `skillicon.png` (50x50px)
 * The small icon used for <b>Skill Tree icons</b>
 * Just a small version of the main icon.

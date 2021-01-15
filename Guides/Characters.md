@@ -354,6 +354,12 @@ For XML:
 	  
 	  <!-- Skill Tree Name -->
 	  <Name>Test Tree</Name>
+
+    <!-- The file name of the PNG file in your 
+         SLPack\Texture2D\Local\ folder for the sigil
+         sprite, without ".png". -->
+    <SigilIconName></SigilIconName>
+    <!-- eg, <SigilIconName>MyTreeSigil</SigilIconName> -->
 	  
 	  <!-- The rows of your skill tree -->
 	  <SkillRows>

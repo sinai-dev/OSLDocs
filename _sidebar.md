@@ -15,6 +15,7 @@
 
 - <b>Documentation</b>
 
+  - [C# API](API/CSharpAPI.md)
   - [Enums](API/Enums.md)
   - [SL_Character](API/SL_Character.md)
   - [SL_Damage](API/SL_Damage.md)
@@ -31,6 +32,7 @@
   - [SL_Skill](API/SL_Skill.md)
   - [SL_SkillTree](API/SL_SkillTree.md)
   - [SL_StatusEffect](API/SL_StatusEffect.md)
+  - [SL_StatusEffectFamily](API/SL_StatusEffectFamily.md)
 
 <!-- empty block so buttom link isn't cut off on mobile. -->
 <div style="height:40px; display:block;"></div>

@@ -404,6 +404,23 @@ Contains no fields, but requires a `SL_PrePackDeployableCondition` SL_EffectCond
 ## SL_Petrify : SL_Effect
 Used by Full Petrification to Petrify the target character. Contains no extra fields.
 
+## SL_PlayAnimation : SL_Effect
+This is a custom effect used to manually trigger an animation on the affected character.
+
+`Animation` (enum)
+* The animation to play.
+* Must be one of [these values](API/Enums/SpellCastType.md).
+
+`Modifier` (enum)
+* A modifier on the character when the animation plays.
+* Must be exactly one of: `Immobilized`, `Mobile`, `Attack` or `NONE`
+
+`SheatheRequired` (integer)
+* Sets the type of weapon sheathing behavior when the animations plays
+* `0` or `-1` = not set, do nothing
+* `1` = unsheathe required
+* `2` = sheathe required
+
 ## SL_PlaySoundEffect : SL_Effect
 This one is obviously for playing a sound effect. You can pick any sound from the global list.
 
@@ -435,6 +452,12 @@ Used to play a VFX System (visual effects).
 
 `DontInstantiateNew` (boolean)
 * If `false`, it will instantiate a new prefab each activation
+
+## SL_PlayTimedVFX : SL_PlayVFX
+Inherits from `SL_PlayVFX`, and just contains one extra field which allows you to stop the VFX after a delay.
+
+`AutoStopTime` (float)
+* Delay in seconds after which the effects will be stopped. If 0 or less, VFX will play until it stops itself (maybe never).
 
 ## SL_Puke : SL_Effect
 Similar to SL_Cough, used by the Indigestion disease.

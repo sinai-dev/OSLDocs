@@ -20,6 +20,7 @@ Your custom status XML can be placed in the `StatusEffects\` sub-folder of your 
 If you want to use a custom icon, you need to create a <b>sub-folder for each status</b>.
 * Eg, `[SLPack Folder]\StatusEffects\MyStatus\MyStatus.xml`
 * The icon needs to be called <b>icon.png</b> and placed in this same folder as the xml.
+* For LevelStatusEffects, you can also have an icon for each additional level of the status, which must be named "icon2.png", "icon3.png", etc.
 
 See [SL_StatusEffect](API/SL_StatusEffect.md) and [SL_ImbueEffect](API/SL_ImbueEffect.md) for more details.
 
