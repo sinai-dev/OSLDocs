@@ -549,20 +549,22 @@ Used to remove a status effect from the affected character.
 
 You can either use the <b>Identifier Name</b> of the status, or a <b>Tag</b> that the status might have on it.
 
-`Status_Name` (string)
-* <b>Only valid if you are NOT using `StatusType` for the CleanseType!</b>
-* If you want to remove a specific status by the identifier, set this.
-* For a list of Statuses listed by their Identifier, see [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658)
+`CleanseType` (enum)
+* Exactly one of: `StatusNameContains`, `StatusType`, `StatusFamily`, `StatusSpecific` or `NegativeStatuses`
+* The `NegativeStatuses` value will remove ALL negative (purgeable) effects.
+
+`SelectorValue` (string)
+* Depends on your `CleanseType`.
+* If `StatusNameContains`, simply checks if any status identifier name contains your SelectorValue
+* If `StatusSpecific`, checks for status identifiers that are exact matches to your SelectorValue
+* If `StatusType`, checks for statuses with a Tag that matches your SelectorValue
+* If `StatusFamily`, checks for <b>Reference</b> status family UIDs that match your SelectorValue 
+* For a list of Status Identifiers, see [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658)
 
 `Status_Tag` (string)
 * <b>Only valid if you ARE using `StatusType` for the CleanseType!</b>
 * If there's a tag you want to search for on the status and remove all statuses with that tag, set it here.
 * See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
-
-`CleanseType` (enum)
-* Exactly one of: `StatusNameContains`, `StatusType`, `StatusFamily`, `StatusSpecific` or `NegativeStatuses`
-* I recommend using <b>StatusNameContains</b> and using the <b>Status_Name</b> field, or <b>StatusType</b> and using the <b>Status_Tag</b> field.
-* The `NegativeStatuses` value will remove ALL negative (purgeable) effects.
 
 ## SL_RunicBlade : SL_Effect
 This effect is uniquely used by the Runic Blade skill. However, it could be used for other purposes too.
