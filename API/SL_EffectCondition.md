@@ -114,6 +114,18 @@ Checks an equipment slot, and checks if it has enough durability.
 `MinimumDurability` (float)
 * The minimum durability value (flat).
 
+## SL_HasHealthCondition : SL_EffectCondition
+To check the current health of the character, by default it checks that they are above this value, use Invert to check if they are below it.
+
+`Value` (float)
+* The value to check for, either a direct value or a percentage if CheckPercent is true
+
+`CheckPercent` (boolean)
+* If true, your Value will be used as a percentage value. Eg, 50 would check that they have 50% or more health.
+
+`IgnoreBurntForPercent` (boolean)
+* If true, your percentage Value will be based on the character's active max health, ignoring burnt health.
+
 ## SL_HasQuantityItemsCondition : SL_EffectCondition
 Checks if the caster owns a total number of items (any item).
 

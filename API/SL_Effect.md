@@ -227,10 +227,20 @@ For restoring or affecting current Health.
 * How much current health is affected
 
 `IsModifier` (boolean)
-* Should this be applied as a modifier (multiplier) value?
+* Should this be applied as a modifier (percentage) value?
+* Eg, 20 would become 0.2 * character's max health.
 
-`AffectQuantityOnAI`
+`AffectQuantityOnAI` (float)
 * If you want a separate value for AI, set that here. Otherwise set to -1.
+
+`InformSourceCharacter` (boolean)
+* If true, will leech the AffectQuantity (inverted) to the source character, used by Blood Leech.
+
+## SL_AffectCurrentHealth : SL_Effect
+Similar to AffectHealth, but for affecting the active max health by a ratio, ignoring burnt health.
+
+`HealthPercent` (float)
+* The percentage of active max health to affect. For example, 50 would restore 50% of active max health, -99 would put the character very low but never kill them.
 
 ## SL_AffectHealthParentOwner : SL_Effect
 For healing the "owner" of the effect. Used by Blood Bullet, for example.
