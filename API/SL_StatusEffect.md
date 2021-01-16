@@ -26,6 +26,9 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 `Lifespan` (float)
 * The length of the Status Effect in seconds.
 
+`Purgeable` (bool)
+* If false, the status cannot be purged in any way other than the natural lifespan.
+
 `ActionOnHit` (enum)
 * The behaviour when the character with this status gets hit by an attack
 * `None` - do nothing
@@ -53,6 +56,12 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 `IgnoreBuildupIfApplied` (boolean)
 * If false, buildup cannot be added when already 100 or if status is active.
 
+`IgnoreBarrier` (bool)
+* Whether or not this status ignores the Barrier protection stat
+
+`DelayedDestroyTime` (int)
+* Delayed time in seconds when the status stops before it is actually destroyed (for on-stop special FX).
+
 `DisplayedInHUD` (boolean)
 * Is the status visible in HUD?
 
@@ -74,9 +83,6 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 
 `NormalizeDamageDisplay` (bool)
 * Should the damage value (if automatically parsed) be normalized (rounded) for the display?
-
-`IgnoreBarrier` (bool)
-* Whether or not this status ignores the Barrier protection stat
 
 `Tags` (list of string)
 * The `Tags` is a list of string (text) values. For statuses, these are not used that much.

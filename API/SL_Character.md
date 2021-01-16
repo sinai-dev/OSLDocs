@@ -280,9 +280,16 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 * The `Character` argument is the Character instance that was just spawned
 * The `string` argument is the `extraRpcData` you may have provided to your Spawn method.
 
-`Action<Character, string> OnSaveApplied`
+`Action<Character, string, string> OnSaveApplied`
 * Invoked when any character using this template is loaded from a save. 
 * Same arguments as OnSpawn, the extraRpcData is from what you gave to the Spawn method.
+* The second string argument is the extra save data you may have supplied from `OnCharacterBeingSaved`.
+
+`Func<Character, string> OnCharacterBeingSaved`
+* Invoked as the character is being saved.
+* The Character argument is the character being saved
+* The string argument is the data you must provide as the return value, which is sent to the OnSaveApplied method.
+* For example, `public string MySaveMethod(Character character) { /* ... */ }`
 
 ## CustomCharacters
 

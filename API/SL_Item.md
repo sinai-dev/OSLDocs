@@ -477,6 +477,91 @@ SL_Throwable inherits from SL_Item, and contains one more field. This is used fo
 `DestroyDelay` (float)
 * Delay in seconds after throwing for explosion
 
+## SL_ItemContainer : SL_Item
+The `SL_ItemContainer` class inherits from `SL_Item`, and contains some extra fields used for item containers.
+
+`BaseContainerCapacity` (float)
+* The base container capacity weight
+
+`SpecialType` (enum)
+* Used to indicate this is a special type of container.
+* Must be one of: `None`, `Pouch`, `SkillKnowledge`, `LegacyChest`, `Stash`, `EnchantmentTable`, `EnchantmentPillar`, `VampiricTransmutationTable`
+
+`OpenSound` (enum)
+* The sound played when the container is opened by a player
+* Must be one of [these values](API/Enums/Sounds)
+
+`AllowOverCapacity` (bool)
+* If true, the container can go over the weight capacity
+
+`CanContainMoney` (bool)
+* Is the container allowed to contain money?
+
+`CanReceiveCharacterItems` (bool)
+* Is the container allowed to receive character items?
+
+`CanRemoveItems` (bool)
+* Is the player allowed to remove items from the container?
+
+`NonSavableContent` (bool)
+* Is the content in this container <b>non-</b>savable?
+
+`ShowMoneyIfEmpty` (bool)
+* Should the container show the contained money if it is empty?
+
+`VisibleIfEmpty` (bool)
+* Is the container visible when empty?
+
+`ItemFilter` (SL_ItemFilter)
+* The filter on items which are allowed to go in this container.
+
+### SL_ItemFilter
+The SL_ItemFilter class is used by an SL_ItemContainer.
+
+`MatchOnEmpty` (bool)
+* If there are no other defined filters, what is the default match result?
+
+`EquipmentTypes` (list of EquipmentSlot.EquipmentSlotIDs)
+* A list of the allowed equipment slot types of items
+* Must be one of [these values](API/Enums/EquipmentSlotIDs)
+
+`TagTypes` (list of Tag.TagTypes)
+* A list of the allowed tag types for items
+* Must be one of [these values](API/Enums/TagTypes)
+
+## SL_DeployableTrap : SL_ItemContainer
+
+The SL_DeployableTrap inherits from SL_ItemContainer, and is used for deployed-state Traps.
+
+`OneTimeUse` (bool)
+* Limit to one-time use only?
+
+`TrapRecipeEffects` (list of SL_TrapEffectRecipe)
+* The list of recipes/effects for the trap.
+
+### SL_TrapEffectRecipe
+
+The class SL_TrapEffectRecipe is used by an SL_DeployableTrap to define the different trap recipes and effects.
+
+`Name` (string)
+* The name of this trap recipe result
+
+`Description` (string)
+* Description of this trap recipe result
+
+`CompatibleItemTags` (list of string)
+* A list of the compatible Tags for this trap recipe
+
+`CompatibleItemIDs` (list of int)
+* A list of the compatible Item IDs for this trap recipe
+
+`TrapEffects` (list of SL_Effect)
+* A list of SL_Effect (like the Effects on an SL_EffectTransform)
+* These are the standard effects
+
+`HiddenEffects` (list of SL_Effect)
+* Same as TrapEffects, but used for Pressure Plates when the player has Pressure Plate Expertise.
+
 ## SL_Instrument : SL_Item
 SL_Instrument inherits from SL_Item, and is used for the Instruments (Ghost Drum and Sky Chimes) in The Three Brothers DLC.
 

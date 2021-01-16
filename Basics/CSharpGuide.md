@@ -14,10 +14,19 @@ One of the most important features of SideLoader in C# is the events.
 To subscribe to an event in C#, simply put something like this in your `Awake()` function:
 * `SL.OnPacksLoaded += MySetup;` where `MySetup` is a method.
 
-Some of the important events you can subscribe to are:
-* `SL.BeforePacksLoaded` is called right before SL Packs are loaded and applied. This is <b>after</b> ResourcesPrefabManager has loaded.
-* `SL.OnPacksLoaded` is called after all packs have been loaded and applied. This will also be after ResourcesPrefabManager has loaded.
-* `SL.OnSceneLoaded` is called when a scene has truly finished loading. This is <b>not</b> called for the Main Menu or for the "Low Memory Transition Scene".
+The major events you can subscribe to are:
+
+`SL.BeforePacksLoaded` 
+* called right before SL Packs are loaded and applied. This is <b>after</b> ResourcesPrefabManager has loaded.
+
+`SL.OnPacksLoaded` 
+* called after all packs have been loaded and applied. This will also be after ResourcesPrefabManager has loaded.
+
+`SL.OnSceneLoaded` 
+* called when a scene has truly finished loading. This is <b>not</b> called for the Main Menu or for the "Low Memory Transition Scene".
+
+`SL.OnGameplayResumedAfterLoading`
+* called when the gameplay actually resumes, after a scene has loaded.
 
 The order of the initial SideLoader setup in regards to the events is:
 ```

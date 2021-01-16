@@ -15,4 +15,5 @@ If an enum missing which isn't explained elsewhere in the docs, let Sinai know i
 * [SL_ShootBlast.BlastPrefabs](API/Enums/BlastPrefabs.md)
 * [SL_ShootProjectile.ProjectilePrefabs](API/Enums/ProjectilePrefabs.md)
 * [SL_PlayVFX.VFXPrefabs](API/Enums/VFXPrefabs.md)
+* [Tag.TagTypes](API/Enums/TagTypes.md)
 * [Weapon.WeaponType](API/Enums/WeaponType.md)
