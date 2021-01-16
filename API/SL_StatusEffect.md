@@ -106,6 +106,7 @@ Your tags XML should look like this, for example:
 
 `BindFamily` (SL_StatusEffectFamily)
 * If using `Bind` FamilyMode, define the family here.
+* <b>NOTE:</b> A bind family cannot be referenced as a Status Family elsewhere (ie, you can't use a Bind Family for a HasStatusEffectEffectCondition). If you want this family to be "public", you need to use a Reference family.
 * See [SL_StatusEffectFamily](API/SL_StatusEffectFamily) for details on these fields
 
 `ReferenceFamilyUID` (string)

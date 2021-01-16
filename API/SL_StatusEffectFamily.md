@@ -4,7 +4,9 @@ The `SL_StatusEffectFamily` class is used to define a custom Status Effect famil
 
 There is not currently a template generator for SL_StatusEffectFamily, so an example for XML and C# will be provided below.
 
-?> Note: Currently this is only really intended for creating new families, I have not experimented with editing existing ones.
+?> Note: Currently this is only really intended for creating new <b>Reference</b> families, I have not experimented with editing existing ones.
+
+?> Note 2: This is not for Bind families. A Bind family cannot be referenced as a Status Family elsewhere (ie, you can't use a Bind Family for a HasStatusEffectEffectCondition). Bind families should be defined directly on the StatusEffect itself.
 
 ## Fields
 
