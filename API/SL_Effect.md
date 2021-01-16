@@ -560,11 +560,7 @@ You can either use the <b>Identifier Name</b> of the status, or a <b>Tag</b> tha
 * If `StatusType`, checks for statuses with a Tag that matches your SelectorValue
 * If `StatusFamily`, checks for <b>Reference</b> status family UIDs that match your SelectorValue 
 * For a list of Status Identifiers, see [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1969601658)
-
-`Status_Tag` (string)
-* <b>Only valid if you ARE using `StatusType` for the CleanseType!</b>
-* If there's a tag you want to search for on the status and remove all statuses with that tag, set it here.
-* See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
+* See [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
 
 ## SL_RunicBlade : SL_Effect
 This effect is uniquely used by the Runic Blade skill. However, it could be used for other purposes too.
