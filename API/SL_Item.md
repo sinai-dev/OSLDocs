@@ -226,6 +226,9 @@ For example:
 `Mana_Use_Modifier` (float)
 * Works the same way as stamina use penalty, but for mana.
 
+`Mana_Regen` (float)
+* Base mana regen stat per second
+
 `Movement_Penalty` (float)
 * A positive value will reduce movement speed, a negative value increases it.
 

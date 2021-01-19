@@ -2,6 +2,8 @@
 
 The <b>SideLoader Menu</b> can be used for generating Templates from existing Items, Status Effects and Enchantment recipes, and has a few other various helpers.
 
+?> SideLoader has received a major update to its menu in v3.2.0, these docs are not yet updated for the changes.
+
 ## Using The Menu
 
 Open your in-game keybindings and set a binding for the SideLoader Menu. 

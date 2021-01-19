@@ -1,5 +1,7 @@
 # Custom Items
 
+?> SideLoader has received a major update to its menu in v3.2.0, these docs are not yet updated for the changes.
+
 <b>Custom Items</b> can be used to make completely new items or modify existing ones. This includes generic items, consumables, equipment, weapons, and skills. You can do this either from an SL Pack, or directly from your own C# mod.
 
 Make sure you have first had a quick read of the [SL Packs](Basics/SLPacks) article to understand how to work with SideLoader from folders. No knowledge of C# is necessary for this.
