@@ -27,17 +27,15 @@ This is a rough plan of the development of SideLoader. The order is not set in s
 ## v3
 - [x] XML Skill Trees
 - [x] Improved SL Menu
-  - [ ] Browser for loaded SL Packs
-  - [ ] Editing SL templates
-- [ ] Some ability to edit VFX prefabs (at least color)
+  - [x] Browser for loaded SL Packs
+  - [x] Editing SL templates
+- [x] Custom Status Families
+- [x] SL_Summon support for SL_Characters
 - [ ] XML Custom Tags
-- [ ] Custom meshes and animator controllers for SL_Characters
-- [ ] Custom Dialogue / NodeCanvas Support
-- [ ] Custom Status Families
+- [ ] Some ability to edit VFX prefabs (at least color)
 - [ ] Item Sources (adding items to merchants, droptables, etc)
+- [ ] Custom Dialogue / NodeCanvas Support
 - [ ] Custom Props
-- [ ] Custom Scenes
 - [ ] Custom Quests, or at least SL_Quest (SL_Item)
-
-Maybe:
-- [ ] SL_Summon support for SL_Characters (possible, but how would cleanup work?)
+- [ ] Custom Scenes
+- [ ] Custom meshes and animator controllers for SL_Characters
