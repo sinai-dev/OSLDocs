@@ -12,20 +12,39 @@ You can make a recipe scroll with a `SL_RecipeItem` template. See the [SL_Item](
 #### ** Universal **
 
 `UID` (string)
-* Used by Recipe Scroll items. Those items require a UID to learn the appropriate recipe.
 * You can set anything, but best to use something like a `myname.myrecipe` format.
+* Used by Recipe Scroll items. Those items require a UID to learn the appropriate recipe.
 
 `StationType` (enum)
 * Can be exactly one of: `Survival`, `Alchemy`, `Cooking`, or `Forge` (unused)
 
 `Ingredients` (list of Ingredient)
 * Add between 1 and 4 ingredients
-* Each ingredient can be either a `AddSpecificIngredient` for an Item ID, or `AddGenericIngredient` for a Tag.
-* See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
+* See SL_Ingredient below for more details.
 
 `Results` (list of ItemQty)
 * You can add any number of results that you want.
 * Each must have an `ItemID`, and `Quantity` for the result.
+
+### Ingredient
+`Ingredient` is the class used to contain your ingredient info.
+
+`Type` (enum)
+* Can be either a `AddSpecificIngredient` for an Item ID, or `AddGenericIngredient` for a Tag.
+
+`SelectorValue` (string)
+* If setting to a specific item, use that item's Item ID.
+* If setting to a generic tag, use the tag name. See [this google sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
+
+### ItemQty
+`ItemQty` is the class used to contain the result item(s) info.
+
+`ItemID` (int)
+* The result item's Item ID
+
+`Quantity` (int)
+* How many to receive, usually 1. Setting to 0 or below will do nothing.
+
 
 #### ** XML **
 
@@ -41,30 +60,23 @@ You can make a recipe scroll with a `SL_RecipeItem` template. See the [SL_Item](
     <Ingredient>
       <!-- Type: "AddSpecificIngredient" for an Item ID, or "AddGenericIngredient" for a Tag Name -->
       <Type>AddSpecificIngredient</Type>
-
-      <!-- Use "Ingredient_ItemID" for AddSpecificIngredient -->
-      <Ingredient_ItemID>2010070</Ingredient_ItemID>
+      <SelectorValue>2010070</SelectorValue>
     </Ingredient>
 
     <Ingredient>
       <Type>AddGenericIngredient</Type>
-
-      <!-- Use "Ingredient_Tag" for AddGenericIngredient -->
-      <Ingredient_Tag>Water</Ingredient_Tag>
-    </Ingredient>
-
-    <!--
-    <Ingredient>
-      <Type>AddSpecificIngredient</Type>
-      <Ingredient_ItemID>2010070</Ingredient_ItemID>
+      <SelectorValue>Water</SelectorValue>
     </Ingredient>
 
     <Ingredient>
       <Type>AddSpecificIngredient</Type>
-      <Ingredient_ItemID>2010070</Ingredient_ItemID>
+      <SelectorValue>2010070</SelectorValue>
     </Ingredient>
 
-    -->
+    <Ingredient>
+      <Type>AddSpecificIngredient</Type>
+      <SelectorValue>2010070</SelectorValue>
+    </Ingredient>
 
   </Ingredients>
 
