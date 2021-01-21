@@ -157,6 +157,10 @@ For adding a build-up effect, usually used by Hit effects.
 `BypassCounter` (bool)
 * Does this effect ignore counters?
 
+`AffectController` (boolean)
+* Default `false`
+* If true, would override the affected character to the owner of this effect (ie. person creating it)
+
 ## SL_AddStatusEffectBuildUpInstrument : SL_AddStatusEffectBuildUp
 Inherits from `SL_AddStatusEffectBuildUp`, and contains one extra field.
 
@@ -331,7 +335,7 @@ Used by the "Cold" disease, interrupts the player's actions.
 * Value from 0 to 100, what is the general chance for the Cough to trigger when this effect is activated?
 
 ## SL_CreateItemEffect : SL_Effect
-Used to add an item to the caster's inventory.
+Used to add an item to the affected character's inventory.
 
 `ItemToCreate` (int)
 * The Item ID to create
@@ -625,7 +629,7 @@ ShootBlast inherits from SL_Shooter, and contains some extra fields.
 
 `InstantiatedAmount` (integer)
 * Determines the <b>maximum copies of the blast</b> which can be active at once.
-* Think about how many you would need (per caster) at any one time, and set to that.
+* Think about how many you would need (per affected character) at any one time, and set to that.
 
 `Interruptible` (boolean)
 * Can the blast be interrupted?
@@ -938,7 +942,7 @@ Used by the Sweep Kick skill (if target has Confusion).
 * Duration of the stun.
 
 ## SL_SpawnSLCharacter : SL_Effect
-The `SL_SpawnSLCharacter` class is a custom non-game class which can be used to spawn an [SL_Character](API/SL_Character) from an effect. It can also make the character follow the caster of the effect.
+The `SL_SpawnSLCharacter` class is a custom non-game class which can be used to spawn an [SL_Character](API/SL_Character) from an effect. It can also make the character follow the affected character of the effect.
 
 `SLCharacter_UID` (string)
 * The SL_Character template UID which you want to spawn
@@ -946,7 +950,7 @@ The `SL_SpawnSLCharacter` class is a custom non-game class which can be used to 
 `GenerateRandomUIDForSpawn` (boolean)
 * If true, will generate a unique UID for each spawned character, allowing you to re-use the template for dynamic spawns.
 
-`TryFollowCaster` (boolean)
+`TryFollowaffected character` (boolean)
 * If true, will try to follow the person who created this effect. This <b>requires</b> you to set the `Wander_Type` on the SL_CharacterAI to `Follow`. You should also set `Wander_FollowPlayer` to <b>false</b> if you are using this.
 
 `SpawnOffset` (Vector3)
@@ -980,13 +984,13 @@ This effect type is used by skills like Conjure (Summoned Ghost), but also for t
 * Must be exactly one of: `InFrontOfTarget`, `AroundTarget`, `ProximitySkillItem` or `ProximitySoulSpot`.
 
 `MinDistance` (float)
-* Minimum distance of summon from caster (only at time of cast)
+* Minimum distance of summon from affected character (only at time of cast)
 
 `MaxDistance` (float)
-* Max distance of summon from caster (only at time of cast)
+* Max distance of summon from affected character (only at time of cast)
 
 `SameDirectionAsSummoner` (boolean)
-* Summoned prefab has same facing direction as caster?
+* Summoned prefab has same facing direction as affected character?
 
 `SummonLocalForward` (Vector3)
 * Optional extra position added to Summoned prefab
@@ -995,13 +999,13 @@ This effect type is used by skills like Conjure (Summoned Ghost), but also for t
 * Does the effect ignore when prefab is destroyed?
 
 ## SL_SummonAI : SL_Summon
-This effect inherits from SL_Summon. It contains no extra fields, it just tells the game you are summoning an AI Character which will follow the caster.
+This effect inherits from SL_Summon. It contains no extra fields, it just tells the game you are summoning an AI Character which will follow the affected character.
 
 ## SL_SummonBloodSpirit : SL_SummonAI
 Like SL_SummonAI, but it tells the game you are summoning a "Blood Spirit" (probably DLC-related).
 
 ## SL_Teleport : SL_Effect
-Teleports the caster.
+Teleports the affected character.
 
 `MaxRange` (float)
 * Maximum teleport range.

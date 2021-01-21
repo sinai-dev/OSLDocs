@@ -69,19 +69,24 @@ The game checks if your TransformName <b>contains</b> one of the following <b>ke
 * For standard activation effects, ie. using the item or activating the skill
 * Unlike `Activation`, these effects happen during the animation at a certain point depending on the animation
 * For status effects, these are applied on each refresh.
+* The affected character is the person activating/creating this effect.
 
 `Hit`
-* Used for on-hit effects. These effects apply to the hit character.
+* Used for on-hit effects.
+* The affected character is the person <b>hit by the hit-effects</b>.
 * <b>Note:</b> your conditions will also be evaluated against this character, unless the class allows you to override the check to the owner character.
 
 `Passive`
 * For passive effects, these apply only once when the passive is learned or loaded from a save.
+* The affected character is the person activating/creating this effect.
 
 `Activation`
 * Used immediately on activation, before the animation begins.
+* The affected character is the person activating/creating this effect.
 
 `Block`
 * Used for skills that have on-block effects
+* The affected character is the character who blocked the attack.
 
 There is one unique exception: if the TransformName is <b>exactly</b> `Effects`, `Effect`, `ExtraEffects` or `HiddenEffects`, it works the same as the `Normal` keyword. This is likely just an internal thing for the devs before they made the keyword system.
 

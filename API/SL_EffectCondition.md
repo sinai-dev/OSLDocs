@@ -127,13 +127,13 @@ To check the current health of the character, by default it checks that they are
 * If true, your percentage Value will be based on the character's active max health, ignoring burnt health.
 
 ## SL_HasQuantityItemsCondition : SL_EffectCondition
-Checks if the caster owns a total number of items (any item).
+Checks if the affected character owns a total number of items (any item).
 
 `TotalItemsRequired` (integer)
 * The total items required.
 
 ## SL_HasStatusEffectEffectCondition : SL_EffectCondition
-Checks if the caster has a Status Effect or not.
+Checks if the affected character has a Status Effect or not.
 
 `DiseaseAge` (float)
 * If checking for a disease, the minimum age of the disease.
@@ -184,7 +184,7 @@ Checks the height of the character (relative to nearest ground? or just in gener
 Checks if the character is in a town or city, contains no extra fields.
 
 ## SL_ImbueEffectCondition : SL_EffectCondition
-Checks if the caster has an imbue.
+Checks if the affected character has an imbue.
 
 `ImbuePresetID` (integer)
 * The Preset ID of the Imbue required.
@@ -217,7 +217,7 @@ Requires an Instrument item to be within a certain distance.
 * A list of ints for other accepted Instrument Item IDs
 
 `Range` (float)
-* Max distance from caster for the instrument to be
+* Max distance from affected character for the instrument to be
 
 ## SL_InZoneCondition : SL_EffectCondition
 I'll be honest, I don't really know how this one works. It might not actually be a real condition that is used.
@@ -233,7 +233,7 @@ Checks if the given EquipmentSlot has something equipped or not.
 * Must be one of [these values](API/Enums/EquipmentSlotIDs.md).
 
 ## SL_IsWorldHostCondition : SL_EffectCondition
-Self-explanatory condition. Is the caster the world host or not? This condition has no extra fields.
+Self-explanatory condition. Is the affected character the world host or not? This condition has no extra fields.
 
 ## SL_MostRecentCondition : SL_EffectCondition
 Used by Runic spells to check which of two status effects is most recent.
@@ -251,7 +251,7 @@ Prevents multiple of the same shooter from creating this effect in a certain ran
 * The range for only 1 of the shooter to be active inside.
 
 ## SL_OwnsItemCondition : SL_EffectCondition
-Checks if the caster owns an amount of a specific Item ID.
+Checks if the affected character owns an amount of a specific Item ID.
 
 `ReqItemID` (integer)
 * The Item ID required
@@ -260,7 +260,7 @@ Checks if the caster owns an amount of a specific Item ID.
 * Required amount of this item
 
 ## SL_PassiveSkillCondition : SL_EffectCondition
-Checks if the caster has a passive skill of this Item ID.
+Checks if the affected character has a passive skill of this Item ID.
 
 `ReqSkillID` (integer)
 * The required passive skill ID.
