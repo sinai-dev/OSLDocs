@@ -1,7 +1,5 @@
 # Custom Status Effects
 
-?> SideLoader has received a major update to its menu in v3.2.0, these docs are not yet updated for the changes.
-
 <b>Custom Status Effects</b> can be used to make completely new Status Effects and Imbues or modify existing ones. You can do this either from an SL Pack, or directly from your own C# mod.
 
 The SL Pack sub-folder for custom Status Effects is `StatusEffects\`.
