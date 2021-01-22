@@ -10,7 +10,7 @@ Press the button and the menu should open. If it does not, you may have installe
 
 ## Menu Overview
 
-![](img/menu.png "SL Menu Overview")
+![](https://sinai-dev.github.io/OSLDocs/img/menu.png "SL Menu Overview")
 
 ### Menu Notes
 * To delete something from an SL Pack, you need to manually delete the XML file. By default, new packs are created to `Mods\SideLoader\...`.
