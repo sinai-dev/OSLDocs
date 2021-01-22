@@ -1,6 +1,6 @@
 # SL Menu
 
-The <b>SideLoader Menu</b> can be used for generating Templates from existing Items, Status Effects and Enchantment recipes, and has a few other various helpers.
+The <b>SideLoader Menu</b> can be used for the creation and editing of SL Packs and their contents, as well as some other features.
 
 ## Using The Menu
 
