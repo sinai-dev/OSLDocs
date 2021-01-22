@@ -15,9 +15,9 @@ If you wanted to spawn the characters from an effect on a weapon or skill, you c
 
 <!-- tabs:start -->
 
-#### ** XML **
+#### ** XML/SLMenu **
 
-Currently, there is no debug menu generator for characters, so I'll just provide an example template here.
+You can create/edit an SL_Character from the SL Menu. For this example, I will provide a completed SL_Character template. Save this as an `.xml` file and put it in the `Characters\` sub-folder of your SL Pack. Load up the game and open the SL Menu (or hot-reload), and look at the Characters folder of your pack, you should now see the Character.
 
 For SL_CharacterTrainers, see below.
 
@@ -58,7 +58,7 @@ For SL_CharacterTrainers, see below.
   <Faction>Bandits</Faction>
   
   <!-- If you want to set manual targetable factions, uncomment and set them here. -->
-  <!-- <TargetableFactions>
+  <TargetableFactions>
 	<Factions>Player</Factions>
 	<!-- etc... -->
   </TargetableFactions> -->
@@ -235,15 +235,20 @@ In addition to the example below, there is C# summary documentation that you can
 
 The C# classes for custom characters are `SL_Character` and `CustomCharacters`.
 
-### OnSpawn Event
+### Events
 
-`public event Action<Character, string> OnSpawn`
+`Action<Character, string> OnSpawn`
+* The most important thing to know about your SL_Character template is the OnSpawn event.
+* This event is invoked <b>locally</b> for <b>all clients</b> via RPC. You do not need to use your own RPC manager for this.
+* When you call `CreateCharacter` manually, you can include a `string extraRpcData` with any manual network sync that you want to send.
 
-The most important thing to know about your SL_Character template is the OnSpawn event.
+`Action<Character, string, string> OnSaveApplied`
+* OnSaveApplied is called when a save is applied to an SL_Character.
+* The first string contains the `extraRpcData` which was provided to the Spawn method (if any), and the second string is `extraSaveData` which you may have provided for the OnCharacterBeingSaved event.
 
-This event is invoked <b>locally</b> for <b>all clients</b> via RPC. You do not need to use your own RPC manager for this.
-
-When you call `CreateCharacter` manually, you can include a `string extraRpcData` with any manual network sync that you want to send.
+`Func<Character, string> OnCharacterBeingSaved`
+* OnCharacterBeingSaved is called before an SL_Character is saved.
+* The return string value you must provide is the `extraSaveData` that will be provided to OnSaveApplied for you.
 
 ### Examples
 

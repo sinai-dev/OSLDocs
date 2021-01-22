@@ -1,7 +1,5 @@
 # Custom Items
 
-?> SideLoader has received a major update to its menu in v3.2.0, these docs are not yet updated for the changes.
-
 <b>Custom Items</b> can be used to make completely new items or modify existing ones. This includes generic items, consumables, equipment, weapons, and skills. You can do this either from an SL Pack, or directly from your own C# mod.
 
 Make sure you have first had a quick read of the [SL Packs](Basics/SLPacks) article to understand how to work with SideLoader from folders. No knowledge of C# is necessary for this.
@@ -20,7 +18,7 @@ For full documentation about the SL_Item class, see [SL_Item](API/SL_Item.md).
 
 <!-- tabs:start -->
 
-#### ** XML **
+#### ** XML/SLMenu **
 
 Make sure you have enabled the <b>Outward Debug Menu</b> for this guide first:
 1. Open the folder `Outward\Outward_Data\`
@@ -29,36 +27,21 @@ Make sure you have enabled the <b>Outward Debug Menu</b> for this guide first:
 We are going to use the [SL Menu](Basics/SLMenu.md) to generate a template from an existing Item for us.
 
 1. Go into your Keybindings and set a binding for the SL Menu if you have not already, then open the menu.
-2. In the Items section, enter `2000010` as the Item ID. 
-3. Press the button to generate the template.
-
-Let's find the template SideLoader generated.
-
-1. Press the button at the top of the menu to open the "_GENERATED" folder (`Outward\Mods\SideLoader\_GENERATED\`)
-2. Inside here, you should see an `Items\` sub-folder
-3. Inside Items, you should see a folder called `2000010_IronSword\`.
-
-Now we need to move this folder into our own SL Pack.
-
-1. <b>Cut</b> this Iron Sword folder (Ctrl+X)
-2. Go back to the `SideLoader\` folder. Create a new folder in here called `Test\`. 
-3. Create a sub-folder in Test called Items (`Test\Items\`)
-4. <b>Paste</b> (Ctrl+V) the Iron Sword folder in here. 
-
-It should now look like this: `Outward\Mods\SideLoader\Test\Items\2000010_IronSword\`.
-
-Note: You can also put the XML file directly in the `Items\` folder if you don't want to change the textures or icons.
+2. Create an SL Pack or select an existing one
+3. Select the "Items" category of the SL Pack (it is selected by default)
+4. In the Target ID field, enter `Iron Sword` and click on the Iron Sword option of the auto-completer. Alternatively, just enter `2000010`.
+5. Press the button to generate the template.
 
 Now let's make a basic change to the Item.
 
-1. Open the `Iron Sword.xml` file and have a look. 
-2. Replace the `<Description />` value with this: `<Description>Test.</Description>`
-3. In the SL Menu under the "SL Packs" tab, press the Hot Reload button to reload all SL Packs.
-4. Load a character and press <b>F1</b> to open the Item Spawner, then spawn an Iron Sword and have a look, our description should now be set.
+1. Change the `SL_Item.Description` by typing into the input field on that row and pressing "Apply".
+2. Press the Hot Reload button up the top-left to reload all SL Packs.
+3. Load a character and press <b>F1</b> to open the Item Spawner, then spawn an Iron Sword and have a look, our description should now be set.
+4. <b>Note:</b> Existing spawned objects will not be affected by a Hot Reload unless you go back to the menu or reload the scene first.
 
 ![It worked!](https://i.imgur.com/UxuA8ky.png)
 
-If there were any errors, SideLoader should log them in the file `Outward\BepInEx\LogOutput.log`.
+If there were any errors, SideLoader should log them in the <b>Debug Console</b> of the menu, and also to the file `Outward\BepInEx\LogOutput.log`.
 
 #### ** C# **
 
