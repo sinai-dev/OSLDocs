@@ -19,6 +19,9 @@ See [SL Menu](Basics/SLMenu.md) for details on how to dump Enchantments and see 
 `Description` (string)
 * Description (displayed when inspecting the <b>applied</b> enchantment). Not all Enchantments use this.
 
+`IsEnchantingGuildRecipe` (boolean)
+* Is this for the New Sirocco Enchanting Guild? True if so, false otherwise.
+
 `IncenseItemID` (int)
 * The Item ID for the Incense required by this recipe.
 
