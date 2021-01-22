@@ -147,9 +147,9 @@ Checks if the affected character has a Status Effect or not.
 
 `SelectorValue` (string)
 * Depends on your StatusSelectorType
-* If `StatusSpecific`, checks for a Status Identifier of this name
-* If `StatusType`, checks for a status with this Tag
-* If `StatusFamily`, checks for a status family with this UID
+* If `StatusSpecific`, checks for a Status Identifier of this name, meaning it checks the `SL_StatusEffect.StatusIdentifier` for an exact match.
+* If `StatusType`, checks for a status with this Tag. This means it checks the `SL_StatusEffect.Tags` for one or more matches.
+* If `StatusFamily`, checks for a status family with this UID, which can be either the Status Effect's Bind or Reference family (depending on family mode).
 
 ## SL_HasStatusLevelCondition : SL_EffectCondition
 Similar to HasStatusEffectEffectCondition, but checks for a Level-Status Effect (like Alertness).
