@@ -33,6 +33,7 @@
   - [SL_SkillTree](API/SL_SkillTree.md)
   - [SL_StatusEffect](API/SL_StatusEffect.md)
   - [SL_StatusEffectFamily](API/SL_StatusEffectFamily.md)
+  - [SL_TagManifest](API/SL_TagManifest.md)
 
 <!-- empty block so buttom link isn't cut off on mobile. -->
 <div style="height:40px; display:block;"></div>
