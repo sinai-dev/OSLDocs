@@ -31,4 +31,22 @@ For C#, you can also just use the `CustomTags` class to easily define a custom t
 var myTag = CustomTags.CreateTag("MyUniqueTag");
 ```
 
+Otherwise, to use the full SL_TagManifest, do something like this:
+
+```csharp
+var manifest = new SL_TagManifest
+{
+    Tags = new List<SL_TagDefinition>
+    {
+        new SL_TagDefinition
+        {
+            TagName = "MyTag",
+            OptionalTagUID = "myname.tags.mytag",
+        }
+    }
+};
+
+manifest.CreateContent();
+```
+
 <!-- tabs:end -->
