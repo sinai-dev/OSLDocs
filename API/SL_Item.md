@@ -14,7 +14,9 @@ All SL_Item classes have these fields.
 * The Item ID of the Item you are cloning <b>from</b>, or the item you want to edit. If you leave out fields on the template, it will default to the value from this item.
 
 `New_ItemID` (integer)
-* The Item ID you want to apply the template <b>to</b>. It can be a new or existing ID. If not set, this will default to the Target ID.
+* The Item ID you want to apply the template <b>to</b>. It can be a new or existing ID. If set to -1, this will default to the Target ID.
+* <b>You can use an Item ID below 0</b>, which is recommended for custom modded items. The game does not use any ID's below 0, so they are all safe for us to take.
+* If you want to be compatible with other mods, coordinate with us in the [Outward Modding Discord](https://discord.gg/E9jaeUm) to reserve an ID range.
 
 `Name` (text)
 * The item name.
@@ -689,6 +691,10 @@ It should look like this in XML:
 `SubfolderName`
 * If setting custom textures or icons, the name of the subfolder in the `Items` folder of the SLPack which contains your `Textures` folder to use
 * See [Custom Item Visuals](Guides/ItemVisuals.md) for more information
+
+`SL_Item.CurrentlyAppliedTemplates` (List<SL_Item>)
+* Static list of all currently applied SL_Item templates.
+* This is reset on Hot Reload.
 
 ### Methods
 
