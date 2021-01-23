@@ -31,9 +31,9 @@ This is a rough plan of the development of SideLoader. The order is not set in s
   - [x] Editing SL templates
 - [x] Custom Status Families
 - [x] SL_Summon support for SL_Characters
-- [ ] XML Custom Tags
-- [ ] Some ability to edit VFX prefabs (at least color)
+- [x] XML Custom Tags
 - [ ] Item Sources (adding items to merchants, droptables, etc)
+- [ ] Some ability to edit VFX prefabs (at least color)
 - [ ] Custom Dialogue / NodeCanvas Support
 - [ ] Custom Props
 - [ ] Custom Quests, or at least SL_Quest (SL_Item)
