@@ -699,7 +699,7 @@ It should look like this in XML:
 * The OnInstanceStart event is called when an Item with this template's applied ID is created or loaded during gameplay, in an actual scene.
 * `Action<Item> listener` is your callback. The Item argument passed to your method is the instance that was just created.
 
-`static AddOnInstanceStartListener(int itemID, Action<Item> listener)`
+`static SL_Item.AddOnInstanceStartListener(int itemID, Action<Item> listener)`
 * Same as the non-static version (above), but you can use this to add a callback for ANY Item ID, even if you're not making a template for it.
 
 ### Events
