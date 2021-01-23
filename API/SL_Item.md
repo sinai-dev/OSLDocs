@@ -211,14 +211,16 @@ For example:
 ```
 
 `Impact_Resistance` (float)
-* Impact resistance stat, 0-100
+* Impact resistance stat, usually -100 to 100
 
 `Damage_Protection` (float)
-* Physical protection stat, 0-100
+* Physical protection stat, usually -100 to 100
 
 `Damage_Bonus` (list of float)
-* Same as Damage_Resistance, but for damage bonuses instead.
-* Normal values are between -100 and 100.
+* Same as Damage_Resistance, but for damage bonuses instead, usually -100 to 100
+
+`Impact_Bonus` (float)
+* Bonus impact damage modifier stat, usually -100 to 100.
 
 `Stamina_Use_Penalty` (float)
 * Positive values mean it increases stamina costs, negative values decreases stamina costs.
@@ -696,6 +698,9 @@ It should look like this in XML:
 `AddOnInstanceStartListener(Action<Item> listener>)`
 * The OnInstanceStart event is called when an Item with this template's applied ID is created or loaded during gameplay, in an actual scene.
 * `Action<Item> listener` is your callback. The Item argument passed to your method is the instance that was just created.
+
+`static AddOnInstanceStartListener(int itemID, Action<Item> listener)`
+* Same as the non-static version (above), but you can use this to add a callback for ANY Item ID, even if you're not making a template for it.
 
 ### Events
 

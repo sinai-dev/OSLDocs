@@ -26,6 +26,7 @@ The sub-folders you can create are:
 * `Recipes\`
 * `StatusEffects\`
 * `StatusFamilies`
+* `Tags\`
 * `Texture2D\`
 
 ### AssetBundles
@@ -89,6 +90,12 @@ See also: [Custom Statuses](Guides/StatusEffects.md)
 The `StatusFamilies\` folder is used to define custom Status Effect Families.
 
 See [SL_StatusEffectFamily](API/SL_StatusEffectFamily.md) for more details.
+
+### Tags
+
+The `Tags\` folder is used to define Custom Tags.
+
+You can define `SL_TagManifest` XMLs in here (or using the SL Menu), and these tags will be created for you or others to use in the game.
 
 ### Texture2D
 
