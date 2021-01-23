@@ -97,6 +97,8 @@ The `Tags\` folder is used to define Custom Tags.
 
 You can define `SL_TagManifest` XMLs in here (or using the SL Menu), and these tags will be created for you or others to use in the game.
 
+See [SL_TagManifest](API/SL_TagManifest.md) for more details.
+
 ### Texture2D
 
 The `Texture2D\` folder is used for loading or replacing textures. SideLoader will find currently loaded textures which have the same name and replace them.
