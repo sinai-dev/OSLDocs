@@ -46,6 +46,18 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 * Optional, you can set this to manually define a list of targetable factions.
 * Same possible values as Factions, but its a list.
 
+### Loot Drops
+
+`LootableOnDeath` (boolean)
+* Should the character be lootable on death? This adds the loot interaction to them when they die.
+* If using pouch and/or weapon drops, see the Equipment sub-heading below.
+
+`DropPouchContents` (boolean)
+* If LootableOnDeath is true, should the character drop their pouch contents?
+
+`DropWeapons` (boolean)
+* If LootableOnDeath is true, should the character drop their weapon and/or shield? (These literally drop on the ground if equipped)
+
 ### Visual Data
 The `CharacterVisualsData` field contains the visual data. You can set it to null or delete it for default visuals.
 
@@ -67,7 +79,7 @@ The `CharacterVisualsData` field contains the visual data. You can set it to nul
 `HairColorIndex` (integer)
 * Chosen hair color, corresponds to the character creation options.
 
-### Equipment IDs
+### Equipment
 You can set the Item ID for each equipment slot on the character. These should be fairly self-explanatory.
 
 `Weapon_ID` (integer)
@@ -81,6 +93,28 @@ You can set the Item ID for each equipment slot on the character. These should b
 `Boots_ID` (integer)
 
 `Backpack_ID` (integer)
+
+`Pouch_Items` (List of SL_ItemQty)
+* A list of starting items in the character's pouch.
+* These could be used for various things, mainly as guaranteed drops.
+* You must enable LootableOnDeath and DropPouchContents if you want to drop these items for the player.
+* See SL_ItemQty below.
+
+`Backpack_Items` (List of SL_ItemQty)
+* If setting these, you must define a Backpack_ID for the character.
+* A list of SL_ItemQty objects which are the contents of the backpack.
+* If you define a Lantern, Sideloader will automatically light it and hang it from the backpack.
+* See SL_ItemQty below.
+
+#### SL_ItemQty
+The SL_ItemQty class is a simple holder for defining a quantity of an item.
+
+`ItemID` (int)
+* The Item ID.
+
+`Quantity` (int)
+* The quantity of the item, default 1.
+
 
 ### Character Stats
 The next few fields relate to the character's stats.
