@@ -465,7 +465,7 @@ Used to play a VFX System (visual effects).
 * If `FXWorld`, it will set the parent to the global FX transform holder
 
 `DontInstantiateNew` (boolean)
-* If `false`, it will instantiate a new prefab each activation
+* <b>This should be false in almost all cases</b>, only set to true if you know you need to (or the thing you're editing had it as true maybe).
 
 ## SL_PlayTimedVFX : SL_PlayVFX
 Inherits from `SL_PlayVFX`, and just contains one extra field which allows you to stop the VFX after a delay.
