@@ -35,6 +35,16 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 * Optional, only used if SceneToSpawn is set.
 * A Vector3 for the spawn rotation.
 
+`StartingPose` (enum)
+* Can use any of [these values](API/Enums/SpellCastType).
+* The starting pose animation for the Character, which will be interrupted by movement or combat.
+
+`Scale` (Vector3)
+* The character's physical scale, by default `Vector3.one` (1.0, 1.0, 1.0).
+
+`StartSheathed` (boolean)
+* Should the character be sheathed on spawn? Default true.
+
 `DestroyOnDeath` (boolean)
 * If true, the character will be destroyed after they die
 
@@ -301,6 +311,26 @@ For more information on SL_SkillTree, see [Skill Trees](Guides/SkillTrees.md).
 For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characters.md).
 
 #### ** C# Only **
+
+### Fields
+
+`ShouldSpawn` (bool Function)
+* The <b>optional</b> ShouldSpawn delegate accepts a `Func<bool>` method, which will determine if the SL_Character should spawn for a Scene-type spawn or not.
+* Does not affect manual dynamic spawns (just check it yourself in that case)
+
+For example:
+```csharp
+myCharacter.ShouldSpawn = () => { true; };
+
+// or 
+
+myCharacter.ShouldSpawn = ShouldSpawnMyChar;
+
+private bool ShouldSpawnMyChar()
+{
+	// ...
+}
+```
 
 ### Methods
 
