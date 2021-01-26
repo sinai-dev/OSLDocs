@@ -62,7 +62,20 @@ The chance for each drop is not set directly as a % value, but as a Dice Value w
 
 `Drops` (list of SL_ItemDropChance)
 * The random drops on your table. Their Dice Value weights (along with the NoDrop) will determine their relative drop chance.
-* For example, if your NoDrop chance was set to 5 and you have one SL_ItemDropChance with a DiceValue of 10, this would mean you have a ~66.6% chance of receiving the drop and a ~33.3% chance of receiving nothing.
+
+#### Drop-rate examples
+The drop rates are determined through an imaginary "dice roll", where each drop has an associated unique range of values from 0 to the maximum dice value. Each drop may occupy 1 or more values, but no two ranges will overlap - they will be laid out consecutively after each other.
+
+For one example, if your `NoDrop_DiceValue` was set to 5 and you have <b>one</b> `SL_ItemDropChance` of Iron Sword with a `DiceValue` of 10, this would mean you have:
+* `0 to 4` = no drop (~33.3%, range of 5)
+* `5 to 14` = Iron Sword (~66.6%, range of 10)
+* Total dice range of 15 (values 0 to 14).
+
+For another example, let's say you have a NoDrop of 10 and <b>two</b> drops with dice values of 5 for Iron Sword and 15 for Salt respectively, you will now have:
+* `0 to 9` = no drop (~33.3%, range of 10)
+* `10 to 14` = Iron Sword (~16.6%, range of 5)
+* `15 to 29` = Salt (50%, range of 15)
+* Total dice range of 30 (values 0 to 29).
 
 #### ** C# only **
 
