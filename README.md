@@ -15,8 +15,6 @@ See also:
 
 SideLoader supports both C# and non-C# approaches to mod development, so no knowledge of programming is necessary (although it does help!).
 
-On the SideLoader Docs, in some places there will be both <b>C#</b> and <b>XML</b> (non-C#) instructions for the same thing, use the tabs to view the side which is relevant to you.
-
 A recommend starting point is the [Overview](Basics/Overview) article, or following along with the articles in the <b>Guides</b> category.
 
 ### Credits
