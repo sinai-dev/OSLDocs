@@ -86,11 +86,11 @@ Used by Jinx to apply a random Status Effect from a list of possible values.
 
 `StatusIdentifiers` (list of string)
 * The list of Status identifiers to choose from
-* Each value is a `<string>IdentifierName</string>`
 
 `ForceID` (int)
 * If you want to override the result to a certain value, set this
 * This is the index of the StatusIdentifiers list (starting at 0) to choose.
+* Not really sure what this would be used for in reality...
 
 ## SL_AddBoonEffect : SL_AddStatusEffect
 This is used for Boons, for the Amplified Effect (with Shamanic Resonance).
@@ -394,8 +394,8 @@ This is a custom effect used to manually trigger an animation on the affected ch
 `SheatheRequired` (integer)
 * Sets the type of weapon sheathing behavior when the animations plays
 * `0` or `-1` = not set, do nothing
-* `1` = unsheathe required
-* `2` = sheathe required
+* `1` = sheathe required
+* `2` = unsheathe required
 
 ## SL_PlaySoundEffect : SL_Effect
 This one is obviously for playing a sound effect. You can pick any sound from the global list.
