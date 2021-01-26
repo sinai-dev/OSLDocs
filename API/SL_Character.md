@@ -369,9 +369,9 @@ myCharacter.ShouldSpawn = () => { return shouldSpawn; };
 
 `Func<Character, string> OnCharacterBeingSaved`
 * Invoked as the character is being saved.
-* The Character argument is the character being saved
-* The string argument is the data you must provide as the return value, which is sent to the OnSaveApplied method.
-* For example, `public string MySaveMethod(Character character) { /* ... */ }`
+* The Character argument passed to your method is the character being saved
+* The string return argument is your string data, which is sent to the OnSaveApplied method.
+* For example, `public string OnSaveBeingApplied(Character character) { return "hello world"; }`
 
 ## CustomCharacters
 
