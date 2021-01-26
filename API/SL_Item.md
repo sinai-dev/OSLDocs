@@ -166,10 +166,7 @@ Along with all the SL_Item fields, you have the following:
 
 ### SL_EquipmentStats : SL_ItemStats
 
-The <b>Equipment Stats</b> overrides the base `StatsHolder` field. It will look like:
-```xml
-<StatsHolder xsi:type="SL_EquipmentStats">
-```
+The <b>Equipment Stats</b> inherints from SL_ItemStats, and contains stats relating to combat, needs etc.
 
 `Damage_Resistance` (list of floats)
 * This is a list of float number values which sets the Damage Resistance of the equipment.
@@ -177,14 +174,14 @@ The <b>Equipment Stats</b> overrides the base `StatsHolder` field. It will look 
 * Define a `<float></float>` for each entry. There must be at least 6 entries, though technically the game uses 9.
 * The order is: <b>`Physical`, `Ethereal`, `Decay`, `Lightning`, `Frost`, `Fire`,</b> and the unused `DarkOLD`, `LightOLD` and `Raw`
 
+`Damage_Bonus` (list of float)
+* Same as `Damage_Resistance`, but for damage bonuses instead, usually -100 to 100
+
 `Impact_Resistance` (float)
 * Impact resistance stat, usually -100 to 100
 
 `Damage_Protection` (float)
 * Physical protection stat, usually -100 to 100
-
-`Damage_Bonus` (list of float)
-* Same as Damage_Resistance, but for damage bonuses instead, usually -100 to 100
 
 `Impact_Bonus` (float)
 * Bonus impact damage modifier stat, usually -100 to 100.

@@ -444,20 +444,9 @@ Similar to SL_Cough, used by the Indigestion disease.
 ## SL_PunctualDamage : SL_Effect
 PunctualDamage is a type of damage applied by skills or effects. It requires no weapon.
 
-The `Damage` is a list of SL_Damage objects. This is similar to the `BaseDamage` field on a SL_Weapon template.
+The `Damage` is a list of [SL_Damage](API/SL_Damage) objects.
 * Each entry has a `Damage` and `Type` value.
 * For the "Type", you must set one of: `Physical`, `Ethereal`, `Decay`, `Electric` (<b>not</b> Lightning), `Frost`, or `Fire`.
-
-The XML should look like:
-```xml
-<Damage>
-  <SL_Damage>
-    <Damage>20</Damage>
-    <Type>Physical</Type>
-  </SL_Damage>
-  <!-- etc... -->
-</Damage>
-```
 
 `Damages_AI` (list of SL_Damage)
 * The same as `Damage`, but its separate values applied to AI characters. You don't have to set this.
@@ -724,41 +713,6 @@ SL_ShootProjectile inherits from SL_Shooter. It is similar to ShootBlast, this s
 `ProjectileShots` (list of SL_ProjectileShot)
 
 Each SL_ProjectileShot is an actual projectile produced by this effect. You need at least 1 of these, but can have as many as you want. Each shot can have its own offsets and directions applied to it.
-
-For example:
-<!-- tabs:start -->
-#### ** XML **
-
-```xml
-<ProjectileShots>
-  <SL_ProjectileShot>
-    <LocalDirectionOffset>
-      <x>0</x>
-      <y>1.5</y>
-      <z>0</z>
-	  </LocalDirectionOffset>
-	  <!-- etc... -->
-  </SL_ProjectileShot>
-  <MustShoot>false</MustShoot>
-  <!-- etc... -->
-</ProjectileShots>
-```
-
-#### ** C# **
-
-```csharp
-ProjectileShots = new SL_ProjectileShot[]
-{
-  new SL_ProjectileShot
-  {
-    LocalDirectionOffset = Vector3.one,
-    MustShoot = false,
-    // etc...
-  },
-  // etc...
-}
-```
-<!-- tabs:end -->
 
 The fields on SL_ProjectileShot are:
 
