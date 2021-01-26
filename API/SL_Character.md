@@ -56,9 +56,15 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 
 `DropPouchContents` (boolean)
 * If LootableOnDeath is true, should the character drop their pouch contents?
+* <b>Note:</b> if defining any DropTableUIDs you should set this to true (or SL will do it for you)
 
 `DropWeapons` (boolean)
 * If LootableOnDeath is true, should the character drop their weapon and/or shield? (These literally drop on the ground if equipped)
+
+`DropTableUIDs` (list of string)
+* A list of string UIDs which are [SL_DropTable](API/SL_DropTable.md) UIDs.
+* You should define an SL_DropTable and then reference it here via its UID.
+* These drops will be rolled on this SL_Character's death.
 
 ### Visual Data
 The `CharacterVisualsData` field contains the visual data. You can set it to null or delete it for default visuals.

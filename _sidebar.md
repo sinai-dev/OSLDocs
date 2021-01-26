@@ -19,6 +19,7 @@
   - [Enums](API/Enums.md)
   - [SL_Character](API/SL_Character.md)
   - [SL_Damage](API/SL_Damage.md)
+  - [SL_DropTable](API/SL_DropTable.md)
   - [SL_Effect](API/SL_Effect.md)
   - [SL_EffectCondition](API/SL_EffectCondition.md)
   - [SL_EffectTransform](API/SL_EffectTransform.md)
