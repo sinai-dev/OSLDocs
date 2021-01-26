@@ -17,6 +17,7 @@ The SL Pack subfolder for SL_DropTables is `DropTables\`.
 `GuaranteedDrops` (list of SL_ItemDrop)
 * A list of basic guaranteed drops on your table.
 * See `SL_ItemDrop` below.
+* While you can technically define an ItemDropChance here, the dice value would be ignored and it would be treated as a guaranteed drop.
 
 `RandomTables` (list of SL_RandomDropGenerator)
 * A list of random sub-tables which will each generate their own drops as well.
@@ -33,15 +34,6 @@ The class `SL_ItemDrop` is a basic wrapper for an item drop.
 
 `MaxQty` (integer)
 * The maximum drop quantity, default 1. <b>Should be at least the same as the Min quantity! (SideLoader will force this to be the case if not)</b>
-
-### SL_ItemDropChance : SL_ItemDrop
-
-The class `SL_ItemDropChance` inherits from `SL_ItemDrop` and contains one extra field.
-
-`DiceValue` (integer)
-* The weight of this drop on the random table, in terms of the dice roll.
-* Should be <b>at least 1</b>, and as high as you want.
-* This determines the drop chance based on the weights compared to the rest of your table and the NoDrop weight. See `SL_RandomDropGenerator` for more details.
 
 ### SL_RandomDropGenerator
 
@@ -62,6 +54,15 @@ The chance for each drop is not set directly as a % value, but as a Dice Value w
 
 `Drops` (list of SL_ItemDropChance)
 * The random drops on your table. Their Dice Value weights (along with the NoDrop) will determine their relative drop chance.
+
+### SL_ItemDropChance : SL_ItemDrop
+
+The class `SL_ItemDropChance` inherits from `SL_ItemDrop` and contains one extra field. It is used by a `RandomDropGenerator`.
+
+`DiceValue` (integer)
+* The weight of this drop on the random table, in terms of the dice roll.
+* Should be <b>at least 1</b>, and as high as you want.
+* This determines the drop chance based on the weights compared to the rest of your table and the NoDrop weight. See `SL_RandomDropGenerator` for more details.
 
 #### Drop-rate examples
 The drop rates are determined through an imaginary "dice roll", where each drop has an associated unique range of values from 0 to the maximum dice value. Each drop may occupy 1 or more values, but no two ranges will overlap - they will be laid out consecutively after each other.
