@@ -6,7 +6,9 @@ SL_DropTables can be defined and edited via the SL Menu, or directly from C#.
 
 The SL Pack subfolder for SL_DropTables is `DropTables\`.
 
-## SL_DropTable fields
+<!-- tabs:start -->
+
+#### ** Universal **
 
 `UID` (string)
 * Unique ID for your droptable, eg. `com.myname.mydroptable`
@@ -61,3 +63,18 @@ The chance for each drop is not set directly as a % value, but as a Dice Value w
 `Drops` (list of SL_ItemDropChance)
 * The random drops on your table. Their Dice Value weights (along with the NoDrop) will determine their relative drop chance.
 * For example, if your NoDrop chance was set to 5 and you have one SL_ItemDropChance with a DiceValue of 10, this would mean you have a ~66.6% chance of receiving the drop and a ~33.3% chance of receiving nothing.
+
+#### ** C# only **
+
+From C#, just define your SL_DropTable like normal, then all you have to do is call `Prepare()` like so:
+
+```csharp
+// In your Awake() method:
+var table = new SL_DropTable()
+{
+	/* ... */
+};
+table.Prepare();
+```
+
+<!-- tabs:end -->
