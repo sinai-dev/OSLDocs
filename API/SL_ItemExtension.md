@@ -2,41 +2,6 @@
 
 An <b>SL_ItemExtension</b> can be defined in the `ItemExtensions` field on an [SL_Item](API/SL_Item.md) template.
 
-## How to define one
-
-<!-- tabs:start -->
-#### ** XML **
-
-```xml
-<ItemExtensions>
-    <!-- replace 'ExtensionType' with the actual extension type -->
-    <SL_ItemExtension xsi:type="ExtensionType">
-        <!-- put fields and values for this extension here -->
-    </SL_ItemExtension>
-</ItemExtensions>
-```
-
-For example:
-
-```xml
-<SL_ItemExtension xsi:type="SL_Ephemeral">
-    <Savable>true</Savable>
-    <Lifespan>60</Lifespan>
-</SL_ItemExtension>
-```
-
-#### ** C# **
-
-```csharp
-var ext = new SL_Ephemeral
-{
-    Savable = true,
-    Lifespan = 60f,
-}
-```
-
-<!-- tabs:end -->
-
 ## Edit behaviour
 
 The field `SL_Item.ExtensionsEditBehaviour` is an `EditBehaviour` value (enum), it will determine how your Extensions are applied.
@@ -49,7 +14,7 @@ The field `SL_Item.ExtensionsEditBehaviour` is an `EditBehaviour` value (enum), 
 All SL_ItemExtension classes have this field.
 
 `Savable` (boolean)
-* Does this ItemExtension save its values to the player's save file? This depends on the type of ItemExtension you are using.
+* Does this ItemExtension save its values to the player's save file? This depends on the type of ItemExtension you are using, it may not be applicable to all types.
 
 # Sub-classes
 
@@ -197,16 +162,6 @@ The `PreservedElements` field on SL_Preserver is a list of SL_PreservedElement o
 
 `PreservedItemTag` (string)
 * The Item Tag for this preservation value. Generally just "Food", but you could also use "Equipment", or something else.
-
-Example:
-```xml
-<PreservedElements>
-    <SL_PreservedElement>
-        <Preservation>75</Preservation>
-        <PreservedItemTag>Food</PreservedItemTag>
-    </SL_PreservedElement>
-</PreservedElements>
-```
 
 ## SL_Sleepable : SL_ItemExtension
 

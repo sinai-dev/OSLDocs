@@ -2,7 +2,7 @@
 
 The `SL_StatusEffectFamily` class is used to define a custom Status Effect family. These are used by certain [SL_StatusEffects](API/SL_StatusEffect.md), either as a unique individual family or as part of a multi-effect family like Poisons or Bleeding, etc.
 
-There is not currently a template generator for SL_StatusEffectFamily, so an example for XML and C# will be provided below.
+Use the SL Menu/XML to create a template, or define it from C# directly.
 
 ?> Note: Currently this is only really intended for creating new <b>Reference</b> families, I have not experimented with editing existing ones.
 

@@ -87,29 +87,10 @@ The `Tags` is a list of string (text) values. Tags are used by the game for lots
 * See [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
 * Do not include the tag number. Eg, put `Weapon`, not `1-Weapon`.
 
-Your tags XML should look like this, for example:
-```xml
-<Tags>
-  <string>Misc</string>
-  <string>Item</string>
-  <string>Ammo</string>
-  <string>Consummable</string>
-</Tags>
-```
-
 Some tags are added by default. For example, if you create an Axe, it will automatically get "Axe" and "Weapon", you don't have to set those.
 
 ### SL_ItemStats (StatsHolder)
 The `StatsHolder` contains the item's <b>SL_ItemStats</b> values. Not all items have stats, but most do.
-
-A base SL_ItemStats XML should look like this:
-```xml
-<StatsHolder>
-  <BaseValue>0</BaseValue>
-  <RawWeight>0</RawWeight>
-  <MaxDurability>0</MaxDurability>
-</StatsHolder>
-```
 
 These stats are:
 
@@ -195,22 +176,6 @@ The <b>Equipment Stats</b> overrides the base `StatsHolder` field. It will look 
 * Normal values are between -100 and 100.
 * Define a `<float></float>` for each entry. There must be at least 6 entries, though technically the game uses 9.
 * The order is: <b>`Physical`, `Ethereal`, `Decay`, `Lightning`, `Frost`, `Fire`,</b> and the unused `DarkOLD`, `LightOLD` and `Raw`
-
-For example:
-
-```xml
-<Damage_Resistance>
-  <float>0</float> <!-- Physical -->
-  <float>0</float> <!-- Ethereal -->
-  <float>0</float> <!-- Decay -->
-  <float>0</float> <!-- Electric (lightning) -->
-  <float>0</float> <!-- Frost -->
-  <float>0</float> <!-- Fire -->
-  <float>0</float> <!-- [UNUSED] DarkOLD -->
-  <float>0</float> <!-- [UNUSED] LightOLD -->
-  <float>0</float> <!-- [UNUSED] Raw -->
-</Damage_Resistance>
-```
 
 `Impact_Resistance` (float)
 * Impact resistance stat, usually -100 to 100
@@ -307,12 +272,9 @@ As well as all the fields on SL_Item and SL_Equipment, weapons also have a few m
 
 ### SL_WeaponStats : SL_EquipmentStats
 
-The <b>Weapon Stats</b> overrides the `StatsHolder` field for a second time (after EquipmentStats). It will look like:
-```xml
-<StatsHolder xsi:type="SL_WeaponStats">
-```
+The <b>Weapon Stats</b> inherits from SL_EquipmentStats, and contains some extra data for Weapons.
 
-While weapons do have all the same fields as Equipment, they cannot actually use a lot of them. Weapons cannot use any resistance stats, for example.
+While weapons do have all the same fields as Equipment, they cannot actually some of those stats.
 
 The extra stats you have on WeaponStats are:
 
@@ -331,25 +293,11 @@ The extra stats you have on WeaponStats are:
 * If `true`, this will ignore your `Attacks`, and instead automatically generate scaled damages from your `BaseDamage`, `Impact` and `StamCost` values. There are standard multipliers used for each weapon class which the SideLoader uses to scale your stats.
 
 #### BaseDamage
-The `BaseDamage` is a list of custom SL_Damage objects, and defines the base damage of the weapon. 
-
-A BaseDamage XML should look like this:
-```xml
-<BaseDamage>
-  <SL_Damage>
-    <Damage>20</Damage>
-    <Type>Physical</Type>
-  </SL_Damage>
-  <SL_Damage>
-    <Damage>15</Damage>
-    <Type>Decay</Type>
-  </SL_Damage>
-</BaseDamage>
-```
+The `BaseDamage` is a list of custom [SL_Damage](API/SL_Damage) objects, and defines the base damage of the weapon. 
 
 For the "Type", you must set one of: `Physical`, `Ethereal`, `Decay`, `Electric` (<b>not</b> Lightning), `Frost`, or `Fire`.
 
-You can add as many <SL_Damage> entries as you want.
+You can add as many SL_Damage entries as you want, though you should generally have 1 of each type at most.
 
 #### AttackData
 The `Attacks` field is a list of `AttackData` objects. This is the data used for the <b>actual attacks</b> for melee weapons, for the damage, impact and stamina cost. Melee weapons have <b>5</b> AttackData entries.
@@ -357,25 +305,6 @@ The `Attacks` field is a list of `AttackData` objects. This is the data used for
 The first two AttackData entries are for the standard attacks, the 3rd is for Special attacks, and the 4th and 5th are for the combo attacks.
 
 If `AutoGenerateAttackData` is `true`, these values are ignored and instead automatically generated.
-
-The Attacks should look like this:
-
-```xml
-<Attacks>
-  <AttackData>
-    <StamCost>0.5</StamCost>
-    <Knockback>12</Knockback>
-    <AttackSpeed>0</AttackSpeed>
-    <Damage>
-      <float>20</float>
-    </Damage>
-  </AttackData>
-  <!-- 
-  etc... continue adding AttackData here, up to 5 entries.
-  ...
-  -->
-</Attacks>
-```
 
 The fields on AttackData are:
 
@@ -388,16 +317,8 @@ The fields on AttackData are:
 `AttackSpeed`
 * Not actually used, just ignore it.
 
-The `Damage` value is a list of `<float></float>` values.
+The `Damage` value is a list of `float` values.
 * This corresponds to the Base Damage you set. Each entry on the list represents a damage type, in the order that you defined the base damage. If you only defined one damage type, you only need one entry, etc.
-
-```xml
-    <Damage>
-      <float>20</float> <!-- first BaseDamage type you defined -->
-      <float>20</float> <!-- second BaseDamage type ... -->
-      <!-- 3rd type ..? -->
-    </Damage>
-```
 
 ## SL_MeleeWeapon : SL_Weapon
 
@@ -665,18 +586,25 @@ It should look like this in XML:
 <?xml version="1.0" encoding="utf-8"?>
 <SL_MultiItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Items>
+	
+	    <!-- Just define all your templates here. -->
+		
 		<SL_Item>
 			<Target_ItemID>2000010</Target_ItemID>
 			<New_ItemID>2000010</New_ItemID>
 			<Name>Iron Sword 2</Name>
 			<Description>Test.</Description>
 		</SL_Item>
+		
 		<SL_Item>
 			<Target_ItemID>2000150</Target_ItemID>
 			<New_ItemID>2000150</New_ItemID>
 			<Name>Brand 2</Name>
 			<Description>Test.</Description>
 		</SL_Item>
+		
+		<!-- etc... -->
+		
 	</Items>
 </SL_MultiItem>
 ```

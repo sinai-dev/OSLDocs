@@ -89,14 +89,6 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 * See [this Google Sheet](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680) for a list of tags.
 * Do not include the tag number.
 
-Your tags XML should look like this, for example:
-```xml
-<Tags>
-  <string>Boon</string>
-  <string>Status Type</string>
-</Tags>
-```
-
 `FamilyMode` (enum)
 * The status family mode
 * Must be one of: `Bind` (unique individual family) or `Reference` (part of a joined family)

@@ -1,10 +1,10 @@
 # SL_EnchantmentRecipe
 
-`SL_EnchantmentRecipe`s can be defined from XML or C#. Enchantment XMLs should be placed in the `Enchantments\` sub-folder of your SL Pack.
+`SL_EnchantmentRecipe`s can be defined from the SL Menu/XML or C#. Enchantment XMLs should be placed in the `Enchantments\` sub-folder of your SL Pack.
 
 You can make a recipe scroll with a `SL_EnchantmentRecipeItem` template. See the [SL_Item](API/SL_Item.md) page for more details.
 
-See [SL Menu](Basics/SLMenu.md) for details on how to dump Enchantments and see how they work in more detail.
+Use the [SL Menu](Basics/SLMenu.md) to create an enchantment template, or define it from C# directly.
 
 <!-- tabs:start -->
 #### ** Universal **
@@ -31,17 +31,6 @@ Each PillarData has:
 * `Direction` (enum): one of `North`, `South`, `East` or `West`
 * `IsFar` (boolean): Whether this is a "Far" pillar or not (otherwise "Close").
 
-In Xml, it would look like this:
-```xml
-<PillarDatas>
-  <PillarData>
-    <Direction>North</Direction>
-    <IsFar>true</IsFar>
-  </PillarData>
-  <!-- etc, up to 4 -->
-</PillarDatas>
-```
-
 The `CompatibleEquipment` contains information about the compatible equipment.
 
 * `RequiredTag` (string): The <b>REQUIRED</b> Tag for Equipment with this Enchantment. Eg, "Item", "Weapon", "Armor", "Helmet", "Boots". Can pick any Tag off [this list of Tags](https://docs.google.com/spreadsheets/d/1btxPTmgeRqjhqC5dwpPXWd49-_tX_OVLN1Uvwv525K4/edit#gid=1840819680).
@@ -51,71 +40,21 @@ Each IngredientData has:
 * `SelectorType` (enum): One of: `SpecificItem` (Item ID) or `Tag` (Item Tag). Determines how the game uses the SelectorValue.
 * `SelectorValue` (string): Depends on the SelectorType. If SpecificItem, this should be an <b>Item ID</b>. If Tag, this should be a Tag name.
 
-In Xml, the entire CompatibleEquipment should look something like this:
-
-```xml
-<CompatibleEquipment>
-  <Equipments>
-    <IngredientData>
-      <SelectorType>Tag</SelectorType>
-      <SelectorValue>Palladium</SelectorValue>
-    </IngredientData>
-  </Equipments>
-  <RequiredTag>Weapon</RequiredTag>
-</CompatibleEquipment>
-```
-
 `TimeOfDay` (list of Vector2)
 * A list of Vector2 (`x` and `y`) which represents valid times during the day for this recipe.
 * The values of the Vector2 correspond to the hours of the day (0 to 24).
 * For example, a value of  `x: 5, y: 15` would mean that the any time between 5am and 3pm would succeed.
 
-In Xml, the TimeOfDay should look something like this:
-```xml
-<TimeOfDay>
-  <Vector2>
-    <x>18</x> <!-- 6 PM -->
-    <y>5</y>  <!-- 5 AM -->
-  </Vector2>
-</TimeOfDay>
-```
-
 `Areas` (list of enum)
 * A list of AreaEnum objects, corresponding to areas where this recipe is valid.
 * You can pick any value off [this list](API/Enums/AreaEnum.md).
-
-In Xml, this would look like:
-```xml
-<Areas>
-  <AreaEnum>Emercar</AreaEnum>
-</Areas>
-```
 
 The `WeatherConditions` field is a list of WeatherCondition objects. Each of these has:
 * `WeatherType` (enum): One of: `Clear`, `Rain`, `Snow` or `SeasonEffect`.
 * `Invert` (boolean): Like the Invert field on SL_EffectCondition, this flips the result of the evaluation.
 
-In Xml, this might look like:
-```xml
-<WeatherConditions>
-  <WeatherCondition>
-    <Invert>false</Invert>
-    <WeatherType>SeasonEffect</WeatherType>
-  </WeatherCondition>
-</WeatherConditions>
-```
-
 The `Temperature` is a list of TemperatureStep objects, corresponding to valid Environment temperatures for this recipe.
 * Each TemperatureStep can be either: `Coldest`, `VeryCold`, `Cold`, `Fresh`, `Neutral`, `Warm`, `Hot`, `VeryHot`, `Hottest`.
-
-For example, in Xml:
-```xml
-<Temperature>
-  <TemperatureSteps>Cold</TemperatureSteps>
-  <TemperatureSteps>VeryCold</TemperatureSteps>
-  <TemperatureSteps>Coldest</TemperatureSteps>
-</Temperature>
-```
 
 `WindAltarActivated` (boolean)
 * Whether or not the Wind Altar needs to be activated in the current region for this recipe.
@@ -133,46 +72,13 @@ The `AddedDamages` is a list of AdditionalDamage objects. Each AdditionalDamage 
 * `SourceDamageType` (enum): The existing type of damage to add from. Same values as AddedDamageType.
 * `ConversionRatio` (float): The amount of SourceDamageType which is added as AddedDamageType. For example, 0.25 would add 25% of the Source type as Added type, 2.0 would be 200%, etc.
 
-In Xml, this would look like:
-```xml
-<AddedDamages>
-  <AdditionalDamage>
-    <AddedDamageType>Physical</AddedDamageType>
-    <SourceDamageType>Physical</SourceDamageType>
-    <ConversionRatio>0.8</ConversionRatio>
-  </AdditionalDamage>
-</AddedDamages>
-```
-
 The `StatModifications` is a list of StatModification objects. Each StatModification has:
 * `Stat` (enum): Pick any value off [this list](API/Enums/EnchantmentStat.md).
 * `Type` (enum): How to add this stat. Must be one of `Bonus` or `Modifier`
 * `Value` (float): The value applied to this stat.
 
-In Xml, this would look like:
-```xml
-<StatModifications>
-  <StatModification>
-    <Stat>MovementSpeed</Stat>
-    <Type>Modifier</Type>
-    <Value>3</Value>
-  </StatModification>
-</StatModifications>
-```
-
 `FlatDamageAdded` (list of SL_Damage)
 * This is flat damage, simply added directly to the weapon's damage.
-
-In xml, the FlatDamageAdded should look something like this:
-```xml
-<FlatDamageAdded>
-  <SL_Damage>
-    <Damage>20</Damage>
-    <Type>Physical</Type>
-  </SL_Damage>
-  <!-- can add other types -->
-</FlatDamageAdded>
-```
 
 `DamageModifierBonus` (list of SL_Damage)
 * This is defined the same way as FlatDamageAdded, however this adds Damage Modifier Bonus to the equipment.
@@ -206,6 +112,6 @@ In xml, the FlatDamageAdded should look something like this:
 
 #### ** C# Only **
 
-To apply the enchantment in C#, just call `template.ApplyRecipe();`
+To apply the enchantment in C#, just call `template.Apply();`. You should do this during the Awake method of your mod, and SideLoader will apply it during its normal setup process (will be applied by `OnPacksLoaded`).
 
 <!-- tabs:end -->

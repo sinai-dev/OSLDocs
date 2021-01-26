@@ -1,6 +1,6 @@
 # SL_Damage
 
-SL_Damage is a wrapper used for Damages, used by many classes.
+SL_Damage is a simple wrapper used for Damages, used by many classes.
 
 `Damage` (float)
 * The actual damage value

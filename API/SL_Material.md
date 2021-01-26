@@ -1,8 +1,8 @@
 # SL_Material
 
-SideLoader allows you to adjust the Material and Shader properties through xml files. This is done with a file called <b>properties.xml</b>, which must be placed in the Material sub-folder for the textures.
+SideLoader allows you to adjust the Material and Shader properties through the SL Menu/XML files. This is done with a file called <b>properties.xml</b>, which must be placed in the Material sub-folder for the textures on the item.
 
-When you generate a template with the SL Menu, it will include these xml files in the correct structure for you.
+When you generate a template with the SL Menu, you can include these xml files in the correct structure during the export.
 
 ?> <b>Tip:</b> you can copy the properties.xml (or sections of it) from one material to another.
 

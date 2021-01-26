@@ -4,10 +4,10 @@ SideLoader has support for <b>Custom Effects</b> with [SL_Item](API/SL_Item), [S
 
 An <b>SL_EffectTransform</b> is a container for these effects, as well as Effect Conditions. Each Transform represents a group of effects that are applied at the same time and with the same conditions.
 
-I recommend using the [SideLoader Menu](Basics/SLMenu.md) to dump some existing items, skills and statuses to see how they work if you have trouble getting a grasp on this.
+In most cases, looking at how existing items and skills work will give you the best idea on how to use these correctly.
 
 ## Edit Behaviour
-`EffectBehaviour` is a setting found on various SideLoader templates such as SL_Item and SL_StatusEffect. It determines <b>how your template effects are applied</b>. This is referring to when SideLoader actually applies this template, not when the effects are applied in game.
+`EffectBehaviour` (an `EditBehaviour` enum) is a setting found on various SideLoader templates. It determines <b>how your template effects are applied</b>. This is referring to when SideLoader actually applies this template, not when the effects are applied in game.
 * `NONE` will <b>leave the existing effects untouched</b>. Use NONE if you don't want to modify the existing effects at all, or you want to add on-top of them.
 * `Destroy` will <b>wipe all the existing effects</b> before it applies yours. This is recommended in most cases if you are editing the effects.
 * `Override` will <b>only destroy transforms if you have defined one with the same TransformName</b>. You can use this to have greater control and only replace specific transforms. In some cases, it is possible that there are duplicate-name children on one transform, and SideLoader has no way to solve this. You would need to use Destroy and replace everything in this case.
@@ -15,7 +15,7 @@ I recommend using the [SideLoader Menu](Basics/SLMenu.md) to dump some existing 
 ?> <b>Note:</b> Even if you don't define any SL_EffectTransforms, your EffectBehaviour is <b>still applied</b> to the base prefab. All SL classes have `Override` or `NONE` as the default value if not set.
 
 ## SL_EffectTransform
-As mentioned above, an SL_EffectTransform is a container for effects and conditions. When defining your Effects on items, skills or status effects, you are defining a <b>list of SL_EffectTransforms</b>.
+An `SL_EffectTransform` is simply a container for effects and their conditions. When defining your effects on items, skills or status effects, you are generally defining a list of SL_EffectTransforms.
 
 The fields on an SL_EffectTransform are:
 
@@ -28,15 +28,6 @@ The fields on an SL_EffectTransform are:
 * Sets the local position of the transform.
 * By default, this is ignored. You can use this to set a non-zero position for the transform.
 * Certain effects may make use of this (eg. Backstab), but most don't.
-
-Example of a Vector3 value in XML:
-```xml
-<Position>
-	<x>1.5</x>
-	<y>2.0</y>
-	<z>-5.0</z>
-</Position>
-```
 
 `Scale` (Vector3)
 * This vector3 value sets the local scale (size) of the transform.

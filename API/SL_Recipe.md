@@ -1,10 +1,8 @@
 # SL_Recipe
 
-<b>Custom Recipes</b> can be defined from XML or C#. You can set recipes for any station type.
+<b>Custom Recipes</b> can be defined from the SL Menu/XML or C#. You can set recipes for any station type.
 
 Recipes XMLs should be placed in the `Recipes\` sub-folder of your SL Pack.
-
-?> <b>Note:</b> Custom recipes are applied after all Custom Items have been set up, so you can safely reference those here.
 
 You can make a recipe scroll with a `SL_RecipeItem` template. See the [SL_Item](API/SL_Item.md) page for more details.
 

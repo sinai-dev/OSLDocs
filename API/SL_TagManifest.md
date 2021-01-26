@@ -4,6 +4,8 @@
 
 A `Tag` by itself does nothing, but it can be used by various game systems such as crafting, skills, etc.
 
+For non-C# mods, you can set up a tag manifest through the SL Menu (or XML) by selecting the Tags category.
+
 <!-- tabs:start -->
 
 #### ** Universal **

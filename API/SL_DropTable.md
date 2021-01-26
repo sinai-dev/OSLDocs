@@ -2,7 +2,7 @@
 
 SL_DropTable is a wrapper used to define a Drop Table, which would be used by other parts of your SL Pack, or for whatever you need.
 
-SL_DropTables can be defined and edited via the SL Menu, or directly from C#.
+SL_DropTables can be defined and edited via the SL Menu/XML, or directly from C#.
 
 The SL Pack subfolder for SL_DropTables is `DropTables\`.
 

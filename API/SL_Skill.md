@@ -37,23 +37,23 @@ All SL_Skills inherit from this class. If you use a generated SL_Item template, 
 * Determines the VFX prefab that will play on start.
 * Can pick any of [these values](API/Enums/VFXPrefabs.md), or `NONE` to set no VFX.
 
-### Required Items
+`RequiredItems` (list of SkillItemReq)
+* A list of required items to active the skill.
+* You can add as many as you want.
+* See SkillItemReq below.
 
-The `RequiredItems` value is a list of SkillItemReq objects.
+### SkillItemReq
 
-The XML should look like this:
-```xml
-<RequiredItems>
-  <SkillItemReq>
-    <ItemID>6500010</ItemID> <!-- Fire Stone (6500010) -->
-    <Quantity>1</Quantity> <!-- Requires 1 -->
-    <Consume>true</Consume> <!-- Consumed: true -->
-  </SkillItemReq>
-  <!-- etc.. can add more -->
-</RequiredItems>
-```
+The `SkillItemReq` is a wrapper for item requirements on skills.
 
-The fields should be self-explanatory. Add as many SkillItemReq objects as you want.
+`ItemID` (integer)
+* The Item ID of the required item
+
+`Quantity` (integer)
+* The required quantity of the item
+
+`Consume` (boolean)
+* Should the item(s) be consumed if all requirements are met?
 
 ## SL_LevelPassiveSkill : SL_Skill
 

@@ -4,45 +4,7 @@ An <b>SL_Effect</b> object can be defined on an [SL_EffectTransform](API/SL_Effe
 
 These effects work closely with [SL_EffectConditions](API/SL_EffectCondition).
 
-## How to define one
-
-<!-- tabs:start -->
-
-#### ** XML **
-
-```xml
-<!-- replace 'EffectType' with the actual effect type -->
-<SL_Effect xsi:type="EffectType">
-    <!-- put fields and values for this effect here -->
-</SL_Effect>
-```
-
-For example:
-
-```xml
-<SL_Effect xsi:type="SL_AddStatusEffectBuildUp">
-    <StatusEffect>Doom</StatusEffect>
-    <Buildup>60</Buildup>
-	  <!-- etc ... -->
-</SL_Effect>
-```
-
-#### ** C# **
-
-Define any sub-class of SL_Effect (most likely on an [SL_EffectTransform](API/SL_EffectTransform)).
-
-```csharp
-var effect = new SL_AddStatusEffectBuildUp
-{
-  StatusEffect = "Doom",
-  Buildup = 60f,
-  // etc...
-}
-```
-
-<!-- tabs:end -->
-
-## Fields
+## SL_Effect Fields
 
 <b>All SL_Effect classes have these fields.</b>
 

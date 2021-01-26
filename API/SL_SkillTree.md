@@ -4,7 +4,7 @@
 
 For C#, I suggest subscribing to `SL.OnPacksLoaded` and defining the skill tree after this point. The Skill Tree template assumes that the skills IDs are already set up when you apply it.
 
-For XML, you must use an [SL_CharacterTrainer](API/SL_Character) and define your skill tree directly there.
+For SL Menu/XML, you must use an [SL_CharacterTrainer](API/SL_Character) and define your skill tree directly there.
 
 <!-- tabs:start -->
 #### ** Universal **

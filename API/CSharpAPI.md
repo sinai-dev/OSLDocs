@@ -41,6 +41,8 @@ var audio = pack.AudioClips["MyAudio"];
 var myChar = pack.CharacterTemplates["my.character"];
 ```
 
+There are also dictionaries for all other parts of the SL Pack content, I haven't written up the API for them yet but just look in your IDE.
+
 ## Custom Keybindings
 
 `CustomKeybindings` contains helpers for creating and checking custom in-game keybindings.
@@ -84,9 +86,7 @@ Example:
 // All you have to do is define the class.
 public class PlayerSaveExtExample: PlayerSaveExtension
 {
-    // Declare as many members as you want, but
-	// they must be XML-serializable (string, primitive,
-	// or a struct or array of strings or primitives).
+    // Declare as many members as you want, but they must be XML-serializable.
 	// They must also be public, and not static.
 	public string DateTime;
 
@@ -168,7 +168,7 @@ The methods you'll likely want to use are:
 
 There is also a static class version for each of those methods, for example `GetFieldStatic`, `SetPropertyStatic` or `InvokeStatic`. These methods are not generic because you cannot use static types as generic arguments.
 
-The rest of `At`'s helper methods are generic, so be careful with the instances you pass to them, make sure the generic type actually contains the member you want to access. For example, if you have an instance of a Weapon but it is currently only cast to an Item, you would need to do something like this: `At.SetField(myItem as Weapon, "m_someWeaponField", someValue);`
+The rest of `At`'s helper methods are generic, so be careful with the instances you pass to them, make sure the generic type actually contains the member you want to access. For example, if you want to set a field on the `Weapon` class but your instance object is cast to `Item`, you would need to do something like this: `At.SetField<Weapon>(myItem, "m_someWeaponField", someValue)`, or implicitly: `At.SetField(myItem as Weapon, ...`
 
 ## UnityHelpers
 The `UnityHelpers` class contains a few helpers for working with Unity objects in general.

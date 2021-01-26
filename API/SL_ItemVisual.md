@@ -11,35 +11,23 @@ These are the fields you can set on an SL_ItemVisual class.
 * If the custom `Prefab_` Visuals are <b>not</b> set, you can use this to transmog the visual prefab to a different Item's visuals.
 * You can copy this from a different item for easy "transmogs".
 
-?> <b>Note:</b> the `Prefab_` fields are not required. They're only used if you are using your own custom Visual Prefabs.
-
 `Prefab_SLPack` (string)
+* Only required if using custom AssetBundle visuals.
 * The name of the SLPack you are using for the visuals.
 * This means you can use Asset Bundles found in other SLPacks, if you want to.
 
 `Prefab_AssetBundle` (string)
+* Only required if using custom AssetBundle visuals.
 * The <b>file name</b> of the asset bundle in your SL Pack that contains your item visual prefab
 * For example, if the bundle is `MyPack/AssetBundles/mybundle`, then put `mybundle` as your setting.
 
 `Prefab_Name` (string)
+* Only required if using custom AssetBundle visuals.
 * Set this to the name of the <b>GameObject</b> in the AssetBundle for your visual prefab.
 * Make sure you actually made a GameObject out of your 3D model and you're not trying to load a Mesh object directly.
 
-#### Vector3 Settings {docsify-ignore}
-
-The next 4 settings are Vector3 settings. In xml, a Vector3 looks like this:
-```xml
-<!-- Example is Position. 
- Same goes for Rotation, PositionOffset, and RotationOffset -->
-<Position> 
-  <x>0</x>
-  <y>0</y>
-  <z>0</z>
-</Position>
-```
-
 `Position` (Vector3)
-* Allows you to directly set the position. This will override any setting from the original item or from Unity Editor.
+* Allows you to directly set the position of the visuals. This will override any setting from the original item or from Unity Editor.
 * If you don't set this (ie. delete or comment it from the template) then SideLoader will copy the values from the existing visuals.
 
 `Rotation` (Vector3)
@@ -60,35 +48,6 @@ SL_ArmorVisuals inherits from SL_ItemVisual, and contains two extra fields.
 
 `HideHair`
 * For head or chest armor only. Does equipping these visuals hide the player's hair?
-
-#### ** XML Example **
-Here is an Xml Example of an SL_ItemVisual object in XML.
-
-```xml
-<ItemVisuals>
-    <Prefab_SLPack>TsarRevolver</Prefab_SLPack>
-    <Prefab_AssetBundle>tsarrevolver_bundle</Prefab_AssetBundle>
-    <Prefab_Name>TsarRevolver_prefab</Prefab_Name>
-    <!-- 
-    I don't define Position or Rotation, so they are copied from the original.
-	I simply use the PositionOffset and RotationOffset to adjust my visuals slightly.
-	This was figured out with some trial and error.
-    -->
-    <PositionOffset>
-        <x>-0.02</x>
-        <y>0.075</y>
-        <z>0.08</z>
-    </PositionOffset>
-    <RotationOffset>
-        <x>-18</x>
-        <y>90</y>
-        <z>6</z>
-    </RotationOffset>
-</ItemVisuals>
-
-<SpecialItemVisuals>
-<!-- etc... -->
-```
 
 #### ** C# Only **
 

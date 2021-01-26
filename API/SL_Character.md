@@ -2,7 +2,7 @@
 
 See also: [Guides: Custom Characters](Guides/Characters.md)
 
-?> Important note about SL_Characters: They are subject to save data which may interfere with your design process. While developing, you may want to delete the `Outward\Mods\SideLoader\_SAVEDATA\` folder after making a change, so that old data does not overwrite your changes.
+?> Important note about SL_Characters: They are subject to save data which may interfere with your design process. While developing, you may want to delete the `Outward\Mods\SideLoader\_SAVEDATA\` folder after making a change, so that old data does not overwrite your changes. You could also just set the SaveType to Temporary while working on the character.
 
 <!-- tabs:start -->
 
@@ -10,8 +10,7 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 
 `UID` (string)
 * The <b>unique identifier</b> for this character template.
-* Can be used for the actual Character UID, or you can override it for dynamic spawns.
-* Used by the OnSpawn callback to invoke the corresponding template's method.
+* Can be used for the actual Character UID, or you can override it for dynamic spawns from C#.
 
 `SaveType` (enum)
 * Determines how the character is saved.
@@ -28,7 +27,6 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 
 `SpawnPosition` (Vector3)
 * Optional, only used if SceneToSpawn is set.
-* A Vector3 takes an `x`, `y` and `z` value.
 * You can find World Position with the SL Menu.
 
 `SpawnRotation` (Vector3)
@@ -52,7 +50,6 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 * The faction ("team") of the character. Not referring to Story factions.
 * Common options are: `NONE`, `Players`, `Bandits`
 * Other options are: `Mercs`, `Tuanosaurs`, `Deer`, `Hounds`, `Merchants`, `Golden`, `CorruptionSpirit`
-* Default is `Players`, if unchanged.
 
 `TargetableFactions` (list of Character.Factions)
 * Optional, you can set this to manually define a list of targetable factions.
@@ -74,7 +71,6 @@ See also: [Guides: Custom Characters](Guides/Characters.md)
 `DropTableUIDs` (list of string)
 * A list of string UIDs which are [SL_DropTable](API/SL_DropTable.md) UIDs.
 * You should define an SL_DropTable and then reference it here via its UID.
-* These drops will be rolled on this SL_Character's death.
 
 ### Visual Data
 The `CharacterVisualsData` field contains the visual data. You can set it to null or delete it for default visuals.
@@ -88,8 +84,6 @@ The `CharacterVisualsData` field contains the visual data. You can set it to nul
 
 `HeadVariationIndex` (integer)
 * Face style. May be clamped depending on your chosen Gender and SkinIndex.
-
-?> Note: If you want to hide the face with an Armor by default, you must set this to 0. This is a bug and will be fixed when possible.
 
 `HairStyleIndex` (integer)
 * Chosen hair style, corresponds to the character creation options.
@@ -133,7 +127,6 @@ The SL_ItemQty class is a simple holder for defining a quantity of an item.
 `Quantity` (int)
 * The quantity of the item, default 1.
 
-
 ### Character Stats
 The next few fields relate to the character's stats.
 
@@ -167,29 +160,18 @@ The next few fields relate to the character's stats.
 * Each entry is a Tag.
 * Use the Outward Tools google sheet (link in Resources on sidebar) to get Tag names.
 
-### SL_CharacterAI
-
-The `AI` field is an SL_CharacterAI object, which is the class used to define your Character's AI behaviour. At the moment there is only one preset class, SL_CharacterAIMelee.
-
 `AI` (SL_CharacterAI)
 * Optional, The `AI` can be defined if you want AI for the character.
 
-To define one in XML:
+### SL_CharacterAI
 
-```xml
-<AI xsi:type="SL_CharacterAIMelee">
-    <!-- ... --->
-</AI>
-```
+The `AI` field on SL_Character is an SL_CharacterAI object, which is the class used to define your Character's AI behaviour. 
 
-Or in C#:
+At the moment there is only one preset class, `SL_CharacterAIMelee`.
 
-```csharp
-sl_character.AI = new SL_CharacterAIMelee()
-{
-  // ...
-}
-```
+#### SL_CharacterAI
+
+Abstract class used for CharacterAI. Cannot use this one directly.
 
 `CanDodge` (boolean)
 * Can the character perform dodges?
@@ -202,6 +184,10 @@ sl_character.AI = new SL_CharacterAIMelee()
 
 `ForceNonCombat` (boolean)
 * Set true to force the character to always be passive
+
+#### SL_CharacterAIMelee
+
+At the moment, the only AI you can actually use. A basic pre-made AI setup which is based on the Summoned Ghost NPC (though it doesn't have to be a follower obviously).
 
 `AIContagionRange` (float)
 * Probably won't do anything yet. I think it's used for AI Squads.
@@ -312,24 +298,48 @@ For an XML template of CharacterTrainer, see [Custom Characters](Guides/Characte
 
 #### ** C# Only **
 
+To use an SL_Character from C# you can define it via XML/SL Menu or create it with C# directly.
+
+```csharp
+internal void Awake()
+{
+	// can either define a new SL_Character like so:
+	var myCharacter = new SL_Character()
+	{
+		/* ... */
+	};
+	// or define it via XML and subscribe to this:
+	SL.OnPacksLoaded += OnPacksLoaded;
+}
+// if using XML...
+void OnPacksLoaded()
+{
+	// Get SLPack via its name, and character via its template UID.
+    var myCharacter = SL.GetSLPack("MyPack").CharacterTemplates["my.character"];
+}
+```
+
 ### Fields
 
 `ShouldSpawn` (bool Function)
-* The <b>optional</b> ShouldSpawn delegate accepts a `Func<bool>` method, which will determine if the SL_Character should spawn for a Scene-type spawn or not.
+* The <b>optional</b> ShouldSpawn field accepts a `Func<bool>` delegate, which will determine if the SL_Character should spawn for a Scene-type spawn or not.
 * Does not affect manual dynamic spawns (just check it yourself in that case)
 
 For example:
 ```csharp
-myCharacter.ShouldSpawn = () => { true; };
+// myCharacter is from either defining it directly or getting from your SLPack
+myCharacter.ShouldSpawn = ShouldSpawnMyCharacter;
 
-// or 
-
-myCharacter.ShouldSpawn = ShouldSpawnMyChar;
-
-private bool ShouldSpawnMyChar()
+// in the class, define a static bool ShouldSpawnMyCharacter...
+private static bool ShouldSpawnMyCharacter()
 {
-	// ...
+	// do some condition check here
+    return someCondition;
 }
+
+// or you could just do a lambda 
+// (assuming shouldSpawn is some bool in your class)
+myCharacter.ShouldSpawn = () => { return shouldSpawn; };
 ```
 
 ### Methods
