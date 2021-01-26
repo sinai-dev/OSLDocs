@@ -1,11 +1,9 @@
 # SL Overview
 
 ## How are SideLoader mods made?
-There are two ways you can use SideLoader:
-1. Using <b>SL Packs</b> (folders containing <b>XML</b> files and other assets)
+There are two ways you can use SideLoader (either or both):
+1. Using the <b>SL Packs</b> (folders containing <b>XML</b> files and other assets) and/or the <b>SL Menu</b>
 2. Using the <b>C#</b> API from your own plugin
-
-To get the most out of SideLoader, it is recommended to use both the SL Pack folders to load your assets, and the C# API for extended features.
 
 ### Simple Replacements
 
@@ -17,6 +15,10 @@ See also:
 
 ### Custom Content
 SideLoader also offers an expansive API for all sorts of <b>changes or additions</b> to game content such as Items, Status Effects, Characters and more. 
+
+You can use the [SL Menu](Basics/SLMenu) to create and edit the XML parts of your pack, though deleting them requires you to manually delete the files yourself.
+
+Before you get started on this, it is recommended to first understand the [SL Packs](Basics/SLPacks) system unless you want to work from C# exclusively.
 
 See also: 
 * [Custom Characters](Guides/Characters.md)

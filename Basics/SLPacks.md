@@ -2,6 +2,8 @@
 
 An <b>SL Pack</b> (<b>SideLoader Pack</b>) is used to load and configure custom assets, and it is simply a <b>folder</b> which uses a specific structure and names.
 
+You can create an manage your SL Packs via the [SL Menu](Basics/SLMenu). Deleting a pack requires you to delete the folder manually yourself. When working from the SL Menu, a lot of the rest of the process will be handled for you and you may not find the need to manually touch the folders at all, however it is still recommended to have an understanding of how it all works.
+
 SideLoader supports two structures for the SL Pack folder:
 * `Outward\Mods\SideLoader\{Name}\`
 * `Outward\BepInEx\plugins\{Name}\SideLoader\`
@@ -39,7 +41,7 @@ AssetBundles which you place in this folder can be referenced by the <b>file nam
 
 See also: [Unity AssetBundles Guide](https://docs.unity3d.com/Manual/AssetBundles-Workflow.html)
 
-!> <b>Note:</b> You must use the same version of the Unity Editor that Outward uses to build your asset bundles. Currently, this is <b>[Unity 2018.4.8](https://download.unity3d.com/download_unity/9bc9d983d803/Windows64EditorInstaller/UnitySetup64-2018.4.8f1.exe)</b>.
+?> <b>Note:</b> You must use the same version of the Unity Editor that Outward uses to build your asset bundles. Currently, this is <b>[Unity 2018.4.8](https://download.unity3d.com/download_unity/9bc9d983d803/Windows64EditorInstaller/UnitySetup64-2018.4.8f1.exe)</b>.
 
 ### AudioClip
 
