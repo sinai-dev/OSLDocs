@@ -2,6 +2,8 @@
 
 See also: [Guides: Custom Characters](Guides/Characters.md)
 
+?> Important note about SL_Characters: They are subject to save data which may interfere with your design process. While developing, you may want to delete the `Outward\Mods\SideLoader\_SAVEDATA\` folder after making a change, so that old data does not overwrite your changes.
+
 <!-- tabs:start -->
 
 #### ** Universal **
