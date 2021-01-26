@@ -23,6 +23,7 @@ The sub-folders you can create are:
 * `AudioClip\`
 * `AssetBundles\`
 * `Characters\`
+* `DropTables\`
 * `Enchantments\`
 * `Items\`
 * `Recipes\`
@@ -58,6 +59,12 @@ The `Characters\` folder is used for defining custom Characters.
 You can also define a Skill Tree with XML here through an `SL_CharacterTrainer` template.
 
 See [Custom Characters](Guides/Characters.md).
+
+### DropTables
+
+The `DropTables\` folder is used to define an SL_DropTable which is used by other parts of your pack.
+
+See [SL_DropTable](API/SL_DropTable) for more details.
 
 ### Enchantments
 
