@@ -2,7 +2,7 @@
 
 An <b>SL Pack</b> (<b>SideLoader Pack</b>) is used to load and configure custom assets, and it is simply a <b>folder</b> which uses a specific structure and names.
 
-You can create an manage your SL Packs via the [SL Menu](Basics/SLMenu). Deleting a pack requires you to delete the folder manually yourself. When working from the SL Menu, a lot of the rest of the process will be handled for you and you may not find the need to manually touch the folders at all, however it is still recommended to have an understanding of how it all works.
+You can create and manage your SL Packs via the [SL Menu](Basics/SLMenu). Deleting a pack requires you to delete the folder manually yourself. When working from the SL Menu, a lot of the rest of the process will be handled for you and you may not find the need to manually touch the folders at all, however it is still recommended to have an understanding of how it all works.
 
 SideLoader supports two structures for the SL Pack folder:
 * `Outward\Mods\SideLoader\{Name}\`
