@@ -7,6 +7,14 @@ This is a brief summary of how to use the SideLoader directly from your own C# m
 1. <b>Install SideLoader</b> to the Outward/BepInEx/plugins folder.
 2. In your C# Project, add a reference to <b>SideLoader.dll</b> from this location.
 3. Put `using SideLoader;` at the top of classes where you want to use SideLoader.
+4. Add the BepInDependency attribute to your plugin class, as shown below:
+
+```csharp
+[BepInDependency(SLPlugin.GUID, BepInDependency.DependencyFlags.HardDependency)]
+[BepInPlugin("com.me.myname", "My Mod", "1.0")]
+public class MyPlugin : BaseUnityPlugin
+// ...
+```
 
 ## Events
 One of the most important features of SideLoader in C# is the events.

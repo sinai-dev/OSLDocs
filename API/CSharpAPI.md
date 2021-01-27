@@ -28,7 +28,7 @@ Example:
 // The SLPack "MyPack" is found at either Mods\SideLoader\MyPack or BepInEx\plugins\MyPack\SideLoader\
 var pack = SL.GetSLPack("MyPack");
 
-// ..\Texture2D\myTex.png
+// ..\Texture2D\myTex.png (or Texture2D\Local\myTex.png)
 var myTex = pack.Texture2D["myTex"];
 
 // ..\AssetBundles\mybundle
@@ -41,7 +41,19 @@ var audio = pack.AudioClips["MyAudio"];
 var myChar = pack.CharacterTemplates["my.character"];
 ```
 
-There are also dictionaries for all other parts of the SL Pack content, I haven't written up the API for them yet but just look in your IDE.
+### Other SLPack Content
+
+For all other SLPack content, at the moment you'll have to do something like this:
+
+```csharp
+var pack = SL.GetSLPack("MyPack");
+var items = pack.GetContentForCategory<SideLoader.SLPacks.Categories.ItemCategory>();
+foreach (var entry in items.Values)
+{
+    // You'll have to know what type of content it is (inferred from the category).
+    var item = entry as SL_Item;
+}
+```
 
 ## Custom Keybindings
 
