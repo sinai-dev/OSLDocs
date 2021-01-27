@@ -51,7 +51,6 @@ See also: [Custom Status Effects](Guides/StatusEffects.md).
 `AmplifiedStatusIdentifier` (string)
 * Determines the Status Effect which will be received if the player has Shamanic Resonance
 * Set this to the Identifier Name of the Status Effect you want to set.
-* Note: if you're setting this to a custom Status, you should set that one up first. SideLoader applies templates in alphabetical order (of the file name), so use that to apply the other one first.
 
 `IgnoreBuildupIfApplied` (boolean)
 * If false, buildup cannot be added when already 100 or if status is active.
