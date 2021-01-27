@@ -571,41 +571,6 @@ An `SL_BuildingRequirement` value has the following fields:
 `ReqUpgradeIndex` (int)
 * The required upgrade index on that building, if any
 
-## SL_MultiItem
-
-SL_MultiItem can be used from XML to define multiple item edits from one template. This might be useful if you are making bulk edits, or lots of very small edits.
-
-The SL_MultiItem template is very simple, it's basically just a list of SL_Item templates. You only have one field: `Items`, which is a list of SL_Items.
-
-It should look like this in XML:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<SL_MultiItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Items>
-	
-	    <!-- Just define all your templates here. -->
-		
-		<SL_Item>
-			<Target_ItemID>2000010</Target_ItemID>
-			<New_ItemID>2000010</New_ItemID>
-			<Name>Iron Sword 2</Name>
-			<Description>Test.</Description>
-		</SL_Item>
-		
-		<SL_Item>
-			<Target_ItemID>2000150</Target_ItemID>
-			<New_ItemID>2000150</New_ItemID>
-			<Name>Brand 2</Name>
-			<Description>Test.</Description>
-		</SL_Item>
-		
-		<!-- etc... -->
-		
-	</Items>
-</SL_MultiItem>
-```
-
 #### ** C# Only **
 
 ### Fields
