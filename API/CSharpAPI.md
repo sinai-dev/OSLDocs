@@ -43,16 +43,19 @@ var myChar = pack.CharacterTemplates["my.character"];
 
 ### Other SLPack Content
 
-For all other SLPack content, at the moment you'll have to do something like this:
+For all other SLPack content, you can use these helpers:
 
 ```csharp
 var pack = SL.GetSLPack("MyPack");
-var items = pack.GetContentForCategory<SideLoader.SLPacks.Categories.ItemCategory>();
-foreach (var entry in items.Values)
-{
-    // You'll have to know what type of content it is (inferred from the category).
-    var item = entry as SL_Item;
-}
+
+// all SL_Items:
+var items = pack.GetContentOfType<SL_Item>();
+
+// get a specific item (file name is "my item.xml")
+var myItem = pack.GetContentByFileName<SL_Item>("my item");
+
+// get all content from a specific category
+var category = zpack.GetContentForCategory<SideLoader.SLPacks.Categories.CharacterCategory>();
 ```
 
 ## Custom Keybindings

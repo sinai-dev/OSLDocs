@@ -179,7 +179,7 @@ I haven't tested this class much so let me know if it's buggy.
 
 #### ** C# Only **
 
-For C#, just call `Apply()` to apply your template, at Awake or BeforePacksLoaded.
+For C#, just call `ApplyTemplate()` to apply your template, at Awake or BeforePacksLoaded.
 
 ### Events
 

@@ -48,7 +48,7 @@ var manifest = new SL_TagManifest
     }
 };
 
-manifest.CreateContent();
+manifest.ApplyTemplate();
 ```
 
 <!-- tabs:end -->

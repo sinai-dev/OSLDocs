@@ -26,7 +26,7 @@ Imbues are similar to [Status Effects](API/SL_StatusEffect.md), but much simpler
 
 #### ** C# Only **
 
-For C#, just call `Apply()` to apply your template, at Awake or BeforePacksLoaded.
+For C#, just call `ApplyTemplate()` to apply your template, at Awake or BeforePacksLoaded.
 
 ### Events
 

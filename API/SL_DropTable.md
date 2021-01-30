@@ -88,7 +88,7 @@ var table = new SL_DropTable()
 {
 	/* ... */
 };
-table.Prepare();
+table.ApplyTemplate();
 ```
 
 <!-- tabs:end -->

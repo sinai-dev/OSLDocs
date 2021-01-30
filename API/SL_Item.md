@@ -588,7 +588,7 @@ An `SL_BuildingRequirement` value has the following fields:
 
 ### Methods
 
-`Apply()`
+`ApplyTemplate()`
 * Call this to prepare and apply the template. Do this in Awake or BeforePacksLoaded.
 
 `AddOnInstanceStartListener(Action<Item> listener>)`

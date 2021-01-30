@@ -104,7 +104,7 @@ var myrecipe = new SL_Recipe()
     // define fields here
 };
 
-myrecipe.ApplyRecipe();
+myrecipe.ApplyTemplate();
 ```
 
 <!-- tabs:end -->

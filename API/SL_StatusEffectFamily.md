@@ -70,7 +70,7 @@ var family = new SL_StatusEffectFamily
     LengthType = StatusEffectFamily.LengthTypes.Short
 };
 
-family.Apply();
+family.ApplyTemplate();
 ```
 
 <!-- tabs:end -->

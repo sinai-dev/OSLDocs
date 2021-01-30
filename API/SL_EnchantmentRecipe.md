@@ -112,6 +112,6 @@ The `StatModifications` is a list of StatModification objects. Each StatModifica
 
 #### ** C# Only **
 
-To apply the enchantment in C#, just call `template.Apply();`. You should do this during the Awake method of your mod, and SideLoader will apply it during its normal setup process (will be applied by `OnPacksLoaded`).
+To apply the enchantment in C#, just call `template.ApplyTemplate();`. You should do this during the Awake method of your mod, and SideLoader will apply it during its normal setup process (will be applied by `OnPacksLoaded`).
 
 <!-- tabs:end -->

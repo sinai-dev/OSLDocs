@@ -344,7 +344,7 @@ myCharacter.ShouldSpawn = () => { return shouldSpawn; };
 
 ### Methods
 
-`Prepare()`
+`ApplyTemplate()`
 * Call this in the Awake() on OnPacksLoaded method of your mod to register your character template.
 
 `Spawn(Vector3 position, Vector3 rotation, string characterUID, string extraRpcData)`
