@@ -55,7 +55,7 @@ var items = pack.GetContentOfType<SL_Item>();
 var myItem = pack.GetContentByFileName<SL_Item>("my item");
 
 // get all content from a specific category
-var category = zpack.GetContentForCategory<SideLoader.SLPacks.Categories.CharacterCategory>();
+var category = pack.GetContentForCategory<SideLoader.SLPacks.Categories.CharacterCategory>();
 ```
 
 ## Custom Keybindings
