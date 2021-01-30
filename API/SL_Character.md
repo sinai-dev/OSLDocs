@@ -308,6 +308,8 @@ internal void Awake()
 	{
 		/* ... */
 	};
+	myCharacter.ApplyTemplate();
+	
 	// or define it via XML and subscribe to this:
 	SL.OnPacksLoaded += OnPacksLoaded;
 }
