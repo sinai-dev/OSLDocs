@@ -44,11 +44,7 @@ An SL_ItemSpawn can be used to define a world spawn for an Item. You can also us
 
 An SL_DropTableAddition can be used to "add on" to an existing drop table or Merchant in the game any time it is rolled on.
 
-You can declare 1 or more SL_DropTable UIDs which will be rolled alongside the original target.
-
-<b>Notes:</b>
-* Your drops <b>will not</b> affect the existing drop rates if you use SL_DropTableAddition
-* Your items will always appear as the first items in the window
+You can declare 1 or more SL_DropTable UIDs which will be rolled alongside the original target. Your drops <b>will not</b> affect the existing drop rates if you use SL_DropTableAddition.
 
 `SelectorTargets` (list of string)
 * The targets to add on to, which can either be <b>the name of a DropTable</b> or <b>the UID of a Merchant</b>.
