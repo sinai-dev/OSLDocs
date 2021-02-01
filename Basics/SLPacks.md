@@ -26,6 +26,7 @@ The sub-folders you can create are:
 * `DropTables\`
 * `Enchantments\`
 * `Items\`
+* `ItemSources\`
 * `Recipes\`
 * `StatusEffects\`
 * `StatusFamilies`
@@ -81,6 +82,14 @@ You can place custom item xmls directly in this folder if you want (eg. `Items\M
 You can also create a <b>sub-folder for each item</b>. This is used if you are defining any <b>custom icons or textures</b> for the item (explained in more detail on the Custom Items page).
 
 See also: [Custom Items](Guides/Items.md).
+
+### ItemSources
+
+The `ItemSources\` folder can be used to define custom Item Sources, to put items into the world.
+
+`SL_ItemSource` XMLs should be placed directly in this folder.
+
+See [SL_ItemSource](API/SL_ItemSource.md) for more details.
 
 ### Recipes
 

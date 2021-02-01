@@ -11,6 +11,9 @@ Items/Skills:
 * [Custom Item Visuals](Guides/ItemVisuals.md)
 * [Custom Skill Trees](Guides/SkillTrees.md)
 
+Item Sources:
+* [Custom Item Sources](Guides/ItemSources.md)
+
 Statuses:
 * [Custom Statuses](Guides/StatusEffects.md)
 

@@ -27,6 +27,7 @@
   - [SL_ImbueEffect](API/SL_ImbueEffect.md)
   - [SL_Item](API/SL_Item.md)
   - [SL_ItemExtension](API/SL_ItemExtension.md)
+  - [SL_ItemSource](API/SL_ItemSource.md)
   - [SL_ItemVisual](API/SL_ItemVisual.md)
   - [SL_Material](API/SL_Material.md)
   - [SL_Recipe](API/SL_Recipe.md)

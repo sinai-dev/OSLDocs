@@ -164,6 +164,13 @@ Along with all the SL_Item fields, you have the following:
 * For off-hand equipment, the IK (hand/arm animation) when the character holds the item.
 * Must be exactly one of: `None`, `Lantern`, `Torch`, or `Lexicon`
 
+`VisualDetectabilityAdd` (float)
+* Amount of Visual Detectability to add to the equipment. Used for Character stealth.
+
+`RequiredPlayerType` (enum)
+* The required player type to use this equipment.
+* Must be one of: `None`, `Normal` (human) or `Trog`
+
 ### SL_EquipmentStats : SL_ItemStats
 
 The <b>Equipment Stats</b> inherints from SL_ItemStats, and contains stats relating to combat, needs etc.

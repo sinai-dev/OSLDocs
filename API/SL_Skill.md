@@ -42,6 +42,10 @@ All SL_Skills inherit from this class. If you use a generated SL_Item template, 
 * You can add as many as you want.
 * See SkillItemReq below.
 
+`RequiredPlayerType` (enum)
+* The required player type to use this skill.
+* Must be one of: `None`, `Normal` (human) or `Trog`
+
 ### SkillItemReq
 
 The `SkillItemReq` is a wrapper for item requirements on skills.
