@@ -60,9 +60,8 @@ For SL_CharacterTrainers, see below.
   <Faction>Bandits</Faction>
   
   <!-- If you want to set manual targetable factions, uncomment and set them here. -->
-  <TargetableFactions>
+  <!-- <TargetableFactions>
 	<Factions>Player</Factions>
-	<!-- etc... -->
   </TargetableFactions> -->
   
   <!-- Human character visual data. Corresponds to Character Creation options. -->
