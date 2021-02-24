@@ -11,4 +11,4 @@ BepInEx is required for SideLoader.
 * Download the latest SideLoader from the <b>[SL Releases page](https://github.com/sinai-dev/Outward-SideLoader/releases)</b>
 * Put this zip file in your Outward directory, so it looks like `Outward\SideLoader.zip`
 * Right-click the file and <b>"Extract Here"</b> (requires [7-Zip](https://www.7-zip.org/download.html)), so it merges with the existing folders.
-* Done! The file `SideLoader.dll` should exist at: `Outward\BepInEx\plugins\SideLoader.dll`
+* Done! The file `SideLoader.dll` should exist at: `Outward\BepInEx\plugins\sinai-dev SideLoader\SideLoader.dll`
