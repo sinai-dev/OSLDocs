@@ -11,7 +11,7 @@ See [SL_Character](API/SL_Character.md) for full documentation on this class.
 
 If you wanted to spawn the characters from an effect on a weapon or skill, you can use [SL_SpawnSLCharacter](API/SL_Effect?id=sl_spawnslcharacter-sl_effect).
 
-?> Important note about SL_Characters: They are subject to save data which may interfere with your design process. While developing, you may want to delete the `Outward\Mods\SideLoader\_SAVEDATA\` folder after making a change, so that old data does not overwrite your changes.
+?> Important note about SL_Characters: They are subject to save data which may interfere with your design process. While developing, you may want to delete the `Outward\BepInEx\config\SideLoader\_SAVEDATA\` folder after making a change, so that old data does not overwrite your changes.
 
 ## SL_Character Example
 

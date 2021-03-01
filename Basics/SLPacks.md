@@ -4,17 +4,16 @@ An <b>SL Pack</b> (<b>SideLoader Pack</b>) is used to load and configure custom 
 
 You can create and manage your SL Packs via the [SL Menu](Basics/SLMenu). Deleting a pack requires you to delete the folder manually yourself. When working from the SL Menu, a lot of the rest of the process will be handled for you and you may not find the need to manually touch the folders at all, however it is still recommended to have an understanding of how it all works.
 
-SideLoader supports two structures for the SL Pack folder:
-* `Outward\Mods\SideLoader\{Name}\`
+The folder structure of an SL Pack is like so:
 * `Outward\BepInEx\plugins\{Name}\SideLoader\`
-
-The first is recommended for non-C# mods, and the second format is recommended if you are making a BepInEx mod as it means you can store everything in one folder.
 
 The `{Name}` in the path is the unique name of your Mod or Asset Pack. It can be anything, but try to be original to avoid conflicts.
 
-For example, `Outward\Mods\SideLoader\MyCoolPack\` is an SL Pack folder called MyCoolPack. For the BepInEx structure, it would look like `Outward\BepInEx\plugins\MyCoolPack\SideLoader\`
+For example, `Outward\BepInEx\plugins\MyCoolPack\SideLoader\` is an SL Pack folder called MyCoolPack.
 
 ?> In C#, this {Name} is what you'll use for `SL.GetSLPack(string name)`
+
+SL also supports legacy packs in the structure `Mods\SideLoader\{NAME}\`, although this is no longer recommended for new packs.
 
 ## SL Pack Structure
 Other than the Name, the only special thing about your SL Pack is the name of the sub-folders you create inside of it.

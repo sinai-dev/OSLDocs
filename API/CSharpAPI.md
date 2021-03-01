@@ -7,7 +7,7 @@ See also: [C# Overview](Basics/CSharpGuide.md).
 The `SLPack` class is the C# wrapper for SL Pack folders.
 
 Use `SL.GetSLPack(string name)` to get a handle on a pack.
-* The Name is the folder name of either: `Mods\SideLoader\{Name}\` or `BepInEx\plugins\{Name}\SideLoader\`
+* The Name is the {Name} in `BepInEx\plugins\{Name}\SideLoader\`
 
 `SLPack.AssetBundles`
 * Dictionary of loaded AssetBundles, key is the file name
@@ -25,7 +25,7 @@ Use `SL.GetSLPack(string name)` to get a handle on a pack.
 
 Example:
 ```csharp
-// The SLPack "MyPack" is found at either Mods\SideLoader\MyPack or BepInEx\plugins\MyPack\SideLoader\
+// The SLPack "MyPack" is found at BepInEx\plugins\MyPack\SideLoader\
 var pack = SL.GetSLPack("MyPack");
 
 // ..\Texture2D\myTex.png (or Texture2D\Local\myTex.png)

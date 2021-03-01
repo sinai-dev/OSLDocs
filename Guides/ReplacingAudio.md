@@ -6,7 +6,7 @@ All you have to do is use the same name that the game uses (listed below) and Si
 
 Your .wav files must be placed in the `AudioClip\` sub-folder of your [SL Pack](Basics/SLPacks).
 
-For example, `Mods\SideLoader\MyPack\AudioClip\BGM_GeneralTitleScreen.wav` would replace the title screen music.
+For example, `Outward\BepInEx\plugins\MyPack\AudioClip\BGM_GeneralTitleScreen.wav` would replace the title screen music.
 
 ## Audio Clip Names
 
@@ -24,6 +24,6 @@ The names start with a prefix which is used as a category for the sound, you can
 ## Example
 
 1. Pick any song you want to use and make sure it is a `.wav` file (there are many free online converters for this if you need one).
-2. Create a Test SL Pack (`Outward\Mods\SideLoader\Test\`), and create a `AudioClip\` sub-folder inside it. Put your `.wav` file inside the `AudioClip\` sub-folder (for example, `Test\AudioClip\MySong.wav`)
+2. Create a Test SL Pack (`Outward\BepInEx\plugins\Test\SideLoader\`), and create a `AudioClip\` sub-folder inside it. Put your `.wav` file inside the `AudioClip\` sub-folder (for example, `Test\AudioClip\MySong.wav`)
 3. Rename your audio clip so that it matches the name of an existing audio clip. For this example, we will use the title screen music. Rename your audio clip to `BGM_GeneralTitleScreen.wav`.
 4. Start the game, and you should now hear your audio clip.

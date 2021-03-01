@@ -12,7 +12,7 @@ Press the button and the menu should open. If it does not, you may have installe
 
 Notes:
 * Use the Save and Load buttons in the Template Editor liberally, there is no "Undo" button.
-* To delete something from an SL Pack, you need to manually delete the XML file. By default, new packs are created to `Mods\SideLoader\...`.
+* To delete something from an SL Pack, you need to manually delete the XML file. By default, new packs are created to `BepInEx\plugins\SideLoader\...`.
 * Please refer to the API pages to understand what each value does on the template.
 
 ![](https://sinai-dev.github.io/OSLDocs/img/menu.png "SL Menu Overview")
