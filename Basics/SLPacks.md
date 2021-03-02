@@ -4,16 +4,27 @@ An <b>SL Pack</b> (<b>SideLoader Pack</b>) is used to load and configure custom 
 
 You can create and manage your SL Packs via the [SL Menu](Basics/SLMenu). Deleting a pack requires you to delete the folder manually yourself. When working from the SL Menu, a lot of the rest of the process will be handled for you and you may not find the need to manually touch the folders at all, however it is still recommended to have an understanding of how it all works.
 
+## SLPack Name
+
 The folder structure of an SL Pack is like so:
 * `Outward\BepInEx\plugins\{Name}\SideLoader\`
 
-The `{Name}` in the path is the unique name of your Mod or Asset Pack. It can be anything, but try to be original to avoid conflicts.
+By default, the `{Name}` in the path is the unique name of your Mod or Asset Pack if you don't override it with a `manifest.txt` file. It can be anything, but try to be original to avoid conflicts.
 
 For example, `Outward\BepInEx\plugins\MyCoolPack\SideLoader\` is an SL Pack folder called MyCoolPack.
 
 ?> In C#, this {Name} is what you'll use for `SL.GetSLPack(string name)`
 
 SL also supports legacy packs in the structure `Mods\SideLoader\{NAME}\`, although this is no longer recommended for new packs.
+
+## Manifest file
+SideLoader also supports a file in the root of an SL Pack called `manifest.txt`, this file can be used to manually set the name of the SLPack instead of relying on the folder name.
+
+The reason for this is because Outward is now on the [Thunderstore](https://thunderstore.io) and we will not have total control over our folder names when using r2modman.
+
+Currently, SideLoader will simply read the `manifest.txt` file and whatever you write in there will be your SL Pack name. For example, CombatHUD's `manifest.txt` file just contains `sinai-dev CombatHUD`, so this is what is used as the SL Pack name.
+
+If this design changes in the future then we will use a different name than `manifest.txt` for the new design and provide backwards support for this one, but we just needed a simple solution for now.
 
 ## SL Pack Structure
 Other than the Name, the only special thing about your SL Pack is the name of the sub-folders you create inside of it.
