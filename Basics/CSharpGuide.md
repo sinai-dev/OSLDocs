@@ -10,7 +10,7 @@ This is a brief summary of how to use the SideLoader directly from your own C# m
 4. Add the BepInDependency attribute to your plugin class, as shown below:
 
 ```csharp
-[BepInDependency(SLPlugin.GUID, BepInDependency.DependencyFlags.HardDependency)]
+[BepInDependency(SL.GUID, BepInDependency.DependencyFlags.HardDependency)]
 [BepInPlugin("com.me.myname", "My Mod", "1.0")]
 public class MyPlugin : BaseUnityPlugin
 // ...
