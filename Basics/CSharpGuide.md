@@ -4,8 +4,8 @@ This is a brief summary of how to use the SideLoader directly from your own C# m
 
 ## Adding the Reference
 
-1. <b>Install SideLoader</b> to the Outward/BepInEx/plugins folder.
-2. In your C# Project, add a reference to <b>SideLoader.dll</b> from this location.
+1. <b>Install SideLoader</b> to the Outward/BepInEx/plugins folder, or through Thunderstore.
+2. In your C# Project, add a reference to <b>SideLoader.dll</b>. If you used Thunderstore/r2modman then the file will be at`%userprofile%\AppData\Roaming\r2modmanPlus-local\Outward\profiles\Default\BepInEx\plugins\sinai-dev-SideLoader`
 3. Put `using SideLoader;` at the top of classes where you want to use SideLoader.
 4. Add the BepInDependency attribute to your plugin class, as shown below:
 

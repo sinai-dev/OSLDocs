@@ -5,9 +5,10 @@
 The <b>Outward SideLoader</b> is an API and a tool for Mod Development in the game Outward, for both custom content and editing existing content.
 
 See also:
-* [SL on GitHub](https://github.com/sinai-dev/Outward-Sideloader)
-* [SL on NexusMods](https://www.nexusmods.com/outward/mods/96)
 * [Outward Modding Community Discord](https://discord.gg/E9jaeUm)
+* [SL on GitHub](https://github.com/sinai-dev/Outward-Sideloader)
+* [SL on Thunderstore](https://outward.thunderstore.io/package/sinai-dev/SideLoader/)
+* [SL on NexusMods](https://www.nexusmods.com/outward/mods/96) (legacy)
 
 ### Getting Started
 
