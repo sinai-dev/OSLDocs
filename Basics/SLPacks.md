@@ -20,6 +20,8 @@ SL also supports legacy packs in the structure `Mods\SideLoader\{NAME}\`, althou
 ## Manifest file
 SideLoader also supports a file in the root of an SL Pack called `manifest.txt`, this file can be used to manually set the name of the SLPack instead of relying on the folder name.
 
+* For example, it should look like `MyMod\SideLoader\manifest.txt`.
+
 The reason for this is because Outward is now on the [Thunderstore](https://thunderstore.io) and we will not have total control over our folder names when using r2modman.
 
 Currently, SideLoader will simply read the `manifest.txt` file and whatever you write in there will be your SL Pack name. For example, CombatHUD's `manifest.txt` file just contains `sinai-dev CombatHUD`, so this is what is used as the SL Pack name.
