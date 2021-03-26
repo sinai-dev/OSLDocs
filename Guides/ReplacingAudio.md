@@ -2,6 +2,10 @@
 
 Replacing Audio with SideLoader is fairly simple, the only tedious part is finding the correct name for replacement.
 
+## Overview
+
+Simply put `.wav` files in the `AudioClip\` folder of your SL Pack. You can use any online converter to convert your audio files to .WAV.
+
 All you have to do is use the same name that the game uses (listed below) and SideLoader will find and replace the original audio with your file.
 
 Your .wav files must be placed in the `AudioClip\` sub-folder of your [SL Pack](Basics/SLPacks).
