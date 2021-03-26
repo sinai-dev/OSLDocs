@@ -6,7 +6,7 @@ All you have to do is use the same name that the game uses (listed below) and Si
 
 Your .wav files must be placed in the `AudioClip\` sub-folder of your [SL Pack](Basics/SLPacks).
 
-For example, `Outward\BepInEx\plugins\MyPack\AudioClip\BGM_GeneralTitleScreen.wav` would replace the title screen music.
+For example, `Outward\BepInEx\plugins\MyPack\SideLoader\AudioClip\BGM_GeneralTitleScreen.wav` would replace the title screen music.
 
 ## Audio Clip Names
 
