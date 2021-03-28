@@ -35,9 +35,10 @@ We are going to use the [SL Menu](Basics/SLMenu.md) to generate a template from 
 Now let's make a basic change to the Item.
 
 1. Change the `SL_Item.Description` by typing into the input field on that row and pressing "Apply".
-2. Press the Hot Reload button up the top-left to reload all SL Packs.
-3. Load a character and press <b>F1</b> to open the Item Spawner, then spawn an Iron Sword and have a look, our description should now be set.
-4. <b>Note:</b> Existing spawned objects will not be affected by a Hot Reload unless you go back to the menu or reload the scene first.
+2. Press "Save XML" to save the changes to disk.
+3. Press the Hot Reload button up the top-left to reload all SL Packs.
+4. Load a character and press <b>F1</b> to open the Item Spawner, then spawn an Iron Sword and have a look, our description should now be set.
+5. <b>Note:</b> Existing spawned objects will not be affected by a Hot Reload unless you go back to the menu or reload the scene first.
 
 ![It worked!](https://i.imgur.com/UxuA8ky.png)
 
