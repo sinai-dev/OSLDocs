@@ -34,6 +34,9 @@ These are the fields you can set on an SL_ItemVisual class.
 * Allows you to directly set the rotation. This will override any setting from the original item or from Unity Editor.
 * If you don't set this (ie. delete or comment it from the template) then SideLoader will copy the values from the existing visuals.
 
+`Scale` (Vector3)
+* To set the scale of the item visuals, default is `(1, 1, 1)`
+
 `PositionOffset` (Vector3)
 * An offset applied to the position. You can use this to copy the position of the original visuals, and only apply an offset from that.
 
