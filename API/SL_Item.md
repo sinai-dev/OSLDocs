@@ -481,6 +481,9 @@ The class SL_TrapEffectRecipe is used by an SL_DeployableTrap to define the diff
 `Description` (string)
 * Description of this trap recipe result
 
+`ReplaceBasicEffects` (bool)
+* For Pressure Plate Expertise, should the standard effects be replaced by the extra effects? If false they will be combined.
+
 `CompatibleItemTags` (list of string)
 * A list of the compatible Tags for this trap recipe
 
